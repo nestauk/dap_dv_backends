@@ -1,0 +1,28 @@
+{
+  "name": "dap_dv_backends",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nestauk/dap_dv_backends.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nestauk/dap_dv_backends/issues"
+  },
+  "homepage": "https://github.com/nestauk/dap_dv_backends#readme",
+  "dependencies": {
+    "@aws-crypto/sha256-browser": "^2.0.1",
+    "@aws-sdk/credential-provider-node": "^3.49.0",
+    "@aws-sdk/node-http-handler": "^3.49.0",
+    "@aws-sdk/protocol-http": "^3.49.0",
+    "@aws-sdk/signature-v4": "^3.49.0",
+    "commander": "^9.0.0"
+  }
+}
