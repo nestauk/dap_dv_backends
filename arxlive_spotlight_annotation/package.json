@@ -1,28 +1,32 @@
 {
-  "name": "dap_dv_backends",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nestauk/dap_dv_backends.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nestauk/dap_dv_backends/issues"
-  },
-  "homepage": "https://github.com/nestauk/dap_dv_backends#readme",
-  "dependencies": {
-    "@aws-crypto/sha256-browser": "^2.0.1",
-    "@aws-sdk/credential-provider-node": "^3.49.0",
-    "@aws-sdk/node-http-handler": "^3.49.0",
-    "@aws-sdk/protocol-http": "^3.49.0",
-    "@aws-sdk/signature-v4": "^3.49.0",
-    "commander": "^9.0.0"
-  }
+	"author": "",
+	"bugs": {
+		"url": "https://github.com/nestauk/dap_dv_backends/issues"
+	},
+	"dependencies": {
+		"@aws-crypto/sha256-browser": "^2.0.1",
+		"@aws-sdk/credential-provider-node": "^3.49.0",
+		"@aws-sdk/node-http-handler": "^3.49.0",
+		"@aws-sdk/protocol-http": "^3.49.0",
+		"@aws-sdk/signature-v4": "^3.49.0",
+		"cli-progress": "^3.10.0",
+		"commander": "^9.0.0",
+		"cross-env": "^7.0.3",
+		"undici": "^4.13.0",
+		"winston": "^3.5.1"
+	},
+	"description": "",
+	"homepage": "https://github.com/nestauk/dap_dv_backends#readme",
+	"keywords": [],
+	"license": "ISC",
+	"main": "index.js",
+	"name": "arxlive_spotlight_annotation",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nestauk/dap_dv_backends.git"
+	},
+	"scripts": {
+		"annotate": "cross-env NODE_ENV=production node src/bin/es/annotate.mjs --index arxiv_v6 --spotlight http://localhost:2222/rest/annotate --size 100"
+	},
+	"version": "0.0.1"
 }
