@@ -29,13 +29,13 @@
 						"type": "text"
 					},
 					"confidence": {
-						"type": "double"
+						"type": "float"
 					},
 					"percentageOfSecondRank": {
-						"type": "double"
+						"type": "float"
 					},
 					"similarityScore": {
-						"type": "double"
+						"type": "float"
 					},
 					"surfaceForm": {
 						"type": "text"
