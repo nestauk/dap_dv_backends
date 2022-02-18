@@ -38,6 +38,8 @@
 		"testAnnotationRemotely": "npm run rebuildTestIndex && sleep 5 && node src/bin/es/annotate.mjs --field textBody_abstract_article --index test --spotlight http://localhost:2222/rest/annotate --size 10",
 		"testAnnotationLocally": "npm run rebuildTestIndex && sleep 5 && node src/bin/es/annotate.mjs --field textBody_abstract_article --index test --size 10",
 		"testEdgeCasesLocally": "npm run rebuildEdgeCasesIndex && sleep 1 && mocha --recursive -g 'edgeCases' src/test",
+		"testPerformance": "bash src/test/perf/time.sh",
+		"testSpotlightLocally": "sh src/test/dbpedia/localCurlRequest.sh",
 		"buildDocs": "jsdoc -c ./jsdocrc.json -r",
 		"test": "mocha --recursive --parallel src/test"
 	},

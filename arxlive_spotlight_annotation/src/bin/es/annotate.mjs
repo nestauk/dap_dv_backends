@@ -22,7 +22,11 @@ program.option(
 	'Endpoint for spotlight annotator',
 	undefined
 );
-program.option('-p, --size <page size>', 'Size of page to scroll with', 10000);
+program.option(
+	'-p, --page-size <page size>',
+	'Size of page to scroll with',
+	10000
+);
 program.option(
 	'-b, --batch-size <batch size>',
 	'Size of batch to annotate over',
@@ -42,7 +46,7 @@ program.parse();
 const options = program.opts();
 
 const bar = new cliProgress.SingleBar(
-	{ etaBuffer: options.size * 10 },
+	{ etaBuffer: options.pageSize * 10 },
 	cliProgress.Presets.shades_classic
 );
 
@@ -51,7 +55,7 @@ const main = async () => {
 	bar.start(totalDocuments, 0);
 
 	const scroller = scroll(options.domain, options.index, {
-		size: options.size,
+		size: options.pageSize,
 		pages: options.pages,
 	});
 

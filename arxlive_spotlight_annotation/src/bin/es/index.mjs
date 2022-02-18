@@ -34,9 +34,14 @@ program
 	.argument('<dest>', 'destination index')
 	.argument('[domain]', 'domain where index is hosted', arxliveCopy)
 	.option('--max-docs <docs>', 'number of documents to copy', 'all')
+	.option('--proceed-on-conflict', 'whether to proceed on conflict or abort')
 	.action(async (source, dest, domain, options) => {
-		const payload =
-			options.maxDocs === 'all' ? {} : { max_docs: options.maxDocs };
+		const payload = {
+			...(options.maxDocs !== 'all' && {
+				max_docs: parseInt(options.maxDocs),
+			}),
+			...(options.proceedOnConflict && { conflicts: 'proceed' }),
+		};
 		await indexAPI.reindex(source, dest, domain, {
 			payload,
 		});
