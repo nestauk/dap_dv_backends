@@ -20,7 +20,6 @@ program
 			JSON.stringify(payload),
 			{ q: query }
 		);
-		console.log(request);
 		await makeRequest(request, { verbose: true });
 	});
 

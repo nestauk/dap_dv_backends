@@ -1,14 +1,14 @@
-import { annotate, parseAnnotationResults } from 'dbpedia/spotlight.mjs';
-import { scroll, clearScroll } from 'es/search.mjs';
-import { count } from 'es/index.mjs';
-import { update } from 'es/update.mjs';
 import * as cliProgress from 'cli-progress';
 import { Command } from 'commander';
 
-import { logger } from '../../node_modules/logging.mjs';
+import { scroll, clearScroll } from 'es/search.mjs';
+import { count } from 'es/index.mjs';
+import {
+	annotateDocument,
+	uploadAnnotatedDocument,
+} from 'dbpedia/spotlight.mjs';
 import { arxliveCopy } from 'conf/config.mjs';
-
-const confidenceValues = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
+import { promisesHandler } from '../../node_modules/util.mjs';
 
 const program = new Command();
 program.option(
@@ -28,36 +28,18 @@ program.option(
 	'Number of pages to iterate over',
 	'all'
 );
+program.option(
+	'-f, --field <field>',
+	'Field of doc to be used as input text for annotation'
+);
+
 program.parse();
 const options = program.opts();
 
-// progress bar
-const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
-let currentDocumentCount = 0;
-
-const processHit = async hit => {
-	currentDocumentCount++;
-	bar.update(currentDocumentCount);
-	try {
-		if ('dbpedia_entities' in hit._source) {
-			logger.verbose('skipping', hit);
-			return Promise.resolve();
-		}
-		const spotlightResults = await Promise.all(
-			confidenceValues.map(confidence =>
-				annotate(hit._source.textBody_abstract_article, confidence, {
-					endpoint: options.spotlight,
-				})
-			)
-		);
-		const spotlightTerms = spotlightResults.map(parseAnnotationResults);
-		return update(options.domain, options.index, hit._id, {
-			dbpedia_entities: spotlightTerms,
-		});
-	} catch (error) {
-		logger.error(`Could not annotate ${hit._id}`, error);
-	}
-};
+const bar = new cliProgress.SingleBar(
+	{ etaBuffer: options.size * 10 },
+	cliProgress.Presets.shades_classic
+);
 
 const main = async () => {
 	const totalDocuments = await count(options.domain, options.index);
@@ -69,7 +51,24 @@ const main = async () => {
 	});
 
 	for await (let page of scroller) {
-		await Promise.all(page.hits.hits.map(processHit));
+		const docs = page.hits.hits;
+		const annotations = await promisesHandler(
+			docs.map(doc =>
+				annotateDocument(doc, options.field, options.spotlight)
+			)
+		);
+
+		const settled = await promisesHandler(
+			annotations.map(doc => {
+				bar.increment();
+				return uploadAnnotatedDocument(
+					doc.annotations,
+					doc.document._id,
+					options.domain,
+					options.index
+				);
+			})
+		);
 	}
 	bar.stop();
 	clearScroll(options.domain);
