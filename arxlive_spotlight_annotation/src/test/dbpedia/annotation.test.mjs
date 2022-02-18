@@ -1,14 +1,19 @@
 import * as assert from 'assert';
 import * as fs from 'fs/promises';
 
+import { stringify } from '@svizzle/utils';
+
 import {
 	annotateDocument,
 	uploadAnnotatedDocument,
 } from 'dbpedia/spotlight.mjs';
 import { buildRequest, makeRequest } from 'es/requests.mjs';
+import { createIndex, deleteIndex } from 'es/index.mjs';
 import { update } from 'es/update.mjs';
-import { get } from 'es/document.mjs';
+import { get, create } from 'es/document.mjs';
 import { arxliveCopy } from 'conf/config.mjs';
+
+const e2eDocumentID = '0705.1058';
 
 describe('spotlight', () => {
 	const annotationField = 'textBody_abstract_article';
@@ -24,43 +29,80 @@ describe('spotlight', () => {
 				'src/test/data/elastic_search_results/test_index_annotated.json'
 			)
 		);
+		// create edge-case index
+		await createIndex('edge-cases');
+		const edgeCaseDocs = JSON.parse(
+			await fs.readFile(
+				'src/test/data/elastic_search_results/edge_case_documents.json'
+			)
+		);
+		const promises = edgeCaseDocs.map(document =>
+			create(arxliveCopy, 'edge-cases', document, { id: document.id })
+		);
+		await Promise.all(promises);
+
+		// create e2e index
+		const mapping = JSON.parse(
+			await fs.readFile('src/test/conf/test_index_mapping.json')
+		);
+		await createIndex('e2e-test', arxliveCopy, { payload: mapping });
+		const reindexPayload = {
+			source: {
+				index: 'original-arxiv_v6',
+				query: {
+					term: {
+						_id: e2eDocumentID,
+					},
+				},
+			},
+			dest: {
+				index: 'e2e-test',
+			},
+		};
+		const request = buildRequest(arxliveCopy, '_reindex', 'POST', {
+			payload: reindexPayload,
+		});
+		await makeRequest(request);
+	});
+	after(async function () {
+		await deleteIndex('edge-cases');
+		await deleteIndex('e2e-test');
 	});
 	describe('#annotateDocument()', () => {
 		it('should correctly annotate the first document', async function () {
 			const firstDocument = dummyDocuments.hits.hits[0];
-			const result = await annotateDocument(firstDocument);
+			const result = await annotateDocument(
+				firstDocument,
+				'textBody_abstract_article'
+			);
 			assert.deepStrictEqual(result, annotatedDummyDocuments[0]);
 		});
 		it('should correctly annotate all documents', async function () {
 			this.timeout(0);
 			const promises = dummyDocuments.hits.hits.map(doc =>
-				annotateDocument(doc)
+				annotateDocument(doc, 'textBody_abstract_article')
 			);
 			const result = await Promise.all(promises);
 			assert.deepStrictEqual(result, annotatedDummyDocuments);
 		});
 	});
-	describe('#annotate()', () => {
-		it('should annotate this piece of text', async function () {
-			this.timeout(0);
-
-			assert.notEqual(result, null);
-		});
-	});
 	describe('end2end', () => {
 		it('should successfully pull the doc down, annotate it and upload back to the test endpoint', async function () {
 			// get the doc
-			const id = encodeURIComponent('cond-mat/0108181');
-			const path = `test/_doc/${id}`;
-			const getDocRequest = buildRequest(arxliveCopy, path, 'GET');
-			const { body: document } = await makeRequest(getDocRequest);
+			const index = 'e2e-test';
+			const document = await get(arxliveCopy, index, e2eDocumentID);
 			const annotatedDoc = await annotateDocument(
 				document,
 				annotationField
 			);
-			const updateResponse = await update(arxliveCopy, 'test', id, {
-				dbpedia_entities: annotatedDoc,
-			});
+			const updateResponse = await update(
+				arxliveCopy,
+				index,
+				e2eDocumentID,
+				{
+					dbpedia_entities: annotatedDoc,
+				}
+			);
 			assert.ok(!('error' in updateResponse));
 		});
 	});
