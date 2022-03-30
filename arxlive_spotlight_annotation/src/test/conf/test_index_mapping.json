@@ -1,0 +1,26 @@
+{
+	"mappings": {
+		"properties": {
+			"dbpedia_entities": {
+				"type": "nested",
+				"properties": {
+					"URI": {
+						"type": "text"
+					},
+					"confidence": {
+						"type": "float"
+					},
+					"percentageOfSecondRank": {
+						"type": "float"
+					},
+					"similarityScore": {
+						"type": "float"
+					},
+					"surfaceForm": {
+						"type": "text"
+					}
+				}
+			}
+		}
+	}
+}

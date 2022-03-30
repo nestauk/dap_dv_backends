@@ -1,0 +1,18 @@
+[
+	{
+		"id": "empty-string",
+		"textBody_abstract_article": ""
+	},
+	{
+		"id": "nonsensical",
+		"textBody_abstract_article": "aoehgaoegih egaoeigha aweghaeuh aegw----a"
+	},
+	{
+		"id": "field-missing",
+		"otherField": "other field"
+	},
+	{
+		"id": "japanese",
+		"textBody_abstract_article": "口は災いの元"
+	}
+]
