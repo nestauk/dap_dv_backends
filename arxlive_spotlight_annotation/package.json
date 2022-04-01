@@ -31,12 +31,12 @@
 		"url": "git+https://github.com/nestauk/dap_dv_backends.git"
 	},
 	"scripts": {
-		"annotate": "cross-env NODE_ENV=production NODE_NO_WARNINGS=1 node src/bin/es/annotate.mjs --field textBody_abstract_article --index arxiv_v6 --spotlight http://localhost:2222/rest/annotate --size 100",
+		"annotate": "cross-env NODE_ENV=production NODE_NO_WARNINGS=1 node src/bin/es/annotate.mjs --field textBody_abstract_article --index arxiv_v6 --spotlight http://localhost:2222/rest/annotate --page-size 100",
 		"rebuildTestIndex": "node src/bin/es/index.mjs delete test && sleep 1 && node src/bin/es/index.mjs create test --path src/test/conf/test_index_mapping.json && sleep 1 && node src/bin/es/index.mjs reindex arxiv_v6 test --max-docs 1000",
 		"rebuildEdgeCasesIndex": "node src/bin/es/index.mjs delete edge-cases && sleep 1 && node src/bin/es/index.mjs create edge-cases && sleep 1 && node src/bin/es/document.mjs create edge-cases ./src/test/data/elastic_search_results/test_documents.json",
 		"rebuild": "npm run rebuildTestIndex && npm run rebuildEdgeCasesIndex",
-		"testAnnotationRemotely": "npm run rebuildTestIndex && sleep 5 && node src/bin/es/annotate.mjs --field textBody_abstract_article --index test --spotlight http://localhost:2222/rest/annotate --size 10",
-		"testAnnotationLocally": "npm run rebuildTestIndex && sleep 5 && node src/bin/es/annotate.mjs --field textBody_abstract_article --index test --size 10",
+		"testAnnotationRemotely": "npm run rebuildTestIndex && sleep 5 && node src/bin/es/annotate.mjs --field textBody_abstract_article --index test --spotlight http://localhost:2222/rest/annotate --page-size 10",
+		"testAnnotationLocally": "npm run rebuildTestIndex && sleep 5 && node src/bin/es/annotate.mjs --field textBody_abstract_article --index test --page-size 10",
 		"testEdgeCasesLocally": "npm run rebuildEdgeCasesIndex && sleep 1 && mocha --recursive -g 'edgeCases' src/test",
 		"testPerformance": "bash src/test/perf/time.sh",
 		"testSpotlightLocally": "sh src/test/dbpedia/localCurlRequest.sh",
