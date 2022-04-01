@@ -45,7 +45,15 @@ describe('spotlight', () => {
 		const mapping = JSON.parse(
 			await fs.readFile('src/test/conf/test_index_mapping.json')
 		);
-		await createIndex('e2e-test', arxliveCopy, { payload: mapping });
+		await createIndex('e2e-test', arxliveCopy, {
+			payload: {
+				...mapping,
+				mappings: {
+					...mapping.mappings,
+					dynamic: true,
+				},
+			},
+		});
 		const reindexPayload = {
 			source: {
 				index: 'original-arxiv_v6',
