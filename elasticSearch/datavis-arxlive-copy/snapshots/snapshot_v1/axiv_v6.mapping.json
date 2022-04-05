@@ -1,0 +1,160 @@
+{
+	"arxiv_v6": {
+		"mappings": {
+			"dynamic": "strict",
+			"properties": {
+				"booleanFlag_multinational_article": {
+					"type": "boolean"
+				},
+				"count_citations_article": {
+					"type": "integer"
+				},
+				"date_created_article": {
+					"type": "date"
+				},
+				"dbpedia_entities": {
+					"type": "nested",
+					"properties": {
+						"URI": {
+							"type": "text"
+						},
+						"confidence": {
+							"type": "double"
+						},
+						"percentageOfSecondRank": {
+							"type": "double"
+						},
+						"similarityScore": {
+							"type": "double"
+						},
+						"surfaceForm": {
+							"type": "text"
+						}
+					}
+				},
+				"id_digitalObjectIdentifier_article": {
+					"type": "keyword"
+				},
+				"json_category_article": {
+					"type": "nested",
+					"properties": {
+						"ancestors": {
+							"type": "keyword"
+						},
+						"level": {
+							"type": "integer"
+						},
+						"order": {
+							"type": "integer"
+						},
+						"value": {
+							"type": "keyword"
+						}
+					}
+				},
+				"json_fieldsOfStudy_article": {
+					"type": "nested",
+					"properties": {
+						"ancestors": {
+							"type": "keyword"
+						},
+						"level": {
+							"type": "integer"
+						},
+						"order": {
+							"type": "integer"
+						},
+						"value": {
+							"type": "keyword"
+						}
+					}
+				},
+				"json_location_article": {
+					"type": "nested",
+					"properties": {
+						"ancestors": {
+							"type": "keyword"
+						},
+						"level": {
+							"type": "integer"
+						},
+						"order": {
+							"type": "integer"
+						},
+						"value": {
+							"type": "keyword"
+						}
+					}
+				},
+				"metric_citations_article": {
+					"type": "float"
+				},
+				"metric_novelty_article": {
+					"type": "float"
+				},
+				"terms_authors_article": {
+					"type": "text",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						}
+					},
+					"analyzer": "terms_analyzer"
+				},
+				"terms_institutes_article": {
+					"type": "text",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						}
+					},
+					"analyzer": "terms_analyzer"
+				},
+				"terms_tokens_article": {
+					"type": "text",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						}
+					},
+					"analyzer": "terms_analyzer"
+				},
+				"textBody_abstract_article": {
+					"type": "text",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						}
+					}
+				},
+				"title_of_article": {
+					"type": "text",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						}
+					}
+				},
+				"type_of_entity": {
+					"type": "text",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						}
+					}
+				},
+				"url_of_article": {
+					"type": "text",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						}
+					}
+				},
+				"year_of_article": {
+					"type": "integer"
+				}
+			}
+		}
+	}
+}
