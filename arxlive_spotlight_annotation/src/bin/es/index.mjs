@@ -4,6 +4,7 @@ import { Command } from 'commander';
 
 import * as indexAPI from 'es/index.mjs';
 import { arxliveCopy } from 'conf/config.mjs';
+import { remove } from 'es/pipeline.mjs';
 
 const program = new Command();
 
@@ -33,9 +34,15 @@ program
 	.argument('<source>', 'source index')
 	.argument('<dest>', 'destination index')
 	.argument('[domain]', 'domain where index is hosted', arxliveCopy)
+	.option(
+		'--ignore <fields...>',
+		'fields to ignore upon reindex. These fields will not be copied over to the new index.'
+	)
 	.option('--max-docs <docs>', 'number of documents to copy', 'all')
 	.option('--proceed-on-conflict', 'whether to proceed on conflict or abort')
 	.action(async (source, dest, domain, options) => {
+		const pipeline = options.ignore ? await remove(options.ignore) : null;
+		console.log(pipeline);
 		const payload = {
 			...(options.maxDocs !== 'all' && {
 				max_docs: parseInt(options.maxDocs),
@@ -44,6 +51,7 @@ program
 		};
 		await indexAPI.reindex(source, dest, domain, {
 			payload,
+			pipeline,
 		});
 	});
 
