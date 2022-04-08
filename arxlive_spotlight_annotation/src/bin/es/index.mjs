@@ -42,7 +42,6 @@ program
 	.option('--proceed-on-conflict', 'whether to proceed on conflict or abort')
 	.action(async (source, dest, domain, options) => {
 		const pipeline = options.ignore ? await remove(options.ignore) : null;
-		console.log(pipeline);
 		const payload = {
 			...(options.maxDocs !== 'all' && {
 				max_docs: parseInt(options.maxDocs),

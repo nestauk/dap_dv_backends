@@ -51,6 +51,7 @@ program.option(
 	'--force',
 	'Force the annotation process, even if no snapshots can be created'
 );
+
 program.parse();
 const options = program.opts();
 
@@ -68,7 +69,10 @@ const main = async () => {
 
 	const newFieldName = options.name || `dbpedia_entities-${options.field}`;
 	const currentMapping = await getMappings(options.domain, options.index);
-	if (newFieldName in currentMapping[options.index].mappings.properties) {
+	if (
+		newFieldName in currentMapping[options.index].mappings.properties &&
+		!options.force
+	) {
 		throw new Error(
 			'Field already exists at index mapping, and force flag or continue flag not supplied'
 		);
