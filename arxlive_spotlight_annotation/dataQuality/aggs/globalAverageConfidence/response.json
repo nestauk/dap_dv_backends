@@ -1,0 +1,26 @@
+{
+	"took": 2344,
+	"timed_out": false,
+	"_shards": {
+		"total": 5,
+		"successful": 5,
+		"skipped": 0,
+		"failed": 0
+	},
+	"hits": {
+		"total": {
+			"value": 10000,
+			"relation": "gte"
+		},
+		"max_score": null,
+		"hits": []
+	},
+	"aggregations": {
+		"dbpedia": {
+			"doc_count": 75296846,
+			"average_term_confidence": {
+				"value": 0.39032922308591783
+			}
+		}
+	}
+}
