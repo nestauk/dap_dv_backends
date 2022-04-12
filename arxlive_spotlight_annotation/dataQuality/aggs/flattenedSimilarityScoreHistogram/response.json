@@ -1,0 +1,67 @@
+{
+	"took": 2790,
+	"timed_out": false,
+	"_shards": {
+		"total": 5,
+		"successful": 5,
+		"skipped": 0,
+		"failed": 0
+	},
+	"hits": {
+		"total": {
+			"value": 10000,
+			"relation": "gte"
+		},
+		"max_score": null,
+		"hits": []
+	},
+	"aggregations": {
+		"dbpedia_entities": {
+			"doc_count": 75296846,
+			"similarityScore": {
+				"buckets": [
+					{
+						"key": 0.1,
+						"doc_count": 617
+					},
+					{
+						"key": 0.2,
+						"doc_count": 30688
+					},
+					{
+						"key": 0.30000000000000004,
+						"doc_count": 307719
+					},
+					{
+						"key": 0.4,
+						"doc_count": 1186575
+					},
+					{
+						"key": 0.5,
+						"doc_count": 2969734
+					},
+					{
+						"key": 0.6000000000000001,
+						"doc_count": 3091462
+					},
+					{
+						"key": 0.7000000000000001,
+						"doc_count": 3488187
+					},
+					{
+						"key": 0.8,
+						"doc_count": 4859700
+					},
+					{
+						"key": 0.9,
+						"doc_count": 38806897
+					},
+					{
+						"key": 1.0,
+						"doc_count": 20555267
+					}
+				]
+			}
+		}
+	}
+}
