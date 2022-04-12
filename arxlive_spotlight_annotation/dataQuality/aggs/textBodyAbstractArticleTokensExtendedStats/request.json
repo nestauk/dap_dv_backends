@@ -1,0 +1,10 @@
+{
+    "size": 0,
+    "aggs": {
+        "textBody_abstract_article_tokens": {
+            "extended_stats": {
+                "field": "textBody_abstract_article.tokens"
+            }
+        }
+    }
+}

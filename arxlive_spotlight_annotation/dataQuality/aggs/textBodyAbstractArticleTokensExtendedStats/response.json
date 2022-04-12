@@ -1,0 +1,34 @@
+{
+    "took": 143,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 10000,
+            "relation": "gte"
+        },
+        "max_score": null,
+        "hits": []
+    },
+    "aggregations": {
+        "textBody_abstract_article_tokens": {
+            "count": 1851140,
+            "min": 0.0,
+            "max": 942.0,
+            "avg": 139.75281664271745,
+            "sum": 2.58702029E8,
+            "sum_of_squares": 4.4409570119E10,
+            "variance": 4459.5400105146155,
+            "std_deviation": 66.77978743987296,
+            "std_deviation_bounds": {
+                "upper": 273.3123915224634,
+                "lower": 6.193241762971525
+            }
+        }
+    }
+}
