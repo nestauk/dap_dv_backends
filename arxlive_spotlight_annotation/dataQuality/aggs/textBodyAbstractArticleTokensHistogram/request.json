@@ -1,0 +1,17 @@
+{
+    "size": 0,
+    "aggs": {
+        "textBody_abstract_article_token_count_histogram": {
+            "histogram": {
+                "field": "textBody_abstract_article.token_count",
+                "interval": 10,
+                "min_doc_count": 1
+            }
+        },
+        "textBody_abstract_article_token_count_extended_stats": {
+            "extended_stats": {
+                "field": "textBody_abstract_article.token_count"
+            }
+        }
+    }
+}
