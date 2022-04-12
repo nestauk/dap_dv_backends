@@ -1,7 +1,7 @@
-## Histogram of flattened confidence values
+## Flattened `confidence` Histogram
 
-Aggregates all confidence values into a histogram, each bucket indicating one of
-the 10 possible confidence levels annotated. Flattened here denotes the fact
+Aggregates all `confidence` values into a histogram, each bucket indicating one of
+the 10 possible `confidence` levels annotated. Flattened here denotes the fact
 that all annotated entities are treated as a flat list - no per document
 analysis is performed.
 
@@ -15,10 +15,10 @@ See:
 We have decided not to use the `histogram` API here due to errors produced by
 rounding of floating precision point values. When using a histogram with
 interval 0.1, the values for the buckets turn out to be incorrect. In
-particular, there are no entities found with confidence 0.7, which is obviously
-wrong. Instead, it seems like all entities tagged at confidence 0.7 are
+particular, there are no entities found with `confidence `0.7, which is obviously
+wrong. Instead, it seems like all entities tagged at `confidence` 0.7 are
 erroneously counted in the 0.6 bucket, meaning that bucket contains all entities
-for confidence 0.6 and 0.7:
+for `confidence` 0.6 and 0.7:
 
 Request:
 ```json
@@ -90,7 +90,7 @@ The `terms` aggregation has difficulty creating buckets whose keys are of type
 float or double, due to floating point precision errors. As a result, the keys
 found in the `response.json` can look bizarre. In actual fact, the keys are
 indistinguishable (in the Java Runtime) due to the rounding errors. Example
-(using key for confidence bucket 0.4):
+(using key for `confidence` bucket 0.4):
 
 ```java
 class Main {  
@@ -106,13 +106,13 @@ You can find a replit for the example
 
 We've decided to document this behavior for now and move on. However, there
 exists two possible solutions to the problem. The first involves changing the
-schema so that confidence values are encoded as integers. The current values
+schema so that `confidence` values are encoded as integers. The current values
 would be mapped using a factor of 10, so that entities tagged at confidence
-level 0.3 would have an integer confidence value of 3, those tagged at 0.7 an
+level 0.3 would have an integer `confidence` value of 3, those tagged at 0.7 an
 integer value of 7, and so on. The advantage of this approach is that we
 guarantee the correct term bucket keys due to no risk of floating point
 precision errors. However, we deviate from the accepted inputs of the Spotlight
-API, which only accepts values for confidence within the range 0 and 1.
+API, which only accepts values for `confidence` within the range 0 and 1.
 
 The second solution is to use the `histogram` API, with interval set to 0.1 and
 an offset set to a value very slightly below zero. The following request is
