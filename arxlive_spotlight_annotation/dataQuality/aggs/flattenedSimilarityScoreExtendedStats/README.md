@@ -1,7 +1,7 @@
-## Flattened `confidence` Extended Stats
+## Flattened `similarityScore` Extended Stats
 
 Produces a number of different statistical measures such as average, STD, min,
-max, etc. for`confidence`values. Flattened here denotes the fact
+max, etc. for `similarityScore` fields. Flattened here denotes the fact
 that all annotated entities are treated as a flat list - no per document
 analysis is performed.
 
