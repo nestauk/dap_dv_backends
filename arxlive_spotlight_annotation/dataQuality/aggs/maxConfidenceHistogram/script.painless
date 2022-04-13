@@ -1,0 +1,13 @@
+if (!params._source.containsKey('dbpedia_entities'))
+{
+    return 0;
+}
+double max = 0;
+for (item in params._source.dbpedia_entities)
+{
+    if (item.confidence > max)
+    {
+        max = item.confidence;
+    }
+}
+return max;
