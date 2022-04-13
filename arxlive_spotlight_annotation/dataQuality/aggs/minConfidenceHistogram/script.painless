@@ -1,0 +1,13 @@
+if (!params._source.containsKey('dbpedia_entities'))
+{
+    return 0;
+}
+double min = 1;
+for (item in params._source.dbpedia_entities)
+{
+    if (item.confidence < min)
+    {
+        min = item.confidence;
+    }
+}
+return min;
