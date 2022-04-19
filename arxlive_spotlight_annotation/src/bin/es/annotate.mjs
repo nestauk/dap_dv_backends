@@ -1,5 +1,6 @@
 import * as cliProgress from 'cli-progress';
 import { Command } from 'commander';
+import { stringify } from '@svizzle/utils';
 
 import { scroll, clearScroll } from 'es/search.mjs';
 import { count, getMappings, updateMapping } from 'es/index.mjs';
@@ -10,7 +11,7 @@ import {
 } from 'dbpedia/spotlight.mjs';
 import { arxliveCopy } from 'conf/config.mjs';
 import { promisesHandler, batch } from '../../node_modules/util.mjs';
-import { settings, defaultMapping } from 'conf/config.mjs';
+import { settings, defaultMapping, metaDataMapping } from 'conf/config.mjs';
 
 const program = new Command();
 program.option(
@@ -51,6 +52,10 @@ program.option(
 	'--force',
 	'Force the annotation process, even if no snapshots can be created'
 );
+program.option(
+	'--include-metadata',
+	'Include metadata fields on the index'
+)
 
 program.parse();
 const options = program.opts();
@@ -94,7 +99,12 @@ const main = async () => {
 	);
 
 	// create mapping for new field
-	const mappingPayload = { properties: { [newFieldName]: defaultMapping } };
+	const mappingPayload = {
+		properties: {
+			[newFieldName]: defaultMapping,
+			...(options.includeMetadata && { [`${newFieldName}_metadata`]: metaDataMapping })
+		}
+	};
 	await updateMapping(options.domain, options.index, {
 		payload: mappingPayload,
 	});
@@ -116,15 +126,21 @@ const main = async () => {
 			const nonEmptyDocs = docs.filter(doc => doc._source[options.field]);
 			const annotations = await promisesHandler(
 				nonEmptyDocs.map(doc =>
-					annotateDocument(doc, options.field, options.spotlight)
+					annotateDocument(
+						doc,
+						options.field,
+						{
+							endpoint: options.spotlight,
+							includeMetaData: options.includeMetadata
+						}
+					)
 				)
 			);
 			await promisesHandler(
 				annotations.map(doc => {
 					bar.increment();
 					return uploadAnnotatedDocument(
-						doc.annotations,
-						doc.document._id,
+						doc,
 						newFieldName,
 						options.domain,
 						options.index
