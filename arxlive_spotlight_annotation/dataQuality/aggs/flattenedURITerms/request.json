@@ -1,0 +1,18 @@
+{
+    "size": 0,
+    "aggs": {
+        "dbpedia": {
+            "nested": {
+                "path": "dbpedia_entities"
+            },
+            "aggs": {
+                "URIs": {
+                    "terms": {
+                        "field": "dbpedia_entities.URI",
+                        "size": 100
+                    }
+                }
+            }
+        }
+    }
+}
