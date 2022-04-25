@@ -1,10 +1,12 @@
 import * as cliProgress from 'cli-progress';
 import { Command } from 'commander';
 import { stringify } from '@svizzle/utils';
+import * as _ from 'lamb'
 
 import { scroll, clearScroll } from 'es/search.mjs';
 import { count, getMappings, updateMapping } from 'es/index.mjs';
 import { register, trigger, status } from 'es/snapshot.mjs';
+import { bulkUpdate } from 'es/update.mjs'
 import {
 	annotateDocument,
 	uploadAnnotatedDocument,
@@ -136,17 +138,21 @@ const main = async () => {
 					)
 				)
 			);
-			await promisesHandler(
-				annotations.map(doc => {
-					bar.increment();
-					return uploadAnnotatedDocument(
-						doc,
-						newFieldName,
-						options.domain,
-						options.index
-					);
-				})
-			);
+			const nonEmptyAnnotations = _.filter(
+				annotations,
+				doc => doc.annotations.length !== 0
+			)
+			const bulkFormat = _.map(nonEmptyAnnotations, doc => (
+				{
+					id: doc.id,
+					data: {
+						[newFieldName]: doc.annotations,
+						...(doc.metadata && { [`${newFieldName}_metadata`]: doc.metadata })
+					}
+				}
+			));
+			await bulkUpdate(options.domain, options.index, bulkFormat)
+			bar.increment(options.batchSize)
 		}
 	}
 	bar.stop();
