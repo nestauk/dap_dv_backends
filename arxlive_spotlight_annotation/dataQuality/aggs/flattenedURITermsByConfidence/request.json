@@ -1,0 +1,177 @@
+{
+    "size": 0,
+    "aggs": {
+        "dbpedia": {
+            "nested": {
+                "path": "dbpedia_entities"
+            },
+            "aggs": {
+                "top_URI_100": {
+                    "filter": {
+                        "term": {
+                            "dbpedia_entities.confidence": 100
+                        }
+                    },
+                    "aggs": {
+                        "URIs_100": {
+                            "terms": {
+                                "field": "dbpedia_entities.URI",
+                                "size": 100
+                            }
+                        }
+                    }
+                },
+                "top_URI_90": {
+                    "filter": {
+                        "term": {
+                            "dbpedia_entities.confidence": 90
+                        }
+                    },
+                    "aggs": {
+                        "URI": {
+                            "terms": {
+                                "field": "dbpedia_entities.URI",
+                                "size": 100
+                            }
+                        }
+                    }
+                },
+                "top_URI_80": {
+                    "filter": {
+                        "term": {
+                            "dbpedia_entities.confidence": 80
+                        }
+                    },
+                    "aggs": {
+                        "URI": {
+                            "terms": {
+                                "field": "dbpedia_entities.URI",
+                                "size": 100
+                            }
+                        }
+                    }
+                },
+                "top_URI_70": {
+                    "filter": {
+                        "term": {
+                            "dbpedia_entities.confidence": 70
+                        }
+                    },
+                    "aggs": {
+                        "URI": {
+                            "terms": {
+                                "field": "dbpedia_entities.URI",
+                                "size": 100
+                            }
+                        }
+                    }
+                },
+                "top_URI_60": {
+                    "filter": {
+                        "term": {
+                            "dbpedia_entities.confidence": 60
+                        }
+                    },
+                    "aggs": {
+                        "URI": {
+                            "terms": {
+                                "field": "dbpedia_entities.URI",
+                                "size": 100
+                            }
+                        }
+                    }
+                },
+                "top_URI_50": {
+                    "filter": {
+                        "term": {
+                            "dbpedia_entities.confidence": 50
+                        }
+                    },
+                    "aggs": {
+                        "URI": {
+                            "terms": {
+                                "field": "dbpedia_entities.URI",
+                                "size": 100
+                            }
+                        }
+                    }
+                },
+                "top_URI_40": {
+                    "filter": {
+                        "term": {
+                            "dbpedia_entities.confidence": 40
+                        }
+                    },
+                    "aggs": {
+                        "URI": {
+                            "terms": {
+                                "field": "dbpedia_entities.URI",
+                                "size": 100
+                            }
+                        }
+                    }
+                },
+                "top_URI_30": {
+                    "filter": {
+                        "term": {
+                            "dbpedia_entities.confidence": 30
+                        }
+                    },
+                    "aggs": {
+                        "URI": {
+                            "terms": {
+                                "field": "dbpedia_entities.URI",
+                                "size": 100
+                            }
+                        }
+                    }
+                },
+                "top_URI_20": {
+                    "filter": {
+                        "term": {
+                            "dbpedia_entities.confidence": 20
+                        }
+                    },
+                    "aggs": {
+                        "URI": {
+                            "terms": {
+                                "field": "dbpedia_entities.URI",
+                                "size": 100
+                            }
+                        }
+                    }
+                },
+                "top_URI_10": {
+                    "filter": {
+                        "term": {
+                            "dbpedia_entities.confidence": 10
+                        }
+                    },
+                    "aggs": {
+                        "URI": {
+                            "terms": {
+                                "field": "dbpedia_entities.URI",
+                                "size": 100
+                            }
+                        }
+                    }
+                },
+                "top_URI_0": {
+                    "filter": {
+                        "term": {
+                            "dbpedia_entities.confidence": 0
+                        }
+                    },
+                    "aggs": {
+                        "URI": {
+                            "terms": {
+                                "field": "dbpedia_entities.URI",
+                                "size": 100
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
