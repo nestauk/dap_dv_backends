@@ -1,6 +1,5 @@
 import * as cliProgress from 'cli-progress';
 import { Command } from 'commander';
-import { stringify } from '@svizzle/utils';
 import * as _ from 'lamb'
 
 import { scroll, clearScroll } from 'es/search.mjs';
@@ -9,10 +8,9 @@ import { register, trigger, status } from 'es/snapshot.mjs';
 import { bulkUpdate } from 'es/update.mjs'
 import {
 	annotateDocument,
-	uploadAnnotatedDocument,
 } from 'dbpedia/spotlight.mjs';
 import { arxliveCopy } from 'conf/config.mjs';
-import { promisesHandler, batch } from '../../node_modules/util.mjs';
+import { promisesHandler, batch, commanderParseInt } from '../../node_modules/util.mjs';
 import { settings, defaultMapping, metaDataMapping } from 'conf/config.mjs';
 
 const program = new Command();
@@ -30,12 +28,14 @@ program.option(
 program.option(
 	'-p, --page-size <page size>',
 	'Size of page to scroll with',
-	10000
+	10000,
+	commanderParseInt
 );
 program.option(
 	'-b, --batch-size <batch size>',
 	'Size of batch to annotate over',
-	10
+	10,
+	commanderParseInt
 );
 program.option(
 	'-z, --pages <number of pages>',
@@ -60,7 +60,6 @@ program.option(
 )
 
 program.parse();
-const options = program.opts();
 
 const bar = new cliProgress.SingleBar(
 	{ etaBuffer: options.size * 10 },
@@ -120,9 +119,8 @@ const main = async () => {
 	});
 
 	for await (let page of scroller) {
-		const docs = page.hits.hits;
-		const batches = batch(docs, options.batchSize);
-
+		const batches = batch(page.hits.hits, options.batchSize);
+		const updates = []
 		for (const docs of batches) {
 			// filter out docs with empty text
 			const nonEmptyDocs = docs.filter(doc => doc._source[options.field]);
@@ -151,9 +149,11 @@ const main = async () => {
 					}
 				}
 			));
-			await bulkUpdate(options.domain, options.index, bulkFormat)
 			bar.increment(options.batchSize)
-		}
+			updates.push(bulkFormat)
+		};
+		const flattenedUpdates = _.flatten(updates)
+		bulkUpdate(options.domain, options.index, flattenedUpdates)
 	}
 	bar.stop();
 	clearScroll(options.domain);
