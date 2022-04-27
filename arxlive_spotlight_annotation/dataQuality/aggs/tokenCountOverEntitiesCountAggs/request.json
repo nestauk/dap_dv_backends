@@ -1,0 +1,17 @@
+{
+    "size": 0,
+    "aggs": {
+        "token_count_over_entity_count_extended_stats": {
+            "extended_stats": {
+                "script": "if (doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['textBody_abstract_article.token_count'].value) / doc['dbpedia_entities_metadata.entities_count'].value;"
+            }
+        },
+        "token_count_over_entity_count_histogram": {
+            "histogram": {
+                "script": "if (doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['textBody_abstract_article.token_count'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                "interval": 0.1,
+                "min_doc_count": 1
+            }
+        }
+    }
+}
