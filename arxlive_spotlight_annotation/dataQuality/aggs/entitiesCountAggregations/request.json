@@ -1,0 +1,17 @@
+{
+    "size": 0,
+    "aggs": {
+        "entities_count_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.entities_count"
+            }
+        },
+        "entities_count_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.entities_count",
+                "interval": 1,
+                "min_doc_count": 1
+            }
+        }
+    }
+}
