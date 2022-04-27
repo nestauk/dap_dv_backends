@@ -4,3 +4,4 @@ node_modules
 .prettierignore
 .DS_Store
 **/secrets/**
+src/bin/spotlight/nginx.conf
