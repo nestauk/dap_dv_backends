@@ -60,6 +60,7 @@ program.option(
 )
 
 program.parse();
+const options = program.opts();
 
 const bar = new cliProgress.SingleBar(
 	{ etaBuffer: options.size * 10 },
