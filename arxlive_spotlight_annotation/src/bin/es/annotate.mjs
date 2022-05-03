@@ -5,7 +5,7 @@ import * as _ from 'lamb'
 import { scroll, clearScroll } from 'es/search.mjs';
 import { count, getMappings, updateMapping } from 'es/index.mjs';
 import { register, trigger, status } from 'es/snapshot.mjs';
-import { bulkUpdate } from 'es/update.mjs'
+import { bulkRequest } from 'es/bulk.mjs'
 import {
 	annotateDocument,
 } from 'dbpedia/spotlight.mjs';
@@ -153,7 +153,7 @@ const main = async () => {
 			updates.push(bulkFormat)
 		};
 		const flattenedUpdates = _.flatten(updates)
-		bulkUpdate(options.domain, options.index, flattenedUpdates)
+		bulkRequest(options.domain, options.index, flattenedUpdates, 'update')
 	}
 	bar.stop();
 	clearScroll(options.domain);
