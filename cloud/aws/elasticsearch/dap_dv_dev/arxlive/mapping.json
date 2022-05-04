@@ -1,5 +1,5 @@
 {
-	"arxiv_v6": {
+	"arxlive": {
 		"mappings": {
 			"dynamic": "strict",
 			"properties": {
@@ -16,19 +16,90 @@
 					"type": "nested",
 					"properties": {
 						"URI": {
-							"type": "text"
+							"type": "keyword"
 						},
 						"confidence": {
-							"type": "double"
+							"type": "integer"
+						},
+						"duplicates_10": {
+							"type": "integer"
+						},
+						"duplicates_60": {
+							"type": "integer"
 						},
 						"percentageOfSecondRank": {
-							"type": "double"
+							"type": "float"
 						},
 						"similarityScore": {
-							"type": "double"
+							"type": "float"
 						},
 						"surfaceForm": {
 							"type": "text"
+						}
+					}
+				},
+				"dbpedia_entities_metadata": {
+					"properties": {
+						"confidence_avg": {
+							"type": "float"
+						},
+						"confidence_counts": {
+							"properties": {
+								"0": {
+									"type": "integer"
+								},
+								"10": {
+									"type": "integer"
+								},
+								"100": {
+									"type": "integer"
+								},
+								"20": {
+									"type": "integer"
+								},
+								"30": {
+									"type": "integer"
+								},
+								"40": {
+									"type": "integer"
+								},
+								"50": {
+									"type": "integer"
+								},
+								"60": {
+									"type": "integer"
+								},
+								"70": {
+									"type": "integer"
+								},
+								"80": {
+									"type": "integer"
+								},
+								"90": {
+									"type": "integer"
+								}
+							}
+						},
+						"confidence_max": {
+							"type": "integer"
+						},
+						"confidence_min": {
+							"type": "integer"
+						},
+						"dupes_10_count": {
+							"type": "integer"
+						},
+						"dupes_10_ratio": {
+							"type": "float"
+						},
+						"dupes_60_count": {
+							"type": "integer"
+						},
+						"dupes_60_ratio": {
+							"type": "float"
+						},
+						"entities_count": {
+							"type": "integer"
 						}
 					}
 				},
@@ -124,6 +195,10 @@
 					"fields": {
 						"keyword": {
 							"type": "keyword"
+						},
+						"token_count": {
+							"type": "token_count",
+							"analyzer": "standard"
 						}
 					}
 				},

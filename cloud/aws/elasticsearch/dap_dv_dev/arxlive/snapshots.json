@@ -1,0 +1,26 @@
+[
+	{
+		"id": "snapshot_v4",
+		"version": 4,
+		"description": "This snapshot contains a radical change in the `arxiv_v6` mappings.\r\n\r\n-   A metadata field named `dbpedia_entities_metadata`, which captures data on\r\n    entity counts, entity frequencies at different confidence levels, ratio of\r\n    duplicates to counts, and mean, max and min confidence levels for entities\r\n    for each document.\r\n-   The `dbpedia_entities.URI` field has been given a keyword field, in order to\r\n    use term aggregations to investigate most frequent URIs.\r\n-   `dbpedia_entities.confidence` has been recalculated, and is now an integer\r\n    which lies within the range 0-100, with intervals of size ten. This is to\r\n    solve issues with rounding errors when using the `histogram` aggregation on\r\n    confidences with float values.\r\n-   `dbpedia_entities.duplicates_10` and `dbpedia_entities.duplicates_60` are\r\n    new fields which denote how many times that entity was tagged for confidence\r\n    levels 0.1 and 0.6 respectively. We think these data will provide a\r\n    heuristic weighting to how relevant that entity is to the document's\r\n    abstract.\r\n-   `tokens`, the field created for counting the number of tokens using\r\n    ElasticSearch's standard analyzer, is renamed to `token_count`, for better\r\n    clarity.",
+		"domain": "dap_dv_dev"
+	},
+	{
+		"id": "snapshot_v3",
+		"version": 3,
+		"description": "This snapshot contains the new state of the domain, where the\\r\\n`original-arxiv_v6` has been deleted. It also contains `arxiv_v6`, which is\\r\\nannotated, but which does _not_ have the `token_count` analyser for the\\r\\n`textBody_article_abstract` field.\\r\\n\\r\\nSee https:\\\/\\\/github.com\\\/nestauk\\\/dap_dv_backends\\\/issues\\\/21 for reasoning, and\\r\\nhttps:\\\/\\\/github.com\\\/nestauk\\\/dap_dv_backends\\\/pull\\\/22 for changes introduced.\\r\\n",
+		"domain": "dap_dv_dev"
+	},
+	{
+		"id": "snapshot_v2",
+		"version": 2,
+		"description": "This snapshot contains the new state of the domain, where the\r\n`original-arxiv_v6` has been deleted. It also contains `arxiv_v6`, which is\r\nannotated, but which does _not_ have the `token_count` analyser for the\r\n`textBody_article_abstract` field.\r\n\r\nSee https:\/\/github.com\/nestauk\/dap_dv_backends\/issues\/21 for reasoning, and\r\nhttps:\/\/github.com\/nestauk\/dap_dv_backends\/pull\/22 for changes introduced.\r\n",
+		"domain": "dap_dv_dev"
+	},
+	{
+		"id": "snapshot_v1",
+		"version": 1,
+		"description": "First snapshot",
+		"domain": "dap_dv_dev"
+	}
+]

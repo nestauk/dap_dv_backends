@@ -1,9 +1,0 @@
-[
-	{
-		"domain": "https://search-datavis-arxlive-copy-n6ltva3lqh7x7xb6ucpaqfb5a4.eu-west-2.es.amazonaws.com",
-		"id": "datavis-arxlive-copy",
-		"indices": [
-			"arxiv_v6"
-		]
-	}
-]
