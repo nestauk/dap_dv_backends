@@ -1,0 +1,137 @@
+{
+    "size": 0,
+    "aggs": {
+        "confidence_0_normalised_with_entities_count_extended_stats": {
+            "extended_stats": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.0'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.0'].value) / doc['dbpedia_entities_metadata.entities_count'].value;"
+            }
+        },
+        "confidence_0_normalised_with_entities_count_histogram": {
+            "histogram": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.0'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.0'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                "interval": 0.01,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_10_normalised_with_entities_count_extended_stats": {
+            "extended_stats": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.10'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.10'].value) / doc['dbpedia_entities_metadata.entities_count'].value;"
+            }
+        },
+        "confidence_10_normalised_with_entities_count_histogram": {
+            "histogram": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.10'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.10'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                "interval": 0.01,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_20_normalised_with_entities_count_extended_stats": {
+            "extended_stats": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.20'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.20'].value) / doc['dbpedia_entities_metadata.entities_count'].value;"
+            }
+        },
+        "confidence_20_normalised_with_entities_count_histogram": {
+            "histogram": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.20'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.20'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                "interval": 0.01,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_30_normalised_with_entities_count_extended_stats": {
+            "extended_stats": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.30'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.30'].value) / doc['dbpedia_entities_metadata.entities_count'].value;"
+            }
+        },
+        "confidence_30_normalised_with_entities_count_histogram": {
+            "histogram": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.30'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.30'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                "interval": 0.01,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_40_normalised_with_entities_count_extended_stats": {
+            "extended_stats": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.40'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.40'].value) / doc['dbpedia_entities_metadata.entities_count'].value;"
+            }
+        },
+        "confidence_40_normalised_with_entities_count_histogram": {
+            "histogram": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.40'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.40'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                "interval": 0.01,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_50_normalised_with_entities_count_extended_stats": {
+            "extended_stats": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.50'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.50'].value) / doc['dbpedia_entities_metadata.entities_count'].value;"
+            }
+        },
+        "confidence_50_normalised_with_entities_count_histogram": {
+            "histogram": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.50'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.50'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                "interval": 0.01,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_60_normalised_with_entities_count_extended_stats": {
+            "extended_stats": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.60'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.60'].value) / doc['dbpedia_entities_metadata.entities_count'].value;"
+            }
+        },
+        "confidence_60_normalised_with_entities_count_histogram": {
+            "histogram": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.60'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.60'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                "interval": 0.01,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_70_normalised_with_entities_count_extended_stats": {
+            "extended_stats": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.70'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.70'].value) / doc['dbpedia_entities_metadata.entities_count'].value;"
+            }
+        },
+        "confidence_70_normalised_with_entities_count_histogram": {
+            "histogram": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.70'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.70'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                "interval": 0.01,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_80_normalised_with_entities_count_extended_stats": {
+            "extended_stats": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.80'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.80'].value) / doc['dbpedia_entities_metadata.entities_count'].value;"
+            }
+        },
+        "confidence_80_normalised_with_entities_count_histogram": {
+            "histogram": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.80'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.80'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                "interval": 0.01,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_90_normalised_with_entities_count_extended_stats": {
+            "extended_stats": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.90'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.90'].value) / doc['dbpedia_entities_metadata.entities_count'].value;"
+            }
+        },
+        "confidence_90_normalised_with_entities_count_histogram": {
+            "histogram": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.90'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.90'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                "interval": 0.01,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_100_normalised_with_entities_count_extended_stats": {
+            "extended_stats": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.100'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.100'].value) / doc['dbpedia_entities_metadata.entities_count'].value;"
+            }
+        },
+        "confidence_100_normalised_with_entities_count_histogram": {
+            "histogram": {
+                "script": "if (doc['dbpedia_entities_metadata.confidence_counts.100'].size() == 0 || doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['dbpedia_entities_metadata.confidence_counts.100'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                "interval": 0.01,
+                "min_doc_count": 1
+            }
+        }
+    }
+}
