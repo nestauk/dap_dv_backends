@@ -1,0 +1,53 @@
+{
+    "size": 0,
+    "aggs": {
+        "dupes_10_count_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.dupes_10_count"
+            }
+        },
+        "dupes_10_count_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.dupes_10_count",
+                "interval": 1,
+                "min_doc_count": 1
+            }
+        },
+        "dupes_10_ratio_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.dupes_10_ratio"
+            }
+        },
+        "dupes_10_ratio_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.dupes_10_ratio",
+                "interval": 0.01,
+                "min_doc_count": 1
+            }
+        },
+        "dupes_60_count_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.dupes_60_count"
+            }
+        },
+        "dupes_60_count_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.dupes_60_count",
+                "interval": 1,
+                "min_doc_count": 1
+            }
+        },
+        "dupes_60_ratio_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.dupes_60_ratio"
+            }
+        },
+        "dupes_60_ratio_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.dupes_60_ratio",
+                "interval": 0.01,
+                "min_doc_count": 1
+            }
+        }
+    }
+}

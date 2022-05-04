@@ -1,0 +1,1158 @@
+{
+    "took": 168,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 3018,
+            "relation": "eq"
+        },
+        "max_score": null,
+        "hits": []
+    },
+    "aggregations": {
+        "entities_count_over_token_count_at_50_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 0.25,
+            "avg": 0.015435920752366173,
+            "sum": 46.585608830641114,
+            "sum_of_squares": 2.1273732089842676,
+            "variance": 0.0004666273833246393,
+            "std_deviation": 0.0216015597428667,
+            "std_deviation_bounds": {
+                "upper": 0.05863904023809958,
+                "lower": -0.027767198733367228
+            }
+        },
+        "entities_count_over_token_count_at_0_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 0.1,
+            "avg": 0.0005083019536375182,
+            "sum": 1.53405529607803,
+            "sum_of_squares": 0.040896907255406185,
+            "variance": 0.000013292625563758032,
+            "std_deviation": 0.0036459053147000447,
+            "std_deviation_bounds": {
+                "upper": 0.0078001125830376074,
+                "lower": -0.0067835086757625715
+            }
+        },
+        "entities_count_over_token_count_at_100_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 2478
+                },
+                {
+                    "key": 0.01,
+                    "doc_count": 311
+                },
+                {
+                    "key": 0.02,
+                    "doc_count": 124
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 40
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 18
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 17
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 10
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.18,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.33,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "entities_count_over_token_count_at_10_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 2674
+                },
+                {
+                    "key": 0.01,
+                    "doc_count": 230
+                },
+                {
+                    "key": 0.02,
+                    "doc_count": 65
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 22
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 11
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "entities_count_over_token_count_at_90_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 0.3333333333333333,
+            "avg": 0.02007776163444841,
+            "sum": 60.594684612765306,
+            "sum_of_squares": 3.6978524402882376,
+            "variance": 0.0008221493725376265,
+            "std_deviation": 0.028673147238097642,
+            "std_deviation_bounds": {
+                "upper": 0.0774240561106437,
+                "lower": -0.037268532841746874
+            }
+        },
+        "entities_count_over_token_count_at_80_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 0.5,
+            "avg": 0.013842053911365764,
+            "sum": 41.77531870450188,
+            "sum_of_squares": 2.579837957834002,
+            "variance": 0.0006632146269588471,
+            "std_deviation": 0.025752953752120302,
+            "std_deviation_bounds": {
+                "upper": 0.06534796141560636,
+                "lower": -0.037663853592874844
+            }
+        },
+        "entities_count_over_token_count_at_20_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 0.14285714285714285,
+            "avg": 0.003152530474020863,
+            "sum": 9.514336970594965,
+            "sum_of_squares": 0.32586615984056333,
+            "variance": 0.00009803575964236559,
+            "std_deviation": 0.009901300906566044,
+            "std_deviation_bounds": {
+                "upper": 0.02295513228715295,
+                "lower": -0.016650071339111228
+            }
+        },
+        "entities_count_over_token_count_at_0_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 2969
+                },
+                {
+                    "key": 0.01,
+                    "doc_count": 31
+                },
+                {
+                    "key": 0.02,
+                    "doc_count": 10
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "entities_count_over_token_count_at_60_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 0.5,
+            "avg": 0.010076607071987053,
+            "sum": 30.411200143256924,
+            "sum_of_squares": 1.7264440085284112,
+            "variance": 0.00047051103184137004,
+            "std_deviation": 0.02169126625721445,
+            "std_deviation_bounds": {
+                "upper": 0.053459139586415946,
+                "lower": -0.03330592544244185
+            }
+        },
+        "entities_count_over_token_count_at_80_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 1794
+                },
+                {
+                    "key": 0.01,
+                    "doc_count": 621
+                },
+                {
+                    "key": 0.02,
+                    "doc_count": 236
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 92
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 75
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 67
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 29
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 31
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 17
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 12
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 9
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 11
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.2,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.25,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.28,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.5,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "entities_count_over_token_count_at_20_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 2689
+                },
+                {
+                    "key": 0.01,
+                    "doc_count": 210
+                },
+                {
+                    "key": 0.02,
+                    "doc_count": 60
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 20
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 9
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 13
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "entities_count_over_token_count_at_100_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 0.3333333333333333,
+            "avg": 0.005269031585707732,
+            "sum": 15.901937325665934,
+            "sum_of_squares": 0.6579143981188614,
+            "variance": 0.000190234124610995,
+            "std_deviation": 0.01379253872972612,
+            "std_deviation_bounds": {
+                "upper": 0.03285410904515997,
+                "lower": -0.022316045873744507
+            }
+        },
+        "entities_count_over_token_count_at_40_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 843
+                },
+                {
+                    "key": 0.01,
+                    "doc_count": 586
+                },
+                {
+                    "key": 0.02,
+                    "doc_count": 550
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 377
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 230
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 172
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 74
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 49
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 36
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 24
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 17
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 12
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 15
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 11
+                },
+                {
+                    "key": 0.15,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.18,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.2,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.21,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.22,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.25,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.33,
+                    "doc_count": 2
+                }
+            ]
+        },
+        "entities_count_over_token_count_at_60_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 2091
+                },
+                {
+                    "key": 0.01,
+                    "doc_count": 488
+                },
+                {
+                    "key": 0.02,
+                    "doc_count": 193
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 71
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 45
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 44
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 18
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 17
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 10
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 9
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.15,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.2,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.25,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.5,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "entities_count_over_token_count_at_30_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 0.8888888888888888,
+            "avg": 0.2733470246759234,
+            "sum": 824.9613204719369,
+            "sum_of_squares": 242.5473151072978,
+            "variance": 0.005648307714901556,
+            "std_deviation": 0.07515522413579483,
+            "std_deviation_bounds": {
+                "upper": 0.4236574729475131,
+                "lower": 0.12303657640433377
+            }
+        },
+        "entities_count_over_token_count_at_40_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 0.3333333333333333,
+            "avg": 0.026665992200364495,
+            "sum": 80.47796446070005,
+            "sum_of_squares": 4.50498664902684,
+            "variance": 0.0007816308404296228,
+            "std_deviation": 0.027957661569409247,
+            "std_deviation_bounds": {
+                "upper": 0.08258131533918299,
+                "lower": -0.029249330938454
+            }
+        },
+        "entities_count_over_token_count_at_90_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 1339
+                },
+                {
+                    "key": 0.01,
+                    "doc_count": 624
+                },
+                {
+                    "key": 0.02,
+                    "doc_count": 408
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 204
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 133
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 120
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 43
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 41
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 20
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 11
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 11
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 19
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 10
+                },
+                {
+                    "key": 0.15,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.17,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.18,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.2,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.21,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.22,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.23,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.25,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.27,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.33,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "entities_count_over_token_count_at_30_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 11
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 13
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 18
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 11
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 18
+                },
+                {
+                    "key": 0.15,
+                    "doc_count": 31
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 41
+                },
+                {
+                    "key": 0.17,
+                    "doc_count": 46
+                },
+                {
+                    "key": 0.18,
+                    "doc_count": 61
+                },
+                {
+                    "key": 0.19,
+                    "doc_count": 56
+                },
+                {
+                    "key": 0.2,
+                    "doc_count": 135
+                },
+                {
+                    "key": 0.21,
+                    "doc_count": 140
+                },
+                {
+                    "key": 0.22,
+                    "doc_count": 163
+                },
+                {
+                    "key": 0.23,
+                    "doc_count": 186
+                },
+                {
+                    "key": 0.24,
+                    "doc_count": 164
+                },
+                {
+                    "key": 0.25,
+                    "doc_count": 225
+                },
+                {
+                    "key": 0.26,
+                    "doc_count": 212
+                },
+                {
+                    "key": 0.27,
+                    "doc_count": 179
+                },
+                {
+                    "key": 0.28,
+                    "doc_count": 199
+                },
+                {
+                    "key": 0.29,
+                    "doc_count": 133
+                },
+                {
+                    "key": 0.3,
+                    "doc_count": 158
+                },
+                {
+                    "key": 0.31,
+                    "doc_count": 128
+                },
+                {
+                    "key": 0.32,
+                    "doc_count": 104
+                },
+                {
+                    "key": 0.33,
+                    "doc_count": 109
+                },
+                {
+                    "key": 0.34,
+                    "doc_count": 66
+                },
+                {
+                    "key": 0.35000000000000003,
+                    "doc_count": 77
+                },
+                {
+                    "key": 0.36,
+                    "doc_count": 58
+                },
+                {
+                    "key": 0.37,
+                    "doc_count": 43
+                },
+                {
+                    "key": 0.38,
+                    "doc_count": 47
+                },
+                {
+                    "key": 0.39,
+                    "doc_count": 15
+                },
+                {
+                    "key": 0.4,
+                    "doc_count": 28
+                },
+                {
+                    "key": 0.41000000000000003,
+                    "doc_count": 16
+                },
+                {
+                    "key": 0.42,
+                    "doc_count": 26
+                },
+                {
+                    "key": 0.43,
+                    "doc_count": 9
+                },
+                {
+                    "key": 0.44,
+                    "doc_count": 10
+                },
+                {
+                    "key": 0.45,
+                    "doc_count": 8
+                },
+                {
+                    "key": 0.46,
+                    "doc_count": 9
+                },
+                {
+                    "key": 0.47000000000000003,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.48,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.5,
+                    "doc_count": 12
+                },
+                {
+                    "key": 0.51,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.52,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.53,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.54,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.5700000000000001,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.59,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.62,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.66,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.6900000000000001,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.72,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.8300000000000001,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.88,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "entities_count_over_token_count_at_10_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 0.14285714285714285,
+            "avg": 0.003057370371441355,
+            "sum": 9.227143781010009,
+            "sum_of_squares": 0.2526682311359244,
+            "variance": 0.00007437290759669817,
+            "std_deviation": 0.008623972842994009,
+            "std_deviation_bounds": {
+                "upper": 0.02030531605742937,
+                "lower": -0.014190575314546662
+            }
+        },
+        "entities_count_over_token_count_at_70_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 2204
+                },
+                {
+                    "key": 0.01,
+                    "doc_count": 425
+                },
+                {
+                    "key": 0.02,
+                    "doc_count": 187
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 77
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 34
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 27
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 21
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.2,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.22,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.25,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.28,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "entities_count_over_token_count_at_70_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 0.2857142857142857,
+            "avg": 0.008481163995935558,
+            "sum": 25.596152939733514,
+            "sum_of_squares": 1.285521259367942,
+            "variance": 0.0003540212354609059,
+            "std_deviation": 0.018815452039770555,
+            "std_deviation_bounds": {
+                "upper": 0.046112068075476666,
+                "lower": -0.029149740083605553
+            }
+        },
+        "entities_count_over_token_count_at_50_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 1469
+                },
+                {
+                    "key": 0.01,
+                    "doc_count": 708
+                },
+                {
+                    "key": 0.02,
+                    "doc_count": 405
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 166
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 85
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 66
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 36
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 24
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 21
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 9
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 8
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.15,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.17,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.18,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.25,
+                    "doc_count": 3
+                }
+            ]
+        }
+    }
+}

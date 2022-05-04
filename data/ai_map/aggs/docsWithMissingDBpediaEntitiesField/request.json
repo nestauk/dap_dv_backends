@@ -1,0 +1,16 @@
+{
+    "query": {
+        "bool": {
+            "must_not": {
+                "nested": {
+                    "path": "dbpedia_entities",
+                    "query": {
+                        "exists": {
+                            "field": "dbpedia_entities"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

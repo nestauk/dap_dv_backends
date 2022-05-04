@@ -1,0 +1,26 @@
+{
+	"size": 0,
+	"aggs": {
+		"avg_confidence_histogram": {
+			"histogram": {
+				"field": "dbpedia_entities_metadata.confidence_avg",
+				"interval": 1,
+				"min_doc_count": 1
+			}
+		},
+		"max_confidence_histogram": {
+			"histogram": {
+				"field": "dbpedia_entities_metadata.confidence_max",
+				"interval": 10,
+				"min_doc_count": 1
+			}
+		},
+		"min_confidence_histogram": {
+			"histogram": {
+				"field": "dbpedia_entities_metadata.confidence_min",
+				"interval": 10,
+				"min_doc_count": 1
+			}
+		}
+	}
+}
