@@ -19,9 +19,10 @@ program.requiredOption(
     '-p, --path <path>',
     'Path to directory containing requests'
 );
-program.requiredOption(
+program.option(
     '-o, --out <path>',
-    'Path to directory in which to save results'
+    'Path to directory in which to save results. If not set, the results are saved in the same directory as the request object.',
+    null
 );
 
 program.parse();
@@ -38,7 +39,7 @@ const getDirFiles = filterDirectory(dirEnt => dirEnt.isFile())
 
 const main = async () => {
     const aggregationDirectories = getSubDirectories(options.path);
-    
+
     const payloads = await Promise.all(
         _.map(aggregationDirectories, async dir => {
             const subPath = path.join(options.path, dir);
@@ -49,31 +50,36 @@ const main = async () => {
             const payload = fs.readFileSync(
                 path.join(subPath, 'request.json'), { encoding: 'utf-8' })
             return { name: dir, payload }
-    }));
-    
+        }));
+
     const responses = await Promise.all(
-        _.map(payloads, async ({ name, payload}) => {
+        _.map(payloads, async ({ name, payload }) => {
             const requestPath = `${options.index}/_search`
             const request = buildRequest(
-                options.domain, 
-                requestPath, 
-                'POST', 
+                options.domain,
+                requestPath,
+                'POST',
                 { payload }
             )
             const { body: response } = await makeRequest(request);
             return { name, payload, response }
-    }))
+        }))
 
-    if (!fs.existsSync(options.out)) {
-        fs.mkdirSync(options.out, { recursive: true });
+    if (options.out) {
+        if (!fs.existsSync(options.out)) {
+            fs.mkdirSync(options.out, { recursive: true });
+        }
     }
     await Promise.all(
         _.map(responses, async response => {
+            const outputPath = options.out
+                ? path.join(options.out, `${response.name}.json`)
+                : path.join(options.path, response.name, 'response.json')
             fs.writeFileSync(
-                path.join(options.out, `${response.name}.json`), 
+                outputPath, 
                 JSON.stringify(response.response, null, 4)
             )
-    }));
+        }));
 };
 
 main();
