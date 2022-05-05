@@ -2,16 +2,20 @@ import * as cliProgress from 'cli-progress';
 import { Command } from 'commander';
 import * as _ from 'lamb'
 
-import { scroll, clearScroll } from 'es/search.mjs';
-import { count, getMappings, updateMapping } from 'es/index.mjs';
-import { register, trigger, status } from 'es/snapshot.mjs';
+import { 
+	arxliveCopy, 
+	settings, 
+	defaultMapping, 
+	metaDataMapping 
+} from 'conf/config.mjs';
 import { bulkRequest } from 'es/bulk.mjs'
-import {
-	annotateDocument,
-} from 'dbpedia/spotlight.mjs';
-import { arxliveCopy } from 'conf/config.mjs';
-import { promisesHandler, batch, commanderParseInt } from '../../node_modules/util.mjs';
-import { settings, defaultMapping, metaDataMapping } from 'conf/config.mjs';
+import { count, getMappings, updateMapping } from 'es/index.mjs';
+import { scroll, clearScroll } from 'es/search.mjs';
+import { register, trigger, status } from 'es/snapshot.mjs';
+import { annotateDocument } from 'dbpedia/spotlight.mjs';
+import { batch } from 'util/array.mjs'
+import { commanderParseInt } from 'util/commander.mjs'
+import { promisesHandler } from 'util/promises.mjs'
 
 const program = new Command();
 program.option(
@@ -28,14 +32,14 @@ program.option(
 program.option(
 	'-p, --page-size <page size>',
 	'Size of page to scroll with',
-	10000,
-	commanderParseInt
+	commanderParseInt,
+	10000
 );
 program.option(
 	'-b, --batch-size <batch size>',
 	'Size of batch to annotate over',
-	10,
-	commanderParseInt
+	commanderParseInt,
+	10
 );
 program.option(
 	'-z, --pages <number of pages>',
@@ -61,6 +65,7 @@ program.option(
 
 program.parse();
 const options = program.opts();
+console.log(typeof options.pageSize)
 
 const bar = new cliProgress.SingleBar(
 	{ etaBuffer: options.size * 10 },

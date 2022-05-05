@@ -4,7 +4,7 @@ import { Command } from 'commander';
 
 import * as documentAPI from 'es/document.mjs';
 import { arxliveCopy } from 'conf/config.mjs';
-import { dedent } from '../../node_modules/util.mjs';
+import { dedent } from 'util/string.mjs';
 
 const program = new Command();
 
