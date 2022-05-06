@@ -1,21 +1,21 @@
 import * as cliProgress from 'cli-progress';
 import { Command } from 'commander';
-import * as _ from 'lamb'
+import * as _ from 'lamb';
 
-import { 
-	arxliveCopy, 
-	settings, 
-	defaultMapping, 
-	metaDataMapping 
+import {
+	arxliveCopy,
+	settings,
+	defaultMapping,
+	metaDataMapping
 } from 'conf/config.mjs';
-import { bulkRequest } from 'es/bulk.mjs'
+import { bulkRequest } from 'es/bulk.mjs';
 import { count, getMappings, updateMapping } from 'es/index.mjs';
 import { scroll, clearScroll } from 'es/search.mjs';
 import { register, trigger, status } from 'es/snapshot.mjs';
 import { annotateDocument } from 'dbpedia/spotlight.mjs';
-import { batch } from 'util/array.mjs'
-import { commanderParseInt } from 'util/commander.mjs'
-import { promisesHandler } from 'util/promises.mjs'
+import { batch } from 'util/array.mjs';
+import { commanderParseInt } from 'util/commander.mjs';
+import { promisesHandler } from 'util/promises.mjs';
 
 const program = new Command();
 program.option(
@@ -61,11 +61,11 @@ program.option(
 program.option(
 	'--include-metadata',
 	'Include metadata fields on the index'
-)
+);
 
 program.parse();
 const options = program.opts();
-console.log(typeof options.pageSize)
+console.log(typeof options.pageSize);
 
 const bar = new cliProgress.SingleBar(
 	{ etaBuffer: options.size * 10 },
@@ -102,14 +102,14 @@ const main = async () => {
 	await trigger(
 		options.domain,
 		settings.snapshotSettings.repository,
-		`${newFieldName.toLowerCase()}-before-${+new Date()}`
+		`${newFieldName.toLowerCase()}-before-${Number(new Date())}`
 	);
 
 	// create mapping for new field
 	const mappingPayload = {
 		properties: {
 			[newFieldName]: defaultMapping,
-			...(options.includeMetadata && { [`${newFieldName}_metadata`]: metaDataMapping })
+			...options.includeMetadata && { [`${newFieldName}_metadata`]: metaDataMapping }
 		}
 	};
 	await updateMapping(options.domain, options.index, {
@@ -126,10 +126,11 @@ const main = async () => {
 
 	for await (let page of scroller) {
 		const batches = batch(page.hits.hits, options.batchSize);
-		const updates = []
+		const updates = [];
 		for (const docs of batches) {
 			// filter out docs with empty text
 			const nonEmptyDocs = docs.filter(doc => doc._source[options.field]);
+			// eslint-disable-next-line no-await-in-loop
 			const annotations = await promisesHandler(
 				nonEmptyDocs.map(doc =>
 					annotateDocument(
@@ -145,21 +146,21 @@ const main = async () => {
 			const nonEmptyAnnotations = _.filter(
 				annotations,
 				doc => doc.annotations.length !== 0
-			)
+			);
 			const bulkFormat = _.map(nonEmptyAnnotations, doc => (
 				{
 					id: doc.id,
 					data: {
 						[newFieldName]: doc.annotations,
-						...(doc.metadata && { [`${newFieldName}_metadata`]: doc.metadata })
+						...doc.metadata && { [`${newFieldName}_metadata`]: doc.metadata }
 					}
 				}
 			));
-			bar.increment(options.batchSize)
-			updates.push(bulkFormat)
+			bar.increment(options.batchSize);
+			updates.push(bulkFormat);
 		};
-		const flattenedUpdates = _.flatten(updates)
-		bulkRequest(options.domain, options.index, flattenedUpdates, 'update')
+		const flattenedUpdates = _.flatten(updates);
+		bulkRequest(options.domain, options.index, flattenedUpdates, 'update');
 	}
 	bar.stop();
 	clearScroll(options.domain);
@@ -168,7 +169,7 @@ const main = async () => {
 	await trigger(
 		options.domain,
 		settings.snapshotSettings.repository,
-		`${newFieldName.toLowerCase()}-after-${+new Date()}`
+		`${newFieldName.toLowerCase()}-after-${Number(new Date())}`
 	);
 };
 
