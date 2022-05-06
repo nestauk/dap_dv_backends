@@ -65,7 +65,6 @@ program.option(
 
 program.parse();
 const options = program.opts();
-console.log(typeof options.pageSize);
 
 const bar = new cliProgress.SingleBar(
 	{ etaBuffer: options.size * 10 },
