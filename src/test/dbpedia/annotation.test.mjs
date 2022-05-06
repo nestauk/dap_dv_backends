@@ -1,8 +1,6 @@
 import * as assert from 'assert';
 import * as fs from 'fs/promises';
 
-import { stringify } from '@svizzle/utils';
-
 import {
 	annotateDocument,
 	uploadAnnotatedDocument,
@@ -17,7 +15,7 @@ const e2eDocumentID = '0705.1058';
 
 describe('spotlight', () => {
 	const annotationField = 'textBody_abstract_article';
-	let dummyDocuments, annotatedDummyDocuments;
+	let annotatedDummyDocuments, dummyDocuments;
 	before(async function () {
 		dummyDocuments = JSON.parse(
 			await fs.readFile(
@@ -78,7 +76,7 @@ describe('spotlight', () => {
 	});
 	describe('#annotateDocument()', () => {
 		it('should correctly annotate the first document', async function () {
-			const firstDocument = dummyDocuments.hits.hits[0];
+			const [ firstDocument ] = dummyDocuments.hits.hits;
 			const result = await annotateDocument(
 				firstDocument,
 				'textBody_abstract_article'
@@ -86,6 +84,7 @@ describe('spotlight', () => {
 			assert.deepStrictEqual(result, annotatedDummyDocuments[0]);
 		});
 		it('should correctly annotate all documents', async function () {
+			// eslint-disable-next-line no-invalid-this
 			this.timeout(0);
 			const promises = dummyDocuments.hits.hits.map(doc =>
 				annotateDocument(doc, 'textBody_abstract_article')
