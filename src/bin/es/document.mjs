@@ -24,7 +24,6 @@ program
 	arxliveCopy
 )
 .action((index, path, options) => {
-	// eslint-disable-next-line no-sync
 	const parsed = JSON.parse(fs.readFileSync(path));
 	const documents = parsed instanceof Array ? parsed : [parsed];
 	documents.map(async document => {
