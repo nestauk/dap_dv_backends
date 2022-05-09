@@ -17,6 +17,7 @@ const flattenBucketsWithKeys = buckets => {
 };
 
 const bucketByMaxConfidence = sample => {
+
 	// reduce nested complexity, map each doc to array of confidences
 	const docsWithEntities = _.filter(
 		sample.hits.hits,
@@ -40,6 +41,7 @@ const bucketByMaxConfidence = sample => {
 };
 
 const main = async () => {
+
 	// actual
 	const aggregationResult = JSON.parse(
 		await fs.readFile('./aggs/bucketByMaxConfidence/response.json', 'utf-8')

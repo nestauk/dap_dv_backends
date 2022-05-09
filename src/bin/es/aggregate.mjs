@@ -42,6 +42,7 @@ const main = async () => {
 	const payloads = await Promise.all(
 		_.map(aggregationDirectories, dir => {
 			const subPath = path.join(options.path, dir);
+
 			// if file is generated using script, regenerate
 			if (fs.existsSync(path.join(subPath, 'request.mjs'))) {
 				exec(`node ${path.join(subPath, 'request.mjs')}`);

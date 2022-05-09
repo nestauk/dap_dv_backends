@@ -17,6 +17,7 @@ const main = async () => {
 	const found = [];
 
 	bar.start(missing.length, 0);
+
 	// loop needed to avoid rate limiting issues
 	for (const org of missing) {
 		const query = `"${org.name}"`;
