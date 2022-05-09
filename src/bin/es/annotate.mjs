@@ -127,6 +127,7 @@ const main = async () => {
 		const batches = batch(page.hits.hits, options.batchSize);
 		const updates = [];
 		for (const docs of batches) {
+
 			// filter out docs with empty text
 			const nonEmptyDocs = docs.filter(doc => doc._source[options.field]);
 			// eslint-disable-next-line no-await-in-loop

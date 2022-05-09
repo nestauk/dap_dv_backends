@@ -27,6 +27,7 @@ describe('spotlight', () => {
 				'src/test/data/elastic_search_results/test_index_annotated.json'
 			)
 		);
+
 		// create edge-case index
 		await createIndex('edge-cases');
 		const edgeCaseDocs = JSON.parse(
@@ -95,6 +96,7 @@ describe('spotlight', () => {
 	});
 	describe('end2end', () => {
 		it('should successfully pull the doc down, annotate it and upload back to the test endpoint', async function () {
+
 			// get the doc
 			const index = 'e2e-test';
 			const document = await get(arxliveCopy, index, e2eDocumentID);

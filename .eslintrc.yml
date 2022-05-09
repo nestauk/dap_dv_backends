@@ -81,7 +81,9 @@ rules:
   linebreak-style:
     - error
     - unix
-  lines-around-comment: off
+  lines-around-comment:
+    - error
+    - beforeLineComment: true
   lines-around-directive: error
   lines-between-class-members: error
   max-classes-per-file: off
