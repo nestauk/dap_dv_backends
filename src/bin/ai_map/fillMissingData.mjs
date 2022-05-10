@@ -7,9 +7,9 @@ import { search } from 'bing/search.mjs';
 
 const bar = new SingleBar(Presets.rect);
 
-const FILE_SOURCE = 'data/ai-map/data/ai_map_orgs_places.json';
-const FILE_SUBSET = './data/ai-map/data/ai_map_orgs_places_populated_subset.json';
-const FILE_POPULATED = './data/ai-map/data/ai_map_orgs_places_populated.json';
+const FILE_SOURCE = 'data/ai_map/data/ai_map_orgs_places.json';
+const FILE_SUBSET = './data/ai_map/data/ai_map_orgs_places_populated_subset.json';
+const FILE_POPULATED = './data/ai_map/data/ai_map_orgs_places_populated.json';
 
 const main = async () => {
 	const data = JSON.parse(await fs.readFile(FILE_SOURCE));

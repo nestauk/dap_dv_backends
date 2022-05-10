@@ -1,0 +1,137 @@
+{
+    "size": 0,
+    "aggs": {
+        "confidence_0_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.confidence_counts.0"
+            }
+        },
+        "confidence_10_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.confidence_counts.10"
+            }
+        },
+        "confidence_20_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.confidence_counts.20"
+            }
+        },
+        "confidence_30_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.confidence_counts.30"
+            }
+        },
+        "confidence_40_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.confidence_counts.40"
+            }
+        },
+        "confidence_50_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.confidence_counts.50"
+            }
+        },
+        "confidence_60_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.confidence_counts.60"
+            }
+        },
+        "confidence_70_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.confidence_counts.70"
+            }
+        },
+        "confidence_80_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.confidence_counts.80"
+            }
+        },
+        "confidence_90_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.confidence_counts.90"
+            }
+        },
+        "confidence_100_extended_stats": {
+            "extended_stats": {
+                "field": "dbpedia_entities_metadata.confidence_counts.100"
+            }
+        },
+        "confidence_0_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.confidence_counts.0",
+                "interval": 1,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_10_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.confidence_counts.10",
+                "interval": 1,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_20_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.confidence_counts.20",
+                "interval": 1,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_30_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.confidence_counts.30",
+                "interval": 1,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_40_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.confidence_counts.40",
+                "interval": 1,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_50_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.confidence_counts.50",
+                "interval": 1,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_60_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.confidence_counts.60",
+                "interval": 1,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_70_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.confidence_counts.70",
+                "interval": 1,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_80_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.confidence_counts.80",
+                "interval": 1,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_90_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.confidence_counts.90",
+                "interval": 1,
+                "min_doc_count": 1
+            }
+        },
+        "confidence_100_histogram": {
+            "histogram": {
+                "field": "dbpedia_entities_metadata.confidence_counts.100",
+                "interval": 1,
+                "min_doc_count": 1
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+	"size": 0,
+	"aggs": {
+		"dbpedia_entities": {
+			"nested": {
+				"path": "dbpedia_entities"
+			},
+			"aggs": {
+				"confidence_stats": {
+					"extended_stats": {
+						"field": "dbpedia_entities.confidence"
+					}
+				}
+			}
+		}
+	}
+}

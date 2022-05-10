@@ -1,0 +1,544 @@
+{
+    "took": 7,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 3018,
+            "relation": "eq"
+        },
+        "max_score": null,
+        "hits": []
+    },
+    "aggregations": {
+        "dupes_60_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 1777
+                },
+                {
+                    "key": 1,
+                    "doc_count": 822
+                },
+                {
+                    "key": 2,
+                    "doc_count": 290
+                },
+                {
+                    "key": 3,
+                    "doc_count": 90
+                },
+                {
+                    "key": 4,
+                    "doc_count": 24
+                },
+                {
+                    "key": 5,
+                    "doc_count": 10
+                },
+                {
+                    "key": 6,
+                    "doc_count": 5
+                }
+            ]
+        },
+        "dupes_10_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 622
+                },
+                {
+                    "key": 1,
+                    "doc_count": 363
+                },
+                {
+                    "key": 2,
+                    "doc_count": 316
+                },
+                {
+                    "key": 3,
+                    "doc_count": 305
+                },
+                {
+                    "key": 4,
+                    "doc_count": 236
+                },
+                {
+                    "key": 5,
+                    "doc_count": 218
+                },
+                {
+                    "key": 6,
+                    "doc_count": 164
+                },
+                {
+                    "key": 7,
+                    "doc_count": 165
+                },
+                {
+                    "key": 8,
+                    "doc_count": 116
+                },
+                {
+                    "key": 9,
+                    "doc_count": 85
+                },
+                {
+                    "key": 10,
+                    "doc_count": 85
+                },
+                {
+                    "key": 11,
+                    "doc_count": 59
+                },
+                {
+                    "key": 12,
+                    "doc_count": 56
+                },
+                {
+                    "key": 13,
+                    "doc_count": 40
+                },
+                {
+                    "key": 14,
+                    "doc_count": 37
+                },
+                {
+                    "key": 15,
+                    "doc_count": 26
+                },
+                {
+                    "key": 16,
+                    "doc_count": 27
+                },
+                {
+                    "key": 17,
+                    "doc_count": 16
+                },
+                {
+                    "key": 18,
+                    "doc_count": 12
+                },
+                {
+                    "key": 19,
+                    "doc_count": 7
+                },
+                {
+                    "key": 20,
+                    "doc_count": 10
+                },
+                {
+                    "key": 21,
+                    "doc_count": 10
+                },
+                {
+                    "key": 22,
+                    "doc_count": 12
+                },
+                {
+                    "key": 23,
+                    "doc_count": 9
+                },
+                {
+                    "key": 24,
+                    "doc_count": 4
+                },
+                {
+                    "key": 25,
+                    "doc_count": 3
+                },
+                {
+                    "key": 26,
+                    "doc_count": 4
+                },
+                {
+                    "key": 27,
+                    "doc_count": 2
+                },
+                {
+                    "key": 28,
+                    "doc_count": 2
+                },
+                {
+                    "key": 29,
+                    "doc_count": 1
+                },
+                {
+                    "key": 30,
+                    "doc_count": 2
+                },
+                {
+                    "key": 32,
+                    "doc_count": 1
+                },
+                {
+                    "key": 33,
+                    "doc_count": 1
+                },
+                {
+                    "key": 40,
+                    "doc_count": 1
+                },
+                {
+                    "key": 46,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "dupes_60_ratio_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 0.25,
+            "avg": 0.017663666389998594,
+            "sum": 53.30894516501576,
+            "sum_of_squares": 3.41321241936486,
+            "variance": 0.000818946652209176,
+            "std_deviation": 0.02861724396599323,
+            "std_deviation_bounds": {
+                "upper": 0.07489815432198506,
+                "lower": -0.03957082154198786
+            }
+        },
+        "dupes_60_ratio_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 1781
+                },
+                {
+                    "key": 0.01,
+                    "doc_count": 172
+                },
+                {
+                    "key": 0.02,
+                    "doc_count": 311
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 281
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 133
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 106
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 66
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 67
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 22
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 18
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 14
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 17
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 8
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.15,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.18,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.2,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.21,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.22,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.25,
+                    "doc_count": 3
+                }
+            ]
+        },
+        "dupes_10_ratio_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 1,
+            "avg": 0.11754362580827465,
+            "sum": 354.7466626893729,
+            "sum_of_squares": 67.0187287834449,
+            "variance": 0.008389834263602063,
+            "std_deviation": 0.09159603847111546,
+            "std_deviation_bounds": {
+                "upper": 0.30073570275050554,
+                "lower": -0.06564845113395626
+            }
+        },
+        "dupes_10_count_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 46,
+            "avg": 4.616964877402253,
+            "sum": 13934,
+            "sum_of_squares": 140770,
+            "variance": 25.327107819177268,
+            "std_deviation": 5.032604476727459,
+            "std_deviation_bounds": {
+                "upper": 14.682173830857172,
+                "lower": -5.448244076052665
+            }
+        },
+        "dupes_60_count_extended_stats": {
+            "count": 3018,
+            "min": 0,
+            "max": 6,
+            "avg": 0.6123260437375746,
+            "sum": 1848,
+            "sum_of_squares": 3606,
+            "variance": 0.8198878300771908,
+            "std_deviation": 0.9054765762167406,
+            "std_deviation_bounds": {
+                "upper": 2.423279196171056,
+                "lower": -1.1986271086959066
+            }
+        },
+        "dupes_10_ratio_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 622
+                },
+                {
+                    "key": 0.02,
+                    "doc_count": 19
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 57
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 60
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 106
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 101
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 131
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 95
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 86
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 145
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 156
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 121
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 114
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 128
+                },
+                {
+                    "key": 0.15,
+                    "doc_count": 129
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 108
+                },
+                {
+                    "key": 0.17,
+                    "doc_count": 114
+                },
+                {
+                    "key": 0.18,
+                    "doc_count": 104
+                },
+                {
+                    "key": 0.19,
+                    "doc_count": 81
+                },
+                {
+                    "key": 0.2,
+                    "doc_count": 127
+                },
+                {
+                    "key": 0.21,
+                    "doc_count": 59
+                },
+                {
+                    "key": 0.22,
+                    "doc_count": 56
+                },
+                {
+                    "key": 0.23,
+                    "doc_count": 46
+                },
+                {
+                    "key": 0.24,
+                    "doc_count": 22
+                },
+                {
+                    "key": 0.25,
+                    "doc_count": 74
+                },
+                {
+                    "key": 0.26,
+                    "doc_count": 29
+                },
+                {
+                    "key": 0.27,
+                    "doc_count": 26
+                },
+                {
+                    "key": 0.28,
+                    "doc_count": 21
+                },
+                {
+                    "key": 0.29,
+                    "doc_count": 13
+                },
+                {
+                    "key": 0.3,
+                    "doc_count": 13
+                },
+                {
+                    "key": 0.31,
+                    "doc_count": 13
+                },
+                {
+                    "key": 0.32,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.33,
+                    "doc_count": 12
+                },
+                {
+                    "key": 0.34,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.35000000000000003,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.36,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.37,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.38,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.4,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.41000000000000003,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.45,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.46,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.5,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.6,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.66,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.77,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.8200000000000001,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.86,
+                    "doc_count": 1
+                },
+                {
+                    "key": 1,
+                    "doc_count": 1
+                }
+            ]
+        }
+    }
+}

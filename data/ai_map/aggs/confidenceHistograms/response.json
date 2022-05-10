@@ -1,0 +1,304 @@
+{
+    "took": 1,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 3018,
+            "relation": "eq"
+        },
+        "max_score": null,
+        "hits": []
+    },
+    "aggregations": {
+        "min_confidence_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 116
+                },
+                {
+                    "key": 10,
+                    "doc_count": 613
+                },
+                {
+                    "key": 20,
+                    "doc_count": 423
+                },
+                {
+                    "key": 30,
+                    "doc_count": 1855
+                },
+                {
+                    "key": 40,
+                    "doc_count": 2
+                },
+                {
+                    "key": 50,
+                    "doc_count": 1
+                },
+                {
+                    "key": 60,
+                    "doc_count": 4
+                },
+                {
+                    "key": 70,
+                    "doc_count": 1
+                },
+                {
+                    "key": 90,
+                    "doc_count": 2
+                },
+                {
+                    "key": 100,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "max_confidence_histogram": {
+            "buckets": [
+                {
+                    "key": 30,
+                    "doc_count": 23
+                },
+                {
+                    "key": 40,
+                    "doc_count": 39
+                },
+                {
+                    "key": 50,
+                    "doc_count": 44
+                },
+                {
+                    "key": 60,
+                    "doc_count": 76
+                },
+                {
+                    "key": 70,
+                    "doc_count": 103
+                },
+                {
+                    "key": 80,
+                    "doc_count": 514
+                },
+                {
+                    "key": 90,
+                    "doc_count": 1327
+                },
+                {
+                    "key": 100,
+                    "doc_count": 892
+                }
+            ]
+        },
+        "avg_confidence_histogram": {
+            "buckets": [
+                {
+                    "key": 23,
+                    "doc_count": 1
+                },
+                {
+                    "key": 27,
+                    "doc_count": 2
+                },
+                {
+                    "key": 28,
+                    "doc_count": 5
+                },
+                {
+                    "key": 29,
+                    "doc_count": 3
+                },
+                {
+                    "key": 30,
+                    "doc_count": 46
+                },
+                {
+                    "key": 31,
+                    "doc_count": 53
+                },
+                {
+                    "key": 32,
+                    "doc_count": 131
+                },
+                {
+                    "key": 33,
+                    "doc_count": 243
+                },
+                {
+                    "key": 34,
+                    "doc_count": 286
+                },
+                {
+                    "key": 35,
+                    "doc_count": 332
+                },
+                {
+                    "key": 36,
+                    "doc_count": 303
+                },
+                {
+                    "key": 37,
+                    "doc_count": 278
+                },
+                {
+                    "key": 38,
+                    "doc_count": 239
+                },
+                {
+                    "key": 39,
+                    "doc_count": 146
+                },
+                {
+                    "key": 40,
+                    "doc_count": 234
+                },
+                {
+                    "key": 41,
+                    "doc_count": 131
+                },
+                {
+                    "key": 42,
+                    "doc_count": 116
+                },
+                {
+                    "key": 43,
+                    "doc_count": 93
+                },
+                {
+                    "key": 44,
+                    "doc_count": 48
+                },
+                {
+                    "key": 45,
+                    "doc_count": 66
+                },
+                {
+                    "key": 46,
+                    "doc_count": 39
+                },
+                {
+                    "key": 47,
+                    "doc_count": 32
+                },
+                {
+                    "key": 48,
+                    "doc_count": 33
+                },
+                {
+                    "key": 49,
+                    "doc_count": 6
+                },
+                {
+                    "key": 50,
+                    "doc_count": 44
+                },
+                {
+                    "key": 51,
+                    "doc_count": 9
+                },
+                {
+                    "key": 52,
+                    "doc_count": 16
+                },
+                {
+                    "key": 53,
+                    "doc_count": 10
+                },
+                {
+                    "key": 54,
+                    "doc_count": 5
+                },
+                {
+                    "key": 55,
+                    "doc_count": 12
+                },
+                {
+                    "key": 56,
+                    "doc_count": 8
+                },
+                {
+                    "key": 57,
+                    "doc_count": 4
+                },
+                {
+                    "key": 58,
+                    "doc_count": 6
+                },
+                {
+                    "key": 60,
+                    "doc_count": 10
+                },
+                {
+                    "key": 61,
+                    "doc_count": 1
+                },
+                {
+                    "key": 62,
+                    "doc_count": 2
+                },
+                {
+                    "key": 63,
+                    "doc_count": 1
+                },
+                {
+                    "key": 65,
+                    "doc_count": 8
+                },
+                {
+                    "key": 66,
+                    "doc_count": 2
+                },
+                {
+                    "key": 67,
+                    "doc_count": 1
+                },
+                {
+                    "key": 68,
+                    "doc_count": 2
+                },
+                {
+                    "key": 70,
+                    "doc_count": 2
+                },
+                {
+                    "key": 72,
+                    "doc_count": 1
+                },
+                {
+                    "key": 74,
+                    "doc_count": 1
+                },
+                {
+                    "key": 78,
+                    "doc_count": 1
+                },
+                {
+                    "key": 80,
+                    "doc_count": 1
+                },
+                {
+                    "key": 82,
+                    "doc_count": 1
+                },
+                {
+                    "key": 86,
+                    "doc_count": 1
+                },
+                {
+                    "key": 90,
+                    "doc_count": 2
+                },
+                {
+                    "key": 100,
+                    "doc_count": 1
+                }
+            ]
+        }
+    }
+}
