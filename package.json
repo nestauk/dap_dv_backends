@@ -9,6 +9,7 @@
 		"@aws-sdk/node-http-handler": "^3.49.0",
 		"@aws-sdk/protocol-http": "^3.49.0",
 		"@aws-sdk/signature-v4": "^3.49.0",
+		"@svizzle/file": "^0.12.0",
 		"@svizzle/utils": "^0.16.0",
 		"cli-progress": "^3.10.0",
 		"commander": "^9.0.0",
