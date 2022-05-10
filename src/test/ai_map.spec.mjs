@@ -2,15 +2,15 @@ import { strict as assert } from 'assert';
 import * as fs from 'fs';
 
 import { saveObj } from '@svizzle/file';
-import { mergeWithSum } from '@svizzle/utils';
+import { mergeWithSum, getTruthyValuesKeys } from '@svizzle/utils';
 import * as cliProgress from 'cli-progress';
 import * as _ from 'lamb';
-import { fetch } from 'undici';
 
 import { arxliveCopy } from 'conf/config.mjs';
-import { getEntityDetails } from 'dbpedia/requests.mjs';
+import { getEntityDetails, isDisambiguation } from 'dbpedia/requests.mjs';
 import { scroll, clearScroll } from 'es/search.mjs';
 import { batch } from 'util/array.mjs';
+import { stringify } from 'querystring';
 
 const FILE_DBPEDIA_URIS = 'data/ai_map/test/URI_titles.json';
 const FILE_DETAILS = 'data/ai_map/test/URIs_details.json';
@@ -19,6 +19,7 @@ const FILE_MISSING_DERIVED_FROM = 'data/ai_map/test/missing_derived_from.json';
 const FILE_MISSING_THUMBNAIL = 'data/ai_map/test/missing_image.json';
 const FILE_THUMBNAIL_404s = 'data/ai_map/test/image_404s.json';
 const FILE_THUMBNAIL_EXTENSION_COUNTS = 'data/ai_map/test/image_extension_counts.json';
+const FILE_DISAMBIGUATION_ENTITIES = 'data/ai_map/test/disambiguation_entities.json';
 
 async function batchIterate(iterable, func, { concat=true }={}) {
 	const bar = new cliProgress.Bar(null, cliProgress.Presets.rect);
@@ -142,5 +143,36 @@ describe('aiMapDBpediaEntities', () => {
 			console.log(counts);
 
 		});
+		it('counts the number of entities that are Wikipedia disambiguation pages', async function() {
+			this.timeout(0);
+
+			const bar = new cliProgress.Bar(null, cliProgress.Presets.rect);
+			bar.start(titles.length, 0);
+
+			const batches = batch(titles, 100);
+			let results = {};
+
+			for (const batchOfTitles of batches) {
+				// eslint-disable-next-line no-await-in-loop
+				const resultBatch = await isDisambiguation(batchOfTitles);
+				results = { ...results, ...resultBatch };
+				bar.increment(batchOfTitles.length);
+			}
+
+			const disambiguations = getTruthyValuesKeys(results);
+
+			const stats = {
+				count: disambiguations.length,
+				proportion: disambiguations.length / titles.length
+			};
+			const saveDisambiguations = saveObj(FILE_DISAMBIGUATION_ENTITIES, 4);
+			saveDisambiguations({
+				stats,
+				entities: disambiguations
+			});
+			bar.stop();
+			console.log(stringify(stats));
+		});
 	});
 });
+
