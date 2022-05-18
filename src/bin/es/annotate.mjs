@@ -23,11 +23,24 @@ program.option(
 	'ES domain on which to annotate',
 	arxliveCopy
 );
-program.option('-i, --index <index>', 'Index on which to annotate', 'test');
+program.option(
+	'-i, --index <index>',
+	'Index on which to annotate',
+	'test'
+);
 program.option(
 	'-s, --spotlight <endpoint>',
 	'Endpoint for spotlight annotator',
 	undefined
+);
+program.requiredOption(
+	'-f, --field <field>',
+	'Field of doc to be used as input text for annotation'
+);
+program.option(
+	'-n, --name <annotated_field_name>',
+	'Name of new field to be created',
+	'dbpedia_entities'
 );
 program.option(
 	'-p, --page-size <page size>',
@@ -36,23 +49,15 @@ program.option(
 	10000
 );
 program.option(
-	'-b, --batch-size <batch size>',
-	'Size of batch to annotate over',
-	commanderParseInt,
-	10
-);
-program.option(
 	'-z, --pages <number of pages>',
 	'Number of pages to iterate over',
 	'all'
 );
-program.requiredOption(
-	'-f, --field <field>',
-	'Field of doc to be used as input text for annotation'
-);
 program.option(
-	'-n, --name <annotated_field_name>',
-	'Name of new field to be created'
+	'-b, --batch-size <batch size>',
+	'Size of batch to annotate over',
+	commanderParseInt,
+	10
 );
 program.option(
 	'--force',
