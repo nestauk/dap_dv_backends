@@ -9,7 +9,7 @@ program
 .command('query')
 .description('Queries the endpoint')
 .argument('<query>', 'query term')
-.argument('[domain]', 'domain on which to register snapshot')
+.argument('[domain]', 'domain on which to query')
 .action(async (query, domain = arxliveCopy) => {
 	const path = `_search`;
 	const payload = { size: 2 };
