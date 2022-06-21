@@ -1,0 +1,112 @@
+{
+    "0": {
+        "noClasses": {
+            "count": 1,
+            "proportion": 0.05263157894736842
+        },
+        "noRootClass": {
+            "count": 3,
+            "proportion": 0.15789473684210525
+        }
+    },
+    "10": {
+        "noClasses": {
+            "count": 8,
+            "proportion": 0.06956521739130435
+        },
+        "noRootClass": {
+            "count": 16,
+            "proportion": 0.1391304347826087
+        }
+    },
+    "20": {
+        "noClasses": {
+            "count": 13,
+            "proportion": 0.16666666666666666
+        },
+        "noRootClass": {
+            "count": 27,
+            "proportion": 0.34615384615384615
+        }
+    },
+    "30": {
+        "noClasses": {
+            "count": 1152,
+            "proportion": 0.17852161785216178
+        },
+        "noRootClass": {
+            "count": 2277,
+            "proportion": 0.3528591352859135
+        }
+    },
+    "40": {
+        "noClasses": {
+            "count": 226,
+            "proportion": 0.1422278162366268
+        },
+        "noRootClass": {
+            "count": 487,
+            "proportion": 0.3064820641913153
+        }
+    },
+    "50": {
+        "noClasses": {
+            "count": 133,
+            "proportion": 0.13407258064516128
+        },
+        "noRootClass": {
+            "count": 291,
+            "proportion": 0.2933467741935484
+        }
+    },
+    "60": {
+        "noClasses": {
+            "count": 95,
+            "proportion": 0.14960629921259844
+        },
+        "noRootClass": {
+            "count": 181,
+            "proportion": 0.28503937007874014
+        }
+    },
+    "70": {
+        "noClasses": {
+            "count": 60,
+            "proportion": 0.13333333333333333
+        },
+        "noRootClass": {
+            "count": 121,
+            "proportion": 0.2688888888888889
+        }
+    },
+    "80": {
+        "noClasses": {
+            "count": 70,
+            "proportion": 0.14893617021276595
+        },
+        "noRootClass": {
+            "count": 129,
+            "proportion": 0.274468085106383
+        }
+    },
+    "90": {
+        "noClasses": {
+            "count": 88,
+            "proportion": 0.06470588235294118
+        },
+        "noRootClass": {
+            "count": 189,
+            "proportion": 0.13897058823529412
+        }
+    },
+    "100": {
+        "noClasses": {
+            "count": 72,
+            "proportion": 0.09651474530831099
+        },
+        "noRootClass": {
+            "count": 173,
+            "proportion": 0.23190348525469168
+        }
+    }
+}

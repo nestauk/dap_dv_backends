@@ -17,6 +17,9 @@ const FILE_IMAGE_STATUS = 'data/ai_map/quality/entities/image_status.json';
 const FILE_IMAGE_404s = 'data/ai_map/quality/entities/image_404s.json';
 const FILE_IMAGE_EXTENSION_COUNTS = 'data/ai_map/quality/entities/image_extension_counts.json';
 const FILE_DISAMBIGUATION_ENTITIES = 'data/ai_map/quality/entities/disambiguation_entities.json';
+const FILE_CONFIDENCE_COUNTS = 'data/ai_map/quality/entities/confidenceCounts.json';
+const FILE_CIELING_CONFIDENCE_VALUES = 'data/ai_map/quality/entities/cielingConfidenceValues.json';
+const FILE_AVERAGE_CONFIDENCE_VALUES = 'data/ai_map/quality/entities/averageConfidenceValues.json';
 
 const save = (path, object) => saveObj(path, 4)(object);
 const addStats = (entities, all) => {
@@ -30,6 +33,7 @@ const addStats = (entities, all) => {
 	};
 };
 
+
 const main = async () => {
 
 	// Get Titles for all entities annotated on the ai_map index
@@ -41,6 +45,15 @@ const main = async () => {
 	console.log('[+] Getting Entity Details');
 	const details = await batchIterate(titles, getEntityDetails);
 	save(FILE_ENTITY_DETAILS, details);
+
+	// Confidence related statistics
+	console.log('[+] Calculating Confidence related Statistics');
+	const confidenceCounts = await getAllConfidenceLevels('ai_map');
+	saveObj(FILE_CONFIDENCE_COUNTS)(results);
+	const cielingConfidenceValues = _.mapValues(confidenceCounts, c => Math.max(...c));
+	save(FILE_CIELING_CONFIDENCE_VALUES, cielingConfidenceValues);
+	const averageConfidenceValues = _.mapValues(confidenceCounts, _.mean);
+	save(FILE_AVERAGE_CONFIDENCE_VALUES, averageConfidenceValues);
 
 	// Get the count statistics for the details
 	console.log('[+] Calculating count statistics');
