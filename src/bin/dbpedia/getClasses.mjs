@@ -5,7 +5,7 @@ import * as _ from 'lamb';
 
 import { stringify } from '@svizzle/utils';
 import { arxliveCopy } from 'conf/config.mjs';
-import { getClasses } from 'dbpedia/requests.mjs';
+import { getClasses, hasInfoBoxTemplate } from 'dbpedia/requests.mjs';
 import { dbo, dbr, owl } from 'dbpedia/util.mjs';
 import { getEntities } from 'es/entities.mjs';
 import { batchIterate } from 'util/array.mjs';
@@ -42,8 +42,21 @@ const main = async () => {
 		? await getEntities(options.index)
 		: JSON.parse(await fs.readFile(options.path));
 
-	const results = await batchIterate(
+	console.log('[+] Checking infobox status');
+	const infoboxStatus = await batchIterate(
 		titles,
+		hasInfoBoxTemplate,
+	);
+	const [hasInfobox, noInfobox] = _.partition(
+		_.keys(infoboxStatus),
+		key => infoboxStatus[key]
+	);
+
+	/* Class related logic, for entities with infoboxes */
+
+	console.log('[+] Collecting class data');
+	const results = await batchIterate(
+		hasInfobox,
 		batch => getClasses(batch, { fullURI: true, squash: false }),
 		{ concat: false }
 	);
@@ -62,12 +75,27 @@ const main = async () => {
 		sortedClasses,
 		_.mapWith(_.getKey('class_'))
 	);
+
+	const justOwlThing = _.filter(
+		_.keys(sortedAndSquashedClasses),
+		key => {
+			const arr = sortedAndSquashedClasses[key];
+			return arr.length === 1 && arr[0] === 'owl:Thing';
+		}
+	);
+	const noInfoboxPrefixes = _.map(noInfobox, s => s.replaceAll(dbr, 'dbr:'));
+	const emptyClasses = _.make(
+		[...noInfoboxPrefixes, ...justOwlThing],
+		Array([...noInfoboxPrefixes, ...justOwlThing].length).fill([])
+	);
+
+	const output = { ...sortedAndSquashedClasses, ...emptyClasses };
 	const save = (path, object) => saveObj(path, 4)(object);
 	save(
 		options.out,
 		{
 			prefixes: { dbo, dbr, owl },
-			classes: sortedAndSquashedClasses
+			classes: output
 		}
 	);
 };
