@@ -3,3 +3,4 @@ node_modules
 !/**/src/node_modules
 .prettierignore
 .DS_Store
+**/secrets/**
