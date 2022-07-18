@@ -6,6 +6,7 @@
 	"dependencies": {
 		"@aws-crypto/sha256-browser": "^2.0.1",
 		"@aws-sdk/client-ses": "^3.128.0",
+		"@aws-sdk/client-s3": "^3.121.0",
 		"@aws-sdk/credential-provider-node": "^3.49.0",
 		"@aws-sdk/node-http-handler": "^3.49.0",
 		"@aws-sdk/protocol-http": "^3.49.0",
@@ -17,6 +18,7 @@
 		"commander": "^9.0.0",
 		"cross-env": "^7.0.3",
 		"fastify": "^4.2.1",
+		"express": "^4.18.1",
 		"lamb": "^0.60.0",
 		"redis": "^4.2.0",
 		"undici": "^4.13.0",
@@ -44,6 +46,7 @@
 		"rebuildEdgeCasesIndex": "node src/bin/es/index.mjs delete edge-cases && sleep 1 && node src/bin/es/index.mjs create edge-cases && sleep 1 && node src/bin/es/document.mjs create edge-cases ./src/test/data/elastic_search_results/test_documents.json",
 		"rebuildTestIndex": "node src/bin/es/index.mjs delete test && sleep 1 && node src/bin/es/index.mjs create test --path src/test/conf/test_index_mapping.json && sleep 1 && node src/bin/es/index.mjs reindex arxiv_v6 test --ignore dbpedia_entities dbpedia_entities_metadata --max-docs 1000",
 		"spotlightSetup": "bash src/bin/spotlight/setup.sh",
+		"spotlightServer": "node src/servers/spotlight/app.mjs",
 		"test": "mocha --recursive --parallel src/test",
 		"testAnnotationLocally": "npm run rebuildTestIndex && sleep 5 && node src/bin/es/annotate.mjs --field textBody_abstract_article --name dbpedia_entities --index test --page-size 10 --include-metadata",
 		"testAnnotationRemotely": "npm run rebuildTestIndex && sleep 5 && node src/bin/es/annotate.mjs --field textBody_abstract_article --index test --spotlight http://localhost:2222/rest/annotate --page-size 10",
