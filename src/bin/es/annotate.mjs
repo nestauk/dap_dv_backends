@@ -1,6 +1,7 @@
 import * as cliProgress from 'cli-progress';
 import { Command } from 'commander';
 import * as _ from 'lamb';
+import { performance } from 'perf_hooks';
 
 import {
 	arxliveCopy,
@@ -46,7 +47,13 @@ program.option(
 	'-p, --page-size <page size>',
 	'Size of page to scroll with',
 	commanderParseInt,
-	10000
+	1000
+);
+program.option(
+	'-b, --batch-size <batch size>',
+	'Size of batch to annotate over',
+	commanderParseInt,
+	10
 );
 program.option(
 	'-z, --pages <number of pages>',
@@ -100,6 +107,8 @@ const main = async () => {
 			`Can't trigger a snapshot as domain is already busy creating one`
 		);
 	}
+
+	const startTime = performance.now();
 
 	// initialize snapshot repository with given settings
 	await register(options.domain, settings.snapshotSettings.repository);
@@ -176,6 +185,9 @@ const main = async () => {
 		settings.snapshotSettings.repository,
 		`${newFieldName.toLowerCase()}-after-${Number(new Date())}`
 	);
+
+	const endTime = performance.now();
+	console.log(`Total time taken (in ms): ${endTime - startTime}`);
 };
 
 main();
