@@ -1,22 +1,13 @@
-import * as cliProgress from 'cli-progress';
 import { Command } from 'commander';
 import * as _ from 'lamb';
 import { performance } from 'perf_hooks';
 
-import {
-	arxliveCopy,
-	settings,
-	defaultMapping,
-	metaDataMapping
-} from 'conf/config.mjs';
-import { bulkRequest } from 'es/bulk.mjs';
-import { count, getMappings, updateMapping } from 'es/index.mjs';
-import { scroll, clearScroll } from 'es/search.mjs';
+import { arxliveCopy, settings } from 'conf/config.mjs';
+import { getMappings } from 'es/index.mjs';
 import { register, trigger, status } from 'es/snapshot.mjs';
-import { annotateDocument } from 'dbpedia/spotlight.mjs';
-import { batch } from 'util/array.mjs';
+import {annotateIndex } from 'dbpedia/spotlight.mjs';
 import { commanderParseInt } from 'util/commander.mjs';
-import { promisesHandler } from 'util/promises.mjs';
+import { dedent } from 'util/string.mjs';
 
 const program = new Command();
 program.option(
@@ -29,10 +20,9 @@ program.option(
 	'Index on which to annotate',
 	'test'
 );
-program.option(
+program.requiredOption(
 	'-s, --spotlight <endpoint>',
 	'Endpoint for spotlight annotator',
-	undefined
 );
 program.requiredOption(
 	'-f, --field <field>',
@@ -47,7 +37,7 @@ program.option(
 	'-p, --page-size <page size>',
 	'Size of page to scroll with',
 	commanderParseInt,
-	1000
+	100
 );
 program.option(
 	'-b, --batch-size <batch size>',
@@ -61,27 +51,17 @@ program.option(
 	'all'
 );
 program.option(
-	'-b, --batch-size <batch size>',
-	'Size of batch to annotate over',
-	commanderParseInt,
-	10
-);
-program.option(
 	'--force',
 	'Force the annotation process, even if no snapshots can be created'
 );
 program.option(
 	'--include-metadata',
-	'Include metadata fields on the index'
+	'Include metadata fields on the index',
+	true
 );
 
 program.parse();
 const options = program.opts();
-
-const bar = new cliProgress.SingleBar(
-	{ etaBuffer: options.size * 10 },
-	cliProgress.Presets.shades_classic
-);
 
 const main = async () => {
 	if (!settings.snapshotSettings && !options.force) {
@@ -90,14 +70,14 @@ const main = async () => {
 		);
 	}
 
-	const newFieldName = options.name || `dbpedia_entities-${options.field}`;
 	const currentMapping = await getMappings(options.domain, options.index);
 	if (
-		newFieldName in currentMapping[options.index].mappings.properties &&
+		options.name in currentMapping[options.index].mappings.properties &&
 		!options.force
 	) {
 		throw new Error(
-			'Field already exists at index mapping, and force flag or continue flag not supplied'
+			dedent`Field already exists at index mapping, and force 
+				   flag or continue flag not supplied`
 		);
 	}
 
@@ -115,75 +95,26 @@ const main = async () => {
 	await trigger(
 		options.domain,
 		settings.snapshotSettings.repository,
-		`${newFieldName.toLowerCase()}-before-${Number(new Date())}`
+		`${options.name.toLowerCase()}-before-${Number(new Date())}`
 	);
 
-	// create mapping for new field
-	const mappingPayload = {
-		properties: {
-			[newFieldName]: defaultMapping,
-			...options.includeMetadata && { [`${newFieldName}_metadata`]: metaDataMapping }
-		}
-	};
-	await updateMapping(options.domain, options.index, {
-		payload: mappingPayload,
-	});
-
-	const totalDocuments = await count(options.domain, options.index);
-	bar.start(totalDocuments, 0);
-
-	const scroller = scroll(options.domain, options.index, {
-		size: options.pageSize,
-		pages: options.pages,
-	});
-
-	for await (let page of scroller) {
-		const batches = batch(page.hits.hits, options.batchSize);
-		const updates = [];
-		for (const docs of batches) {
-
-			// filter out docs with empty text
-			const nonEmptyDocs = docs.filter(doc => doc._source[options.field]);
-			// eslint-disable-next-line no-await-in-loop
-			const annotations = await promisesHandler(
-				nonEmptyDocs.map(doc =>
-					annotateDocument(
-						doc,
-						options.field,
-						{
-							endpoint: options.spotlight,
-							includeMetaData: options.includeMetadata
-						}
-					)
-				)
-			);
-			const nonEmptyAnnotations = _.filter(
-				annotations,
-				doc => doc.annotations.length !== 0
-			);
-			const bulkFormat = _.map(nonEmptyAnnotations, doc => (
-				{
-					id: doc.id,
-					data: {
-						[newFieldName]: doc.annotations,
-						...doc.metadata && { [`${newFieldName}_metadata`]: doc.metadata }
-					}
-				}
-			));
-			bar.increment(options.batchSize);
-			updates.push(bulkFormat);
-		};
-		const flattenedUpdates = _.flatten(updates);
-		bulkRequest(options.domain, options.index, flattenedUpdates, 'update');
-	}
-	bar.stop();
-	clearScroll(options.domain);
+	await annotateIndex(
+		options.domain,
+		options.index,
+		options.spotlight,
+		options.field,
+		options.name,
+		options.includeMetadata,
+		options.batchSize,
+		options.pages,
+		options.pageSize
+	);
 
 	// trigger snapshot after successful run
 	await trigger(
 		options.domain,
 		settings.snapshotSettings.repository,
-		`${newFieldName.toLowerCase()}-after-${Number(new Date())}`
+		`${options.name.toLowerCase()}-after-${Number(new Date())}`
 	);
 
 	const endTime = performance.now();
@@ -191,3 +122,5 @@ const main = async () => {
 };
 
 main();
+
+

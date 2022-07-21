@@ -67,22 +67,17 @@ http {
 
 export const setup = async workers => {
 
-	const previousState = await getCurrentState(TERRAFORM_DIRECTORY);
-
-	// if there are no resources, provision some
-	if (!previousState || !previousState.resources.length) {
-		generateConfiguration(workers, path.join(TERRAFORM_DIRECTORY, 'main.tf.json'));
-		init(TERRAFORM_DIRECTORY);
-		apply(TERRAFORM_DIRECTORY);
-	}
+	generateConfiguration(workers, path.join(TERRAFORM_DIRECTORY, 'main.tf.json'));
+	await init(TERRAFORM_DIRECTORY);
+	await apply(TERRAFORM_DIRECTORY);
 
 	const currentState = await getCurrentState(TERRAFORM_DIRECTORY);
 	configureLoadBalancer(currentState);
 
-	// wait at least another minute to ensure instances are running
-	await sleep(1000 * 15);
+	// wait to ensure instances are running
+	// TODO: Keep polling instance until sure we can connect
+	await sleep(1000 * 60);
 
 	// TODO: Handle provisioning of existing resources more gracefully
 	launchSpotlightContainers(currentState);
-	state.status = { status: 'up', workers };
 };
