@@ -7,6 +7,7 @@ import * as terraform from './terraform.mjs';
 
 
 const provisionService = (context, event) => callback => {
+
 	terraform.provision(context.desiredWorkers).then(() => {
 		context.currentWorkers = context.desiredWorkers;
 		callback('READY');

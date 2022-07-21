@@ -1,15 +1,8 @@
-import { defaultProvider } from '@aws-sdk/credential-provider-node';
-import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
-
-import { BACKEND_BASE } from './config.mjs';
+import { sendEmail } from 'aws/email.mjs';
+import { BACKEND_BASE, SOURCE_EMAIL } from './config.mjs';
 import { generateToken } from './crypto.mjs';
 
-const client = new SESClient({
-	credentials: defaultProvider(),
-	region: 'eu-west-2',
-});
-
-export const sendEmail = async email => {
+export const sentTokenEmail = async email => {
 	const token = generateToken();
 
 	const link = new URL('provide', BACKEND_BASE);
@@ -22,25 +15,11 @@ export const sendEmail = async email => {
 		<a href="${link.toString()}">Click here</a><br>
 		If you don't verify your email, your token above will not work.`;
 
-	const input = {
-		Source: 'authenticate@dap-tools.uk',
-		Destination: {
-			ToAddresses: [email],
-		},
-		Message: {
-			Body: {
-				Html: {
-					Charset: 'UTF-8',
-					Data: message,
-				},
-			},
-			Subject: {
-				Charset: 'UTF-8',
-				Data: 'Nesta verification email',
-			},
-		},
-	};
-	const command = new SendEmailCommand(input);
-	const response = await client.send(command);
+	const response = await sendEmail(
+		email,
+		SOURCE_EMAIL,
+		message,
+		'Nesta verification email'
+	);
 	return response;
 };

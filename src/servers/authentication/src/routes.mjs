@@ -1,5 +1,5 @@
 import { doesTokenMatch, hashAndSaltToken } from './crypto.mjs';
-import { sendEmail } from './email.mjs';
+import { sentTokenEmail } from './email.mjs';
 
 // eslint-disable-next-line require-await
 export const routes = async (fastify, options) => {
@@ -12,7 +12,7 @@ export const routes = async (fastify, options) => {
 		if (!email.endsWith('nesta.org.uk')) {
 			return reply.code(400).send('Nesta email must be provided');
 		}
-		sendEmail(email);
+		sentTokenEmail(email);
 		reply.send();
 	});
 

@@ -9,3 +9,4 @@ const BACKEND_BASES = {
 };
 
 export const BACKEND_BASE = BACKEND_BASES[nodeEnv];
+export const SOURCE_EMAIL = 'authenticate@dap-tools.uk';

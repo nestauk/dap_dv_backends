@@ -25,11 +25,11 @@ program.requiredOption(
 	'Endpoint for spotlight annotator',
 );
 program.requiredOption(
-	'-f, --field <field>',
+	'-f, --field-name <field>',
 	'Field of doc to be used as input text for annotation'
 );
 program.option(
-	'-n, --name <annotated_field_name>',
+	'-n, --new-field-name <annotated_field_name>',
 	'Name of new field to be created',
 	'dbpedia_entities'
 );
@@ -72,7 +72,7 @@ const main = async () => {
 
 	const currentMapping = await getMappings(options.domain, options.index);
 	if (
-		options.name in currentMapping[options.index].mappings.properties &&
+		options.newFieldName in currentMapping[options.index].mappings.properties &&
 		!options.force
 	) {
 		throw new Error(
@@ -95,26 +95,22 @@ const main = async () => {
 	await trigger(
 		options.domain,
 		settings.snapshotSettings.repository,
-		`${options.name.toLowerCase()}-before-${Number(new Date())}`
+		`${options.newFieldName.toLowerCase()}-before-${Number(new Date())}`
 	);
 
 	await annotateIndex(
 		options.domain,
 		options.index,
 		options.spotlight,
-		options.field,
-		options.name,
-		options.includeMetadata,
-		options.batchSize,
-		options.pages,
-		options.pageSize
+		options.fieldName,
+		options
 	);
 
 	// trigger snapshot after successful run
 	await trigger(
 		options.domain,
 		settings.snapshotSettings.repository,
-		`${options.name.toLowerCase()}-after-${Number(new Date())}`
+		`${options.newFieldName.toLowerCase()}-after-${Number(new Date())}`
 	);
 
 	const endTime = performance.now();
