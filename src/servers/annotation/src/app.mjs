@@ -14,7 +14,7 @@ const start = async () => {
 	try {
 		await fastify.listen({ port: PORT });
 		console.log(`Listening at http://localhost:${PORT}`);
-		setInterval(tick, 5000);
+		tick();
 	} catch (err) {
 		fastify.log.error(err);
 		throw new Error(err);
