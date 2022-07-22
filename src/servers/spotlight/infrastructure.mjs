@@ -8,30 +8,31 @@ import { getCurrentState } from '../../node_modules/terraform/state.mjs';
 import { init, apply } from '../../node_modules/terraform/commands.mjs';
 import { displayCommandOutput } from '../../node_modules/util/shell.mjs';
 import { sleep } from '../../node_modules/util/time.mjs';
+import { state } from './state.mjs';
+
 
 const SERVER_DIRECTORY = 'src/servers/spotlight';
 const TERRAFORM_DIRECTORY = path.join(SERVER_DIRECTORY, 'terraform');
 
-export const launchSpotlightContainers = async state => {
+export const launchSpotlightContainers = async terraformState => {
 
 	console.log('[+] Launching Spotlight Containers');
-	const ips = _.map(_.values(state.outputs), _.getKey('value'));
+	const ips = _.map(_.values(terraformState.outputs), _.getKey('value'));
 	const command = await fs.readFile(
 		path.join(SERVER_DIRECTORY, 'spotlightDockerCommand.sh'),
 		{ encoding: 'utf-8'}
 	);
-	console.log(command);
-
-	_.map(ips, ip => {
+	_.forEach(ips, ip => {
 		exec(`ssh -oStrictHostKeyChecking=accept-new -i ~/.ssh/spotlight.pem ubuntu@${ip} "cd /home/ubuntu ; ${command}"`, displayCommandOutput);
 	});
+	console.log('[+] Done.');
 };
 
-export const configureLoadBalancer = async state => {
+export const configureLoadBalancer = async terraformState => {
 
 	console.log('[+] Configuring Load Balancer...');
 	const ips = _.map(
-		_.values(state.outputs),
+		_.values(terraformState.outputs),
 		output => `server ${output.value}:2222;`);
 	const ipStrings = _.join(
 		ips,
@@ -71,11 +72,6 @@ export const setup = async workers => {
 	// if there are no resources, provision some
 	if (!previousState || !previousState.resources.length) {
 		generateConfiguration(workers, path.join(TERRAFORM_DIRECTORY, 'main.tf.json'));
-
-		// not sure why, but a sleep here is neccessary in order to ensure
-		// configuration file is available to the Terraform apply command
-		await sleep(100);
-
 		init(TERRAFORM_DIRECTORY);
 		apply(TERRAFORM_DIRECTORY);
 	}
@@ -86,4 +82,5 @@ export const setup = async workers => {
 	// wait at least another minute to ensure instances are running
 	await sleep(1000 * 60);
 	launchSpotlightContainers(currentState);
+	state.status = { status: 'up', workers };
 };
