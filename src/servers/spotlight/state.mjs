@@ -1,3 +1,4 @@
 export let state = {
-	status: {}
+	status: 'down',
+	workers: 0
 };
