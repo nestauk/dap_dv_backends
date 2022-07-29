@@ -80,7 +80,9 @@ export const setup = async workers => {
 	configureLoadBalancer(currentState);
 
 	// wait at least another minute to ensure instances are running
-	await sleep(1000 * 60);
+	await sleep(1000 * 15);
+
+	// TODO: Handle provisioning of existing resources more gracefully
 	launchSpotlightContainers(currentState);
 	state.status = { status: 'up', workers };
 };

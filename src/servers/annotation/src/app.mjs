@@ -1,6 +1,7 @@
 import Fastify from 'fastify';
 
 import { PORT } from './config.mjs';
+import { tick } from './logic.mjs';
 import { routes } from './routes.mjs';
 
 const fastify = Fastify({
@@ -13,9 +14,11 @@ const start = async () => {
 	try {
 		await fastify.listen({ port: PORT });
 		console.log(`Listening at http://localhost:${PORT}`);
+		setInterval(tick, 5000);
 	} catch (err) {
 		fastify.log.error(err);
 		throw new Error(err);
 	}
 };
+
 start();

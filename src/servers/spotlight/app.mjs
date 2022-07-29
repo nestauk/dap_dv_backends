@@ -23,7 +23,7 @@ app.post('/provision', (req, res) => {
 	res.send();
 });
 
-app.post('/teardown', (_, res) => {
+app.get('/teardown', (_, res) => {
 	state.status = { status: 'destroying' };
 	const callback = (err, stdout, stderr) => {
 		state.status = { status: 'down' };
