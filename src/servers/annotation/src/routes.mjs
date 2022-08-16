@@ -1,8 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import { MAX_WORKERS } from './config.mjs';
-import { state } from './state.mjs';
-import { getStatus } from './util.mjs';
+import { arxliveCopy as DEFAULT_DOMAIN } from 'conf/config.mjs';
+import { MAX_WORKERS, annotationEndpoint } from './config.mjs';
+import { annotationService } from './machine.mjs';
 
 export const routes = (fastify, options, done) => {
 
@@ -15,14 +15,35 @@ export const routes = (fastify, options, done) => {
 
 	fastify.post('/annotate/es', (request, reply) => {
 
-		let { domain, index, field, workers=MAX_WORKERS } = request.body;
+		let {
+			index,
+			field,
+			includeMetaData = true,
+			domain = DEFAULT_DOMAIN,
+			newField = 'dbpedia_entities',
+			workers = MAX_WORKERS,
+		} = request.body;
 
 		// no more than 4 workers per process
 		if (workers > MAX_WORKERS) {
 			workers = MAX_WORKERS;
 		}
+
 		const id = uuidv4();
-		state.waiting = [...state.waiting, { domain, index, field, workers, id }];
+
+		annotationService.send(
+			{
+				id,
+				workers,
+				domain,
+				index,
+				field,
+				newField,
+				annotationEndpoint,
+				includeMetaData,
+				type: 'PROVISION',
+			}
+		);
 		reply.send({ id });
 	});
 
