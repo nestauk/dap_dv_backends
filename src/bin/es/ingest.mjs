@@ -49,16 +49,16 @@ const main = async () => {
 
 	const documents = options.key
 		? _.map(data, object => {
-			const { [options.key]: id, ...contents } = object;
-			return { id, data: contents };
+			const { [options.key]: _id, ...contents } = object;
+			return { _id, data: contents };
 		})
-		: _.map(data, (contents, id) => ({ id, data: contents }));
+		: _.map(data, (contents, _id) => ({ _id, data: contents }));
 
-	const docsWithId = _.filter(documents, doc => doc.id);
+	const docsWithId = _.filter(documents, doc => doc._id);
 	for (const docs of batch(docsWithId, options.batchSize)) {
 		// eslint-disable-next-line no-await-in-loop
 		const response = await bulkRequest(options.domain, options.index, docs, 'create');
-		logErrors(response.items);
+		console.log(response);
 	};
 };
 

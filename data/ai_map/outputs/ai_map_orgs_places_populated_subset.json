@@ -1,12 +1,43 @@
 [
     {
+        "description": "Skip to content London School of Economics and Political Science. Trending at LSE. Undergraduate open days: April and July. Campus tours for prospective students. Event: Continuity and Change in Public Opinion About European integration. Book Review: Social Change and the Weight of the Past.",
+        "location": {
+            "lat": 51.513974,
+            "lon": -0.116737,
+            "postcode": "WC2A2AE"
+        },
+        "name": "London School of Economics & Pol Sci",
+        "name_extra": "",
+        "place_id": "fe9dd256a87d91f7ce30a7f67a6aa1d222b86f8d",
+        "types": [
+            "3"
+        ],
+        "url": "https://www.lse.ac.uk/"
+    },
+    {
+        "description": "The London School of Hygiene & Tropical Medicine is renowned for its research, postgraduate studies and continuing education in public and global health. LSHTM has an international presence and collaborative ethos. It is uniquely placed to help shape health policy and translate research findings into tangible impact. Discover more about us News",
+        "location": {
+            "lat": 51.520859,
+            "lon": -0.13032,
+            "postcode": "WC1E7HT"
+        },
+        "name": "London Sch of Hygiene and Trop Medicine",
+        "name_extra": "",
+        "place_id": "fe9dd256a87d91f7ce30a7f67a6aa1d222b86f8d",
+        "types": [
+            "3"
+        ],
+        "url": "https://www.lshtm.ac.uk/"
+    },
+    {
         "description": "Leeds Metropolitan University can offer international students a vibrant and growing international community with over 4,000 international students from well over 100 countries. There are many reasons why students choose to study here. Campuses As a dynamic modern university, we’re always growing and developing.",
         "location": {
             "lat": 53.804004,
             "lon": -1.548573,
-            "postcode": "LS13HB"
+            "postcode": "LS13HE"
         },
         "name": "Leeds Metropolitan University",
+        "name_extra": "",
         "place_id": "a21ab7df6d6a3f7d804151ccb3818205ff292358",
         "types": [
             "3"
@@ -14,326 +45,334 @@
         "url": "https://www.educations.com/study-abroad/leeds-metropolitan-university/"
     },
     {
-        "description": "Hello. We’re Muckle LLP, a highly successful Commercial Law Firm based in Newcastle upon Tyne.From our home here in the wonderful North East of England we have built a national reputation. Not only for providing the best advice and service we possibly can, but also for doing it with a personality, enthusiasm and attitude that’s very much our own.",
+        "description": "The Institute of Food Research (IFR) a British centre for research and training in food science and health.",
         "location": {
-            "lat": 54.974023,
-            "lon": -1.619574,
-            "postcode": "NE14BF"
+            "lat": 52.623815,
+            "lon": 1.224688,
+            "postcode": "NR47UA"
         },
-        "name": "Muckle LLP Solicitor",
-        "place_id": "f696b5b53d9e5aa2b62f6dd8a4f383fcbbff4f73",
+        "name": "Institute of Food Research",
+        "name_extra": "",
+        "place_id": "fdc4bc1dc7a549403527f24682abeea212217bb1",
         "types": [
             "3"
         ],
-        "url": "https://www.muckle-llp.com/"
+        "url": "https://www.britmycolsoc.org.uk/science/research-map/institute-food-research"
     },
     {
-        "description": "National Physical Laboratory - NPL - impact from science - NPL Creating impact from science and engineering Our world-leading measurement solutions are critical to business and government, accelerating research and innovation, improving quality of life and enabling trade.",
+        "description": "LGC is a leading, global life science tools company, providing mission-critical components and solutions into high-growth application areas across the human healthcare and applied market segments. Sorry, your browser doesn't support embedded videos.",
         "location": {
-            "lat": 51.425296,
-            "lon": -0.344078,
-            "postcode": "TW110LW"
+            "lat": 51.42393,
+            "lon": -0.341534,
+            "postcode": "TW110LY"
         },
-        "name": "National Physical Laboratory NPL",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
+        "name": "LGC Limited",
+        "name_extra": "",
+        "place_id": "fe9dd256a87d91f7ce30a7f67a6aa1d222b86f8d",
         "types": [
             "3"
         ],
-        "url": "https://www.npl.co.uk/"
-    },
-    {
-        "description": "Friendly, affordable and safe, your student journey begins in Belfast, the vibrant capital city of Northern Ireland. Your new home Awards and accreditations Queen’s is recognised as one of the UK’s leading research intensive universities and has a global reputation for excellence. Find out more Top 50 Queen's is ranked 43 in the world",
-        "location": {
-            "lat": 54.58456,
-            "lon": -5.934403,
-            "postcode": "BT95AF"
-        },
-        "name": "Queen's University of Belfast",
-        "place_id": "92476a0486cfb3f43b3db727f8e85a0341924aed",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.qub.ac.uk/"
-    },
-    {
-        "description": "Welcome to Homerton University Hospital NHS Foundation Trust's website where you can discover the services we offer at hospital, in the community and in your home, clinic times and other information.",
-        "location": {
-            "lat": 51.549818,
-            "lon": -0.046223,
-            "postcode": "E96EP"
-        },
-        "name": "Homerton University Hospital NHS Trust",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.homerton.nhs.uk/"
-    },
-    {
-        "description": "Queen Elizabeth University Hospital Glasgow COVID-19: New visiting arrangements are in place. Click here for more details... Every inpatient ward will have access to an iPad so patients can keep in touch with friends and family, if they don’t have a phone or tablet of their own.",
-        "location": {
-            "lat": 55.861783,
-            "lon": -4.341461,
-            "postcode": "G514TF"
-        },
-        "name": "Queen Elizabeth University Hospital",
-        "place_id": "3f4da5818818d50e770d539ea958f6cacffb775d",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.nhsggc.org.uk/locations/hospitals/queen-elizabeth-university-hospital-glasgow/"
-    },
-    {
-        "description": "The National Composites Centre (NCC) is an independent, open-access technology centre delivering world-class research and development of composites.",
-        "location": {
-            "lat": 51.49824,
-            "lon": -2.476025,
-            "postcode": "BS167FS"
-        },
-        "name": "National Composites Centre",
-        "place_id": "6b52d9cdf1e36b31226a3d7dbe74b48dc3e51a59",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.nccuk.com/"
-    },
-    {
-        "description": "Robotics and autonomous systems are set to become a critical component in the safety, cost reduction and efficiency of offshore wind farm operations. ORE Catapult has created a dedicated structure for de-risking and supporting this development. Find out more LATEST NEWS & INSIGHTS Our Response to COVID-19",
-        "location": {
-            "lat": 55.862414,
-            "lon": -4.262576,
-            "postcode": "G25QY"
-        },
-        "name": "Offshore Renewable Energy Catapult",
-        "place_id": "3f4da5818818d50e770d539ea958f6cacffb775d",
-        "types": [
-            "3"
-        ],
-        "url": "https://ore.catapult.org.uk/"
-    },
-    {
-        "description": "Posted 28 Apr 2022 at 04:16 PM. New Partnership Aims to Foster Next Generation of NHS Workers and Improve Health Literacy Djanogly City Academy and the Medicine Division team at Nottingham University Hospitals Trust have signed a Twinning Partnership Agreement to develop a wider understanding of healthcare issues and pro...",
-        "location": {
-            "lat": 52.943374,
-            "lon": -1.185252,
-            "postcode": "NG72FT"
-        },
-        "name": "Nottingham University Hospitals NHS Trust",
-        "place_id": "8982db953f512336cd825ac88f21b469cd53c82d",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.nuh.nhs.uk/"
-    },
-    {
-        "description": "Norfolk and Norwich University Hospital Cromer Hospital Jenny Lind Children’s Hospital Our board of directors Contacting & Finding Us You can contact us on the following telephone numbers: NNUH 01603 286286 Cromer Hospital 01263 513571 You can contact a ward directly by visiting our Wards A-Z.",
-        "location": {
-            "lat": 52.617202,
-            "lon": 1.220593,
-            "postcode": "NR47UL"
-        },
-        "name": "Norfolk and Norwich University Hospital",
-        "place_id": "f2aba22829e7d794af3f0e5c531f7e3924d9a076",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.nnuh.nhs.uk/"
+        "url": "https://www.lgcgroup.com/"
     },
     {
         "description": "The OU was founded to open up higher education to all, regardless of background or circumstances. Our mission is to be open to people, places, methods and ideas—and as such, equality and diversity are at the heart of everything we do. Read more about equality and diversity Coronavirus vaccination information",
         "location": {
             "lat": 52.024257,
             "lon": -0.711252,
-            "postcode": "MK76HL"
+            "postcode": "MK76AA"
         },
         "name": "Open University",
-        "place_id": "52ffbcb3fc5afa8c9dbe75b231d0cb7dce34359b",
+        "name_extra": "",
+        "place_id": "35f3385b73d0a03840a9b2ee151a51ce5d2b95ee",
         "types": [
             "3"
         ],
         "url": "https://www.open.ac.uk/"
     },
     {
-        "description": "We provide companies with access to world-class facilities and skills to scale-up and prove-out high value manufacturing technologies. Problem Solving We give companies of all sizes access to the specialist knowledge, expertise and equipment they need to master the challenges they face. Policy Insight & Intelligence",
+        "description": "The Offshore Renewable Energy Catapult was established in 2013 by the UK Government and is one of a network of Catapults set up by Innovate UK in high growth industries. It is the UK’s leading innovation centre for offshore renewable energy.",
+        "location": {
+            "lat": 55.862414,
+            "lon": -4.262576,
+            "postcode": "G25RQ"
+        },
+        "name": "Offshore Renewable Energy Catapult",
+        "name_extra": "",
+        "place_id": "9cae28ab3e45a45444a7452a90ab40056c7801a0",
+        "types": [
+            "3"
+        ],
+        "url": "https://ore.catapult.org.uk/about/"
+    },
+    {
+        "description": "The MRC London Institute of Medical Sciences (LMS) is a biomedical research institute where scientists and clinicians collaborate to advance the understanding of biology and its application to medicine. The LMS is hosted by Imperial College London at the Hammersmith Hospital campus in West London.",
+        "location": {
+            "lat": 51.51742,
+            "lon": -0.234721,
+            "postcode": "W120NN"
+        },
+        "name": "MRC London Institute of Medical Sciences",
+        "name_extra": "",
+        "place_id": "fe9dd256a87d91f7ce30a7f67a6aa1d222b86f8d",
+        "types": [
+            "3"
+        ],
+        "url": "https://lms.mrc.ac.uk/"
+    },
+    {
+        "description": "Data. The BGS is a data-rich organisation with over 400 datasets in its care, including environmental monitoring data, digital databases, physical collections (borehole core, rocks, minerals and fossils), records and archives. Data. Highlights.",
+        "location": {
+            "lat": 52.879179,
+            "lon": -1.078233,
+            "postcode": "NG125GG"
+        },
+        "name": "NERC British Geological Survey",
+        "name_extra": "",
+        "place_id": "5da0b90206d8898b7260a58be6089f0823933c69",
+        "types": [
+            "3"
+        ],
+        "url": "https://www.bgs.ac.uk/"
+    },
+    {
+        "description": "British Antarctic Survey",
+        "location": {
+            "lat": 52.21273,
+            "lon": 0.080218,
+            "postcode": "CB30ET"
+        },
+        "name": "NERC British Antarctic Survey",
+        "name_extra": "",
+        "place_id": "bc252e6505b0897f14aee9d72d6e338fa3f6a90f",
+        "types": [
+            "3"
+        ],
+        "url": "https://www.bas.ac.uk/"
+    },
+    {
+        "description": "Moredun is committed to promoting livestock health and welfare through research and education and is recognised worldwide for its contribution to research into infectious diseases of farmed livestock. Established by Scottish farmers in 1920, Moredun’s work has always been firmly based on addressing the needs of the farming industry.",
+        "location": {
+            "lat": 55.857743,
+            "lon": -3.195146,
+            "postcode": "EH260PZ"
+        },
+        "name": "Moredun Research Institute",
+        "name_extra": "",
+        "place_id": "d7221e6ca01add505996f599258fe434639f54fa",
+        "types": [
+            "3"
+        ],
+        "url": "https://moredun.org.uk/"
+    },
+    {
+        "description": "The HVM Catapult works with thousands of companies each year to boost the UK’s manufacturing performance. We’re helping to move cutting-edge research from the UK’s world-leading universities into the commercial market, supporting companies to transform the products they sell, the way they make them and the skills of their workforce.",
         "location": {
             "lat": 52.376535,
             "lon": -1.794572,
             "postcode": "B908AD"
         },
         "name": "High Value Manufacturing Catapult",
-        "place_id": "ef88ea91d511ac63d0ce2ebf5d648c0b4ea5ec9b",
+        "name_extra": "",
+        "place_id": "cf51fa4abf5a2447a7b7cae6dbbfdf01bcfc6e92",
         "types": [
             "3"
         ],
         "url": "https://hvm.catapult.org.uk/"
     },
     {
-        "description": "BEIS, Innovate UK, High Value Manufacturing (HVM) Catapult … 30 Jul 2021. News HVM Catapult to lead project to address future skills gaps. HVM Catapult has been appointed by the DfE to lead an … 18 Mar 2021. News Looking Ahead: Building on the insights of crisis in 2021. 2020 taught us that manufacturing matters, says Alan … 15 Feb 2021. Read more stories. Join our mailing list . Connect ...",
+        "description": "The Health and Safety Executive (HSE) is Britain’s national regulator for workplace health and safety. It prevents work-related death, injury and ill health. HSE is an executive non-departmental...",
         "location": {
-            "lat": 52.379507,
-            "lon": -1.560201,
-            "postcode": "CV47SH"
+            "lat": 51.507444,
+            "lon": -0.095429,
+            "postcode": "SE19HS"
         },
-        "name": "High Value Manufacturing (HVM) Catapult",
-        "place_id": "135d84dc2f6d9aa5e1b32d6c0f2e33a6ec1973dc",
+        "name": "Health and Safety Executive",
+        "name_extra": "",
+        "place_id": "fe9dd256a87d91f7ce30a7f67a6aa1d222b86f8d",
         "types": [
             "3"
         ],
-        "url": "https://hvm.catapult.org.uk/"
+        "url": "https://www.gov.uk/government/organisations/health-and-safety-executive"
     },
     {
-        "description": "My CUH story: International Day of the Midwife. Midwife Jessica Walker is involved in training around 100 students in midwifery at the Rosie Hospital, including already qualified nurses, trainee paramedics and university students. 05 May.",
+        "description": "Driving innovation forward. We are over 600 scientists, engineers, and business specialists helping companies to develop, prove and commercialise new products and processes. View Capabilities Watch Video.",
         "location": {
-            "lat": 52.173741,
-            "lon": 0.139114,
-            "postcode": "CB20SW"
+            "lat": 54.576123,
+            "lon": -1.101591,
+            "postcode": "TS104RF"
         },
-        "name": "Cambridge University Hospitals",
-        "place_id": "866e3595165f2e9b8f45714448c04fe2201ec452",
+        "name": "Centre for Process Innovation Limited",
+        "name_extra": "",
+        "place_id": "c6b8984f30c9373bc11fe459ebae70e4942c8aae",
         "types": [
             "3"
         ],
-        "url": "https://www.cuh.nhs.uk/"
+        "url": "https://www.uk-cpi.com/"
     },
     {
         "description": "Brunel University London is a highly regarded London university and a great place to study. Founded in 1966, it offers a multitude of courses that combine excellence in teaching and research.",
         "location": {
             "lat": 51.532905,
             "lon": -0.472103,
-            "postcode": "UB82PY"
+            "postcode": "UB83PH"
         },
         "name": "Brunel University London",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
+        "name_extra": "",
+        "place_id": "0ca00037304e2a5a2ae8b9ad7d427336a1150c52",
         "types": [
             "3"
         ],
         "url": "https://www.brunel.ac.uk/"
     },
     {
-        "description": "Visiting times: See below. Telephone number: 0151 529 2028/2262. Ward 4. Nearest entrance: Aintree Lodge (Entrance I), Entrance E and D on site map )",
+        "description": "Birkbeck is different: our classes are held in the evening, so your days are free - to study, work, volunteer or just do your own thing. We are proud to be one of the world's top research universities and part of the prestigious University of London. Full-time and part-time study explained",
         "location": {
-            "lat": 53.466323,
-            "lon": -2.931104,
-            "postcode": "L97AL"
+            "lat": 51.521847,
+            "lon": -0.130253,
+            "postcode": "WC1E7HX"
         },
-        "name": "Aintree University Hospitals",
-        "place_id": "b7c388ce99ae31d5a9b5b4769aa4e6c8b2b4d1c6",
+        "name": "Birkbeck College",
+        "name_extra": "",
+        "place_id": "fe9dd256a87d91f7ce30a7f67a6aa1d222b86f8d",
         "types": [
             "3"
         ],
-        "url": "https://www.aintreehospital.nhs.uk/"
+        "url": "https://www.bbk.ac.uk/"
     },
     {
-        "description": "Agri-EPI Centre Pioneering innovation, technology and precision engineering for UK farming. Welcome. We are the Agricultural Engineering Precision Innovation (Agri-EPI) Centre. We accelerate the research, development and adoption of precision agriculture and engineering technology.",
+        "description": "Welcome to the Quadram Institute: The Quadram Institute wants to change understanding of how food in the microbiome can affect our health. Our work focuses on how changes in the gut can lead to conditions such as obesity and dementia. Microbes in the Food Chain",
         "location": {
-            "lat": 55.865551,
-            "lon": -3.198271,
-            "postcode": "EH260PQ"
+            "lat": 52.623815,
+            "lon": 1.224688,
+            "postcode": "NR47UA"
         },
-        "name": "Agri-EPI Centre",
-        "place_id": "4bdf4fd289a4dedf619027b41275a8682872db08",
+        "name": "Quadram Institute Bioscience",
+        "name_extra": "",
+        "place_id": "cc5651cdb1c9a161bda5e9b73684366220d162a8",
         "types": [
             "3"
         ],
-        "url": "https://agri-epicentre.com/"
+        "url": "https://quadram.ac.uk/"
     },
     {
-        "description": "Advanced Forming Research Centre A centre of excellence in forming and forging research Excited by technology and obsessed with solving the toughest manufacturing problems, our engineers and researchers work under 5,680 M2 of world-leading research space dedicated to making your products and processes better.",
+        "description": "Welcome to Guildhall | Guildhall School of Music & Drama. Ranked number one in Arts, Drama & Music by the Complete University Guide 2023, one of the top ten performing arts institutions in the world in the QS World University Rankings 2022, as well as the top conservatoire in the Guardian University Guide music league table, we deliver world ...",
         "location": {
-            "lat": 55.884374,
-            "lon": -4.441618,
-            "postcode": "PA49LJ"
+            "lat": 51.519476,
+            "lon": -0.092384,
+            "postcode": "EC2Y8DT"
         },
-        "name": "Advanced Forming Research Centre",
-        "place_id": "2d418fe40b9b4aac77adf3d300dc08dade56c35e",
+        "name": "Guildhall School of Music and Drama",
+        "name_extra": "",
+        "place_id": "fe9dd256a87d91f7ce30a7f67a6aa1d222b86f8d",
         "types": [
             "3"
         ],
-        "url": "https://www.strath.ac.uk/research/advancedformingresearchcentre/"
+        "url": "https://www.gsmd.ac.uk/"
     },
     {
-        "description": "Call us +44 (0) 203 728 9500. Address 12 th Floor Tower Wing, Guy’s Hospital, Great Maze Pond, London SE1 9RT",
-        "location": {
-            "lat": 51.503355,
-            "lon": -0.087179,
-            "postcode": "SE19GU"
-        },
-        "name": "Cell Therapy Catapult Limited",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
-        "types": [
-            "3"
-        ],
-        "url": "https://ct.catapult.org.uk/"
-    },
-    {
-        "description": "IDEAS Programme. The new Innovation in Digital Engineering - Automotive Sector (IDEAS) Programme offers access to the latest technologies and expertise in data science, modelling and simulation and AI to drive automotive innovation. Hartree National Centre for Digital Innovation. Enabling UK businesses and the public sector to explore and adopt ...",
-        "location": {
-            "lat": 53.343404,
-            "lon": -2.641206,
-            "postcode": "WA44AD"
-        },
-        "name": "Hartree Centre",
-        "place_id": "250d5717bb851c1ba5e08678f26b73125b615aaa",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.hartree.stfc.ac.uk/"
-    },
-    {
-        "description": "Goldsmiths, University of London With world-leading research and high-quality teaching, we offer undergraduate and postgraduate degrees in the arts, humanities, social sciences, business, and computing from our campus in South East London. About Goldsmiths Live like a local",
+        "description": "Goldsmiths, University of London With world-leading research and high-quality teaching, we offer undergraduate and postgraduate degrees in the arts, humanities, social sciences, business, and computing from our campus in South East London. About Goldsmiths Find out more about Clearing",
         "location": {
             "lat": 51.474144,
             "lon": -0.035401,
             "postcode": "SE146NW"
         },
         "name": "Goldsmiths College",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
+        "name_extra": "",
+        "place_id": "fe9dd256a87d91f7ce30a7f67a6aa1d222b86f8d",
         "types": [
             "3"
         ],
         "url": "https://www.gold.ac.uk/"
     },
     {
-        "description": "Welcome to the new Cardiff and Vale University Health Board website. It is still under development in both English and Welsh and some pages are yet to be finalised. For. Our Hospitals. Our Services. Health Centres and Clinics. Local Health Services.",
+        "description": "Research Agency The Food and Environment Research Agency is now independent of the UK government On 1 April 2015 the business and operations of the Food and Environment Research Agency (Fera), an...",
         "location": {
-            "lat": 51.506764,
-            "lon": -3.18936,
-            "postcode": "CF"
+            "lat": 54.0163,
+            "lon": -0.972903,
+            "postcode": "YO411LZ"
         },
-        "name": "Cardiff & Vale University Health Board",
-        "place_id": "b74767fb11a7473bf968349c52aca77792b36859",
+        "name": "Food & Environment Research Agency",
+        "name_extra": "FERA",
+        "place_id": "fe19ef51da235457131c323f98e72312650ea06b",
         "types": [
             "3"
         ],
-        "url": "https://cavuhb.nhs.wales/"
+        "url": "https://www.gov.uk/government/organisations/the-food-and-environment-research-agency"
     },
     {
-        "description": "I began my career in 1993, studying Diagnostic Radiography at the Faculty of Medicine in The University of Liverpool and The Royal Liverpool University NHS Hospitals. I graduated with a First Class Distinction from The British School of Osteopathy in 2008. I have extensive post-graduate training and am committed to continuous professional development through CPD compliance, ongoing education ...",
+        "description": "Diamond Light Source Diamond contributed £1.8billion to UK science and economy Diamond Users Users from the EU: Industry Latest News Aug 8, 2022 Targeting a parasite’s DNA could be more effective way to treat malaria Research from the University of Sheffield explores a new way of killing the Plasmodium parasite that causes malaria Aug 5, 2022",
         "location": {
-            "lat": 53.410634,
-            "lon": -2.964749,
-            "postcode": "L78XP"
+            "lat": 51.57372,
+            "lon": -1.313236,
+            "postcode": "OX110DE"
         },
-        "name": "Royal Liverpool University NHS Hospitals",
-        "place_id": "b7c388ce99ae31d5a9b5b4769aa4e6c8b2b4d1c6",
+        "name": "Diamond Light Source",
+        "name_extra": "",
+        "place_id": "1dd31bd3ff3c8eff1407b970d1627fe07babe234",
         "types": [
             "3"
         ],
-        "url": "https://devlocal.work/about/"
+        "url": "http://diamond.ac.uk/"
     },
     {
-        "description": "Cymraeg : English Hawlfraint © Bwrdd Iechyd Prifysgol Abertawe Bro Morgannwg : Copyright © Abertawe Bro Morgannwg University Health Board",
+        "description": "Culham Centre for Fusion Energy is the UK’s national fusion research laboratory. From theoretical physics to operating two major experiments and carrying out advanced reactor engineering, we lead the world in putting this transformative energy technology on the grid. History Diversity Frequently Asked Questions Resources Share this page:",
         "location": {
-            "lat": 51.684652,
-            "lon": -3.935252,
-            "postcode": "SA66PS"
+            "lat": 51.65776,
+            "lon": -1.228684,
+            "postcode": "OX143DB"
         },
-        "name": "Abertawe Bro Morgannwg University Health Board",
-        "place_id": "14647559f26189190e287d1c3be02a96fea88637",
+        "name": "Culham Centre for Fusion Energy",
+        "name_extra": "",
+        "place_id": "4866ce031bb30e9dcc1f04a7a87a8a564e3b5bd9",
         "types": [
             "3"
         ],
-        "url": "http://www.abm.wales.nhs.uk/"
+        "url": "https://ccfe.ukaea.uk/"
+    },
+    {
+        "description": "Forging partnerships to address food security, malnutrition, poverty, climate change and the environment.",
+        "location": {
+            "lat": 51.809413,
+            "lon": -0.354935,
+            "postcode": "AL52JQ"
+        },
+        "name": "Rothamsted Research",
+        "name_extra": "",
+        "place_id": "ff5f1cafe575c53cda8c57be5bd2ef3358004484",
+        "types": [
+            "3"
+        ],
+        "url": "https://www.rothamsted.ac.uk/"
+    },
+    {
+        "description": "The University of Huddersfield is a member of Yorkshire Universities. View our cookie policy, Freedom of Information Statement, and copyright and disclaimer. Alternative telephone number 0330 1232288 (calls to this number are charged at the national rate). Switch to inverse colours. Switch to standard colours . View our accessibility statement ...",
+        "location": {
+            "lat": 53.643663,
+            "lon": -1.778725,
+            "postcode": "HD13DH"
+        },
+        "name": "University of Huddersfield",
+        "name_extra": "",
+        "place_id": "ff97e5515f451dc8334b4fcb2758031554da229f",
+        "types": [
+            "3"
+        ],
+        "url": "https://www.hud.ac.uk/"
+    },
+    {
+        "description": "Aircraft Research Association Limited. Manton Lane, Bedford, England MK41 7PF. Name * First Last. Email * Phone * Message. reCAPTCHA. Name. This field is for validation purposes and should be left unchanged. Δ . Delivering Confidence to Fly. ARA lead the world with our range of services delivering complete seamless solutions across transonic wind tunnel testing, advanced measurement systems ...",
+        "location": {
+            "lat": 52.155274,
+            "lon": -0.475985,
+            "postcode": "MK417PF"
+        },
+        "name": "Aircraft Research Association Limited",
+        "name_extra": "",
+        "place_id": "9d1a31e8e8a1f76a0227bb2950d9e940066a4347",
+        "types": [
+            "3"
+        ],
+        "url": "https://www.ara.co.uk/"
     },
     {
         "description": "A university with a national and international reputation for excellence, innovation and research. Contributing to economic, social and cultural development of Northern Ireland.",
@@ -343,34 +382,22 @@
             "postcode": "BT521SA"
         },
         "name": "University of Ulster",
-        "place_id": "e3783f81ee1ed553172bbaf11e492be667f1f24f",
+        "name_extra": "",
+        "place_id": "99214dea5d91d9386149a235a2fd4c42ad0bc50e",
         "types": [
             "3"
         ],
         "url": "https://www.ulster.ac.uk/"
     },
     {
-        "description": "What is the University of the Third Age? U3A is a nationwide network of learning groups aimed at encouraging older people to share their knowledge, skills and interests in a friendly environment. There are no exams and no homework, just regular lessons or study groups. It's learning for fun, not with the aim of gaining qualifications. Who can attend a U3A class? There are no age limits but the ...",
-        "location": {
-            "lat": 51.406807,
-            "lon": 0.0158,
-            "postcode": "BR11QN"
-        },
-        "name": "University of The Third Age",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.ageuk.org.uk/information-advice/work-learning/education-training/university-of-the-third-age/"
-    },
-    {
         "description": "Ambition Delivered Today - At Teesside University we believe that innovation powers our steps to create a world where everyone benefits from progress. Ranked in the 801-1000 band of global universities in the Times Higher Education World University Rankings 2021.",
         "location": {
             "lat": 54.572076,
             "lon": -1.234694,
-            "postcode": "TS13DG"
+            "postcode": "TS13BA"
         },
         "name": "University of Teesside",
+        "name_extra": "",
         "place_id": "e0b072173dac885b2a1276c71b1e7b8159fcde41",
         "types": [
             "3"
@@ -378,97 +405,29 @@
         "url": "https://www.tees.ac.uk/"
     },
     {
-        "description": "The University of Huddersfield is a member of Yorkshire Universities View our cookie policy , Freedom of Information Statement , and copyright and disclaimer . Alternative telephone number 0330 1232288 (calls to this number are charged at the national rate).",
+        "description": "Friendly, affordable and safe, your student journey begins in Belfast, the vibrant capital city of Northern Ireland. Your new home Awards and accreditations Queen’s is recognised as one of the UK’s leading research intensive universities and has a global reputation for excellence. Find out more Top 100 Queen's is ranked 85 in the world 99%",
         "location": {
-            "lat": 53.643663,
-            "lon": -1.778725,
-            "postcode": "HD13DH"
+            "lat": 54.58456,
+            "lon": -5.934403,
+            "postcode": "BT71NN"
         },
-        "name": "University of Huddersfield",
-        "place_id": "ff97e5515f451dc8334b4fcb2758031554da229f",
+        "name": "Queen's University of Belfast",
+        "name_extra": "",
+        "place_id": "92476a0486cfb3f43b3db727f8e85a0341924aed",
         "types": [
             "3"
         ],
-        "url": "https://hud.ac.uk/undergraduate"
+        "url": "https://www.qub.ac.uk/"
     },
     {
-        "description": "spread over the general, glenfield and royal infirmary hospitals, we also have our very own children’s hospital and work closely with partners at the university of leicester and de montfort university providing world-class teaching to nurture and develop the next generation of doctors, nurses and other healthcare professionals, many of whom go on …",
-        "location": {
-            "lat": 52.626782,
-            "lon": -1.135961,
-            "postcode": "LE27QS"
-        },
-        "name": "University Hospitals of Leicester NHS",
-        "place_id": "6d3697ef881dafc1423633ec03b94238e365101d",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.leicestershospitals.nhs.uk/aboutus/"
-    },
-    {
-        "description": "University Hospitals Bristol and Weston NHS Foundation Trust was formed on 1 April 2020 following the merger of University Hospitals Bristol NHS Foundation Trust and Weston Area Health NHS Trust. Find out more Travelling to and from our hospitals Information about parking and public transport available if you are visiting our hospitals.",
-        "location": {
-            "lat": 51.459478,
-            "lon": -2.593019,
-            "postcode": "BS13NU"
-        },
-        "name": "University Hospitals Bristol NHS Foundation Trust",
-        "place_id": "aca1b9e9441fafc9f311d095335c44bb5f79a44d",
-        "types": [
-            "3"
-        ],
-        "url": "http://www.uhbristol.nhs.uk/"
-    },
-    {
-        "description": "University Hospitals Birmingham NHS Foundation Trust is recognised as one of the leading NHS trusts in the UK. With more than 20,000 members of staff, we are committed to the development, health and well-being of our people. Find out more about becoming part of team UHB. Our news. New Oncology Treatment Suite and Infusion Suite open . It has been one month since the Oncology Treatment Unit and ...",
-        "location": {
-            "lat": 52.47337,
-            "lon": -1.930292,
-            "postcode": "B168UR"
-        },
-        "name": "University Hospitals Birmingham NHS Foundation Trust",
-        "place_id": "5204352a21564f1b97200e3993e858d41c294698",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.uhb.nhs.uk/"
-    },
-    {
-        "description": "Our Trust manages two major hospitals in Coventry and Rugby, which between them serve a population of over a million people. Click here > Come and join our team At UHCW our staff are proud to work for us, our people receive the best opportunities for development so they can fulfil their potential and watch their careers grow. Click here >",
-        "location": {
-            "lat": 52.421211,
-            "lon": -1.438403,
-            "postcode": "CV22BJ"
-        },
-        "name": "University Hospital Coventry NHS Trust",
-        "place_id": "ab4003a6cabc533832f733b0490956de4ffc2fc6",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.uhcw.nhs.uk/"
-    },
-    {
-        "description": "UCL is the number one London university for Research Strength (REF2014), recognised for its academic excellence and global impact.",
-        "location": {
-            "lat": 51.52449,
-            "lon": -0.134135,
-            "postcode": "WC1H0PD"
-        },
-        "name": "University College London",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.ucl.ac.uk/"
-    },
-    {
-        "description": "Aberdeen's RGU is the Scottish University of the Year 2021. A top university in Scotland for graduate prospects, with an international reputation for management, health, energy & technology courses.",
+        "description": "Published: Thursday 11 August 2022. RGU’s Look Again explores Aberdeen at Wonderland Festival. Look Again, the creative engagement team based at Gray’s School of Art at Robert Gordon University (RGU) have partnered with ‘Miasma’ to curate a multi-faceted public art project, ‘Terra Incognita’ (as above, so below) that will be a major part of the upcoming Wonderland Festival taking ...",
         "location": {
             "lat": 57.148372,
             "lon": -2.10116,
-            "postcode": "AB251UH"
+            "postcode": "AB101FR"
         },
         "name": "The Robert Gordon University",
+        "name_extra": "",
         "place_id": "e61198acf4178b1d83cbfd4e73173c62e43bf27a",
         "types": [
             "3"
@@ -476,59 +435,93 @@
         "url": "https://www.rgu.ac.uk/"
     },
     {
-        "description": "Home | The Alan Turing Institute We believe data science and artificial intelligence will change the world. We are pioneers; training the next generation of leaders, shaping the public conversation, and pushing the boundaries of these sciences for the public good. About us What is The Alan Turing Institute? Watch on",
+        "description": "Pirbright’s insectary facilities are among the best in the world. They allow us to research vector-borne viral diseases, including those spread by midges, mosquitoes, and flies. Vector-borne viral diseases such as Rift Valley fever virus and bluetongue virus have devastating effects on human and... See more details",
+        "location": {
+            "lat": 51.2791,
+            "lon": -0.635213,
+            "postcode": "GU240NF"
+        },
+        "name": "The Pirbright Institute",
+        "name_extra": "",
+        "place_id": "54ce9cf10e68958a9674dddd6c92ee2a67c59483",
+        "types": [
+            "3"
+        ],
+        "url": "https://www.pirbright.ac.uk/"
+    },
+    {
+        "description": "What is The Alan Turing Institute? Watch on The Turing is committed to working flexibly and staying connected. We’ve reconfigured to virtual engagement and you can help shape our events to be great virtual experiences by taking our short survey and letting us know what that means to you.",
         "location": {
             "lat": 51.529741,
             "lon": -0.127317,
             "postcode": "NW12DB"
         },
         "name": "The Alan Turing Institute",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
+        "name_extra": "",
+        "place_id": "fe9dd256a87d91f7ce30a7f67a6aa1d222b86f8d",
         "types": [
             "3"
         ],
         "url": "https://www.turing.ac.uk/"
     },
     {
-        "description": "Summary on Grant Application Form: In 2017 the need for disruptive sensing systems to detect and limit infectious outbreaks has taken centre stage - Zika virus and Ebola add to the threat of pandemic influenza, HIV and antimicrobial resistance, for which the world remains unprepared.",
+        "description": "Science and Technology Facilities Council (STFC) – UKRI Science and Technology Facilities Council (STFC) STFC’s mission is to deliver world-leading national and international research and innovation capabilities and, through those, discover the secrets of the Universe.",
         "location": {
-            "lat": 51.524045,
-            "lon": -0.135158,
-            "postcode": "WC1E6JL"
+            "lat": 51.576039,
+            "lon": -1.312797,
+            "postcode": "OX110QX"
         },
-        "name": "University College Hospitals L",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
+        "name": "STFC",
+        "name_extra": "Laboratories",
+        "place_id": "5f69329235eb45e362970cb5e3a031d9ac267f4a",
         "types": [
             "3"
         ],
-        "url": "https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/R00529X/1"
+        "url": "https://www.ukri.org/councils/stfc/"
     },
     {
-        "description": "Cymraeg : English Hawlfraint © Bwrdd Iechyd Prifysgol Abertawe Bro Morgannwg : Copyright © Abertawe Bro Morgannwg University Health Board",
+        "description": "The Salvation Army is a worldwide evangelical Christian church. Our mission is based on our faith in Jesus Christ who wants everyone to experience life in all its fullness. That is why, here in the UK and Ireland, we put our faith into action by offering practical help for people without discrimination, standing up for those who are vulnerable ...",
         "location": {
-            "lat": 51.613348,
-            "lon": -3.81619,
-            "postcode": "SA127BR"
+            "lat": 52.292297,
+            "lon": -0.690443,
+            "postcode": "NN82QH"
         },
-        "name": "ABM University NHS Trust",
-        "place_id": "013b9819c57a9b47cf1fd107aeeab82b5968e391",
+        "name": "Salvation Army",
+        "name_extra": "",
+        "place_id": "646db7f1bbd6f010f11e5930114fa38e524c28b7",
         "types": [
             "3"
         ],
-        "url": "http://www.abm.wales.nhs.uk/"
+        "url": "https://www.salvationarmy.org.uk/"
     },
     {
-        "description": "WMG Centre High Value Manufacturing (HVM) Catapult is actively changing the way we travel for the better. We specialise in innovation aimed at making transport cleaner, safer and more efficient. We are working with UK manufacturing partners to develop automated, connected, electric and shared mobility for a sustainable future.",
+        "description": "The UK Astronomy Technology Centre in Edinburgh is the national centre for astronomical technology. We design and build instruments for many of the world's major telescopes, and our scientists carry out observational and theoretical research into fundamental questions such as star formation and the evolution of galaxies.",
         "location": {
-            "lat": 52.379507,
-            "lon": -1.560201,
-            "postcode": "CV47SH"
+            "lat": 55.922925,
+            "lon": -3.188135,
+            "postcode": "EH93HJ"
         },
-        "name": "WMG Catapult",
-        "place_id": "135d84dc2f6d9aa5e1b32d6c0f2e33a6ec1973dc",
+        "name": "UK Astronomy Technology Centre",
+        "name_extra": "",
+        "place_id": "bc29cdd7a36d0fa91590c995e9a8d9a00719bb65",
         "types": [
             "3"
         ],
-        "url": "https://warwick.ac.uk/fac/sci/wmg/research/hvmcatapult/"
+        "url": "https://www.roe.ac.uk/ukatc/"
+    },
+    {
+        "description": "UCL is consistently ranked as one of the top ten universities in the world (QS World University Rankings 2010-2022) and is No.2 in the UK for research power (Research Excellence Framework 2021).",
+        "location": {
+            "lat": 51.52449,
+            "lon": -0.134135,
+            "postcode": "WC1E6BT"
+        },
+        "name": "University College London",
+        "name_extra": "",
+        "place_id": "fe9dd256a87d91f7ce30a7f67a6aa1d222b86f8d",
+        "types": [
+            "3"
+        ],
+        "url": "https://www.ucl.ac.uk/"
     }
 ]

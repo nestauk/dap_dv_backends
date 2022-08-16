@@ -5,7 +5,7 @@ import { fetch } from 'undici';
 
 import { getEntityDetails, isDisambiguation } from 'dbpedia/requests.mjs';
 import { getEntities } from 'es/entities.mjs';
-import { batchIterate } from 'util/array.mjs';
+import { batchIterateFlatten } from 'util/array.mjs';
 
 const FILE_ENTITY_TITLES = 'data/ai_map/outputs/entity_titles.json';
 const FILE_ENTITY_DETAILS = 'data/ai_map/outputs/entity_details.json';
@@ -39,7 +39,7 @@ const main = async () => {
 
 	// Get details for all DBpedia entities using DBpedia SPARQL endpoint
 	console.log('[+] Getting Entity Details');
-	const details = await batchIterate(titles, getEntityDetails);
+	const details = await batchIterateFlatten(titles, getEntityDetails);
 	save(FILE_ENTITY_DETAILS, details);
 
 	// Get the count statistics for the details
@@ -81,7 +81,7 @@ const main = async () => {
 
 	// Get the image status by fetching using imageURL
 	console.log('[+] Fetching images and saving response status');
-	const imageURLStatus = await batchIterate(
+	const imageURLStatus = await batchIterateFlatten(
 		imageURLs,
 		async batch_ => {
 			const responses = await Promise.all(
@@ -100,7 +100,7 @@ const main = async () => {
 	save(FILE_IMAGE_404s, addStats(_.map(notFounds, r => r.url), titles));
 	save(FILE_IMAGE_STATUS, imageURLStatusCounts);
 
-	const disambiguationStatus = await batchIterate(
+	const disambiguationStatus = await batchIterateFlatten(
 		titles,
 		isDisambiguation,
 		{ concat: false}
