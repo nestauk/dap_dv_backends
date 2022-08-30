@@ -1,10 +1,17 @@
-import * as fs from 'fs';
+import { promises as fs } from 'fs';
 
+import * as cliProgress from 'cli-progress';
 import { Command } from 'commander';
+import { parse } from 'csv-parse/sync';
+import * as _ from 'lamb';
 
+import { bulkRequest } from 'es/bulk.mjs';
 import * as indexAPI from 'es/index.mjs';
 import { arxliveCopy } from 'conf/config.mjs';
 import { remove } from 'es/pipeline.mjs';
+import { batchIterate } from 'util/array.mjs';
+import { commanderParseInt } from 'util/commander.mjs';
+import { TrackingOptions } from '@aws-sdk/client-ses';
 
 const program = new Command();
 
@@ -52,6 +59,40 @@ program
 		payload,
 		pipeline,
 	});
+});
+
+program
+.command('csv')
+.description('uploads a csv to an ES index. The entire .csv is read into memory, so will not work for massive .csv files')
+.argument('<path>', 'path to the .csv file')
+.argument('<index>', 'index name')
+.argument('[domain]', 'domain where index is to be created', arxliveCopy)
+.option(
+	'--id <id field>',
+	'name of field/column to use as id, defalts to first field',
+	null
+)
+.option(
+	'--batch-size <size>',
+	'size of batches of rows to upload',
+	commanderParseInt,
+	100
+)
+.action(async (path, index, domain, options) => {
+	const raw = await fs.readFile(path);
+	const data = parse(raw, { columns: true });
+	const columns = _.keys(data[0]);
+	const idColumn = options.id || columns[0];
+
+	const bulkFormat = _.map(
+		data,
+		row => {
+			const { [idColumn]: _id, ...rest } = row;
+			return { _id, data: rest };
+		}
+	);
+	const upload = batch => bulkRequest(domain, index, batch, 'create');
+	batchIterate(bulkFormat, upload, { batchSize: options.batchSize });
 });
 
 program.parse();
