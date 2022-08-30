@@ -1,17 +1,18 @@
 import { promises as fs } from 'fs';
 
-import * as cliProgress from 'cli-progress';
 import { Command } from 'commander';
 import { parse } from 'csv-parse/sync';
+import { stringify } from 'csv-stringify/sync';
 import * as _ from 'lamb';
 
+import { dbr } from 'dbpedia/util.mjs';
 import { bulkRequest } from 'es/bulk.mjs';
+import { dump } from 'es/dump.mjs';
 import * as indexAPI from 'es/index.mjs';
 import { arxliveCopy } from 'conf/config.mjs';
 import { remove } from 'es/pipeline.mjs';
 import { batchIterate } from 'util/array.mjs';
 import { commanderParseInt } from 'util/commander.mjs';
-import { TrackingOptions } from '@aws-sdk/client-ses';
 
 const program = new Command();
 
@@ -93,6 +94,42 @@ program
 	);
 	const upload = batch => bulkRequest(domain, index, batch, 'create');
 	batchIterate(bulkFormat, upload, { batchSize: options.batchSize });
+});
+
+program
+.command('download')
+.description('downloads an ElasticSearch index DBpedia entities to a .csv file.')
+.argument('<path>', 'path to the .csv file')
+.argument('<index>', 'index name')
+.argument('[domain]', 'domain where index is to be created', arxliveCopy)
+.requiredOption('--source <field>', 'the source field used to generate the dbpedia entities')
+.option('--threshold <confidence>', 'confidence threshold, only entities with confidence equal or above this paramater will be included', commanderParseInt)
+.option('--strip-uri', 'whether to include the uri prefix in the entities generated')
+.action(async (path, index, domain, options) => {
+
+	const documents = await dump(domain, index);
+	const threshold = options.threshold || 0;
+	const getFilteredEntities = _.pipe([
+		_.filterWith(e => e.confidence >= threshold),
+		_.mapWith(e => [
+			options.stripUri ? e.URI.replace(dbr, '') : e.URI,
+			e.confidence
+		])
+	]);
+	const filteredDocuments = _.map(
+		documents,
+		doc => {
+			const { [options.source]: source, dbpedia_entities } = doc;
+			const entities = getFilteredEntities(dbpedia_entities);
+			return { source, entities };
+		}
+	);
+	const csvString = stringify(
+		filteredDocuments,
+		{ header: true, columns: ['entities', 'source'] }
+	);
+	await fs.writeFile(path, csvString);
+
 });
 
 program.parse();
