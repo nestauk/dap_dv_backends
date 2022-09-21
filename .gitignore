@@ -7,3 +7,4 @@ node_modules
 src/bin/spotlight/nginx.conf
 src/servers/**/terraform
 src/servers/**/nginx.conf
+/data
