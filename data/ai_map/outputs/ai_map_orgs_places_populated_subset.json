@@ -1,534 +1,317 @@
 [
     {
-        "description": "Leeds Metropolitan University can offer international students a vibrant and growing international community with over 4,000 international students from well over 100 countries. There are many reasons why students choose to study here. Campuses As a dynamic modern university, we’re always growing and developing.",
+        "description": "The MRC London Institute of Medical Sciences (LMS) is a biomedical research institute where scientists and clinicians collaborate to advance the understanding of biology and its application to medicine. The LMS is hosted by Imperial College London at the Hammersmith Hospital campus in West London.",
         "location": {
-            "lat": 53.804004,
-            "lon": -1.548573,
-            "postcode": "LS13HB"
+            "lat": 51.51742,
+            "lon": -0.234721,
+            "postcode": "W120NN"
         },
-        "name": "Leeds Metropolitan University",
-        "place_id": "a21ab7df6d6a3f7d804151ccb3818205ff292358",
+        "name": "MRC London Institute of Medical Sciences",
+        "name_extra": "",
+        "place_id": "ece6140a1a144a5a9e7778e9d4c25f4cb611d4de",
         "types": [
             "3"
         ],
-        "url": "https://www.educations.com/study-abroad/leeds-metropolitan-university/"
+        "url": "https://lms.mrc.ac.uk/"
     },
     {
-        "description": "Hello. We’re Muckle LLP, a highly successful Commercial Law Firm based in Newcastle upon Tyne.From our home here in the wonderful North East of England we have built a national reputation. Not only for providing the best advice and service we possibly can, but also for doing it with a personality, enthusiasm and attitude that’s very much our own.",
-        "location": {
-            "lat": 54.974023,
-            "lon": -1.619574,
-            "postcode": "NE14BF"
-        },
-        "name": "Muckle LLP Solicitor",
-        "place_id": "f696b5b53d9e5aa2b62f6dd8a4f383fcbbff4f73",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.muckle-llp.com/"
-    },
-    {
-        "description": "National Physical Laboratory - NPL - impact from science - NPL Creating impact from science and engineering Our world-leading measurement solutions are critical to business and government, accelerating research and innovation, improving quality of life and enabling trade.",
-        "location": {
-            "lat": 51.425296,
-            "lon": -0.344078,
-            "postcode": "TW110LW"
-        },
-        "name": "National Physical Laboratory NPL",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.npl.co.uk/"
-    },
-    {
-        "description": "Friendly, affordable and safe, your student journey begins in Belfast, the vibrant capital city of Northern Ireland. Your new home Awards and accreditations Queen’s is recognised as one of the UK’s leading research intensive universities and has a global reputation for excellence. Find out more Top 50 Queen's is ranked 43 in the world",
-        "location": {
-            "lat": 54.58456,
-            "lon": -5.934403,
-            "postcode": "BT95AF"
-        },
-        "name": "Queen's University of Belfast",
-        "place_id": "92476a0486cfb3f43b3db727f8e85a0341924aed",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.qub.ac.uk/"
-    },
-    {
-        "description": "Welcome to Homerton University Hospital NHS Foundation Trust's website where you can discover the services we offer at hospital, in the community and in your home, clinic times and other information.",
-        "location": {
-            "lat": 51.549818,
-            "lon": -0.046223,
-            "postcode": "E96EP"
-        },
-        "name": "Homerton University Hospital NHS Trust",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.homerton.nhs.uk/"
-    },
-    {
-        "description": "Queen Elizabeth University Hospital Glasgow COVID-19: New visiting arrangements are in place. Click here for more details... Every inpatient ward will have access to an iPad so patients can keep in touch with friends and family, if they don’t have a phone or tablet of their own.",
-        "location": {
-            "lat": 55.861783,
-            "lon": -4.341461,
-            "postcode": "G514TF"
-        },
-        "name": "Queen Elizabeth University Hospital",
-        "place_id": "3f4da5818818d50e770d539ea958f6cacffb775d",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.nhsggc.org.uk/locations/hospitals/queen-elizabeth-university-hospital-glasgow/"
-    },
-    {
-        "description": "The National Composites Centre (NCC) is an independent, open-access technology centre delivering world-class research and development of composites.",
-        "location": {
-            "lat": 51.49824,
-            "lon": -2.476025,
-            "postcode": "BS167FS"
-        },
-        "name": "National Composites Centre",
-        "place_id": "6b52d9cdf1e36b31226a3d7dbe74b48dc3e51a59",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.nccuk.com/"
-    },
-    {
-        "description": "Robotics and autonomous systems are set to become a critical component in the safety, cost reduction and efficiency of offshore wind farm operations. ORE Catapult has created a dedicated structure for de-risking and supporting this development. Find out more LATEST NEWS & INSIGHTS Our Response to COVID-19",
-        "location": {
-            "lat": 55.862414,
-            "lon": -4.262576,
-            "postcode": "G25QY"
-        },
-        "name": "Offshore Renewable Energy Catapult",
-        "place_id": "3f4da5818818d50e770d539ea958f6cacffb775d",
-        "types": [
-            "3"
-        ],
-        "url": "https://ore.catapult.org.uk/"
-    },
-    {
-        "description": "Posted 28 Apr 2022 at 04:16 PM. New Partnership Aims to Foster Next Generation of NHS Workers and Improve Health Literacy Djanogly City Academy and the Medicine Division team at Nottingham University Hospitals Trust have signed a Twinning Partnership Agreement to develop a wider understanding of healthcare issues and pro...",
-        "location": {
-            "lat": 52.943374,
-            "lon": -1.185252,
-            "postcode": "NG72FT"
-        },
-        "name": "Nottingham University Hospitals NHS Trust",
-        "place_id": "8982db953f512336cd825ac88f21b469cd53c82d",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.nuh.nhs.uk/"
-    },
-    {
-        "description": "Norfolk and Norwich University Hospital Cromer Hospital Jenny Lind Children’s Hospital Our board of directors Contacting & Finding Us You can contact us on the following telephone numbers: NNUH 01603 286286 Cromer Hospital 01263 513571 You can contact a ward directly by visiting our Wards A-Z.",
-        "location": {
-            "lat": 52.617202,
-            "lon": 1.220593,
-            "postcode": "NR47UL"
-        },
-        "name": "Norfolk and Norwich University Hospital",
-        "place_id": "f2aba22829e7d794af3f0e5c531f7e3924d9a076",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.nnuh.nhs.uk/"
-    },
-    {
-        "description": "The OU was founded to open up higher education to all, regardless of background or circumstances. Our mission is to be open to people, places, methods and ideas—and as such, equality and diversity are at the heart of everything we do. Read more about equality and diversity Coronavirus vaccination information",
-        "location": {
-            "lat": 52.024257,
-            "lon": -0.711252,
-            "postcode": "MK76HL"
-        },
-        "name": "Open University",
-        "place_id": "52ffbcb3fc5afa8c9dbe75b231d0cb7dce34359b",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.open.ac.uk/"
-    },
-    {
-        "description": "We provide companies with access to world-class facilities and skills to scale-up and prove-out high value manufacturing technologies. Problem Solving We give companies of all sizes access to the specialist knowledge, expertise and equipment they need to master the challenges they face. Policy Insight & Intelligence",
+        "description": "The HVM Catapult works with thousands of companies each year to boost the UK’s manufacturing performance. We’re helping to move cutting-edge research from the UK’s world-leading universities into the commercial market, supporting companies to transform the products they sell, the way they make them and the skills of their workforce.",
         "location": {
             "lat": 52.376535,
             "lon": -1.794572,
             "postcode": "B908AD"
         },
         "name": "High Value Manufacturing Catapult",
-        "place_id": "ef88ea91d511ac63d0ce2ebf5d648c0b4ea5ec9b",
+        "name_extra": "",
+        "place_id": "cf51fa4abf5a2447a7b7cae6dbbfdf01bcfc6e92",
         "types": [
             "3"
         ],
         "url": "https://hvm.catapult.org.uk/"
     },
     {
-        "description": "BEIS, Innovate UK, High Value Manufacturing (HVM) Catapult … 30 Jul 2021. News HVM Catapult to lead project to address future skills gaps. HVM Catapult has been appointed by the DfE to lead an … 18 Mar 2021. News Looking Ahead: Building on the insights of crisis in 2021. 2020 taught us that manufacturing matters, says Alan … 15 Feb 2021. Read more stories. Join our mailing list . Connect ...",
+        "description": "The Offshore Renewable Energy Catapult was established in 2013 by the UK Government and is one of a network of Catapults set up by Innovate UK in high growth industries. It is the UK’s leading innovation centre for offshore renewable energy.",
         "location": {
-            "lat": 52.379507,
-            "lon": -1.560201,
-            "postcode": "CV47SH"
+            "lat": 55.862414,
+            "lon": -4.262576,
+            "postcode": "G25RQ"
         },
-        "name": "High Value Manufacturing (HVM) Catapult",
-        "place_id": "135d84dc2f6d9aa5e1b32d6c0f2e33a6ec1973dc",
+        "name": "Offshore Renewable Energy Catapult",
+        "name_extra": "",
+        "place_id": "b2d40c4f3cd1ee19d42589b346a1ce1c5fb7e134",
         "types": [
             "3"
         ],
-        "url": "https://hvm.catapult.org.uk/"
+        "url": "https://ore.catapult.org.uk/"
     },
     {
-        "description": "My CUH story: International Day of the Midwife. Midwife Jessica Walker is involved in training around 100 students in midwifery at the Rosie Hospital, including already qualified nurses, trainee paramedics and university students. 05 May.",
+        "description": "Research Agency The Food and Environment Research Agency is now independent of the UK government On 1 April 2015 the business and operations of the Food and Environment Research Agency (Fera), an...",
         "location": {
-            "lat": 52.173741,
-            "lon": 0.139114,
-            "postcode": "CB20SW"
+            "lat": 54.0163,
+            "lon": -0.972903,
+            "postcode": "YO411LZ"
         },
-        "name": "Cambridge University Hospitals",
-        "place_id": "866e3595165f2e9b8f45714448c04fe2201ec452",
+        "name": "Food & Environment Research Agency",
+        "name_extra": "FERA",
+        "place_id": "fe19ef51da235457131c323f98e72312650ea06b",
         "types": [
             "3"
         ],
-        "url": "https://www.cuh.nhs.uk/"
+        "url": "https://www.gov.uk/government/organisations/the-food-and-environment-research-agency"
     },
     {
-        "description": "Brunel University London is a highly regarded London university and a great place to study. Founded in 1966, it offers a multitude of courses that combine excellence in teaching and research.",
+        "description": "Culham Centre for Fusion Energy is the UK’s national fusion research laboratory. From theoretical physics to operating two major experiments and carrying out advanced reactor engineering, we lead the world in putting this transformative energy technology on the grid. History Diversity Frequently Asked Questions Resources Share this page:",
         "location": {
-            "lat": 51.532905,
-            "lon": -0.472103,
-            "postcode": "UB82PY"
+            "lat": 51.65776,
+            "lon": -1.228684,
+            "postcode": "OX143DB"
         },
-        "name": "Brunel University London",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
+        "name": "Culham Centre for Fusion Energy",
+        "name_extra": "",
+        "place_id": "b514b7b0975752060474c101d40ce091c934fb76",
         "types": [
             "3"
         ],
-        "url": "https://www.brunel.ac.uk/"
+        "url": "https://ccfe.ukaea.uk/"
     },
     {
-        "description": "Visiting times: See below. Telephone number: 0151 529 2028/2262. Ward 4. Nearest entrance: Aintree Lodge (Entrance I), Entrance E and D on site map )",
+        "description": "Aircraft Research Association Limited. Manton Lane, Bedford, England MK41 7PF. Name * First Last. Email * Phone * Message. reCAPTCHA. Phone. This field is for validation purposes and should be left unchanged. Δ . Delivering Confidence to Fly. ARA lead the world with our range of services delivering complete seamless solutions across transonic wind tunnel testing, advanced measurement systems ...",
         "location": {
-            "lat": 53.466323,
-            "lon": -2.931104,
-            "postcode": "L97AL"
+            "lat": 52.155274,
+            "lon": -0.475985,
+            "postcode": "MK417PF"
         },
-        "name": "Aintree University Hospitals",
-        "place_id": "b7c388ce99ae31d5a9b5b4769aa4e6c8b2b4d1c6",
+        "name": "Aircraft Research Association Limited",
+        "name_extra": "",
+        "place_id": "9d1a31e8e8a1f76a0227bb2950d9e940066a4347",
         "types": [
             "3"
         ],
-        "url": "https://www.aintreehospital.nhs.uk/"
+        "url": "https://www.ara.co.uk/"
     },
     {
-        "description": "Agri-EPI Centre Pioneering innovation, technology and precision engineering for UK farming. Welcome. We are the Agricultural Engineering Precision Innovation (Agri-EPI) Centre. We accelerate the research, development and adoption of precision agriculture and engineering technology.",
+        "description": "The Pirbright Institute | Preventing and controlling viral diseases Science spotlight: Pirbright’s female scientists leading the way in new funding A novel way to create vaccines against infectious bronchitis virus explored by Pirbright scientists £1.6 million awarded to a UK consortium to tackle infectious diseases",
         "location": {
-            "lat": 55.865551,
-            "lon": -3.198271,
-            "postcode": "EH260PQ"
+            "lat": 51.2791,
+            "lon": -0.635213,
+            "postcode": "GU240NF"
         },
-        "name": "Agri-EPI Centre",
-        "place_id": "4bdf4fd289a4dedf619027b41275a8682872db08",
+        "name": "The Pirbright Institute",
+        "name_extra": "",
+        "place_id": "2cb00d7d93523cd5ebd6512d9636756251d6c4b2",
         "types": [
-            "3"
+            "1"
         ],
-        "url": "https://agri-epicentre.com/"
+        "url": "https://www.pirbright.ac.uk/"
     },
     {
-        "description": "Advanced Forming Research Centre A centre of excellence in forming and forging research Excited by technology and obsessed with solving the toughest manufacturing problems, our engineers and researchers work under 5,680 M2 of world-leading research space dedicated to making your products and processes better.",
+        "description": "The UK Astronomy Technology Centre in Edinburgh is the national centre for astronomical technology. We design and build instruments for many of the world's major telescopes, and our scientists carry out observational and theoretical research into fundamental questions such as star formation and the evolution of galaxies.",
         "location": {
-            "lat": 55.884374,
-            "lon": -4.441618,
-            "postcode": "PA49LJ"
+            "lat": 55.922925,
+            "lon": -3.188135,
+            "postcode": "EH93HJ"
         },
-        "name": "Advanced Forming Research Centre",
-        "place_id": "2d418fe40b9b4aac77adf3d300dc08dade56c35e",
+        "name": "UK Astronomy Technology Centre",
+        "name_extra": "",
+        "place_id": "e2d46e3fd37b997fb92fd581bc84c4d77d2dd3e6",
         "types": [
             "3"
         ],
-        "url": "https://www.strath.ac.uk/research/advancedformingresearchcentre/"
+        "url": "https://www.ukri.org/about-us/stfc/locations/royal-observatory-edinburgh/uk-astronomy-technology-centre/"
     },
     {
-        "description": "Call us +44 (0) 203 728 9500. Address 12 th Floor Tower Wing, Guy’s Hospital, Great Maze Pond, London SE1 9RT",
+        "description": "STFC’s mission is to deliver world-leading national and international research and innovation capabilities and, through those, discover the secrets of the Universe. Our major research and innovation campuses at Harwell, Daresbury and research facilities across the UK support fundamental research in astronomy, physics and space science. Highlights",
         "location": {
-            "lat": 51.503355,
-            "lon": -0.087179,
-            "postcode": "SE19GU"
+            "lat": 51.576039,
+            "lon": -1.312797,
+            "postcode": "OX110QX"
         },
-        "name": "Cell Therapy Catapult Limited",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
+        "name": "STFC",
+        "name_extra": "Laboratories",
+        "place_id": "fc1cb9b7107c3056e5af0952fea28d0a2dfcba7e",
         "types": [
             "3"
         ],
-        "url": "https://ct.catapult.org.uk/"
+        "url": "https://www.ukri.org/councils/stfc/"
     },
     {
-        "description": "IDEAS Programme. The new Innovation in Digital Engineering - Automotive Sector (IDEAS) Programme offers access to the latest technologies and expertise in data science, modelling and simulation and AI to drive automotive innovation. Hartree National Centre for Digital Innovation. Enabling UK businesses and the public sector to explore and adopt ...",
+        "description": "Established in 1976, ECI is the UK's leading growth-focused private equity firm investing businesses valued up to £250m. We invest in management buyouts and buyins for majority or minority equity investments in medium sized UK growth companies. For more than 40 years we've been investing across a range of sectors, gaining a wealth of experience in collaborating with management teams to build successful global businesses.",
         "location": {
-            "lat": 53.343404,
-            "lon": -2.641206,
-            "postcode": "WA44AD"
+            "lat": 51.510557,
+            "lon": -0.118919,
+            "postcode": "WC2E7EN"
         },
-        "name": "Hartree Centre",
-        "place_id": "250d5717bb851c1ba5e08678f26b73125b615aaa",
+        "name": "ECI Partners",
+        "name_extra": "",
+        "place_id": "ece6140a1a144a5a9e7778e9d4c25f4cb611d4de",
         "types": [
-            "3"
+            "1"
         ],
-        "url": "https://www.hartree.stfc.ac.uk/"
+        "url": "https://www.ecipartners.com/"
     },
     {
-        "description": "Goldsmiths, University of London With world-leading research and high-quality teaching, we offer undergraduate and postgraduate degrees in the arts, humanities, social sciences, business, and computing from our campus in South East London. About Goldsmiths Live like a local",
+        "description": "Inventages Venture Capital Investment Inc is an investment arm of Nestle SA specializing in PIPES, seed, early, mid, and late venture investments. The firm seeks to invest in middle market and mature companies. It provides mezzanine and bridge financing. The firm seeks to invest in health care, life sciences, cosmeceuticals, pharmaceuticals, enabling technologies and services, and diagnostic and medical devices. Within the pharmaceutical sector, it typically invests in small molecules, proteins, antibodies, vaccines, phytopharmaceuticals, natural compounds, botanicals, antibiotics, and therapeutics. Within the diagnostic sector, it focuses on genetic materials, biomarkers, pathological markers, genetic profiles, protein profiles, pharmacogenomics, food and environmental safety, genetically modified organism detection and trading, medical monitoring, diagnostic and analytical tools, and quality control. Within enabling technologies and services it primarily invests in novel packaging, process and production technologies, supply chain management, innovative materials and resources, delivery systems for active compounds, encapsulation and prevention, food services, extraction and fractionation of biological materials, consumer relation management, green biotechnology, smell and taste modifying technologies, genomics, proteomics, metabolomics, screen and characterization technologies, chemical and biological engineering, and innovative preventive and therapeutic concepts. It also invests in companies involved in the prevention of medical foods, nutraceuticals, cosmoceuticals, nutrition, innovative food, functional food, dietary and food supplements, oral and skin care, immune modulation and stimulation, and health and disease management.",
         "location": {
-            "lat": 51.474144,
-            "lon": -0.035401,
-            "postcode": "SE146NW"
+            "lat": 51.493232,
+            "lon": -0.147829,
+            "postcode": "SW1W9TR"
         },
-        "name": "Goldsmiths College",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
+        "name": "Inventages Venture Capital Investment Inc.",
+        "name_extra": "",
+        "place_id": "ece6140a1a144a5a9e7778e9d4c25f4cb611d4de",
         "types": [
-            "3"
+            "1"
         ],
-        "url": "https://www.gold.ac.uk/"
+        "url": "https://www.inventages.com/"
     },
     {
-        "description": "Welcome to the new Cardiff and Vale University Health Board website. It is still under development in both English and Welsh and some pages are yet to be finalised. For. Our Hospitals. Our Services. Health Centres and Clinics. Local Health Services.",
+        "description": "C5 Capital a family capital-backed investment firm, they build long-term relationships with committed investors, innovative founder teams and global companies keen to maintain their edge. Operating out of London, Luxembourg, Cape Town, Washington D.C. and Manama, they identify, nurture and support partners, whether they're just starting out, or embarking on the next phase of their growth. Given their specialist industry knowledge and execution capability throughout EMEA, they are able to offer a powerful combination of expertise, funding and growth opportunities, all the while ensuring that they are contributing to the public good.",
         "location": {
-            "lat": 51.506764,
-            "lon": -3.18936,
-            "postcode": "CF"
+            "lat": 51.510385,
+            "lon": -0.139116,
+            "postcode": "W1S3HF"
         },
-        "name": "Cardiff & Vale University Health Board",
-        "place_id": "b74767fb11a7473bf968349c52aca77792b36859",
+        "name": "C5 Capital",
+        "name_extra": "",
+        "place_id": "ece6140a1a144a5a9e7778e9d4c25f4cb611d4de",
         "types": [
-            "3"
+            "1"
         ],
-        "url": "https://cavuhb.nhs.wales/"
+        "url": "https://www.c5capital.com/"
     },
     {
-        "description": "I began my career in 1993, studying Diagnostic Radiography at the Faculty of Medicine in The University of Liverpool and The Royal Liverpool University NHS Hospitals. I graduated with a First Class Distinction from The British School of Osteopathy in 2008. I have extensive post-graduate training and am committed to continuous professional development through CPD compliance, ongoing education ...",
+        "description": "m8 Capital is a London-based venture capital firm that funds mobile technology companies.",
         "location": {
-            "lat": 53.410634,
-            "lon": -2.964749,
-            "postcode": "L78XP"
+            "lat": 51.507984,
+            "lon": -0.137442,
+            "postcode": "SW1Y6JD"
         },
-        "name": "Royal Liverpool University NHS Hospitals",
-        "place_id": "b7c388ce99ae31d5a9b5b4769aa4e6c8b2b4d1c6",
+        "name": "m8 Capital",
+        "name_extra": "",
+        "place_id": "ece6140a1a144a5a9e7778e9d4c25f4cb611d4de",
         "types": [
-            "3"
+            "1"
         ],
-        "url": "https://devlocal.work/about/"
+        "url": "https://www.linkedin.com/company/m8-capital"
     },
     {
-        "description": "Cymraeg : English Hawlfraint © Bwrdd Iechyd Prifysgol Abertawe Bro Morgannwg : Copyright © Abertawe Bro Morgannwg University Health Board",
+        "description": "Clydesdale Bank  provides a full range of commercial banking services for retail and institutional customers. The Bank offers savings accounts, telephone banking, insurance, investment management, loans, credit cards, cash management accounts, financial planning, mortgage, and internet banking.",
         "location": {
-            "lat": 51.684652,
-            "lon": -3.935252,
-            "postcode": "SA66PS"
+            "lat": 55.861283,
+            "lon": -4.253419,
+            "postcode": "G12HL"
         },
-        "name": "Abertawe Bro Morgannwg University Health Board",
-        "place_id": "14647559f26189190e287d1c3be02a96fea88637",
+        "name": "Clydesdale Bank",
+        "name_extra": "",
+        "place_id": "b2d40c4f3cd1ee19d42589b346a1ce1c5fb7e134",
         "types": [
-            "3"
+            "1"
         ],
-        "url": "http://www.abm.wales.nhs.uk/"
+        "url": "https://secure.cbonline.co.uk/"
     },
     {
-        "description": "A university with a national and international reputation for excellence, innovation and research. Contributing to economic, social and cultural development of Northern Ireland.",
+        "description": "R/GA is expanding its successful Ventures initiative globally, launching its first UK program in association with InnovateUK. The London-based Venture Studio program is designed to help early-stage and growth-stage startups creating connected products and services to level up as businesses and brands on a global scale.  The expansion of digital into the physical world, often called the \"Internet of Things\", has created an explosion of investment and innovation.  Much like electricity became an invisible component in products and infrastructure in the last century, software and data are becoming embedded at the core of almost everything.  Early applications developed core technologies and explored the market. Now it is up to the next generation of startups to build this foundation, creating meaningful value through products and services that touch the world outside the screen.",
         "location": {
-            "lat": 55.151273,
-            "lon": -6.67609,
-            "postcode": "BT521SA"
+            "lat": 51.527373,
+            "lon": -0.108109,
+            "postcode": "EC1R4AB"
         },
-        "name": "University of Ulster",
-        "place_id": "e3783f81ee1ed553172bbaf11e492be667f1f24f",
+        "name": "R/GA IoT Venture Studio UK",
+        "name_extra": "",
+        "place_id": "ece6140a1a144a5a9e7778e9d4c25f4cb611d4de",
         "types": [
-            "3"
+            "1"
         ],
-        "url": "https://www.ulster.ac.uk/"
+        "url": "https://rgaiot.com/"
     },
     {
-        "description": "What is the University of the Third Age? U3A is a nationwide network of learning groups aimed at encouraging older people to share their knowledge, skills and interests in a friendly environment. There are no exams and no homework, just regular lessons or study groups. It's learning for fun, not with the aim of gaining qualifications. Who can attend a U3A class? There are no age limits but the ...",
+        "description": "TRICAPITAL is an experienced business angel syndicate based in Scotland. TRICAPITAL members invest in a portfolio of high potential, high-growth start-ups and innovative companies across Scotland and the north of England. We also work with Scottish Enterprise, Scottish Investment Bank and other angel syndicates to support dynamic companies who are a good fit for our members' investment ambitions. We welcome new investor members, and play an active role in supporting the companies we invest in. UK companies only, with a particular focus on Scotland and the Borders.",
         "location": {
-            "lat": 51.406807,
-            "lon": 0.0158,
-            "postcode": "BR11QN"
+            "lat": 55.598505,
+            "lon": -2.722467,
+            "postcode": "TD69RU"
         },
-        "name": "University of The Third Age",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
+        "name": "TRICAPITAL",
+        "name_extra": "",
+        "place_id": "8b807c97950c1163464709b819d32ed6074e1dc6",
         "types": [
-            "3"
+            "1"
         ],
-        "url": "https://www.ageuk.org.uk/information-advice/work-learning/education-training/university-of-the-third-age/"
+        "url": "https://tricapital.co.uk/"
     },
     {
-        "description": "Ambition Delivered Today - At Teesside University we believe that innovation powers our steps to create a world where everyone benefits from progress. Ranked in the 801-1000 band of global universities in the Times Higher Education World University Rankings 2021.",
+        "description": "Talis Capital is a venture capital investment firm that takes smart money from some of the world's most successful entrepreneurs and business people and invests it strategically in early-stage technology companies with global potential. Talis has invested over $600 million worth of transactions since 2009 and the portfolio includes Darktrace, Onfido, iwoca, Pirate Studios, Luminance, Threads, Ynsect and Oh My Green. Focused on building long-term partnerships, Talis leverages its network to give some of the world's most innovative startups the opportunity to thrive. For more, see www.taliscapital.com.",
         "location": {
-            "lat": 54.572076,
-            "lon": -1.234694,
-            "postcode": "TS13DG"
+            "lat": 51.425463,
+            "lon": -0.218651,
+            "postcode": "SW195EE"
         },
-        "name": "University of Teesside",
-        "place_id": "e0b072173dac885b2a1276c71b1e7b8159fcde41",
+        "name": "Talis Capital",
+        "name_extra": "",
+        "place_id": "ece6140a1a144a5a9e7778e9d4c25f4cb611d4de",
         "types": [
-            "3"
+            "1"
         ],
-        "url": "https://www.tees.ac.uk/"
+        "url": "https://www.taliscapital.com/"
     },
     {
-        "description": "The University of Huddersfield is a member of Yorkshire Universities View our cookie policy , Freedom of Information Statement , and copyright and disclaimer . Alternative telephone number 0330 1232288 (calls to this number are charged at the national rate).",
+        "description": "Wheatsheaf Group directly operates, invests in and helps to develop businesses in the food and agriculture sectors. Changing global patterns of food consumption and related consumer expectations are putting enormous strain on the sustainability of food production and natural resources. Further pressures will derive from the world's population increasing by a third and reaching almost 10 billion over the next 30 years. By 2050 the U.N. estimates that global agricultural production will need to increase by about 70%. Supply won't meet demand. Not without a more holistic approach to improve yields, soil and nutrient efficiency and reduce waste.  Food production cycles must be improved at every stage and for any solution to have a positive and lasting impact, on a large scale, it must be commercially viable.  Their work is to help meet this challenge.  Through the activities of over 2,500 people across 34 countries and the development of innovative technologies, they aim to contribute enduring solutions to improve efficiency in the production of healthy and nutritious food to meet the food requirements borne out of the increasing demands of changing global population. Their purpose is to deliver lasting commercial and social benefit, using their expertise with a far-sighted perspective. They apply rigorous financial discipline to their activities in order to achieve long term commercial success. But they do so with the aim of making a positive and lasting impact on society by developing and investing in solutions they believe will make a material difference in meeting one of the defining challenges of their time — the provision of enough food to meet the demands of a changing global population, in a way which benefits people's health and wellbeing and nature.",
         "location": {
-            "lat": 53.643663,
-            "lon": -1.778725,
-            "postcode": "HD13DH"
+            "lat": 51.511656,
+            "lon": -0.146,
+            "postcode": "W1K3JP"
         },
-        "name": "University of Huddersfield",
-        "place_id": "ff97e5515f451dc8334b4fcb2758031554da229f",
+        "name": "Wheatsheaf Group",
+        "name_extra": "",
+        "place_id": "ece6140a1a144a5a9e7778e9d4c25f4cb611d4de",
         "types": [
-            "3"
+            "1"
         ],
-        "url": "https://hud.ac.uk/undergraduate"
+        "url": "https://www.wheatsheafgroup.com/news/wheatsheaf-group-acquires-nutrient-management-solutions-company-ostara/"
     },
     {
-        "description": "spread over the general, glenfield and royal infirmary hospitals, we also have our very own children’s hospital and work closely with partners at the university of leicester and de montfort university providing world-class teaching to nurture and develop the next generation of doctors, nurses and other healthcare professionals, many of whom go on …",
+        "description": "Playfair Capital is an early-stage fund that commits to companies early and with conviction. Based in London, Playfair combines the best aspects of angel investing with a focused fund, to invest in truly ambitious founders, wherever they are in the world. Playfair takes a sector-agnostic approach and investments span deep tech, SaaS, marketplaces and B2B companies. We've backed the founders of more than 50 companies including CryptoFacilities, Mapillary, Ravelin, Stripe, Thought Machine and Trouva.",
         "location": {
-            "lat": 52.626782,
-            "lon": -1.135961,
-            "postcode": "LE27QS"
+            "lat": 51.523133,
+            "lon": -0.111225,
+            "postcode": "EC1R5EY"
         },
-        "name": "University Hospitals of Leicester NHS",
-        "place_id": "6d3697ef881dafc1423633ec03b94238e365101d",
+        "name": "Playfair Capital",
+        "name_extra": "",
+        "place_id": "ece6140a1a144a5a9e7778e9d4c25f4cb611d4de",
         "types": [
-            "3"
+            "1"
         ],
-        "url": "https://www.leicestershospitals.nhs.uk/aboutus/"
+        "url": "https://playfaircapital.com/"
     },
     {
-        "description": "University Hospitals Bristol and Weston NHS Foundation Trust was formed on 1 April 2020 following the merger of University Hospitals Bristol NHS Foundation Trust and Weston Area Health NHS Trust. Find out more Travelling to and from our hospitals Information about parking and public transport available if you are visiting our hospitals.",
+        "description": "Artemis is a leading UK-based fund manager, offering a range of funds which invest in the UK, Europe, the US and around the world. As a dedicated, active investment house, they specialise in investment management for both retail and institutional investors.",
         "location": {
-            "lat": 51.459478,
-            "lon": -2.593019,
-            "postcode": "BS13NU"
+            "lat": 51.50679,
+            "lon": -0.140275,
+            "postcode": "SW1A1LD"
         },
-        "name": "University Hospitals Bristol NHS Foundation Trust",
-        "place_id": "aca1b9e9441fafc9f311d095335c44bb5f79a44d",
+        "name": "Artemis",
+        "name_extra": "",
+        "place_id": "ece6140a1a144a5a9e7778e9d4c25f4cb611d4de",
         "types": [
-            "3"
+            "1"
         ],
-        "url": "http://www.uhbristol.nhs.uk/"
+        "url": "https://en.wikipedia.org/wiki/Artemis"
     },
     {
-        "description": "University Hospitals Birmingham NHS Foundation Trust is recognised as one of the leading NHS trusts in the UK. With more than 20,000 members of staff, we are committed to the development, health and well-being of our people. Find out more about becoming part of team UHB. Our news. New Oncology Treatment Suite and Infusion Suite open . It has been one month since the Oncology Treatment Unit and ...",
+        "description": "YYX Capital is an early stage venture capital firm that invests in next generation Consumer Internet, eCommerce and FinTech companies. We are founded on the core belief that deep domain and industry knowledge, operating expertise and extensive networks are fundamental to support early stage entrepreneurs from seed to success. Taking calculated risks are intrinsic to a startups success and by applying our proven playbooks - we formulate strategies to execute alongside teams as they scale.",
         "location": {
-            "lat": 52.47337,
-            "lon": -1.930292,
-            "postcode": "B168UR"
+            "lat": 51.513035,
+            "lon": -0.147314,
+            "postcode": "W1K5DB"
         },
-        "name": "University Hospitals Birmingham NHS Foundation Trust",
-        "place_id": "5204352a21564f1b97200e3993e858d41c294698",
+        "name": "YYX Capital",
+        "name_extra": "",
+        "place_id": "ece6140a1a144a5a9e7778e9d4c25f4cb611d4de",
         "types": [
-            "3"
+            "1"
         ],
-        "url": "https://www.uhb.nhs.uk/"
-    },
-    {
-        "description": "Our Trust manages two major hospitals in Coventry and Rugby, which between them serve a population of over a million people. Click here > Come and join our team At UHCW our staff are proud to work for us, our people receive the best opportunities for development so they can fulfil their potential and watch their careers grow. Click here >",
-        "location": {
-            "lat": 52.421211,
-            "lon": -1.438403,
-            "postcode": "CV22BJ"
-        },
-        "name": "University Hospital Coventry NHS Trust",
-        "place_id": "ab4003a6cabc533832f733b0490956de4ffc2fc6",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.uhcw.nhs.uk/"
-    },
-    {
-        "description": "UCL is the number one London university for Research Strength (REF2014), recognised for its academic excellence and global impact.",
-        "location": {
-            "lat": 51.52449,
-            "lon": -0.134135,
-            "postcode": "WC1H0PD"
-        },
-        "name": "University College London",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.ucl.ac.uk/"
-    },
-    {
-        "description": "Aberdeen's RGU is the Scottish University of the Year 2021. A top university in Scotland for graduate prospects, with an international reputation for management, health, energy & technology courses.",
-        "location": {
-            "lat": 57.148372,
-            "lon": -2.10116,
-            "postcode": "AB251UH"
-        },
-        "name": "The Robert Gordon University",
-        "place_id": "e61198acf4178b1d83cbfd4e73173c62e43bf27a",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.rgu.ac.uk/"
-    },
-    {
-        "description": "Home | The Alan Turing Institute We believe data science and artificial intelligence will change the world. We are pioneers; training the next generation of leaders, shaping the public conversation, and pushing the boundaries of these sciences for the public good. About us What is The Alan Turing Institute? Watch on",
-        "location": {
-            "lat": 51.529741,
-            "lon": -0.127317,
-            "postcode": "NW12DB"
-        },
-        "name": "The Alan Turing Institute",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
-        "types": [
-            "3"
-        ],
-        "url": "https://www.turing.ac.uk/"
-    },
-    {
-        "description": "Summary on Grant Application Form: In 2017 the need for disruptive sensing systems to detect and limit infectious outbreaks has taken centre stage - Zika virus and Ebola add to the threat of pandemic influenza, HIV and antimicrobial resistance, for which the world remains unprepared.",
-        "location": {
-            "lat": 51.524045,
-            "lon": -0.135158,
-            "postcode": "WC1E6JL"
-        },
-        "name": "University College Hospitals L",
-        "place_id": "471aa94f1ff710bd9215bed03da9568ce4111446",
-        "types": [
-            "3"
-        ],
-        "url": "https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/R00529X/1"
-    },
-    {
-        "description": "Cymraeg : English Hawlfraint © Bwrdd Iechyd Prifysgol Abertawe Bro Morgannwg : Copyright © Abertawe Bro Morgannwg University Health Board",
-        "location": {
-            "lat": 51.613348,
-            "lon": -3.81619,
-            "postcode": "SA127BR"
-        },
-        "name": "ABM University NHS Trust",
-        "place_id": "013b9819c57a9b47cf1fd107aeeab82b5968e391",
-        "types": [
-            "3"
-        ],
-        "url": "http://www.abm.wales.nhs.uk/"
-    },
-    {
-        "description": "WMG Centre High Value Manufacturing (HVM) Catapult is actively changing the way we travel for the better. We specialise in innovation aimed at making transport cleaner, safer and more efficient. We are working with UK manufacturing partners to develop automated, connected, electric and shared mobility for a sustainable future.",
-        "location": {
-            "lat": 52.379507,
-            "lon": -1.560201,
-            "postcode": "CV47SH"
-        },
-        "name": "WMG Catapult",
-        "place_id": "135d84dc2f6d9aa5e1b32d6c0f2e33a6ec1973dc",
-        "types": [
-            "3"
-        ],
-        "url": "https://warwick.ac.uk/fac/sci/wmg/research/hvmcatapult/"
+        "url": "https://www.yyxcapital.com/privacy"
     }
 ]
