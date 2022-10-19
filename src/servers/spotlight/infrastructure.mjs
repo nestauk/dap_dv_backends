@@ -30,24 +30,30 @@ export const configureLoadBalancer = async ips => {
 
 	console.log('[+] Configuring Load Balancer...');
 	const ips_ = _.map(ips, ip => `server ${ip}:2222;`);
-	const ipStrings = _.join(ips_, '\n\t	');
-	const nginxConfiguration = `events {}
-http {
-	upstream spotlight {
+	const ipStrings = _.join(ips_, '\n');
+
+	const upstream = ips.length
+		? `upstream spotlight {
 		${ipStrings}
 	}
-
 	server {
 		listen 2222;
 		location / {
 			proxy_pass http://spotlight;
 		}
-	}
+	}`
+		: '';
+	const annotate = ips.length
+		? `location /annotate {
+			proxy_pass http://spotlight/rest/annotate;
+		}`
+		: '';
+	const nginxConfiguration = `events {}
+http {
+	${upstream}
 	server {
 		listen 80;
-		location /annotate {
-			proxy_pass http://spotlight/rest/annotate;
-		}
+		${annotate}
 		location / {
 			proxy_pass http://localhost:3000;
 		}
