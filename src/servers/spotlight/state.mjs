@@ -1,4 +1,5 @@
 export let state = {
 	status: 'down',
-	workers: 0
+	workers: 0,
+	endpoints: []
 };
