@@ -1,11 +1,14 @@
 import { v4 as uuidv4 } from 'uuid';
 
 import { arxliveCopy as DEFAULT_DOMAIN } from 'conf/config.mjs';
-import { MAX_WORKERS, annotationEndpoint } from './config.mjs';
-import { annotationService } from './machine.mjs';
 import { count } from 'es/index.mjs';
+
+import { MAX_WORKERS, annotationEndpoint } from '../config.mjs';
+import { annotationService } from './machine.mjs';
 import { Progress } from './progress.mjs';
 import { state } from './state.mjs';
+
+
 export const routes = (fastify, options, done) => {
 
 	fastify.get('/status', async (_, reply) => {

@@ -1,7 +1,9 @@
 /* eslint-disable no-await-in-loop */
 import { stringify } from "@svizzle/utils";
-import { terraformServerAddress } from "./config.mjs";
 import { sleep } from 'util/time.mjs';
+
+import { terraformServerAddress } from "../config.mjs";
+
 
 export const stateEndpoint = new URL('state', terraformServerAddress);
 export const annotationEndpoint = new URL('annotate', terraformServerAddress);

@@ -1,10 +1,17 @@
 /* eslint-disable no-await-in-loop */
-import * as _ from 'lamb';
+import * as path from 'path';
+import { fileURLToPath } from 'url';
 
+import * as _ from 'lamb';
 import { fetch } from 'undici';
 
-import { state } from './state.mjs';
 import { sleep } from 'util/time.mjs';
+
+import { state } from './state.mjs';
+
+
+export const __filename = fileURLToPath(import.meta.url);
+export const __dirname = path.dirname(__filename);
 
 export const endpointToIp = endpoint => endpoint.split('/')[2].split(':')[0];
 
