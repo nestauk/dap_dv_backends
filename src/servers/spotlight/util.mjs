@@ -1,6 +1,8 @@
 /* eslint-disable no-await-in-loop */
 import * as _ from 'lamb';
 
+import { fetch } from 'undici';
+
 import { state } from './state.mjs';
 import { sleep } from 'util/time.mjs';
 

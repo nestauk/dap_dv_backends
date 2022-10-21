@@ -13,8 +13,12 @@ await bootstrap();
 
 app.use(express.json()); // for parsing application/json
 
+// eslint-disable-next-line consistent-return
 app.post('/provision', (req, res) => {
 	const { workers=4 } = req.body;
+	if (workers === 0) {
+		return res.redirect('/teardown');
+	}
 	state.status = 'scheduling';
 	setup(workers).then(({ status, workers: workers_, endpoints }) => {
 		state.status = status;
