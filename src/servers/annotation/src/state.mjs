@@ -7,5 +7,6 @@ export const state = {
 	instances: {
 		ready: [],
 		provisioning: []
-	}
+	},
+	progress: {}
 };
