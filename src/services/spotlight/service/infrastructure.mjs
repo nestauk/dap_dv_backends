@@ -4,14 +4,16 @@ import { promises as fs } from 'fs';
 import * as _ from 'lamb';
 import * as path from 'path';
 
-import { SERVER_DIRECTORY, TERRAFORM_DIRECTORY } from './conf.mjs';
 import { generateConfiguration } from 'terraform/configuration.mjs';
-import { getCurrentState } from 'terraform/state.mjs';
 import { init, apply } from 'terraform/commands.mjs';
 import { displayCommandOutput } from 'util/shell.mjs';
+import { getCurrentState } from 'terraform/state.mjs';
 import { sleep } from 'util/time.mjs';
+
+import { SERVER_DIRECTORY, TERRAFORM_DIRECTORY } from '../config.mjs';
 import { getIps, endpointToIp, getEndpoints, getNewEndpoints, spotlightEndpointPromise } from './util.mjs';
 import { state } from './state.mjs';
+
 
 export const launchSpotlightContainers = async ips => {
 

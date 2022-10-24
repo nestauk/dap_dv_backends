@@ -6,7 +6,7 @@ import { get } from 'es/document.mjs';
 import { scroll, clearScroll } from 'es/search.mjs';
 import { bulkRequest } from 'es/bulk.mjs';
 
-import * as serverConfig from './config.mjs';
+import * as serverConfig from '../config.mjs';
 
 /* utils */
 const getEntities = _.getPath('_source.dbpedia_entities');

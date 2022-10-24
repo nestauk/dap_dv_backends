@@ -1,10 +1,12 @@
 import express from 'express';
 
-import { TERRAFORM_DIRECTORY } from './conf.mjs';
-import { bootstrap, configureLoadBalancer, setup } from './infrastructure.mjs';
 import { destroy } from 'terraform/commands.mjs';
-import { state } from './state.mjs';
 import { getCurrentState } from 'terraform/state.mjs';
+
+import { TERRAFORM_DIRECTORY } from '../config.mjs';
+import { bootstrap, configureLoadBalancer, setup } from './infrastructure.mjs';
+import { state } from '../state.mjs';
+
 
 const app = express();
 const port = 3000;

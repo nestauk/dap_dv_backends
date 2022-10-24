@@ -1,6 +1,7 @@
+import { performance } from 'perf_hooks';
+
 import { sendEmail } from 'aws/email.mjs';
 
-import { performance } from 'perf_hooks';
 
 export const Progress = class {
 	constructor(total, email, id) {

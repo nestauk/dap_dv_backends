@@ -1,5 +1,5 @@
 import { sendEmail } from 'aws/email.mjs';
-import { BACKEND_BASE, SOURCE_EMAIL } from './config.mjs';
+import { BACKEND_BASE, SOURCE_EMAIL } from '../config.mjs';
 import { generateToken } from './crypto.mjs';
 
 export const sentTokenEmail = async email => {

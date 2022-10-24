@@ -4,6 +4,4 @@ node_modules
 .prettierignore
 .DS_Store
 **/secrets/**
-src/bin/spotlight/nginx.conf
-src/servers/**/terraform
-src/servers/**/nginx.conf
+src/services/**/terraform

@@ -4,7 +4,7 @@ import { createClient } from 'redis';
 import { arxliveCopy } from 'conf/config.mjs';
 import { scroll, clearScroll } from 'es/search.mjs';
 
-import * as serverConfig from './config.mjs';
+import * as serverConfig from '../config.mjs';
 
 export const redisClient = createClient();
 

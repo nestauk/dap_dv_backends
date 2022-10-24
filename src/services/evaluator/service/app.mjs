@@ -1,7 +1,7 @@
 import cors from 'cors';
 import express from 'express';
 
-import { serverPort } from './config.mjs';
+import { serverPort } from '../config.mjs';
 import { redisClient } from './db.mjs';
 import {
 	getNextOrgIdsForUser,
@@ -9,6 +9,7 @@ import {
 	getOrgWithValidEntities,
 	saveEvaluation,
 } from './logic.mjs';
+
 
 const app = express();
 
