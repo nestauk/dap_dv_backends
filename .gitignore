@@ -5,3 +5,4 @@ node_modules
 .DS_Store
 **/secrets/**
 src/services/**/terraform
+.dvc
