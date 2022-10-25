@@ -9,8 +9,8 @@ export const PORT = process.env.PORT || 4000;
 const nodeEnv = process.env.NODE_ENV || 'development';
 
 const BACKEND_BASES = {
-	development: `http://localhost:${PORT}`,
-	dev: 'https://authentication.dap-tools.uk'
+	development: `localhost:${PORT}`,
+	dev: 'api.dap-tools.uk/auth'
 };
 
 export const BACKEND_BASE = BACKEND_BASES[nodeEnv];

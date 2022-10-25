@@ -5,7 +5,7 @@ import { generateToken } from './crypto.mjs';
 export const sentTokenEmail = async email => {
 	const token = generateToken();
 
-	const link = new URL('provide', BACKEND_BASE);
+	const link = new URL('provide', `https://${BACKEND_BASE}`);
 	link.searchParams.append('email', email);
 	link.searchParams.append('token', token);
 

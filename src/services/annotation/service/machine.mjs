@@ -4,6 +4,7 @@ import { from, map, mergeAll } from 'rxjs';
 
 import * as spotlight from 'dbpedia/spotlight.mjs';
 
+import { context as applicationContext } from './context.mjs';
 import * as terraform from './terraform.mjs';
 
 
@@ -149,5 +150,6 @@ export const annotationService = interpret(annotationMachine)
 	console.log(state.event.type);
 	console.log(state.toStrings());
 	console.log(state.context);
+	applicationContext.XstateContext = state.context;
 })
 .start();
