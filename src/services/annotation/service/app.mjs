@@ -15,7 +15,12 @@ import { routes } from './routes.mjs';
 // You must first generate certs for local development.
 // Please see /src/services/.secrets/README.md for more information
 const certsPath = path.join('src', 'services', '.secrets', 'certs');
-const fastifyConfiguration = BACKEND_BASE.startsWith('localhost')
+
+const useHTTPs =
+	BACKEND_BASE.startsWith('localhost')
+	// eslint-disable-next-line no-process-env
+	&& !process.env.GITHUB_ACTIONS;
+const fastifyConfiguration = useHTTPs
 	? {
 		https: {
 			key: readFileSync(path.join(certsPath, 'key.pem')),
