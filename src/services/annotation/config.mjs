@@ -2,6 +2,7 @@ export const PORT = 4000;
 
 export const terraformServerAddress = "http://3.8.192.33";
 export const annotationEndpoint = new URL('annotate', terraformServerAddress);
+export const authenticationEndpoint = 'https://authentication.dap-tools.uk/authenticate';
 
 export const MAX_WORKERS=4;
 
