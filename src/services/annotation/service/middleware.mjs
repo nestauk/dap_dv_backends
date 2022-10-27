@@ -1,4 +1,5 @@
 import { authenticate, parseBasicAuth } from './auth.mjs';
+import codes from './error.mjs';
 
 const respondWithAuthError = (res, message, code) => {
 	res.statusCode=401;
@@ -12,7 +13,7 @@ export const authenticationMiddleware = async(req, res, next) => {
 		respondWithAuthError(
 			res,
 			'No Authorization Header set',
-			100
+			codes.AUTH_NO_HEADER
 		);
 		return;
 	}
@@ -21,7 +22,7 @@ export const authenticationMiddleware = async(req, res, next) => {
 		respondWithAuthError(
 			res,
 			'Basic Authorization Header required',
-			101
+			codes.AUTH_WRONG_HEADER
 		);
 		return;
 	}
@@ -31,7 +32,7 @@ export const authenticationMiddleware = async(req, res, next) => {
 		respondWithAuthError(
 			res,
 			'Email and Token supplied cannot be authenticated',
-			102
+			codes.AUTH_UNAUTHENTICATED
 		);
 		return;
 	}
