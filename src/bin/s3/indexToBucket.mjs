@@ -52,11 +52,7 @@ const main = async () => {
 		options.domain,
 		options.bucket,
 		options.key,
-		options.threshold,
-		options.pages,
-		options.pageSize,
-		options.format,
-		options.processor
+		options
 	);
 };
 
