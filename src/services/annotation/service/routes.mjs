@@ -9,6 +9,7 @@ import { annotationService } from './machine.mjs';
 import { Progress } from './progress.mjs';
 import { state } from './state.mjs';
 import { parseS3URI, uriToEsIndex } from './util.mjs';
+import { checkS3, checkES } from './checks.mjs';
 
 
 export const routes = (fastify, options, done) => {
@@ -41,11 +42,17 @@ export const routes = (fastify, options, done) => {
 			workers = MAX_WORKERS,
 		} = request.body;
 
+		const { bucket: inBucket, key: inKey } = parseS3URI(s3_input_uri);
+		const { bucket: outBucket, key: outKey } = parseS3URI(s3_output_uri);
+
+		const checks = await checkS3(inBucket, inKey, outBucket, outKey);
+		if (checks.error) {
+			return reply.send(checks);
+		}
+
 		const id = uuidv4();
 		reply.send({ id });
 
-		const { bucket: inBucket, key: inKey } = parseS3URI(s3_input_uri);
-		const { bucket: outBucket, key: outKey } = parseS3URI(s3_output_uri);
 
 		const index = uriToEsIndex(s3_input_uri);
 		await bucketToIndex(
@@ -86,6 +93,11 @@ export const routes = (fastify, options, done) => {
 			newField = 'dbpedia_entities',
 			workers = MAX_WORKERS,
 		} = request.body;
+
+		const checks = await checkES(domain, index, field);
+		if (checks.error) {
+			return reply.send(checks);
+		}
 
 		const id = uuidv4();
 		const total = await count(domain, index);
