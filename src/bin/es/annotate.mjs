@@ -81,22 +81,22 @@ const main = async () => {
 		);
 	}
 
-	const { body: snapshotStatus } = await status(options.domain);
-	if (snapshotStatus.snapshots.length !== 0) {
-		throw new Error(
-			`Can't trigger a snapshot as domain is already busy creating one`
-		);
-	}
+	// const { body: snapshotStatus } = await status(options.domain);
+	// if (snapshotStatus.snapshots.length !== 0) {
+	// 	throw new Error(
+	// 		`Can't trigger a snapshot as domain is already busy creating one`
+	// 	);
+	// }
 
 	const startTime = performance.now();
 
 	// initialize snapshot repository with given settings
-	await register(options.domain, settings.snapshotSettings.repository);
-	await trigger(
-		options.domain,
-		settings.snapshotSettings.repository,
-		`${options.newFieldName.toLowerCase()}-before-${Number(new Date())}`
-	);
+	// await register(options.domain, settings.snapshotSettings.repository);
+	// await trigger(
+	// 	options.domain,
+	// 	settings.snapshotSettings.repository,
+	// 	`${options.newFieldName.toLowerCase()}-before-${Number(new Date())}`
+	// );
 
 	await annotateIndex(
 		options.domain,
@@ -107,11 +107,11 @@ const main = async () => {
 	);
 
 	// trigger snapshot after successful run
-	await trigger(
-		options.domain,
-		settings.snapshotSettings.repository,
-		`${options.newFieldName.toLowerCase()}-after-${Number(new Date())}`
-	);
+	// await trigger(
+	// 	options.domain,
+	// 	settings.snapshotSettings.repository,
+	// 	`${options.newFieldName.toLowerCase()}-after-${Number(new Date())}`
+	// );
 
 	const endTime = performance.now();
 	console.log(`Total time taken (in ms): ${endTime - startTime}`);
