@@ -3,13 +3,12 @@ import express from 'express';
 import { destroy } from 'terraform/commands.mjs';
 import { getCurrentState } from 'terraform/state.mjs';
 
-import { TERRAFORM_DIRECTORY } from '../config.mjs';
+import { PORT, spotlightEndpoint, TERRAFORM_DIRECTORY } from '../config.mjs';
 import { bootstrap, configureLoadBalancer, setup } from './infrastructure.mjs';
-import { state } from '../state.mjs';
+import { state } from './state.mjs';
 
 
 const app = express();
-const port = 3000;
 
 await bootstrap();
 
@@ -19,7 +18,7 @@ app.use(express.json()); // for parsing application/json
 app.post('/provision', (req, res) => {
 	const { workers=4 } = req.body;
 	if (workers === 0) {
-		return res.redirect('/teardown');
+		return res.redirect(`${spotlightEndpoint}/teardown`);
 	}
 	state.status = 'scheduling';
 	setup(workers).then(({ status, workers: workers_, endpoints }) => {
@@ -52,8 +51,8 @@ app.get('/status', (_, res) => {
 	res.send(state);
 });
 
-app.listen(port, () => {
-	console.log(`Listening on port ${port}`);
+app.listen(PORT, () => {
+	console.log(`Listening on port ${PORT}`);
 });
 
 

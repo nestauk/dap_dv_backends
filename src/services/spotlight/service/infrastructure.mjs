@@ -10,7 +10,7 @@ import { displayCommandOutput } from 'util/shell.mjs';
 import { getCurrentState } from 'terraform/state.mjs';
 import { sleep } from 'util/time.mjs';
 
-import { SERVER_DIRECTORY, TERRAFORM_DIRECTORY } from '../config.mjs';
+import { WORKER_PORT, SERVER_DIRECTORY, TERRAFORM_DIRECTORY } from '../config.mjs';
 import { getIps, endpointToIp, getEndpoints, getNewEndpoints, spotlightEndpointPromise } from './util.mjs';
 import { state } from './state.mjs';
 
@@ -31,7 +31,7 @@ export const launchSpotlightContainers = async ips => {
 export const configureLoadBalancer = async ips => {
 
 	console.log('[+] Configuring Load Balancer...');
-	const ips_ = _.map(ips, ip => `server ${ip}:2222;`);
+	const ips_ = _.map(ips, ip => `server ${ip}:${WORKER_PORT};`);
 	const ipStrings = _.join(ips_, '\n');
 
 	const upstream = ips.length
@@ -39,7 +39,7 @@ export const configureLoadBalancer = async ips => {
 		${ipStrings}
 	}
 	server {
-		listen 2222;
+		listen ${WORKER_PORT};
 		location / {
 			proxy_pass http://spotlight;
 		}
@@ -47,7 +47,7 @@ export const configureLoadBalancer = async ips => {
 		: '';
 	const annotate = ips.length
 		? `location /annotate {
-			proxy_pass http://spotlight/rest/annotate;
+			proxy_pass http://spotlight/annotate;
 		}`
 		: '';
 	const nginxConfiguration = `events {}
@@ -67,7 +67,8 @@ http {
 };
 
 export const bootstrap = async () => {
-	state.endpoints = getEndpoints(await getCurrentState(TERRAFORM_DIRECTORY));
+	const state_ = await getCurrentState(TERRAFORM_DIRECTORY);
+	state.endpoints = state_ ? getEndpoints(state_) : [];
 	state.workers = state.endpoints.length;
 	state.status = state.workers ? 'up' : 'down';
 };

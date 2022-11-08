@@ -37,13 +37,19 @@ program.option(
 	'-p, --page-size <page size>',
 	'Size of page to scroll with',
 	commanderParseInt,
-	100
+	10000
 );
 program.option(
 	'-b, --batch-size <batch size>',
 	'Size of batch to annotate over',
 	commanderParseInt,
 	10
+);
+program.option(
+	'-g, --group-size <size>',
+	'Size of group of batches, usually corresponds to the number of worker nodes',
+	commanderParseInt,
+	4
 );
 program.option(
 	'-z, --pages <number of pages>',

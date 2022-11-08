@@ -40,6 +40,7 @@ const objectAccessible = async (bucket, key) => {
 	}
 };
 
+
 const bucketWritable = async (bucket, key) => {
 	const uri = buildS3Uri(bucket, key);
 	const data = { "test": "data" };
@@ -62,9 +63,10 @@ const bucketWritable = async (bucket, key) => {
 	}
 };
 
-const outputBucketAlreadyExists = async (bucket, key) => {
+const objectExists = async (bucket, key) => {
 	const uri = buildS3Uri(bucket, key);
-	if (await objectAccessible(bucket, key)) {
+	const { error } = await objectAccessible(bucket, key);
+	if (!error) {
 		return {
 			error: `Object already exists at ${uri}. Please ensure that you're not overwriting an existing S3 object.`,
 			code: codes.S3_OBJECT_EXISTS
@@ -78,7 +80,7 @@ export const checkS3 = async (inBucket, inKey, outBucket, outKey) => {
 	if (readCheck.error) {
 		return readCheck;
 	}
-	const overwriteCheck = await outputBucketAlreadyExists(outBucket, outKey);
+	const overwriteCheck = await objectExists(outBucket, outKey);
 	if (overwriteCheck.error) {
 		return overwriteCheck;
 	}
