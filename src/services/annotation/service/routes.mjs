@@ -32,7 +32,7 @@ export const routes = (fastify, options, done) => {
 	});
 
 	// eslint-disable-next-line consistent-return
-	fastify.post('/annotate/s3', async (request, reply) => {
+	fastify.post('/s3', async (request, reply) => {
 
 		const domain = DEFAULT_DOMAIN;
 		let {
@@ -113,7 +113,7 @@ export const routes = (fastify, options, done) => {
 	});
 
 	// eslint-disable-next-line consistent-return
-	fastify.post('/annotate/es', async (request, reply) => {
+	fastify.post('/es', async (request, reply) => {
 
 		let {
 			index,

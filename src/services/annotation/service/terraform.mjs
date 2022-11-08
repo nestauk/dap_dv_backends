@@ -2,11 +2,11 @@
 import { stringify } from "@svizzle/utils";
 import { sleep } from 'util/time.mjs';
 
-import { terraformServerAddress } from "../config.mjs";
+import { spotlightEndpoint } from "../config.mjs";
 
 
-export const stateEndpoint = new URL('state', terraformServerAddress);
-export const annotationEndpoint = new URL('annotate', terraformServerAddress);
+export const stateEndpoint = new URL('state', spotlightEndpoint);
+export const annotationEndpoint = new URL('annotate', spotlightEndpoint);
 
 const parseResponse = response => {
 	const contentType = response.headers.get('content-type');
@@ -16,7 +16,7 @@ const parseResponse = response => {
 	return response;
 };
 const request = async path => {
-	const endpoint = new URL(path, terraformServerAddress);
+	const endpoint = new URL(path, spotlightEndpoint);
 	const response = await fetch(endpoint);
 	return parseResponse(response);
 };
@@ -27,7 +27,7 @@ export const state = () => request('state');
 
 export const provision = async workers => {
 
-	const endpoint = new URL('provision', terraformServerAddress);
+	const endpoint = new URL('provision', spotlightEndpoint);
 	const headers = { 'Content-Type': 'application/json' };
 	const body = stringify({ workers });
 	const response = await fetch(endpoint, { method: 'POST', headers, body });
@@ -47,5 +47,3 @@ export const provision = async workers => {
 		resolve(provisioningStatus);
 	});
 };
-
-console.log(await status());
