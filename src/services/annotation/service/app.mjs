@@ -13,7 +13,7 @@ const fastify = Fastify({
 await fastify.register(middie);
 
 // only authenticate annotate endpoints
-fastify.use('/annotate/(.*)', authenticationMiddleware);
+fastify.use('/(s3|es)', authenticationMiddleware);
 
 /* routes */
 fastify.register(routes);

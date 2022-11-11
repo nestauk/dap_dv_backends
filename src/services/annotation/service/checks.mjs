@@ -63,6 +63,7 @@ const bucketWritable = async (bucket, key) => {
 };
 
 const outputBucketAlreadyExists = async (bucket, key) => {
+	const uri = buildS3Uri(bucket, key);
 	if (await objectAccessible(bucket, key)) {
 		return {
 			error: `Object already exists at ${uri}. Please ensure that you're not overwriting an existing S3 object.`,
