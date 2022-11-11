@@ -61,8 +61,8 @@ export const routes = (fastify, options, done) => {
 
 		const { email } = parseBasicAuth(request.headers.authorization);
 
-		// const index = uriToEsIndex(s3_input_uri);
 		const index = id;
+
 		await bucketToIndex(
 			index,
 			domain,
@@ -94,6 +94,7 @@ export const routes = (fastify, options, done) => {
 
 		const progress = new Progress(total, callback);
 		state.progress[id] = progress;
+		const groupSize = workers;
 
 		annotationService.send(
 			{
@@ -107,6 +108,7 @@ export const routes = (fastify, options, done) => {
 				includeMetaData,
 				progress,
 				batchSize,
+				groupSize,
 				type: 'PROVISION',
 			}
 		);
@@ -118,12 +120,13 @@ export const routes = (fastify, options, done) => {
 		let {
 			index,
 			field,
-			email,
 			includeMetaData = true,
 			domain = DEFAULT_DOMAIN,
 			newField = 'dbpedia_entities',
 			workers = MAX_WORKERS,
 		} = request.body;
+
+		const { email } = parseBasicAuth(request.headers.authorization);
 
 		const checks = await checkES(domain, index, field);
 		if (checks.error) {
@@ -132,13 +135,24 @@ export const routes = (fastify, options, done) => {
 
 		const id = uuidv4();
 		const total = await count(domain, index);
-		const progress = new Progress(total, email, id);
+
+		const callback = () => {
+			sendEmail(
+				email,
+				notificationEmail,
+				`Your annotation with id <code>${id}</code> has finished`,
+				'Annotation finished.'
+			);
+		};
+		const progress = new Progress(total, callback);
 		state.progress[id] = progress;
 
 		// no more than 4 workers per process
 		if (workers > MAX_WORKERS) {
 			workers = MAX_WORKERS;
 		}
+
+		const groupSize = workers;
 
 		annotationService.send(
 			{
@@ -151,6 +165,7 @@ export const routes = (fastify, options, done) => {
 				annotationEndpoint,
 				includeMetaData,
 				progress,
+				groupSize,
 				type: 'PROVISION',
 			}
 		);

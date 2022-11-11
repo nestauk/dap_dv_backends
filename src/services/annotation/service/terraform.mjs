@@ -16,7 +16,7 @@ const parseResponse = response => {
 	return response;
 };
 const request = async path => {
-	const endpoint = new URL(path, spotlightEndpoint);
+	const endpoint = `${spotlightEndpoint}/${path}`;
 	const response = await fetch(endpoint);
 	return parseResponse(response);
 };
@@ -27,11 +27,10 @@ export const state = () => request('state');
 
 export const provision = async workers => {
 
-	const endpoint = new URL('provision', spotlightEndpoint);
+	const endpoint = `${spotlightEndpoint}/provision`;
 	const headers = { 'Content-Type': 'application/json' };
 	const body = stringify({ workers });
 	const response = await fetch(endpoint, { method: 'POST', headers, body });
-
 	return new Promise(async (resolve, reject) => {
 		const {status: code} = parseResponse(response);
 		if (code !== 200) {
