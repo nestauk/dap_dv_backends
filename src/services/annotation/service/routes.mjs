@@ -5,34 +5,33 @@ import { bucketToIndex, indexToBucket } from 'aws/s3.mjs';
 import { arxliveCopy as DEFAULT_DOMAIN } from 'conf/config.mjs';
 import { count } from 'es/index.mjs';
 
+import { MAX_WORKERS, internalAnnotationEndpoint } from '../config.mjs';
 import { parseBasicAuth } from './auth.mjs';
-import { checkS3, checkES } from './checks.mjs';
-import { MAX_WORKERS, annotationEndpoint, notificationEmail } from '../config.mjs';
 import { annotationService } from './machine.mjs';
 import { Progress } from './progress.mjs';
-import { state } from './state.mjs';
+import { context } from './context.mjs';
+import * as schema from './schemas.mjs';
 import { parseS3URI } from './util.mjs';
+import { checkS3, checkES } from './checks.mjs';
 
 
 export const routes = (fastify, options, done) => {
 
-	fastify.get('/status', async (_, reply) => {
-		const statusResponse = await getStatus();
+	fastify.get('/status', { schema: schema.getStatusSchema }, async (_, reply) => {
 		return reply.send(
-			statusResponse
+			context
 		);
 	});
 
-	fastify.get('/progress/:id', (request, reply) => {
+	fastify.get('/progress/:id', { schema: schema.getProgressSchema }, (request, reply) => {
 		const { id } = request.params;
-		if (id in state.progress) {
-			reply.send(state.progress[id].status());
+		if (id in context.progress) {
+			reply.send(context.progress[id].status());
 		}
 		reply.code(404).send({error: 'no annotation with that id found.'});
 	});
 
-	// eslint-disable-next-line consistent-return
-	fastify.post('/s3', async (request, reply) => {
+	fastify.get('/s3', { schema: schema.postAnnotateS3Schema }, async (request, reply) => {
 
 		const domain = DEFAULT_DOMAIN;
 		let {
@@ -40,29 +39,29 @@ export const routes = (fastify, options, done) => {
 			s3_input_uri,
 			s3_output_uri,
 			idField=null,
+			output_format='array',
+			output_processor='default',
 			includeMetaData=true,
 			newField='dbpedia_entities',
 			workers=MAX_WORKERS,
-			output_format='array',
-			output_processor='default',
-			batchSize=10,
-		} = request.body;
+		} = request.query;
 
 		const { bucket: inBucket, key: inKey } = parseS3URI(s3_input_uri);
 		const { bucket: outBucket, key: outKey } = parseS3URI(s3_output_uri);
 
 		const checks = await checkS3(inBucket, inKey, outBucket, outKey);
 		if (checks.error) {
-			return reply.send(checks);
+			console.log("CHECKS: ", checks);
+			return reply.code(400).send(checks);
 		}
 
 		const id = uuidv4();
 		reply.send({ id });
 
+
 		const { email } = parseBasicAuth(request.headers.authorization);
 
 		const index = id;
-
 		await bucketToIndex(
 			index,
 			domain,
@@ -76,7 +75,7 @@ export const routes = (fastify, options, done) => {
 		const callback = () => {
 			sendEmail(
 				email,
-				notificationEmail,
+				'annotations@dap-tools.uk',
 				`Your annotation with id <code>${id}</code> has finished`,
 				'Annotation finished.'
 			);
@@ -93,9 +92,9 @@ export const routes = (fastify, options, done) => {
 		};
 
 		const progress = new Progress(total, callback);
-		state.progress[id] = progress;
-		const groupSize = workers;
+		context.progress[id] = progress;
 
+		// event send as input to src/node_modules/dbpedia/spotlight#annotateRequest
 		annotationService.send(
 			{
 				id,
@@ -104,18 +103,15 @@ export const routes = (fastify, options, done) => {
 				index,
 				field,
 				newField,
-				annotationEndpoint,
+				annotationEndpoint: internalAnnotationEndpoint,
 				includeMetaData,
 				progress,
-				batchSize,
-				groupSize,
 				type: 'PROVISION',
 			}
 		);
 	});
 
-	// eslint-disable-next-line consistent-return
-	fastify.post('/es', async (request, reply) => {
+	fastify.get('/es', { schema: schema.postAnnotateEsSchema }, async (request, reply) => {
 
 		let {
 			index,
@@ -124,36 +120,29 @@ export const routes = (fastify, options, done) => {
 			domain = DEFAULT_DOMAIN,
 			newField = 'dbpedia_entities',
 			workers = MAX_WORKERS,
-		} = request.body;
-
-		const { email } = parseBasicAuth(request.headers.authorization);
+		} = request.query;
 
 		const checks = await checkES(domain, index, field);
 		if (checks.error) {
-			return reply.send(checks);
+			return reply.code(400).send(checks);
 		}
+
+		const { email } = parseBasicAuth(request.headers.authorization);
 
 		const id = uuidv4();
 		const total = await count(domain, index);
-
 		const callback = () => {
 			sendEmail(
 				email,
-				notificationEmail,
+				'annotations@dap-tools.uk',
 				`Your annotation with id <code>${id}</code> has finished`,
 				'Annotation finished.'
 			);
 		};
 		const progress = new Progress(total, callback);
-		state.progress[id] = progress;
+		context.progress[id] = progress;
 
-		// no more than 4 workers per process
-		if (workers > MAX_WORKERS) {
-			workers = MAX_WORKERS;
-		}
-
-		const groupSize = workers;
-
+		// event send as input to src/node_modules/dbpedia/spotlight#annotateRequest
 		annotationService.send(
 			{
 				id,
@@ -162,10 +151,9 @@ export const routes = (fastify, options, done) => {
 				index,
 				field,
 				newField,
-				annotationEndpoint,
+				annotationEndpoint: internalAnnotationEndpoint,
 				includeMetaData,
 				progress,
-				groupSize,
 				type: 'PROVISION',
 			}
 		);

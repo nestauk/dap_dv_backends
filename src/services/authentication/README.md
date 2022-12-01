@@ -6,7 +6,7 @@ with `@nesta.org.uk`.
 
 To request a token, send a POST request to
 
-`https://authentication.dap-tools.uk/request`
+`https://api.dap-tools.uk/auth/request`
 
 with the following JSON body:
 ```json
@@ -19,7 +19,7 @@ This will send a verification email to your Nesta email account. Click the link,
 and the token should work. To check if the token does in fact, send a POST
 request to
 
-`https://authentication.dap-tools.uk/authenticate`
+`https://api.dap-tools.uk/auth/authenticate`
 
 with the following JSON body:
 ```json
@@ -29,6 +29,10 @@ with the following JSON body:
 }
 ```
 You should get a response of `true`.
+
+
+You can also use the Swagger UI to make these requests. To access the UI,
+simply navigate to `https://api.dap-tools.uk/auth`. 
 
 ## Docker
 

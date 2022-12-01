@@ -1,5 +1,7 @@
 /* eslint-disable no-await-in-loop */
 import { stringify } from "@svizzle/utils";
+import { fetch } from 'undici';
+
 import { sleep } from 'util/time.mjs';
 
 import { spotlightEndpoint } from "../config.mjs";
