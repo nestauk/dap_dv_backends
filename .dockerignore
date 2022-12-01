@@ -1,7 +1,11 @@
 logs
 node_modules
+data
+cloud
 !/**/src/node_modules
 .prettierignore
 .DS_Store
 **/secrets/**
+**/.secrets/**
+**/.env
 src/services/**/terraform

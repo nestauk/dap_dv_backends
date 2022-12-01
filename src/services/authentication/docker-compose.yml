@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  api:
+    build: 
+      context: '../../..'
+      dockerfile: './src/services/authentication/Dockerfile'
+    ports:
+      - ${PORT:-4000}:${PORT:-4000}
+    environment:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AWS_DEFAULT_REGION
+  redis:
+    image: "redis:alpine"

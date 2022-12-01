@@ -12,7 +12,7 @@ fastify.register(routes);
 
 const start = async () => {
 	try {
-		await fastify.listen({ port: PORT });
+		await fastify.listen({ host: '0.0.0.0', port: PORT });
 	} catch (err) {
 		fastify.log.error(err);
 		throw new Error(err);
