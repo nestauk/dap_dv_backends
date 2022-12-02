@@ -62,7 +62,7 @@ export const routes = (fastify, options, done) => {
 		const { email } = parseBasicAuth(request.headers.authorization);
 
 		const index = id;
-		await bucketToIndex(
+		const total = await bucketToIndex(
 			index,
 			domain,
 			inBucket,
@@ -70,8 +70,6 @@ export const routes = (fastify, options, done) => {
 			idField
 		);
 
-		// should there be a delay between above?
-		const total = await count(domain, index);
 		const callback = () => {
 			sendEmail(
 				email,
