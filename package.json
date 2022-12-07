@@ -29,6 +29,7 @@
 		"lamb": "^0.60.0",
 		"neo4j-driver": "^5.0.1",
 		"node-fetch": "^3.2.10",
+		"nodemon": "^2.0.20",
 		"posix": "^4.2.0",
 		"redis": "^4.2.0",
 		"rxjs": "^7.5.6",
@@ -53,6 +54,7 @@
 	},
 	"scripts": {
 		"annotate": "cross-env NODE_ENV=production NODE_NO_WARNINGS=1 node src/bin/es/annotate.mjs --field textBody_abstract_article --name dbpedia_entities --index arxiv_v6 --spotlight http://localhost:2222/rest/annotate --page-size 100 --include-metadata",
+		"auth": "bash src/bin/services/authentication.sh",
 		"evaluationServer": "node src/servers/evaluator/app.mjs",
 		"getDBpediaOntology": "node src/bin/dbpedia/getOntology.mjs",
 		"lint": "eslint 'src/**/*.mjs' 'data/**/*.mjs'",
