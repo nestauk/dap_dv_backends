@@ -5,8 +5,8 @@ import * as schema from './schemas.mjs';
 // eslint-disable-next-line require-await
 export const routes = async (fastify, options) => {
 
-	fastify.post('/request', { schema: schema.postRequestAuthSchema }, (request, reply) => {
-		const { email } = request.body;
+	fastify.get('/request', { schema: schema.getRequestAuthSchema }, (request, reply) => {
+		const { email } = request.query;
 		if (!email) {
 			return reply.code(400).send('No email provided');
 		}
@@ -23,8 +23,8 @@ export const routes = async (fastify, options) => {
 		reply.send('All done. Your token should now work.');
 	});
 
-	fastify.post('/authenticate', { schema: schema.postAuthenticateSchema }, async (request, reply) => {
-		const { token, email } = request.body;
+	fastify.get('/authenticate', { schema: schema.getAuthenticateSchema }, async (request, reply) => {
+		const { token, email } = request.query;
 		const authenticated = await doesTokenMatch(token, email);
 		return reply.send(authenticated);
 	});

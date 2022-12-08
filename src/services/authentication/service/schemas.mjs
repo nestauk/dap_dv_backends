@@ -1,8 +1,8 @@
-export const postRequestAuthSchema = {
+export const getRequestAuthSchema = {
 	summary: 'Request an authentication token for the provided email',
 	description: 'Request an authentication token for the provided email. The email must be registered with Nesta, i.e. must end with @nesta.org.uk',
 	produces: ['text/plain'],
-	body: {
+	query: {
 		required: ['email'],
 		type: 'object',
 		properties: {
@@ -27,7 +27,7 @@ export const postRequestAuthSchema = {
 export const getProvideSchema = {
 	summary: 'Provides a token to the user.',
 	description: 'Provides a token to the user. Endpoint is used to prove that the user does in fact have access to the provided Nesta email.\n\nThe most likely usage is by simpling clicking the link that was automatically generated in the email sent to you.',
-	params: {
+	query: {
 		type: 'object',
 		required: ['email', 'token'],
 		properties: {
@@ -56,10 +56,10 @@ export const getProvideSchema = {
 	}
 };
 
-export const postAuthenticateSchema = {
+export const getAuthenticateSchema = {
 	summary: 'Check if token is valid for an email',
 	description: 'Check if the token and email pair have been authenticated.',
-	body: {
+	query: {
 		required: ['email', 'token'],
 		type: 'object',
 		properties: {

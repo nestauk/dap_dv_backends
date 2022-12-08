@@ -5,4 +5,4 @@ FROM node
 WORKDIR /dap_dv_backends
 COPY . . 
 RUN npm install
-CMD ["node", "src/services/authentication/service/app.mjs"]
+CMD ["npm", "run", "auth"]

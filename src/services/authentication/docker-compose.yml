@@ -4,11 +4,14 @@ services:
     build: 
       context: '../../..'
       dockerfile: './src/services/authentication/Dockerfile'
+    volumes:
+      - ../..:/dap_dv_backends/src
     ports:
       - ${PORT:-4000}:${PORT:-4000}
     environment:
       - AWS_ACCESS_KEY_ID
       - AWS_SECRET_ACCESS_KEY
       - AWS_DEFAULT_REGION
+      - NODE_ENV=${NODE_ENV:-dev}
   redis:
     image: "redis:alpine"

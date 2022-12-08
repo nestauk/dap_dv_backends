@@ -1,13 +1,13 @@
+import * as querystring from 'querystring';
+
 import { sendEmail } from 'aws/email.mjs';
 import { BACKEND_BASE, SOURCE_EMAIL } from '../config.mjs';
 import { generateToken } from './crypto.mjs';
 
 export const sentTokenEmail = async email => {
 	const token = generateToken();
-
-	const link = new URL('provide', `https://${BACKEND_BASE}`);
-	link.searchParams.append('email', email);
-	link.searchParams.append('token', token);
+	const query = querystring.stringify({ email, token });
+	const link = `https://${BACKEND_BASE}/provide?${query}`;
 
 	const message = `
 		Token: <b>${token}</b><br>
