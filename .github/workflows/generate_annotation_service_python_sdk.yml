@@ -1,0 +1,52 @@
+on:
+  push:
+    branches:
+      - 'dev'
+    paths:
+      - 'src/services/annotation/version.txt'
+
+jobs:
+  build_the_sdk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: Download Open API specification
+        run: |
+            npm i
+            node src/services/annotation/service/app.mjs &
+            sleep 2
+            curl localhost:4000/json > api.json
+            ls
+      - name: Generate Python SDK
+        uses: ./.github/actions/codegen
+        with:
+          input: ./api.json
+          language: python
+          configPath: ./src/services/annotation/python_sdk.json
+          output: ./sdk/
+          repository: dap_annotation_service
+          user: nestauk
+      - name: Create workflow directory 
+        run: sudo mkdir -p ./sdk/.github/workflows
+      - name: Change permissions
+        run: |
+          sudo chmod 666 ./sdk/.github
+          sudo chmod 666 ./sdk/.github/workflows
+      - name: Get workflow
+        run: |
+          sudo curl https://gist.githubusercontent.com/doogyb/bef1d3468bd53b4aaa0673a018510f12/raw/ad50631450ad98bf4a9dbefbba232f97e5f93582/gistfile1.txt > tag_version.yml
+          sudo mv tag_version.yml ./sdk/.github/workflows
+      - name: Get Version
+        id: version
+        run: echo "version=`cat ./src/services/annotation/version.txt`" >> $GITHUB_OUTPUT
+      - name: Push to SDK repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+        with:
+          source-directory: sdk
+          destination-github-username: nestauk
+          destination-repository-name: service_dbpedia_annotation_python_sdk 
+          target-branch: main
+          commit-message: ${{ format('v{0}', steps.version.outputs.version) }}

@@ -51,13 +51,11 @@ export const routes = (fastify, options, done) => {
 
 		const checks = await checkS3(inBucket, inKey, outBucket, outKey);
 		if (checks.error) {
-			console.log("CHECKS: ", checks);
 			return reply.code(400).send(checks);
 		}
 
 		const id = uuidv4();
 		reply.send({ id });
-
 
 		const { email } = parseBasicAuth(request.headers.authorization);
 
@@ -105,6 +103,7 @@ export const routes = (fastify, options, done) => {
 				includeMetaData,
 				progress,
 				type: 'PROVISION',
+				groupSize: workers
 			}
 		);
 	});
@@ -137,6 +136,7 @@ export const routes = (fastify, options, done) => {
 				'Annotation finished.'
 			);
 		};
+
 		const progress = new Progress(total, callback);
 		context.progress[id] = progress;
 
@@ -153,6 +153,7 @@ export const routes = (fastify, options, done) => {
 				includeMetaData,
 				progress,
 				type: 'PROVISION',
+				groupSize: workers
 			}
 		);
 		reply.send({ id });

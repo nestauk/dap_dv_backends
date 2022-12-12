@@ -1,0 +1,39 @@
+# action.yml
+name: 'Swagger Codegen CLI'
+description: 'Run Swagger Codegen with Github Actions'
+runs:
+  using: 'docker'
+  image: 'docker://swaggerapi/swagger-codegen-cli-v3'
+  args:
+  - generate
+  - '-i'
+  - ${{ inputs.input }}
+  - '-l'
+  - ${{ inputs.language }}
+  - '-c'
+  - ${{ inputs.configPath }}
+  - '-o'
+  - ${{ inputs.output }}
+  - '--git-repo-id'
+  - ${{ inputs.repository }}
+  - '--git-user-id'
+  - ${{ inputs.user }}
+inputs:
+  input:
+    description: Path to the API spec
+    required: true
+  language:
+    description: Swagger language
+    required: true
+  configPath:
+    description: Path to the configuration for generation
+    required: true
+  output:
+    description: Path for the output of the SDK
+    required: true
+  repository:
+    description: Repository for SDK
+    required: true
+  user:
+    description: User ID for Github
+    required: true

@@ -9,4 +9,3 @@ src/services/**/terraform
 **/.env
 src/services/.secrets/**
 !src/services/.secrets/README.md
-src/services/**/terraform
