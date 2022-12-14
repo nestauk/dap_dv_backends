@@ -1,7 +1,5 @@
 import { performance } from 'perf_hooks';
 
-import { sendEmail } from 'aws/email.mjs';
-
 
 export const Progress = class {
 	constructor(total, callback) {
@@ -15,6 +13,10 @@ export const Progress = class {
 	increment(amount) {
 		this.current += amount;
 	};
+
+	setTotal(total) {
+		this.total = total;
+	}
 
 	status() {
 		if (this.current === 0) {

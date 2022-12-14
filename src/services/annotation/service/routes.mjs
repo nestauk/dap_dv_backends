@@ -40,7 +40,7 @@ export const routes = (fastify, options, done) => {
 			s3_output_uri,
 			idField=null,
 			output_format='array',
-			output_processor='default',
+			output_processor='simple',
 			includeMetaData=true,
 			newField='dbpedia_entities',
 			workers=MAX_WORKERS,
@@ -59,15 +59,6 @@ export const routes = (fastify, options, done) => {
 
 		const { email } = parseBasicAuth(request.headers.authorization);
 
-		const index = id;
-		const total = await bucketToIndex(
-			index,
-			domain,
-			inBucket,
-			inKey,
-			idField
-		);
-
 		const callback = () => {
 			sendEmail(
 				email,
@@ -76,7 +67,7 @@ export const routes = (fastify, options, done) => {
 				'Annotation finished.'
 			);
 			indexToBucket(
-				index,
+				id,
 				domain,
 				outBucket,
 				outKey,
@@ -87,8 +78,18 @@ export const routes = (fastify, options, done) => {
 			);
 		};
 
-		const progress = new Progress(total, callback);
+		const progress = new Progress("calculating", callback);
 		context.progress[id] = progress;
+
+		const total = await bucketToIndex(
+			id,
+			domain,
+			inBucket,
+			inKey,
+			{ idField, refresh: "wait_for" }
+		);
+
+		context.progress[id].setTotal(total);
 
 		// event send as input to src/node_modules/dbpedia/spotlight#annotateRequest
 		annotationService.send(
@@ -96,7 +97,7 @@ export const routes = (fastify, options, done) => {
 				id,
 				workers,
 				domain,
-				index,
+				index: id,
 				field,
 				newField,
 				annotationEndpoint: internalAnnotationEndpoint,
