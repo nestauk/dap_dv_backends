@@ -40,9 +40,7 @@ const main = async () => {
 		options.domain,
 		options.bucket,
 		options.key,
-		options.idField,
-		options.format,
-		options.chunkSize
+		...options
 	);
 };
 
