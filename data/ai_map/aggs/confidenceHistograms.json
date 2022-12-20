@@ -1,0 +1,184 @@
+{
+    "took": 1308,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 152,
+            "relation": "eq"
+        },
+        "max_score": null,
+        "hits": []
+    },
+    "aggregations": {
+        "min_confidence_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 3
+                },
+                {
+                    "key": 10,
+                    "doc_count": 23
+                },
+                {
+                    "key": 20,
+                    "doc_count": 23
+                },
+                {
+                    "key": 30,
+                    "doc_count": 103
+                }
+            ]
+        },
+        "max_confidence_histogram": {
+            "buckets": [
+                {
+                    "key": 40,
+                    "doc_count": 2
+                },
+                {
+                    "key": 50,
+                    "doc_count": 8
+                },
+                {
+                    "key": 60,
+                    "doc_count": 2
+                },
+                {
+                    "key": 70,
+                    "doc_count": 9
+                },
+                {
+                    "key": 80,
+                    "doc_count": 7
+                },
+                {
+                    "key": 90,
+                    "doc_count": 74
+                },
+                {
+                    "key": 100,
+                    "doc_count": 50
+                }
+            ]
+        },
+        "avg_confidence_histogram": {
+            "buckets": [
+                {
+                    "key": 29,
+                    "doc_count": 1
+                },
+                {
+                    "key": 30,
+                    "doc_count": 1
+                },
+                {
+                    "key": 31,
+                    "doc_count": 2
+                },
+                {
+                    "key": 32,
+                    "doc_count": 9
+                },
+                {
+                    "key": 33,
+                    "doc_count": 10
+                },
+                {
+                    "key": 34,
+                    "doc_count": 12
+                },
+                {
+                    "key": 35,
+                    "doc_count": 9
+                },
+                {
+                    "key": 36,
+                    "doc_count": 10
+                },
+                {
+                    "key": 37,
+                    "doc_count": 15
+                },
+                {
+                    "key": 38,
+                    "doc_count": 13
+                },
+                {
+                    "key": 39,
+                    "doc_count": 7
+                },
+                {
+                    "key": 40,
+                    "doc_count": 9
+                },
+                {
+                    "key": 41,
+                    "doc_count": 12
+                },
+                {
+                    "key": 42,
+                    "doc_count": 7
+                },
+                {
+                    "key": 43,
+                    "doc_count": 6
+                },
+                {
+                    "key": 44,
+                    "doc_count": 4
+                },
+                {
+                    "key": 45,
+                    "doc_count": 4
+                },
+                {
+                    "key": 46,
+                    "doc_count": 9
+                },
+                {
+                    "key": 47,
+                    "doc_count": 2
+                },
+                {
+                    "key": 48,
+                    "doc_count": 1
+                },
+                {
+                    "key": 49,
+                    "doc_count": 1
+                },
+                {
+                    "key": 50,
+                    "doc_count": 2
+                },
+                {
+                    "key": 51,
+                    "doc_count": 1
+                },
+                {
+                    "key": 52,
+                    "doc_count": 1
+                },
+                {
+                    "key": 54,
+                    "doc_count": 2
+                },
+                {
+                    "key": 57,
+                    "doc_count": 1
+                },
+                {
+                    "key": 74,
+                    "doc_count": 1
+                }
+            ]
+        }
+    }
+}

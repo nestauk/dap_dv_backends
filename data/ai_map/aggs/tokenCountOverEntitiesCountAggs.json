@@ -1,0 +1,46 @@
+{
+    "error": {
+        "root_cause": [
+            {
+                "type": "script_exception",
+                "reason": "runtime error",
+                "script_stack": [
+                    "org.elasticsearch.search.lookup.LeafDocLookup.get(LeafDocLookup.java:94)",
+                    "org.elasticsearch.search.lookup.LeafDocLookup.get(LeafDocLookup.java:41)",
+                    "return ((double) doc['textBody_abstract_article.token_count'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                    "                     ^---- HERE"
+                ],
+                "script": "if (doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['textBody_abstract_article.token_count'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                "lang": "painless"
+            }
+        ],
+        "type": "search_phase_execution_exception",
+        "reason": "all shards failed",
+        "phase": "query",
+        "grouped": true,
+        "failed_shards": [
+            {
+                "shard": 0,
+                "index": "f8f074ae-b2c5-4208-a509-daa411682a63",
+                "node": "LH32KN05SJyBmcY4LfyFDw",
+                "reason": {
+                    "type": "script_exception",
+                    "reason": "runtime error",
+                    "script_stack": [
+                        "org.elasticsearch.search.lookup.LeafDocLookup.get(LeafDocLookup.java:94)",
+                        "org.elasticsearch.search.lookup.LeafDocLookup.get(LeafDocLookup.java:41)",
+                        "return ((double) doc['textBody_abstract_article.token_count'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                        "                     ^---- HERE"
+                    ],
+                    "script": "if (doc['dbpedia_entities_metadata.entities_count'].size() == 0) { return 0; } return ((double) doc['textBody_abstract_article.token_count'].value) / doc['dbpedia_entities_metadata.entities_count'].value;",
+                    "lang": "painless",
+                    "caused_by": {
+                        "type": "illegal_argument_exception",
+                        "reason": "No field found for [textBody_abstract_article.token_count] in mapping with types []"
+                    }
+                }
+            }
+        ]
+    },
+    "status": 400
+}

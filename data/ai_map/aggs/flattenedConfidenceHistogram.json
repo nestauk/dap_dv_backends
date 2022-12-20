@@ -1,0 +1,69 @@
+{
+    "took": 401,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 152,
+            "relation": "eq"
+        },
+        "max_score": null,
+        "hits": []
+    },
+    "aggregations": {
+        "dbpedia": {
+            "doc_count": 2512,
+            "confidence": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 3,
+                "buckets": [
+                    {
+                        "key": 30,
+                        "doc_count": 1788
+                    },
+                    {
+                        "key": 40,
+                        "doc_count": 194
+                    },
+                    {
+                        "key": 90,
+                        "doc_count": 173
+                    },
+                    {
+                        "key": 50,
+                        "doc_count": 100
+                    },
+                    {
+                        "key": 100,
+                        "doc_count": 59
+                    },
+                    {
+                        "key": 70,
+                        "doc_count": 56
+                    },
+                    {
+                        "key": 60,
+                        "doc_count": 46
+                    },
+                    {
+                        "key": 80,
+                        "doc_count": 37
+                    },
+                    {
+                        "key": 20,
+                        "doc_count": 32
+                    },
+                    {
+                        "key": 10,
+                        "doc_count": 24
+                    }
+                ]
+            }
+        }
+    }
+}

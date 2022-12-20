@@ -1,0 +1,37 @@
+{
+    "took": 1311,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 152,
+            "relation": "eq"
+        },
+        "max_score": null,
+        "hits": []
+    },
+    "aggregations": {
+        "dbpedia_entities": {
+            "doc_count": 2512,
+            "confidence_stats": {
+                "count": 2512,
+                "min": 0,
+                "max": 100,
+                "avg": 39.16799363057325,
+                "sum": 98390,
+                "sum_of_squares": 4852900,
+                "variance": 397.75521763053274,
+                "std_deviation": 19.943801483933115,
+                "std_deviation_bounds": {
+                    "upper": 79.05559659843948,
+                    "lower": -0.7196093372929795
+                }
+            }
+        }
+    }
+}
