@@ -47,7 +47,7 @@
 	"homepage": "https://github.com/nestauk/dap_dv_backends#readme",
 	"keywords": [],
 	"license": "ISC",
-	"main": "index.js",
+	"main": "src/index.js",
 	"name": "dap_dv_backends",
 	"repository": {
 		"type": "git",
