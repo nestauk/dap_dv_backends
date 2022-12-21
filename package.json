@@ -48,7 +48,12 @@
 	"keywords": [],
 	"license": "ISC",
 	"main": "src/index.mjs",
+	"type": "module",
+	"module": "src/index.mjs",
 	"name": "dap_dv_backends",
+	"exports": {
+		"aws": "./src/eeeeeeeeeeee/aws/index.mjs"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/nestauk/dap_dv_backends.git"
@@ -72,5 +77,8 @@
 		"testPerformance": "bash src/test/perf/time.sh",
 		"testSpotlightLocally": "sh src/test/dbpedia/localCurlRequest.sh"
 	},
+	"workspaces": [
+		"./src/node_modules/*"
+	],
 	"version": "0.0.1"
 }
