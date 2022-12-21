@@ -48,7 +48,6 @@
 	"keywords": [],
 	"license": "ISC",
 	"main": "src/index.mjs",
-	"module": "src/index.mjs",
 	"name": "dap_dv_backends",
 	"repository": {
 		"type": "git",
