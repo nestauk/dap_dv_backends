@@ -43,11 +43,12 @@
 		"eslint": "^8.14.0",
 		"mocha": "^9.1.3"
 	},
+	"files": [ "src/node_modules/*" ],
 	"homepage": "https://github.com/nestauk/dap_dv_backends#readme",
 	"keywords": [],
 	"license": "ISC",
 	"main": "index.js",
-	"name": "arxlive_spotlight_annotation",
+	"name": "dap_dv_backends",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/nestauk/dap_dv_backends.git"
