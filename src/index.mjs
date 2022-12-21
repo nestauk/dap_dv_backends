@@ -1,1 +1,1 @@
-export * from 'aws/email.mjs';
+export * from 'aws';
