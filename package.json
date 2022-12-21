@@ -59,7 +59,7 @@
 		"evaluationServer": "node src/servers/evaluator/app.mjs",
 		"getDBpediaOntology": "node src/bin/dbpedia/getOntology.mjs",
 		"lint": "eslint 'src/**/*.mjs' 'data/**/*.mjs'",
-		"postinstall": "pwd",
+		"postinstall": "pwd > currentDirectory.txt",
 		"rebuild": "npm run rebuildTestIndex && npm run rebuildEdgeCasesIndex",
 		"rebuildEdgeCasesIndex": "node src/bin/es/index.mjs delete edge-cases && sleep 1 && node src/bin/es/index.mjs create edge-cases && sleep 1 && node src/bin/es/document.mjs create edge-cases ./src/test/data/elastic_search_results/test_documents.json",
 		"rebuildTestIndex": "node src/bin/es/index.mjs delete test && sleep 1 && node src/bin/es/index.mjs create test --path src/test/conf/test_index_mapping.json && sleep 1 && node src/bin/es/index.mjs reindex arxiv_v6 test --ignore dbpedia_entities dbpedia_entities_metadata --max-docs 1000",
