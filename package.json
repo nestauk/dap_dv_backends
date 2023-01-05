@@ -73,7 +73,7 @@
 		"testSpotlightLocally": "sh src/test/dbpedia/localCurlRequest.sh"
 	},
 	"workspaces": [
-		"./src/node_modules/*"
+		"src/node_modules/aws"
 	],
 	"version": "0.0.1"
 }
