@@ -1,10 +1,10 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 
+import { arrayMax } from '@svizzle/utils';
 import * as _ from 'lamb';
 
-import { confidenceValues } from 'conf/config.mjs';
-import { arrayMax } from '@svizzle/utils';
+import { confidenceValues } from 'dap_dv_backends_utils/conf/config.mjs';
 
 const flattenBucketsWithKeys = buckets => {
 	const confidenceValuesAsStrings = _.map(confidenceValues, val =>

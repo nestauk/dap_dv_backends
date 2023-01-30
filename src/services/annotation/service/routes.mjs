@@ -1,9 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import { sendEmail } from 'aws/email.mjs';
-import { bucketToIndex, indexToBucket } from 'aws/s3.mjs';
-import { arxliveCopy as DEFAULT_DOMAIN } from 'conf/config.mjs';
-import { count } from 'es/index.mjs';
+import { sendEmail } from 'dap_dv_backends_utils/aws/email.mjs';
+import { bucketToIndex, indexToBucket } from 'dap_dv_backends_utils/aws/s3.mjs';
+import { arxliveCopy as DEFAULT_DOMAIN } from 'dap_dv_backends_utils/conf/config.mjs';
+import { count } from 'dap_dv_backends_utils/es/index.mjs';
 
 import { MAX_WORKERS, internalAnnotationEndpoint } from '../config.mjs';
 import { parseBasicAuth } from './auth.mjs';

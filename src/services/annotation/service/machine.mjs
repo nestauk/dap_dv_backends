@@ -2,7 +2,7 @@ import * as _ from 'lamb';
 import { createMachine, assign, interpret } from 'xstate';
 import { from, map, mergeAll } from 'rxjs';
 
-import * as spotlight from 'dbpedia/spotlight.mjs';
+import * as spotlight from 'dap_dv_backends_utils/dbpedia/spotlight.mjs';
 
 import { context as applicationContext } from './context.mjs';
 import * as terraform from './terraform.mjs';

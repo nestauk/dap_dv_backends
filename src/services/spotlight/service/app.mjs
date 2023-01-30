@@ -1,7 +1,7 @@
 import express from 'express';
 
-import { destroy } from 'terraform/commands.mjs';
-import { getCurrentState } from 'terraform/state.mjs';
+import { destroy } from 'dap_dv_backends_utils/terraform/commands.mjs';
+import { getCurrentState } from 'dap_dv_backends_utils/terraform/state.mjs';
 
 import { PORT, spotlightEndpoint, TERRAFORM_DIRECTORY } from '../config.mjs';
 import { bootstrap, configureLoadBalancer, setup } from './infrastructure.mjs';

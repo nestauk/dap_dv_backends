@@ -1,4 +1,4 @@
-import { arxliveCopy as DEFAULT_DOMAIN } from 'conf/config.mjs';
+import { arxliveCopy as DEFAULT_DOMAIN } from 'dap_dv_backends_utils/conf/config.mjs';
 
 const uuidv4Regex =
 	'[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}';

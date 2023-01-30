@@ -5,14 +5,14 @@ import { parse } from 'csv-parse/sync';
 import { stringify } from 'csv-stringify/sync';
 import * as _ from 'lamb';
 
-import { dbr } from 'dbpedia/util.mjs';
-import { bulkRequest } from 'es/bulk.mjs';
-import { dump } from 'es/dump.mjs';
-import * as indexAPI from 'es/index.mjs';
-import { arxliveCopy } from 'conf/config.mjs';
-import { remove } from 'es/pipeline.mjs';
-import { batchIterate } from 'util/array.mjs';
-import { commanderParseInt } from 'util/commander.mjs';
+import { dbr } from 'dap_dv_backends_utils/dbpedia/util.mjs';
+import { bulkRequest } from 'dap_dv_backends_utils/es/bulk.mjs';
+import { dump } from 'dap_dv_backends_utils/es/dump.mjs';
+import * as indexAPI from 'dap_dv_backends_utils/es/index.mjs';
+import { arxliveCopy } from 'dap_dv_backends_utils/conf/config.mjs';
+import { remove } from 'dap_dv_backends_utils/es/pipeline.mjs';
+import { batchIterate } from 'dap_dv_backends_utils/util/array.mjs';
+import { commanderParseInt } from 'dap_dv_backends_utils/util/commander.mjs';
 
 const program = new Command();
 

@@ -1,6 +1,6 @@
 import * as querystring from 'querystring';
 
-import { sendEmail } from 'aws/email.mjs';
+import { sendEmail } from 'dap_dv_backends_utils/aws/email.mjs';
 import { BACKEND_BASE, SOURCE_EMAIL } from '../config.mjs';
 import { generateToken } from './crypto.mjs';
 

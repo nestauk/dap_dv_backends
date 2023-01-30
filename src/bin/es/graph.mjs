@@ -5,9 +5,9 @@ import { Command } from 'commander';
 import { stringify } from 'csv-stringify/sync';
 import * as _ from 'lamb';
 
-import { arxliveCopy } from 'conf/config.mjs';
-import { count } from 'es/index.mjs';
-import { scroll, clearScroll } from 'es/search.mjs';
+import { arxliveCopy } from 'dap_dv_backends_utils/conf/config.mjs';
+import { count } from 'dap_dv_backends_utils/es/index.mjs';
+import { scroll, clearScroll } from 'dap_dv_backends_utils/es/search.mjs';
 
 const program = new Command();
 

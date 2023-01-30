@@ -3,9 +3,9 @@ import { promises as fs } from 'fs';
 import { Command } from 'commander';
 import * as _ from 'lamb';
 
-import { arxliveCopy } from 'conf/config.mjs';
-import { dump } from 'es/dump.mjs';
-import { commanderParseInt } from 'util/commander.mjs';
+import { arxliveCopy } from 'dap_dv_backends_utils/conf/config.mjs';
+import { dump } from 'dap_dv_backends_utils/es/dump.mjs';
+import { commanderParseInt } from 'dap_dv_backends_utils/util/commander.mjs';
 
 const program = new Command();
 program.option(

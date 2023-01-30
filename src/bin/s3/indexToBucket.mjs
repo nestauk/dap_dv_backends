@@ -1,9 +1,9 @@
 import { Command, Option } from 'commander';
 import * as _ from 'lamb';
 
-import { indexToBucket } from 'aws/s3.mjs';
-import { arxliveCopy } from 'conf/config.mjs';
-import { commanderParseInt } from 'util/commander.mjs';
+import { indexToBucket } from 'dap_dv_backends_utils/aws/s3.mjs';
+import { arxliveCopy } from 'dap_dv_backends_utils/conf/config.mjs';
+import { commanderParseInt } from 'dap_dv_backends_utils/util/commander.mjs';
 
 const program = new Command();
 program.option(

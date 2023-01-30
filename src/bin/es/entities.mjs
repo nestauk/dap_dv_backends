@@ -1,12 +1,12 @@
 import { Command } from 'commander';
 import * as _ from 'lamb';
 
-import { arxliveCopy } from 'conf/config.mjs';
-import { getEntityAbstract } from 'dbpedia/requests.mjs';
-import { bulkRequest } from 'es/bulk.mjs';
-import { getEntities } from 'es/entities.mjs';
-import { createIndex } from 'es/index.mjs';
-import { batchIterate, batchIterateFlatten } from 'util/array.mjs';
+import { arxliveCopy } from 'dap_dv_backends_utils/conf/config.mjs';
+import { getEntityAbstract } from 'dap_dv_backends_utils/dbpedia/requests.mjs';
+import { bulkRequest } from 'dap_dv_backends_utils/es/bulk.mjs';
+import { getEntities } from 'dap_dv_backends_utils/es/entities.mjs';
+import { createIndex } from 'dap_dv_backends_utils/es/index.mjs';
+import { batchIterate, batchIterateFlatten } from 'dap_dv_backends_utils/util/array.mjs';
 
 const program = new Command();
 

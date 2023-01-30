@@ -1,8 +1,8 @@
 import * as _ from 'lamb';
 
-import { headObject, putObject } from 'aws/s3.mjs';
-import { info } from 'es/domain.mjs';
-import { count, getMappings, list } from 'es/index.mjs';
+import { headObject, putObject } from 'dap_dv_backends_utils/aws/s3.mjs';
+import { info } from 'dap_dv_backends_utils/es/domain.mjs';
+import { count, getMappings, list } from 'dap_dv_backends_utils/es/index.mjs';
 
 import codes from './error.mjs';
 import { buildS3Uri } from './util.mjs';

@@ -1,6 +1,6 @@
 import { Command } from 'commander';
 
-import * as snapshotAPI from 'es/snapshot.mjs';
+import * as snapshotAPI from 'dap_dv_backends_utils/es/snapshot.mjs';
 
 const program = new Command();
 

@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 import * as _ from 'lamb';
 import { fetch } from 'undici';
 
-import { sleep } from 'util/time.mjs';
+import { sleep } from 'dap_dv_backends_utils/util/time.mjs';
 
 import { state } from './state.mjs';
 

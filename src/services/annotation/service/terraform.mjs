@@ -2,7 +2,7 @@
 import { stringify } from "@svizzle/utils";
 import { fetch } from 'undici';
 
-import { sleep } from 'util/time.mjs';
+import { sleep } from 'dap_dv_backends_utils/util/time.mjs';
 
 import { spotlightEndpoint } from "../config.mjs";
 
