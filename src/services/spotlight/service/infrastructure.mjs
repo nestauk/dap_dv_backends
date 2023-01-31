@@ -5,12 +5,12 @@ import * as _ from 'lamb';
 import * as path from 'path';
 
 import { init, apply } from 'dap_dv_backends_utils/terraform/commands.mjs';
-import { generateConfiguration } from 'dap_dv_backends_utils/terraform/configuration.mjs';
 import { getCurrentState } from 'dap_dv_backends_utils/terraform/state.mjs';
 import { displayCommandOutput } from 'dap_dv_backends_utils/util/shell.mjs';
 import { sleep } from 'dap_dv_backends_utils/util/time.mjs';
 
 import { WORKER_PORT, SERVER_DIRECTORY, TERRAFORM_DIRECTORY } from '../config.mjs';
+import { generateConfiguration } from './configuration.mjs';
 import { getIps, endpointToIp, getEndpoints, getNewEndpoints, spotlightEndpointPromise } from './util.mjs';
 import { state } from './state.mjs';
 
