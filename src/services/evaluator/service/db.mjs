@@ -1,8 +1,8 @@
 import * as _ from 'lamb';
 import { createClient } from 'redis';
 
-import { arxliveCopy } from 'conf/config.mjs';
-import { scroll, clearScroll } from 'es/search.mjs';
+import { arxliveCopy } from 'dap_dv_backends_utils/conf/config.mjs';
+import { scroll, clearScroll } from 'dap_dv_backends_utils/es/search.mjs';
 
 import * as serverConfig from '../config.mjs';
 

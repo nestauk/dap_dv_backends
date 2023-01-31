@@ -1,9 +1,10 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 
-import { buildRequest, makeRequest } from 'es/requests.mjs';
-import { arxliveCopy } from 'conf/config.mjs';
 import { stringify } from '@svizzle/utils';
+
+import { buildRequest, makeRequest } from 'dap_dv_backends_utils/es/requests.mjs';
+import { arxliveCopy } from 'dap_dv_backends_utils/conf/config.mjs';
 
 const main = async () => {
 	const payload = {

@@ -3,8 +3,8 @@ import { promises as fs } from 'fs';
 import { saveObj } from '@svizzle/file';
 import * as _ from 'lamb';
 
-import { query } from 'sparql/query.mjs';
-import { hasNonAsciiCharacters } from 'util/string.mjs';
+import { query } from 'dap_dv_backends_utils/sparql/query.mjs';
+import { hasNonAsciiCharacters } from 'dap_dv_backends_utils/util/string.mjs';
 
 
 const ONTOLOGY_SPARQL_QUERY = 'src/bin/dbpedia/getDBpediaOntology.sparql';

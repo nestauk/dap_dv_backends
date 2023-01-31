@@ -1,7 +1,7 @@
 import { Command } from 'commander';
 
-import { buildRequest, makeRequest } from 'es/requests.mjs';
-import { arxliveCopy } from 'conf/config.mjs';
+import { buildRequest, makeRequest } from 'dap_dv_backends_utils/s/requests.mjs';
+import { arxliveCopy } from 'dap_dv_backends_utils/conf/config.mjs';
 
 const program = new Command();
 

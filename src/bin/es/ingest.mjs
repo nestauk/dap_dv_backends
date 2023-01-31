@@ -3,12 +3,12 @@ import { promises as fs } from 'fs';
 import { Command } from 'commander';
 import * as _ from 'lamb';
 
-import { arxliveCopy } from 'conf/config.mjs';
-import { bulkRequest } from 'es/bulk.mjs';
-import { createIndex } from 'es/index.mjs';
-import { logger } from 'logging/logging.mjs';
-import { batch } from 'util/array.mjs';
-import { commanderParseInt } from 'util/commander.mjs';
+import { arxliveCopy } from 'dap_dv_backends_utils/conf/config.mjs';
+import { bulkRequest } from 'dap_dv_backends_utils/es/bulk.mjs';
+import { createIndex } from 'dap_dv_backends_utils/es/index.mjs';
+import { logger } from 'dap_dv_backends_utils/logging/logging.mjs';
+import { batch } from 'dap_dv_backends_utils/util/array.mjs';
+import { commanderParseInt } from 'dap_dv_backends_utils/util/commander.mjs';
 
 const program = new Command();
 program.option(

@@ -1,10 +1,10 @@
 import { isIterableNotEmpty } from '@svizzle/utils';
 import * as _ from 'lamb';
 
-import { arxliveCopy, confidenceScores } from 'conf/config.mjs';
-import { get } from 'es/document.mjs';
-import { scroll, clearScroll } from 'es/search.mjs';
-import { bulkRequest } from 'es/bulk.mjs';
+import { arxliveCopy, confidenceScores } from 'dap_dv_backends_utils/conf/config.mjs';
+import { get } from 'dap_dv_backends_utils/es/document.mjs';
+import { scroll, clearScroll } from 'dap_dv_backends_utils/es/search.mjs';
+import { bulkRequest } from 'dap_dv_backends_utils/es/bulk.mjs';
 
 import * as serverConfig from '../config.mjs';
 

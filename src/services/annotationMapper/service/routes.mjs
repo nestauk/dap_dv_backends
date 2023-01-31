@@ -1,6 +1,6 @@
 import * as _ from 'lamb';
 
-import { annotateText } from 'dbpedia/spotlight.mjs';
+import { annotateText } from 'dap_dv_backends_utils/dbpedia/spotlight.mjs';
 
 import { DOCKER_SPOTLIGHT_ENDPOINT } from '../config.mjs';
 

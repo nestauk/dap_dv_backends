@@ -23,6 +23,7 @@
 		"cross-env": "^7.0.3",
 		"csv-parse": "^5.3.0",
 		"csv-stringify": "^6.2.0",
+		"dap_dv_backends_utils": "github:nestauk/dap_dv_backends_utils#v0.0.2",
 		"dotenv": "^16.0.3",
 		"express": "^4.18.1",
 		"fastify": "^4.2.1",

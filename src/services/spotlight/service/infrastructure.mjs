@@ -4,11 +4,11 @@ import { promises as fs } from 'fs';
 import * as _ from 'lamb';
 import * as path from 'path';
 
-import { generateConfiguration } from 'terraform/configuration.mjs';
-import { init, apply } from 'terraform/commands.mjs';
-import { displayCommandOutput } from 'util/shell.mjs';
-import { getCurrentState } from 'terraform/state.mjs';
-import { sleep } from 'util/time.mjs';
+import { init, apply } from 'dap_dv_backends_utils/terraform/commands.mjs';
+import { generateConfiguration } from 'dap_dv_backends_utils/terraform/configuration.mjs';
+import { getCurrentState } from 'dap_dv_backends_utils/terraform/state.mjs';
+import { displayCommandOutput } from 'dap_dv_backends_utils/util/shell.mjs';
+import { sleep } from 'dap_dv_backends_utils/util/time.mjs';
 
 import { WORKER_PORT, SERVER_DIRECTORY, TERRAFORM_DIRECTORY } from '../config.mjs';
 import { getIps, endpointToIp, getEndpoints, getNewEndpoints, spotlightEndpointPromise } from './util.mjs';

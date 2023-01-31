@@ -2,9 +2,9 @@ import * as fs from 'fs';
 
 import { Command } from 'commander';
 
-import * as documentAPI from 'es/document.mjs';
-import { arxliveCopy } from 'conf/config.mjs';
-import { dedent } from 'util/string.mjs';
+import * as documentAPI from 'dap_dv_backends_utils/es/document.mjs';
+import { arxliveCopy } from 'dap_dv_backends_utils/conf/config.mjs';
+import { dedent } from 'dap_dv_backends_utils/util/string.mjs';
 
 const program = new Command();
 

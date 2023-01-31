@@ -4,12 +4,12 @@ import * as fs from 'fs/promises';
 import {
 	annotateDocument,
 	uploadAnnotatedDocument,
-} from 'dbpedia/spotlight.mjs';
-import { buildRequest, makeRequest } from 'es/requests.mjs';
-import { createIndex, deleteIndex } from 'es/index.mjs';
-import { update } from 'es/update.mjs';
-import { get, create } from 'es/document.mjs';
-import { arxliveCopy } from 'conf/config.mjs';
+} from 'dap_dv_backends_utils/dbpedia/spotlight.mjs';
+import { buildRequest, makeRequest } from 'dap_dv_backends_utils/es/requests.mjs';
+import { createIndex, deleteIndex } from 'dap_dv_backends_utils/es/index.mjs';
+import { update } from 'dap_dv_backends_utils/es/update.mjs';
+import { get, create } from 'dap_dv_backends_utils/es/document.mjs';
+import { arxliveCopy } from 'dap_dv_backends_utils/conf/config.mjs';
 
 const e2eDocumentID = '0705.1058';
 

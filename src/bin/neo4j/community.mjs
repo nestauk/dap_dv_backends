@@ -4,9 +4,9 @@ import { stringify } from 'csv-stringify/sync';
 import { Command } from 'commander';
 import * as _ from 'lamb';
 
-import { drop, project } from 'neo4j/gds.mjs';
-import { stream } from 'neo4j/community.mjs';
-import { commanderParseInt } from 'util/commander.mjs';
+import { drop, project } from 'dap_dv_backends_utils/neo4j/gds.mjs';
+import { stream } from 'dap_dv_backends_utils/neo4j/community.mjs';
+import { commanderParseInt } from 'dap_dv_backends_utils/util/commander.mjs';
 
 const program = new Command();
 program.requiredOption(
