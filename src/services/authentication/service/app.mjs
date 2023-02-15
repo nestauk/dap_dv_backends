@@ -1,6 +1,7 @@
 import { readFileSync } from 'fs';
 import * as path from 'path';
 
+import cors from '@fastify/cors';
 import swagger from '@fastify/swagger';
 import swaggerUI from '@fastify/swagger-ui';
 import Fastify from 'fastify';
@@ -25,6 +26,8 @@ const fastify = Fastify({
 	...fastifyConfiguration,
 	logger: true
 });
+
+await fastify.register(cors);
 
 await fastify.register(swagger, {
 	swagger: {
