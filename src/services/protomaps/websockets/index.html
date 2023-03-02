@@ -7,6 +7,9 @@
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
     <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/d3-color@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-interpolate@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-scale-chromatic@3"></script>
     <style>
         body {
             display: flex;
@@ -31,11 +34,7 @@
 
 <body>
     <div id="map"></div>
-    <button onclick="changeColours()">Change colours</button>
     <script>
-        const colours = {
-            "Shadwell": "#000fff"
-        }
         const style = {
             version: 8,
             layers: [
@@ -66,7 +65,7 @@
                     },
                     minzoom: 10,
                     maxzoom: 12
-                }
+                },
             ],
             sources: {
                 protomaps: {
@@ -78,8 +77,7 @@
                     minzoom: 0,
                     maxzoom: 13,
                     promoteId: 'LAD22CD'
-                }
-
+                },
             }
         }
         var map = new maplibregl.Map({
@@ -87,16 +85,30 @@
             style,
             center: [-0.09, 51.505], // starting position [lng, lat]
             zoom: 8,
+            maxzoom: 13,
             projection: 'naturalEarth'
         });
 
-
-        const changeColours = () => {
-            map.queryRenderedFeatures().forEach(feature => {
+        const setColours = (features, scale) => {
+            features.forEach((feature, idx) => {
                 map.setFeatureState(feature, {
-                    fill: "#" + Math.floor(Math.random() * 16777215).toString(16)
+                    fill: d3.interpolateBlues(scale[idx])
                 });
-            })
+            });    
+        }
+
+        const socket = new WebSocket('ws://localhost:3000');
+        socket.onopen = event => {
+            let features;
+            map.on('move', () => {
+                features = map.queryRenderedFeatures()
+                const ids = features.map(f => f.properties.OBJECTID)
+                socket.send(JSON.stringify(ids)); 
+            });
+            socket.onmessage = event => {
+                const scale = JSON.parse(event.data);
+                setColours(features, scale);
+            }
         }
     </script>
 
