@@ -96,7 +96,7 @@
                 });
             });    
         }
-        map.on('moveend', () => {
+        map.on('move', () => {
             const features = map.queryRenderedFeatures()
             const ids = features.map(f => f.properties.OBJECTID)
             const response = fetch('http://localhost:3000', {
