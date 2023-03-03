@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <title>Display a map</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
-    <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel='stylesheet' /> 
     <style>
         body {
             display: flex;
@@ -193,7 +193,7 @@
                     "source-layer": "road",
                     "type": "line",
                     "paint": {
-                        "line-color": "#ffffff"
+                        "line-color": "grey"
                     }
                 },
                 {
@@ -258,13 +258,17 @@
 
             }
         }
-        var map = new maplibregl.Map({
+        mapboxgl.accessToken = 'pk.eyJ1IjoibmVzdGEtdWsiLCJhIjoiY2ozbjUzY2drMDAwNzJxbnl6a21uM253cSJ9.3RTMySEVk0LC4gQvGoG-Zw';
+        var map = new mapboxgl.Map({
             container: 'map', // container id
-            style,
             center: [-0.09, 51.505], // starting position [lng, lat]
             zoom: 8,
-            projection: 'naturalEarth'
+            projection: 'naturalEarth',
+            style,
+            // style: "https://api.mapbox.com/styles/v1/nesta-uk/cl8olrzo200ci16pim0h4c1pn?access_token=pk.eyJ1IjoibmVzdGEtdWsiLCJhIjoiY2ozbjUzY2drMDAwNzJxbnl6a21uM253cSJ9.3RTMySEVk0LC4gQvGoG-Zw"
         });
+
+        
 
 
         const changeColours = () => {
