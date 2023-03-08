@@ -57,8 +57,8 @@
 	"scripts": {
 		"annotate": "cross-env NODE_ENV=production NODE_NO_WARNINGS=1 node src/bin/es/annotate.mjs --field textBody_abstract_article --name dbpedia_entities --index arxiv_v6 --spotlight http://localhost:2222/rest/annotate --page-size 100 --include-metadata",
 		"auth": "bash src/bin/services/authentication.sh",
-		"downloadBoundaries": "npx downloadBoundaries -i src/services/protomaps/boundaries.json -o src/services/protomaps/boundaries",
-		"generateTiles": "npx generatePmTiles src/services/protomaps/boundaries s3://dap-protomaps",
+		"downloadBoundaries": "npx downloadBoundaries -i src/experiments/protomaps/boundaries.json -o src/experiments/protomaps/boundaries",
+		"generateTiles": "npx generatePmTiles src/experiments/protomaps/boundaries s3://dap-hpmt",
 		"downloadAndGenerateTiles": "npm run downloadBoundaries && npm run generateTiles",
 		"evaluationServer": "node src/servers/evaluator/app.mjs",
 		"getDBpediaOntology": "node src/bin/dbpedia/getOntology.mjs",

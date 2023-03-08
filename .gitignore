@@ -10,3 +10,4 @@ src/services/**/terraform
 src/services/.secrets/**
 !src/services/.secrets/README.md
 .dvc
+src/experiments/protomaps/boundaries/*
