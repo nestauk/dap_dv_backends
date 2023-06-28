@@ -9,6 +9,7 @@ export const internalAnnotationEndpoint = `${spotlightEndpoint}/annotate`;
 export const authenticationEndpoint = `${rootAddress}/auth/authenticate`;
 export const notificationEmail = 'annotations@dap-tools.uk';
 export const MAX_WORKERS=4;
+export const dapAnnotationDomain = 'es.annotations.dap-tools.uk';
 
 // eslint-disable-next-line no-process-env
 const nodeEnv = process.env.NODE_ENV || 'development';
