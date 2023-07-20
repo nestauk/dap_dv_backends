@@ -202,8 +202,12 @@ export const postAnnotateEsSchema = {
 	],
 	query: {
 		type: 'object',
-		required: ['index', 'field'],
+		required: ['field', 'index', 'domain'],
 		properties: {
+			field: {
+				type: 'string',
+				description: 'Field for the value being annotated.'
+			},
 			index: {
 				type: 'string',
 				description:
@@ -211,7 +215,6 @@ export const postAnnotateEsSchema = {
 			},
 			domain: {
 				type: 'string',
-				default: DEFAULT_DOMAIN,
 				description:
 					'ElasticSearch domain on which the index is hosted',
 			},
