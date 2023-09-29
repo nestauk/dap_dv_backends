@@ -141,3 +141,7 @@ processed, and how many in total will have to be annotated.
 You will also receive an email to your Nesta account notifying you of when your
 annotation has finished.
 
+### Architecture Diagram
+
+![Annotation Service Architecture Diagram](./Architecture%20Diagram.png)
+
