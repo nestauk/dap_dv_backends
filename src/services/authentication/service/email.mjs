@@ -4,10 +4,10 @@ import { sendEmail } from 'dap_dv_backends_utils/aws/email.mjs';
 import { BACKEND_BASE, SOURCE_EMAIL } from '../config.mjs';
 import { generateToken } from './crypto.mjs';
 
-export const sentTokenEmail = async email => {
-	const token = generateToken();
+export const sendTokenEmail = async email => {
+	const token = await generateToken(email);
 	const query = querystring.stringify({ email, token });
-	const link = `https://${BACKEND_BASE}/provide?${query}`;
+	const link = `https://${BACKEND_BASE}/activate?${query}`;
 
 	const message = `
 		Token: <b>${token}</b><br>

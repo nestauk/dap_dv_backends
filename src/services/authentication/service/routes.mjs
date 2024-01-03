@@ -1,5 +1,5 @@
-import { doesTokenMatch, hashAndSaltToken } from './crypto.mjs';
-import { sentTokenEmail } from './email.mjs';
+import { doesTokenMatch, activateEmailToken } from './crypto.mjs';
+import { sendTokenEmail } from './email.mjs';
 import * as schema from './schemas.mjs';
 
 // eslint-disable-next-line require-await
@@ -13,14 +13,17 @@ export const routes = async (fastify, options) => {
 		if (!email.endsWith('nesta.org.uk')) {
 			return reply.code(400).send('Nesta email must be provided');
 		}
-		sentTokenEmail(email);
+		sendTokenEmail(email);
 		reply.code(204).send();
 	});
 
-	fastify.get('/provide', { schema: schema.getProvideSchema }, (request, reply) => {
-		const { token, email } = request.query;
-		hashAndSaltToken(token, email);
-		reply.send('All done. Your token should now work.');
+	fastify.get('/activate', { schema: schema.getActivateSchema }, async (request, reply) => {
+		const { email, token } = request.query;
+		const wasActivated = await activateEmailToken(email, token);
+		const message = wasActivated
+			? 'All done. Your token should now work.'
+			: 'Something went wrong. Please try again.';
+		reply.send(message);
 	});
 
 	fastify.get('/authenticate', { schema: schema.getAuthenticateSchema }, async (request, reply) => {
