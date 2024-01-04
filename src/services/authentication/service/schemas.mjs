@@ -24,9 +24,9 @@ export const getRequestAuthSchema = {
 	}
 };
 
-export const getProvideSchema = {
-	summary: 'Provides a token to the user.',
-	description: 'Provides a token to the user. Endpoint is used to prove that the user does in fact have access to the provided Nesta email.\n\nThe most likely usage is by simpling clicking the link that was automatically generated in the email sent to you.',
+export const getActivateSchema = {
+	summary: 'Activates a token for the email if it matches with the one generated on `/request`.',
+	description: 'Activates a token for the email if it matches with the one generated on `/request`. Endpoint is used to prove that the user does in fact have access to the provided email.\n\nThe most likely usage is by simpling clicking the link that was automatically generated in the email sent to you.',
 	query: {
 		type: 'object',
 		required: ['email', 'token'],
