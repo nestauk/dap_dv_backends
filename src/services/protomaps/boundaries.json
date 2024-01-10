@@ -1,0 +1,26 @@
+[
+    {
+        "boundary": "itl1",
+        "endpoint": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/International_Territorial_Level_1_January_2021_UK_BFC_2022/FeatureServer"
+    },
+    {
+        "boundary": "itl2",
+        "endpoint": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/ArcGIS/rest/services/International_Territorial_Level_2_January_2021_UK_BFC_V2_2022/FeatureServer"
+    },
+    {
+        "boundary": "itl3",
+        "endpoint": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/ArcGIS/rest/services/International_Territorial_Level_3_January_2021_UK_BFC_V3_2022/FeatureServer"
+    },
+    {
+        "boundary": "lau1",
+        "endpoint": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/lau1/FeatureServer"
+    },
+    {
+        "boundary": "msoa",
+        "endpoint": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/msoa/FeatureServer"
+    },
+    {
+        "boundary": "lsoa",
+        "endpoint": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/lsoa/FeatureServer"
+    }
+]

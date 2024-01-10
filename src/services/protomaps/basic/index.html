@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Display a map</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel='stylesheet' /> 
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 90vh;
+            width: 90vw;
+        }
+
+        button {
+            width: 150px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="map"></div>
+    <button onclick="changeColours()">Change colours</button>
+    <script>
+        const colours = {
+            "Shadwell": "#000fff"
+        }
+        const style = {
+            version: 8,
+            layers: [
+                {
+                    id: "lad",
+                    source: "protomaps",
+                    "source-layer": "lad",
+                    type: "fill",
+                    paint: {
+                        "fill-color": [
+                            "case",
+                            ["!=", ["feature-state", "fill"], null], ["feature-state", "fill"],
+                            "steelblue"
+                        ],
+                        "fill-outline-color": "white"
+                    },
+                    minzoom: 1,
+                    maxzoom: 10,
+                },
+                {
+                    id: "msoa",
+                    source: "protomaps",
+                    "source-layer": "msoa",
+                    type: "fill",
+                    paint: {
+                        "fill-color": "red",
+                        "fill-outline-color": "white"
+                    },
+                    minzoom: 10,
+                    maxzoom: 12
+                },
+                {
+                    "id": "admin",
+                    "source": "mapbox-streets",
+                    "source-layer": "admin",
+                    "type": "line",
+                    "paint": {
+                        "line-color": "#ffffff"
+                    }
+                },
+                {
+                    "id": "aeroway",
+                    "source": "mapbox-streets",
+                    "source-layer": "aeroway",
+                    "type": "line",
+                    "paint": {
+                        "line-color": "#ffffff"
+                    }
+                },
+                {
+                    "id": "airport_label",
+                    "source": "mapbox-streets",
+                    "source-layer": "airport_label",
+                    "type": "circle",
+                    "paint": {
+                        "circle-radius": 3,
+                        "circle-color": "rgba(238,78,139, 0.4)",
+                        "circle-stroke-color": "rgba(238,78,139, 1)",
+                        "circle-stroke-width": 1
+                    }
+                },
+                {
+                    "id": "building",
+                    "source": "mapbox-streets",
+                    "source-layer": "building",
+                    "type": "fill",
+                    "paint": {
+                        "fill-color": "rgba(66,100,251, 0.3)",
+                        "fill-outline-color": "rgba(66,100,251, 1)"
+                    }
+                },
+                {
+                    "id": "housenum_label",
+                    "source": "mapbox-streets",
+                    "source-layer": "housenum_label",
+                    "type": "circle",
+                    "paint": {
+                        "circle-radius": 3,
+                        "circle-color": "rgba(238,78,139, 0.4)",
+                        "circle-stroke-color": "rgba(238,78,139, 1)",
+                        "circle-stroke-width": 1
+                    }
+                },
+                {
+                    "id": "landuse_overlay",
+                    "source": "mapbox-streets",
+                    "source-layer": "landuse_overlay",
+                    "type": "fill",
+                    "paint": {
+                        "fill-color": "rgba(66,100,251, 0.3)",
+                        "fill-outline-color": "rgba(66,100,251, 1)"
+                    }
+                },
+                {
+                    "id": "landuse",
+                    "source": "mapbox-streets",
+                    "source-layer": "landuse",
+                    "type": "fill",
+                    "paint": {
+                        "fill-color": "rgba(66,100,251, 0.3)",
+                        "fill-outline-color": "rgba(66,100,251, 1)"
+                    }
+                },
+                {
+                    "id": "motorway_junction",
+                    "source": "mapbox-streets",
+                    "source-layer": "motorway_junction",
+                    "type": "circle",
+                    "paint": {
+                        "circle-radius": 3,
+                        "circle-color": "rgba(238,78,139, 0.4)",
+                        "circle-stroke-color": "rgba(238,78,139, 1)",
+                        "circle-stroke-width": 1
+                    }
+                },
+                {
+                    "id": "natural_label",
+                    "source": "mapbox-streets",
+                    "source-layer": "natural_label",
+                    "type": "circle",
+                    "paint": {
+                        "circle-radius": 3,
+                        "circle-color": "rgba(238,78,139, 0.4)",
+                        "circle-stroke-color": "rgba(238,78,139, 1)",
+                        "circle-stroke-width": 1
+                    }
+                },
+                {
+                    "id": "place_label",
+                    "source": "mapbox-streets",
+                    "source-layer": "place_label",
+                    "type": "circle",
+                    "paint": {
+                        "circle-radius": 3,
+                        "circle-color": "rgba(238,78,139, 0.4)",
+                        "circle-stroke-color": "rgba(238,78,139, 1)",
+                        "circle-stroke-width": 1
+                    }
+                },
+                {
+                    "id": "poi_label",
+                    "source": "mapbox-streets",
+                    "source-layer": "poi_label",
+                    "type": "circle",
+                    "paint": {
+                        "circle-radius": 3,
+                        "circle-color": "rgba(238,78,139, 0.4)",
+                        "circle-stroke-color": "rgba(238,78,139, 1)",
+                        "circle-stroke-width": 1
+                    }
+                },
+                {
+                    "id": "road",
+                    "source": "mapbox-streets",
+                    "source-layer": "road",
+                    "type": "line",
+                    "paint": {
+                        "line-color": "grey"
+                    }
+                },
+                {
+                    "id": "structure",
+                    "source": "mapbox-streets",
+                    "source-layer": "structure",
+                    "type": "fill",
+                    "paint": {
+                        "fill-color": "rgba(66,100,251, 0.3)",
+                        "fill-outline-color": "rgba(66,100,251, 1)"
+                    }
+                },
+                {
+                    "id": "transit_stop_label",
+                    "source": "mapbox-streets",
+                    "source-layer": "transit_stop_label",
+                    "type": "circle",
+                    "paint": {
+                        "circle-radius": 3,
+                        "circle-color": "rgba(238,78,139, 0.4)",
+                        "circle-stroke-color": "rgba(238,78,139, 1)",
+                        "circle-stroke-width": 1
+                    }
+                },
+                {
+                    "id": "water",
+                    "source": "mapbox-streets",
+                    "source-layer": "water",
+                    "type": "fill",
+                    "paint": {
+                        "fill-color": "rgba(66,100,251, 0.3)",
+                        "fill-outline-color": "rgba(66,100,251, 1)"
+                    }
+                },
+                {
+                    "id": "waterway",
+                    "source": "mapbox-streets",
+                    "source-layer": "waterway",
+                    "type": "line",
+                    "paint": {
+                        "line-color": "#ffffff"
+                    }
+                }
+            ],
+            sources: {
+                protomaps: {
+                    type: "vector",
+                    tiles: [
+                        // our tiles
+                        "https://d21cr7yltjd5j0.cloudfront.net/lad.msoa/{z}/{x}/{y}.mvt",
+                    ],
+                    minzoom: 0,
+                    maxzoom: 13,
+                    promoteId: 'LAD22CD'
+                },
+                "mapbox-streets": {
+                    type: "vector",
+                    tiles: [
+                        "https://api.mapbox.com/v4/mapbox.mapbox-streets-v8/{z}/{x}/{y}.mvt?access_token=pk.eyJ1IjoiZG9vZ3liIiwiYSI6ImNsZWVlOWE3ODBnNXczb212amEydWo4Y3MifQ.xHYb_hW-VeytHVF9_7QPTQ",
+                    ]
+                }
+
+            }
+        }
+        mapboxgl.accessToken = 'pk.eyJ1IjoibmVzdGEtdWsiLCJhIjoiY2ozbjUzY2drMDAwNzJxbnl6a21uM253cSJ9.3RTMySEVk0LC4gQvGoG-Zw';
+        var map = new mapboxgl.Map({
+            container: 'map', // container id
+            center: [-0.09, 51.505], // starting position [lng, lat]
+            zoom: 8,
+            projection: 'naturalEarth',
+            style,
+            // style: "https://api.mapbox.com/styles/v1/nesta-uk/cl8olrzo200ci16pim0h4c1pn?access_token=pk.eyJ1IjoibmVzdGEtdWsiLCJhIjoiY2ozbjUzY2drMDAwNzJxbnl6a21uM253cSJ9.3RTMySEVk0LC4gQvGoG-Zw"
+        });
+
+        
+
+
+        const changeColours = () => {
+            map.queryRenderedFeatures().forEach(feature => {
+                map.setFeatureState(feature, {
+                    fill: "#" + Math.floor(Math.random() * 16777215).toString(16)
+                });
+            })
+        }
+    </script>
+
+</body>
+
+</html>
