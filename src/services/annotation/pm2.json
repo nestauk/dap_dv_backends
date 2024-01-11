@@ -1,0 +1,10 @@
+{
+	"apps" : [
+		{
+			"name" : "annotation",
+			"script" : "src/services/annotation/service/app.mjs",
+			"watch" : true,
+			"env" : {}
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{
+	"apps" : [
+		{
+			"name" : "authentication",
+			"script" : "src/services/authentication/service/app.mjs",
+			"watch" : true,
+			"env" : {}
+		}
+	]
+}
