@@ -1,4 +1,4 @@
-import * as bcrypt from 'bcrypt';
+import {default as bcrypt} from 'bcryptjs';
 import * as crypto from 'crypto';
 
 import { redisClient } from './db.mjs';
