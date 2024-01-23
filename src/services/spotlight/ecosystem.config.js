@@ -1,10 +1,12 @@
-{
+module.exports = {
 	"apps" : [
 		{
 			"name" : "spotlight",
 			"script" : "src/services/spotlight/service/app.mjs",
 			"watch" : true,
-			"env" : {}
+			"env" : {
+				"NODE_ENV": "dev"
+			}
 		}
 	]
 }

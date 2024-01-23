@@ -204,6 +204,10 @@ export const postAnnotateEsSchema = {
 		type: 'object',
 		required: ['index', 'field'],
 		properties: {
+			field: {
+				type: 'string',
+				description: 'Field for the value being annotated.'
+			},
 			index: {
 				type: 'string',
 				description:

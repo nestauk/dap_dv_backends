@@ -10,10 +10,12 @@ import { displayCommandOutput } from 'dap_dv_backends_utils/util/shell.mjs';
 import { sleep } from 'dap_dv_backends_utils/util/time.mjs';
 
 import { WORKER_PORT, SERVER_DIRECTORY, TERRAFORM_DIRECTORY } from '../config.mjs';
+import { SPOTLIGHT_PORT } from '../../config.mjs';
 import { generateConfiguration } from './configuration.mjs';
 import { getIps, endpointToIp, getEndpoints, getNewEndpoints, spotlightEndpointPromise } from './util.mjs';
 import { state } from './state.mjs';
 
+import { processAndSaveTemplate } from '../../../utils/template.mjs';
 
 export const launchSpotlightContainers = async ips => {
 
@@ -50,19 +52,19 @@ export const configureLoadBalancer = async ips => {
 			proxy_pass http://spotlight/annotate;
 		}`
 		: '';
-	const nginxConfiguration = `events {}
-http {
-	${upstream}
-	server {
-		listen 80;
-		${annotate}
-		location / {
-			proxy_pass http://localhost:3000;
-		}
-	}
-}
-`;
-	await fs.writeFile(path.join(SERVER_DIRECTORY, 'nginx.conf'), nginxConfiguration);
+
+	const nginxConfigPath = path.join(SERVER_DIRECTORY, 'nginx.conf');
+	const templatePath = path.join(
+		SERVER_DIRECTORY,
+		'../../../nginx/nginx.provisioner.template.conf'
+	);
+	const replacementVars = {
+		TERRAFORM_UPSTREAM: upstream,
+		TERRAFORM_PROXY: annotate,
+		SPOTLIGHT_PORT
+	};
+
+	processAndSaveTemplate(templatePath, replacementVars, nginxConfigPath);
 	exec('sudo nginx -s reload', displayCommandOutput);
 };
 

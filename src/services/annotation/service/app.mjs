@@ -11,6 +11,7 @@ import swaggerUI from '@fastify/swagger-ui';
 import { PORT, BACKEND_BASE } from '../config.mjs';
 import { routes } from './routes.mjs';
 
+import { API_DOMAIN } from '../../config.mjs';
 
 // You must first generate certs for local development.
 // Please see /src/services/.secrets/README.md for more information
@@ -50,7 +51,7 @@ await fastify.register(swagger, {
 	  },
 	  servers: [
 			{
-				url: 'api.dap-tools.uk',
+				url: API_DOMAIN,
 				description: 'Default master node being served on AWS.'
 			}
 	  ],
@@ -83,7 +84,7 @@ fastify.register(routes);
 
 const start = async () => {
 	try {
-		await fastify.listen({ port: PORT });
+		await fastify.listen({ host: '0.0.0.0', port: PORT });
 		console.log(`Listening at localhost:${PORT}`);
 		await fastify.ready();
 		fastify.swagger();
