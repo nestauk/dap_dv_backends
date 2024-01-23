@@ -1,10 +1,12 @@
-{
+module.exports = {
 	"apps" : [
 		{
 			"name" : "annotation",
 			"script" : "src/services/annotation/service/app.mjs",
 			"watch" : true,
-			"env" : {}
+			"env" : {
+				"NODE_ENV": "dev"
+			}
 		}
 	]
 }

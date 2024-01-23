@@ -4,7 +4,12 @@ import { sendEmail } from 'dap_dv_backends_utils/aws/email.mjs';
 import { bucketToIndex, indexToBucket } from 'dap_dv_backends_utils/aws/s3.mjs';
 import { count } from 'dap_dv_backends_utils/es/index.mjs';
 
-import { MAX_WORKERS, internalAnnotationEndpoint, dapAnnotationDomain as DEFAULT_DOMAIN } from '../config.mjs';
+import {
+	ANNOTATIONS_EMAIL,
+	dapAnnotationDomain as DEFAULT_DOMAIN,
+	internalAnnotationEndpoint,
+	MAX_WORKERS,
+} from '../config.mjs';
 import { parseBasicAuth } from './auth.mjs';
 import { annotationService } from './machine.mjs';
 import { Progress } from './progress.mjs';
@@ -12,7 +17,6 @@ import { context } from './context.mjs';
 import * as schema from './schemas.mjs';
 import { parseS3URI } from './util.mjs';
 import { checkS3, checkES } from './checks.mjs';
-
 
 export const routes = (fastify, options, done) => {
 
@@ -26,8 +30,9 @@ export const routes = (fastify, options, done) => {
 		const { id } = request.params;
 		if (id in context.progress) {
 			reply.send(context.progress[id].status());
+		} else {
+			reply.code(404).send({error: 'no annotation with that id found.'});
 		}
-		reply.code(404).send({error: 'no annotation with that id found.'});
 	});
 
 	fastify.get('/s3', { schema: schema.postAnnotateS3Schema }, async (request, reply) => {
@@ -61,7 +66,7 @@ export const routes = (fastify, options, done) => {
 		const callback = () => {
 			sendEmail(
 				email,
-				'annotations@dap-tools.uk',
+				ANNOTATIONS_EMAIL,
 				`Your annotation with id <code>${id}</code> has finished`,
 				'Annotation finished.'
 			);
@@ -131,7 +136,7 @@ export const routes = (fastify, options, done) => {
 		const callback = () => {
 			sendEmail(
 				email,
-				'annotations@dap-tools.uk',
+				ANNOTATIONS_EMAIL,
 				`Your annotation with id <code>${id}</code> has finished`,
 				'Annotation finished.'
 			);
