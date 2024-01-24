@@ -3,7 +3,7 @@ import * as path from 'path';
 import { __dirname } from './service/util.mjs';
 import { API_URI_BASE, PROVISION_PORT } from '../config.mjs';
 
-export const spotlightEndpoint = `${API_URI_BASE}/spotlight`;
+export const provisionEndpoint = `${API_URI_BASE}/provision`;
 
 export const PORT = PROVISION_PORT;
 export const WORKER_PORT = 4000;
