@@ -58,7 +58,7 @@ export const configureLoadBalancer = async ips => {
 	const nginxConfigPath = path.join(SERVER_DIRECTORY, 'nginx.conf');
 	const templatePath = path.join(
 		SERVER_DIRECTORY,
-		'../../../nginx/nginx.provisioner.template.conf'
+		'../../../nginx/nginx.provision.template.conf'
 	);
 	const replacementVars = {
 		TERRAFORM_UPSTREAM: upstream,

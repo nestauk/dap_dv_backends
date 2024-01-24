@@ -18,7 +18,7 @@ do
 			--copy-var ACTIVE_DOMAIN="${server}_DOMAIN" \
 			--copy-var ACTIVE_PORT="${server}_PORT" \
 			--output src/services/provision/nginx.conf \
-			--template nginx/nginx.provisioner.template.conf \
+			--template nginx/nginx.provision.template.conf \
 			--varspath ../../../src/services/config.mjs
 		sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
 		sudo ln -sf $(pwd)/src/services/provision/nginx.conf /etc/nginx/nginx.conf
