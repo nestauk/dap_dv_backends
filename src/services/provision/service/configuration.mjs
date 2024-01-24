@@ -10,14 +10,14 @@ export const generateConfiguration = async(workers, path=null) => {
 		{
 			aws_instance: [
 				{
-					[`spotlight-node-${id}`]: [
+					[`annotation-node-${id}`]: [
 						{
 							ami,
 							instance_type: annotationNodeInstanceType,
 							key_name: 'spotlight', // [1]
 							vpc_security_group_ids: ['sg-026313a646e2d8470'],
 							tags: {
-								Name: `spotlight-node-${id}`,
+								Name: `annotation-node-${id}`,
 							},
 						},
 					],
@@ -27,9 +27,9 @@ export const generateConfiguration = async(workers, path=null) => {
 	));
 	const output = _.map(identifiers, id => (
 		{
-			[`spotlight-node-${id}-public_ip`]: [
+			[`annotation-node-${id}-public_ip`]: [
 				{
-					"value": `\${aws_instance.spotlight-node-${id}.public_ip}`
+					"value": `\${aws_instance.annotation-node-${id}.public_ip}`
 				}
 			]
 		}
