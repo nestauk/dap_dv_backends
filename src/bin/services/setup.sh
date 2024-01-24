@@ -3,16 +3,16 @@ if [ -z "$CERTBOT_EMAIL" ]; then
     exit 1
 fi
 if [ -z "$1" ]; then
-    echo "Please provide one of these AUTH, API, ANNOTATE, SPOTLIGHT as a parameter."
+    echo "Please provide one of these ANNOTATE, API, AUTHENTICATION, SPOTLIGHT as a parameter."
     exit 1
 fi
 
 echo "******************************************************"
-echo "./src/bin/services/install-system.sh $1"
+echo "./src/bin/services/install-system.sh"
 echo "******************************************************"
 $(pwd)/src/bin/services/install-system.sh
 
-if [ "$1" = "AUTH" ]; then
+if [ "$1" = "AUTHENTICATION" ]; then
     echo "******************************************************"
     echo "./src/bin/services/install-docker.sh"
     echo "******************************************************"

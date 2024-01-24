@@ -2,7 +2,7 @@
 # This email will be used to register with Let's Encrypt
 
 sudo rm /etc/nginx/sites-enabled/default
-sudo rm /etc/nginx/sites-enabled/AUTH.conf
+sudo rm /etc/nginx/sites-enabled/AUTHENTICATION.conf
 sudo rm /etc/nginx/sites-enabled/ANNOTATE.conf
 sudo rm /etc/nginx/sites-enabled/API.conf
 sudo service nginx restart
