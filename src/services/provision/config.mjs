@@ -11,7 +11,7 @@ export const SERVER_DIRECTORY = path.join(__dirname, '..');
 export const TERRAFORM_DIRECTORY = path.join(SERVER_DIRECTORY, 'terraform');
 
 export const ami = 'ami-06cb614d0f047d106';
-export const spotlightInstanceType = 't2.xlarge';
+export const annotationNodeInstanceType = 't2.xlarge';
 
 export const scaffold = {
 	provider: [

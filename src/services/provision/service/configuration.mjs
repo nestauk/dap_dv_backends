@@ -1,7 +1,7 @@
 import * as _ from 'lamb';
 
 import { createPathAndWriteObject } from 'dap_dv_backends_utils/util/path.mjs';
-import { ami, scaffold, spotlightInstanceType } from '../config.mjs';
+import { ami, scaffold, annotationNodeInstanceType } from '../config.mjs';
 
 
 export const generateConfiguration = async(workers, path=null) => {
@@ -13,7 +13,7 @@ export const generateConfiguration = async(workers, path=null) => {
 					[`spotlight-node-${id}`]: [
 						{
 							ami,
-							instance_type: spotlightInstanceType,
+							instance_type: annotationNodeInstanceType,
 							key_name: 'spotlight',
 							vpc_security_group_ids: ['sg-026313a646e2d8470'],
 							tags: {
@@ -45,4 +45,3 @@ export const generateConfiguration = async(workers, path=null) => {
 	}
 	return configuration;
 };
-
