@@ -47,9 +47,9 @@
 	},
 	"homepage": "https://github.com/nestauk/dap_dv_backends#readme",
 	"keywords": [],
-	"license": "ISC",
+	"license": "MIT",
 	"main": "index.js",
-	"name": "arxlive_spotlight_annotation",
+	"name": "dap_dv_backends",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/nestauk/dap_dv_backends.git"
