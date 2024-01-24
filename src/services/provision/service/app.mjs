@@ -15,7 +15,7 @@ await bootstrap();
 app.use(express.json()); // for parsing application/json
 
 // eslint-disable-next-line consistent-return
-app.post('/provision', (req, res) => {
+app.post('/create', (req, res) => {
 	const { workers=4 } = req.body;
 	if (workers === 0) {
 		return res.redirect(`${provisionEndpoint}/teardown`);

@@ -29,7 +29,7 @@ export const state = () => request('state');
 
 export const provision = async workers => {
 
-	const endpoint = `${provisionEndpoint}/provision`;
+	const endpoint = `${provisionEndpoint}/create`;
 	const headers = { 'Content-Type': 'application/json' };
 	const body = stringify({ workers });
 	const response = await fetch(endpoint, { method: 'POST', headers, body });

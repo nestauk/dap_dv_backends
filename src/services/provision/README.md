@@ -9,7 +9,7 @@ which ensures the compute bottleneck for the annotation process is minimised.
 
 The following endpoints are exposed:
 
-- `POST /provision`
+- `POST /create`
 
     takes requests with the following request body:
     ```json
@@ -32,7 +32,7 @@ The following endpoints are exposed:
 - `POST /annotate`
 
     Forwards the request to the Spotlight annotation services created using
-    `/provision`. Takes the same paramaters as documented on the [Spotlight
+    `/create`. Takes the same paramaters as documented on the [Spotlight
     API.](https://www.dbpedia-spotlight.org/api)
 
 ## Setup
@@ -45,7 +45,7 @@ having a directory located at `~/.aws/` with `config` and `credentials` files.
 - Symlink the nginx configuration to the one in this repository: `sudo ln -sf
 /path/to/repo/src/servers/spotlight/nginx.conf /etc/nginx/nginx.conf`. This will
 reverse proxy HTTP requests to the server's port at 3000 as well as configure
-the loadbalancer for the instances created using the `/provision` endpoint.
+the loadbalancer for the instances created using the `/create` endpoint.
 
 ## Configuration
 
