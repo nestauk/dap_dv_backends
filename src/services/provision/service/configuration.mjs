@@ -4,7 +4,7 @@ import { createPathAndWriteObject } from 'dap_dv_backends_utils/util/path.mjs';
 import { ami, scaffold, annotationNodeInstanceType } from '../config.mjs';
 
 
-export const generateConfiguration = async(workers, path=null) => {
+export const generateAndWriteConfiguration = async(workers, path=null) => {
 	const identifiers = [...Array(workers).keys()];
 	const resource = _.map(identifiers, id => (
 		{

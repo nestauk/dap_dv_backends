@@ -11,15 +11,15 @@ import { sleep } from 'dap_dv_backends_utils/util/time.mjs';
 
 import { WORKER_PORT, SERVER_DIRECTORY, TERRAFORM_DIRECTORY } from '../config.mjs';
 import { PROVISION_PORT } from '../../config.mjs';
-import { generateConfiguration } from './configuration.mjs';
+import { generateAndWriteConfiguration } from './configuration.mjs';
 import { getIps, endpointToIp, getEndpoints, getNewEndpoints, annotationNodeEndpointPromise } from './util.mjs';
 import { state } from './state.mjs';
 
 import { processAndSaveTemplate } from '../../../utils/template.mjs';
 
-export const launchSpotlightContainers = async ips => {
+export const launchAnnotationNodes = async ips => {
 
-	console.log('[+] Launching Spotlight Containers');
+	console.log('[+] Launching Annotation Nodes');
 	const command = await fs.readFile(
 		path.join(SERVER_DIRECTORY, 'spotlightDockerCommand.sh'),
 		{ encoding: 'utf-8'}
@@ -80,7 +80,7 @@ export const bootstrap = async () => {
 export const setup = async workers => {
 
 	const configPath = path.join(TERRAFORM_DIRECTORY, 'main.tf.json');
-	generateConfiguration(workers, configPath);
+	generateAndWriteConfiguration(workers, configPath);
 	await init(TERRAFORM_DIRECTORY);
 	await apply(TERRAFORM_DIRECTORY);
 
@@ -98,7 +98,7 @@ export const setup = async workers => {
 		// wait to ensure instances are running
 		// TODO: Keep polling instance until sure we can connect
 		await sleep(1000 * 60);
-		launchSpotlightContainers(newIps);
+		launchAnnotationNodes(newIps);
 		console.log('[+] Creating new nodes...');
 		await annotationNodeEndpointPromise(newEndpoints);
 	}
