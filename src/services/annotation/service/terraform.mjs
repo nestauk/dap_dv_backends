@@ -4,11 +4,11 @@ import { fetch } from 'undici';
 
 import { sleep } from 'dap_dv_backends_utils/util/time.mjs';
 
-import { spotlightEndpoint } from "../config.mjs";
+import { provisionEndpoint } from "../config.mjs";
 
 
-export const stateEndpoint = new URL('state', spotlightEndpoint);
-export const annotationEndpoint = new URL('annotate', spotlightEndpoint);
+export const stateEndpoint = new URL('state', provisionEndpoint);
+export const annotationEndpoint = new URL('annotate', provisionEndpoint);
 
 const parseResponse = response => {
 	const contentType = response.headers.get('content-type');
@@ -18,7 +18,7 @@ const parseResponse = response => {
 	return response;
 };
 const request = async path => {
-	const endpoint = `${spotlightEndpoint}/${path}`;
+	const endpoint = `${provisionEndpoint}/${path}`;
 	const response = await fetch(endpoint);
 	return parseResponse(response);
 };
@@ -29,7 +29,7 @@ export const state = () => request('state');
 
 export const provision = async workers => {
 
-	const endpoint = `${spotlightEndpoint}/provision`;
+	const endpoint = `${provisionEndpoint}/provision`;
 	const headers = { 'Content-Type': 'application/json' };
 	const body = stringify({ workers });
 	const response = await fetch(endpoint, { method: 'POST', headers, body });
