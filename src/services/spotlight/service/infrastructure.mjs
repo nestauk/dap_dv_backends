@@ -10,7 +10,7 @@ import { displayCommandOutput } from 'dap_dv_backends_utils/util/shell.mjs';
 import { sleep } from 'dap_dv_backends_utils/util/time.mjs';
 
 import { WORKER_PORT, SERVER_DIRECTORY, TERRAFORM_DIRECTORY } from '../config.mjs';
-import { SPOTLIGHT_PORT } from '../../config.mjs';
+import { PROVISION_PORT } from '../../config.mjs';
 import { generateConfiguration } from './configuration.mjs';
 import { getIps, endpointToIp, getEndpoints, getNewEndpoints, spotlightEndpointPromise } from './util.mjs';
 import { state } from './state.mjs';
@@ -61,7 +61,7 @@ export const configureLoadBalancer = async ips => {
 	const replacementVars = {
 		TERRAFORM_UPSTREAM: upstream,
 		TERRAFORM_PROXY: annotate,
-		SPOTLIGHT_PORT
+		PROVISION_PORT
 	};
 
 	processAndSaveTemplate(templatePath, replacementVars, nginxConfigPath);
