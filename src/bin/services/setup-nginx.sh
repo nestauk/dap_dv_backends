@@ -17,11 +17,11 @@ do
 		node src/bin/utils/fillTemplate.mjs \
 			--copy-var ACTIVE_DOMAIN="${server}_DOMAIN" \
 			--copy-var ACTIVE_PORT="${server}_PORT" \
-			--output src/services/spotlight/nginx.conf \
+			--output src/services/provision/nginx.conf \
 			--template nginx/nginx.provisioner.template.conf \
 			--varspath ../../../src/services/config.mjs
 		sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
-		sudo ln -sf $(pwd)/src/services/spotlight/nginx.conf /etc/nginx/nginx.conf
+		sudo ln -sf $(pwd)/src/services/provision/nginx.conf /etc/nginx/nginx.conf
 	else
 		if [ $server = "API" ]; then
 			template="nginx/nginx.proxy.template.conf"

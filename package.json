@@ -64,7 +64,7 @@
 		"rebuildTestIndex": "node src/bin/es/index.mjs delete test && sleep 1 && node src/bin/es/index.mjs create test --path src/test/conf/test_index_mapping.json && sleep 1 && node src/bin/es/index.mjs reindex arxiv_v6 test --ignore dbpedia_entities dbpedia_entities_metadata --max-docs 1000",
 		"startAuthServer": "pm2 startOrRestart src/services/authentication/ecosystem.config.js",
 		"startAnnotationServer": "pm2 startOrRestart src/services/annotation/ecosystem.config.js",
-		"startSpotlightServer": "pm2 startOrRestart src/services/spotlight/ecosystem.config.js",
+		"startSpotlightServer": "pm2 startOrRestart src/services/provision/ecosystem.config.js",
 		"spotlightSetup": "bash src/bin/spotlight/setup.sh",
 		"spotlightServer": "node src/servers/spotlight/app.mjs",
 		"test": "mocha --recursive --parallel src/test",
