@@ -3,7 +3,7 @@ if [ -z "$CERTBOT_EMAIL" ]; then
     exit 1
 fi
 if [ -z "$1" ]; then
-    echo "Please provide one of these ANNOTATE, API, AUTHENTICATION, SPOTLIGHT as a parameter."
+    echo "Please provide one of these ANNOTATE, API, AUTHENTICATION, PROVISION as a parameter."
     exit 1
 fi
 
@@ -19,7 +19,7 @@ if [ "$1" = "AUTHENTICATION" ]; then
     $(pwd)/src/bin/services/install-docker.sh
 fi
 
-if [ "$1" = "SPOTLIGHT" ]; then
+if [ "$1" = "PROVISION" ]; then
     echo "******************************************************"
     echo "./src/bin/services/install-terraform.sh"
     echo "******************************************************"

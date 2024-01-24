@@ -13,7 +13,7 @@ do
 	serverdomain=$(node src/bin/utils/getDomain.mjs $server)
 	sudo certbot certonly -n --nginx --agree-tos --email $CERTBOT_EMAIL --domains $serverdomain
 
-	if [ $server = "SPOTLIGHT" ]; then
+	if [ $server = "PROVISION" ]; then
 		node src/bin/utils/fillTemplate.mjs \
 			--copy-var ACTIVE_DOMAIN="${server}_DOMAIN" \
 			--copy-var ACTIVE_PORT="${server}_PORT" \
