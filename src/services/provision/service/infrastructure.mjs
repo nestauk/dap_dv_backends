@@ -12,7 +12,7 @@ import { sleep } from 'dap_dv_backends_utils/util/time.mjs';
 import { WORKER_PORT, SERVER_DIRECTORY, TERRAFORM_DIRECTORY } from '../config.mjs';
 import { PROVISION_PORT } from '../../config.mjs';
 import { generateConfiguration } from './configuration.mjs';
-import { getIps, endpointToIp, getEndpoints, getNewEndpoints, spotlightEndpointPromise } from './util.mjs';
+import { getIps, endpointToIp, getEndpoints, getNewEndpoints, annotationNodeEndpointPromise } from './util.mjs';
 import { state } from './state.mjs';
 
 import { processAndSaveTemplate } from '../../../utils/template.mjs';
@@ -98,7 +98,7 @@ export const setup = async workers => {
 		await sleep(1000 * 60);
 		launchSpotlightContainers(newIps);
 		console.log('[+] Creating new nodes...');
-		await spotlightEndpointPromise(newEndpoints);
+		await annotationNodeEndpointPromise(newEndpoints);
 	}
 
 	return Promise.resolve({

@@ -30,7 +30,7 @@ const testSpotlightEnpoint = async endpoint => {
 	return response.ok;
 };
 
-export const spotlightEndpointPromise = endpoints => {
+export const annotationNodeEndpointPromise = endpoints => {
 	const interval = 1000 * 15;
 	let timeout = 1000 * 60 * 20; // if longer than 20 mins, somethings wrong
 	return new Promise(async (resolve, reject) => {
