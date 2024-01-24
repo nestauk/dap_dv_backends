@@ -14,7 +14,7 @@ export const generateConfiguration = async(workers, path=null) => {
 						{
 							ami,
 							instance_type: annotationNodeInstanceType,
-							key_name: 'spotlight',
+							key_name: 'spotlight', // [1]
 							vpc_security_group_ids: ['sg-026313a646e2d8470'],
 							tags: {
 								Name: `spotlight-node-${id}`,
@@ -45,3 +45,8 @@ export const generateConfiguration = async(workers, path=null) => {
 	}
 	return configuration;
 };
+
+/*
+This corresponds to the `spotlight` public/private keys pairs for ssh connection
+See https://eu-west-2.console.aws.amazon.com/ec2/home?region=eu-west-2#KeyPairs:search=:spotlight;v=3;$case=tags:false%5C,client:false;$regex=tags:false%5C,client:false
+*/

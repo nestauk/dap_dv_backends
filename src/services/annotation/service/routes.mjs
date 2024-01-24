@@ -95,7 +95,7 @@ export const routes = (fastify, options, done) => {
 
 		context.progress[id].setTotal(total);
 
-		// event send as input to src/node_modules/dbpedia/spotlight#annotateRequest
+		// event send as input to src/node_modules/dap_dv_backends_utils/dbpedia/spotlight.mjs#annotateRequest
 		annotationService.send(
 			{
 				id,
@@ -145,7 +145,7 @@ export const routes = (fastify, options, done) => {
 		const progress = new Progress(total, callback);
 		context.progress[id] = progress;
 
-		// event send as input to src/node_modules/dbpedia/spotlight#annotateRequest
+		// event send as input to src/node_modules/dap_dv_backends_utils/dbpedia/spotlight.mjs#annotateRequest
 		annotationService.send(
 			{
 				id,

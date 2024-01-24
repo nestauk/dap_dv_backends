@@ -24,6 +24,8 @@ export const launchSpotlightContainers = async ips => {
 		path.join(SERVER_DIRECTORY, 'spotlightDockerCommand.sh'),
 		{ encoding: 'utf-8'}
 	);
+
+	// Re `spotlight.pem`, see note [1] at the bottom of `./configuration.mjs`
 	_.forEach(ips, ip => {
 		exec(`ssh -oStrictHostKeyChecking=accept-new -i ~/.ssh/spotlight.pem ubuntu@${ip} "cd /home/ubuntu ; ${command}"`, displayCommandOutput);
 	});
