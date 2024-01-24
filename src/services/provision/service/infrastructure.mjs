@@ -39,19 +39,19 @@ export const configureLoadBalancer = async ips => {
 	const ipStrings = _.join(ips_, '\n');
 
 	const upstream = ips.length
-		? `upstream spotlight {
+		? `upstream annotation_node {
 		${ipStrings}
 	}
 	server {
 		listen ${WORKER_PORT};
 		location / {
-			proxy_pass http://spotlight;
+			proxy_pass http://annotation_node;
 		}
 	}`
 		: '';
 	const annotate = ips.length
 		? `location /annotate {
-			proxy_pass http://spotlight/annotate;
+			proxy_pass http://annotation_node/annotate;
 		}`
 		: '';
 
