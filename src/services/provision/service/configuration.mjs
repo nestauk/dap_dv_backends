@@ -46,7 +46,8 @@ export const generateAndWriteConfiguration = async(workers, path=null) => {
 	return configuration;
 };
 
-/*
+/* [1]
+
 This corresponds to the `spotlight` public/private keys pairs for ssh connection
 See https://eu-west-2.console.aws.amazon.com/ec2/home?region=eu-west-2#KeyPairs:search=:spotlight;v=3;$case=tags:false%5C,client:false;$regex=tags:false%5C,client:false
 */
