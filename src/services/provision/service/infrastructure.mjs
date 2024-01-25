@@ -10,20 +10,22 @@ import { displayCommandOutput } from 'dap_dv_backends_utils/util/shell.mjs';
 import { sleep } from 'dap_dv_backends_utils/util/time.mjs';
 
 import { WORKER_PORT, SERVER_DIRECTORY, TERRAFORM_DIRECTORY } from '../config.mjs';
-import { SPOTLIGHT_PORT } from '../../config.mjs';
-import { generateConfiguration } from './configuration.mjs';
-import { getIps, endpointToIp, getEndpoints, getNewEndpoints, spotlightEndpointPromise } from './util.mjs';
+import { PROVISION_PORT } from '../../config.mjs';
+import { generateAndWriteConfiguration } from './configuration.mjs';
+import { getIps, endpointToIp, getEndpoints, getNewEndpoints, annotationNodeEndpointPromise } from './util.mjs';
 import { state } from './state.mjs';
 
 import { processAndSaveTemplate } from '../../../utils/template.mjs';
 
-export const launchSpotlightContainers = async ips => {
+export const launchAnnotationNodes = async ips => {
 
-	console.log('[+] Launching Spotlight Containers');
+	console.log('[+] Launching Annotation Nodes');
 	const command = await fs.readFile(
 		path.join(SERVER_DIRECTORY, 'spotlightDockerCommand.sh'),
 		{ encoding: 'utf-8'}
 	);
+
+	// Re `spotlight.pem`, see note [1] at the bottom of `./configuration.mjs`
 	_.forEach(ips, ip => {
 		exec(`ssh -oStrictHostKeyChecking=accept-new -i ~/.ssh/spotlight.pem ubuntu@${ip} "cd /home/ubuntu ; ${command}"`, displayCommandOutput);
 	});
@@ -37,31 +39,31 @@ export const configureLoadBalancer = async ips => {
 	const ipStrings = _.join(ips_, '\n');
 
 	const upstream = ips.length
-		? `upstream spotlight {
+		? `upstream annotation_node {
 		${ipStrings}
 	}
 	server {
 		listen ${WORKER_PORT};
 		location / {
-			proxy_pass http://spotlight;
+			proxy_pass http://annotation_node;
 		}
 	}`
 		: '';
 	const annotate = ips.length
 		? `location /annotate {
-			proxy_pass http://spotlight/annotate;
+			proxy_pass http://annotation_node/annotate;
 		}`
 		: '';
 
 	const nginxConfigPath = path.join(SERVER_DIRECTORY, 'nginx.conf');
 	const templatePath = path.join(
 		SERVER_DIRECTORY,
-		'../../../nginx/nginx.provisioner.template.conf'
+		'../../../nginx/nginx.provision.template.conf'
 	);
 	const replacementVars = {
 		TERRAFORM_UPSTREAM: upstream,
 		TERRAFORM_PROXY: annotate,
-		SPOTLIGHT_PORT
+		PROVISION_PORT
 	};
 
 	processAndSaveTemplate(templatePath, replacementVars, nginxConfigPath);
@@ -78,7 +80,7 @@ export const bootstrap = async () => {
 export const setup = async workers => {
 
 	const configPath = path.join(TERRAFORM_DIRECTORY, 'main.tf.json');
-	generateConfiguration(workers, configPath);
+	generateAndWriteConfiguration(workers, configPath);
 	await init(TERRAFORM_DIRECTORY);
 	await apply(TERRAFORM_DIRECTORY);
 
@@ -96,9 +98,9 @@ export const setup = async workers => {
 		// wait to ensure instances are running
 		// TODO: Keep polling instance until sure we can connect
 		await sleep(1000 * 60);
-		launchSpotlightContainers(newIps);
+		launchAnnotationNodes(newIps);
 		console.log('[+] Creating new nodes...');
-		await spotlightEndpointPromise(newEndpoints);
+		await annotationNodeEndpointPromise(newEndpoints);
 	}
 
 	return Promise.resolve({

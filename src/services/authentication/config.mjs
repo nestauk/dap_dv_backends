@@ -1,10 +1,10 @@
 import * as dotenv from 'dotenv';
-import { API_DOMAIN, BASE_DOMAIN, AUTH_PORT } from '../config.mjs';
+import { API_DOMAIN, BASE_DOMAIN, AUTHENTICATION_PORT } from '../config.mjs';
 
 dotenv.config({ path: 'src/services/authentication/.env'});
 
 // eslint-disable-next-line no-process-env
-export const PORT = AUTH_PORT;
+export const PORT = AUTHENTICATION_PORT;
 
 // eslint-disable-next-line no-process-env
 const nodeEnv = process.env.NODE_ENV || 'development';

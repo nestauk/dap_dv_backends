@@ -2,7 +2,7 @@ import * as _ from 'lamb';
 
 import { annotateText } from 'dap_dv_backends_utils/dbpedia/spotlight.mjs';
 
-import { DOCKER_SPOTLIGHT_ENDPOINT } from '../config.mjs';
+import { DOCKER_ANNOTATION_NODE_ENDPOINT } from '../config.mjs';
 
 
 export const routes = (fastify, options, done) => {
@@ -13,7 +13,7 @@ export const routes = (fastify, options, done) => {
 			texts,
 			t => annotateText(t, {
 				includeMetaData,
-				endpoint: DOCKER_SPOTLIGHT_ENDPOINT
+				endpoint: DOCKER_ANNOTATION_NODE_ENDPOINT
 			}));
 
 		const results = await Promise.allSettled(promises);

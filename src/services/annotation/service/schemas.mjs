@@ -129,7 +129,7 @@ const annotationResponse = {
 	},
 };
 
-/* POST /annotate/s3 */
+/* POST /annotation/s3 */
 export const postAnnotateS3Schema = {
 	summary: 'Annotate data being hosted on an AWS S3 bucket',
 	description:
@@ -192,7 +192,7 @@ export const postAnnotateS3Schema = {
 	response: annotationResponse,
 };
 
-/* POST /annotate/es */
+/* POST /annotation/es */
 export const postAnnotateEsSchema = {
 	summary: 'Annotate data being hosted on an ElasticSearch index',
 	description:

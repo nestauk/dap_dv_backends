@@ -15,7 +15,7 @@ export const __dirname = path.dirname(__filename);
 
 export const endpointToIp = endpoint => endpoint.split('/')[2].split(':')[0];
 
-const testSpotlightEnpoint = async endpoint => {
+const testAnnotationNodeEndpoint = async endpoint => {
 	const url = new URL(endpoint);
 	const text = 'This is some text with the words Semantic Web in it.';
 	const confidence = 0.6;
@@ -30,20 +30,20 @@ const testSpotlightEnpoint = async endpoint => {
 	return response.ok;
 };
 
-export const spotlightEndpointPromise = endpoints => {
+export const annotationNodeEndpointPromise = endpoints => {
 	const interval = 1000 * 15;
 	let timeout = 1000 * 60 * 20; // if longer than 20 mins, somethings wrong
 	return new Promise(async (resolve, reject) => {
 		let ready = false;
 		do {
 			await sleep(interval);
-			const promises = _.map(endpoints, e => testSpotlightEnpoint(e));
+			const promises = _.map(endpoints, e => testAnnotationNodeEndpoint(e));
 			const results = await Promise.all(promises);
 			console.log(results);
 			ready = _.everyIn(results, _.identity);
 			timeout -= interval;
 			if (timeout <= 0) {
-				reject(new Error('Checking the spotlight containers has timed out'));
+				reject(new Error('At least one of the annotation node servers has timed out'));
 			}
 		} while (!ready);
 		resolve();

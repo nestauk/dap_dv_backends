@@ -1,17 +1,17 @@
 import * as path from 'path';
 
 import { __dirname } from './service/util.mjs';
-import { API_URI_BASE, SPOTLIGHT_PORT } from '../config.mjs';
+import { API_URI_BASE, PROVISION_PORT } from '../config.mjs';
 
-export const spotlightEndpoint = `${API_URI_BASE}/spotlight`;
+export const provisionEndpoint = `${API_URI_BASE}/provision`;
 
-export const PORT = SPOTLIGHT_PORT;
+export const PORT = PROVISION_PORT;
 export const WORKER_PORT = 4000;
 export const SERVER_DIRECTORY = path.join(__dirname, '..');
 export const TERRAFORM_DIRECTORY = path.join(SERVER_DIRECTORY, 'terraform');
 
 export const ami = 'ami-06cb614d0f047d106';
-export const spotlightInstanceType = 't2.xlarge';
+export const annotationNodeInstanceType = 't2.xlarge';
 
 export const scaffold = {
 	provider: [
