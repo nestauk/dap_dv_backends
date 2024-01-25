@@ -1,11 +1,10 @@
 import {
-	ANNOTATE_DOMAIN,
 	API_DOMAIN,
-	ANNOTATE_PORT,
+	ANNOTATION_PORT,
 	BASE_DOMAIN
 } from "../config.mjs";
 
-export const PORT = ANNOTATE_PORT;
+export const PORT = ANNOTATION_PORT;
 
 // TODO: port this to the root service conf file, depends on module-alias package
 export const base = API_DOMAIN;

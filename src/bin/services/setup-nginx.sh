@@ -3,7 +3,7 @@
 
 sudo rm /etc/nginx/sites-enabled/default
 sudo rm /etc/nginx/sites-enabled/AUTHENTICATION.conf
-sudo rm /etc/nginx/sites-enabled/ANNOTATE.conf
+sudo rm /etc/nginx/sites-enabled/ANNOTATION.conf
 sudo rm /etc/nginx/sites-enabled/API.conf
 sudo service nginx restart
 # sudo ln -sf nginx/nginx.http.redirect.conf /etc/nginx/sites-enabled/redirect.conf

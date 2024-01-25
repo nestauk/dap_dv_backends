@@ -3,7 +3,7 @@ if [ -z "$CERTBOT_EMAIL" ]; then
     exit 1
 fi
 if [ -z "$1" ]; then
-    echo "Please provide one of these ANNOTATE, API, AUTHENTICATION, PROVISION as a parameter."
+    echo "Please provide one of these ANNOTATION, API, AUTHENTICATION, PROVISION as a parameter."
     exit 1
 fi
 
