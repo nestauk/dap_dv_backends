@@ -23,7 +23,7 @@ const nodeEnv = process.env.NODE_ENV || 'development';
 
 const BACKEND_BASES = {
 	development: `localhost:${PORT}`,
-	dev: `${base}/annotate`
+	dev: `${base}/annotation`
 };
 
 export const BACKEND_BASE = BACKEND_BASES[nodeEnv];

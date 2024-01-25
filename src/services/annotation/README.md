@@ -12,7 +12,7 @@ The REST API docs for the authentication service can be found
 Once you have a token for your associated Nesta Email, you're ready to use the
 annotation service.
 
-The annotation endpoints `/annotate/s3` and `/annotate/es` are protected using
+The annotation endpoints `/annotation/s3` and `/annotation/es` are protected using
 Basic authorization, so you must set an Authorization header with the following
 format when making requests to these endpoints: 
 
@@ -28,13 +28,13 @@ Your Authorization header would therefore look like
 
 `Authorization Basic dXNlckBuZXN0YS5vcmcudWs6YWJjMTIz`.
 
-The [Annotation API docs](https://api.dap-tools.uk/annotate) makes this process
+The [Annotation API docs](https://api.dap-tools.uk/annotation) makes this process
 much easier, because you can simply enter your login details into the little
 lock symbol on the top right hand corner, and it will take care of encoding the
 Authorization headers for you.
 
 # Annotation
-Please refer to the [Annotation API docs](https://api.dap-tools.uk/annotate) for
+Please refer to the [Annotation API docs](https://api.dap-tools.uk/annotation) for
 much more detailed documentation on the endpoints, including which fields are
 required, what each field type is, a description of all of the endpoints,
 request bodies, response types, and more. This README.md will attempt to be a
@@ -42,7 +42,7 @@ general guide for first time users, as well as cover some of the broader
 implications of input and output formats when using the annotation service.
 
 ## S3 Annotation
-### `https://api.dap-tools.co.uk/annotate/s3`
+### `https://api.dap-tools.co.uk/annotation/s3`
 This endpoint allows you to annotate S3 buckets containing textual data. The
 main process involves specifying the URI of an input bucket and an output URI,
 and the annotation service will create a new output bucket at the provided URI.
@@ -118,14 +118,14 @@ document structure as the input, with the annotation results added.
 just the `dbpedia_entities` data, i.e. the results of the annotation process.
 
 ## ElasticSearch Annotation
-### `https://api.dap-tools.co.uk/annotate/es`
+### `https://api.dap-tools.co.uk/annotation/es`
 If you have data on an ElasticSearch index, then you can also annotate the
 documents directly using this endpoint. 
 
 Each document on the index is expected to contain a field to annotate, and the
 service will update the index with a new field corresponding to the annotations.
 Related parameters are fully documented in the [API
-docs](https://api.dap-tools.uk/annotate).
+docs](https://api.dap-tools.uk/annotation).
 
 ## Progress
 
