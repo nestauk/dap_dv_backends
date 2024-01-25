@@ -56,7 +56,6 @@
 	},
 	"scripts": {
 		"annotate": "cross-env NODE_ENV=production NODE_NO_WARNINGS=1 node src/bin/es/annotate.mjs --field textBody_abstract_article --name dbpedia_entities --index arxiv_v6 --spotlight http://localhost:2222/rest/annotate --page-size 100 --include-metadata",
-		"evaluationServer": "node src/servers/evaluator/app.mjs",
 		"getDBpediaOntology": "node src/bin/dbpedia/getOntology.mjs",
 		"lint": "eslint 'src/**/*.mjs' 'data/**/*.mjs'",
 		"rebuild": "npm run rebuildTestIndex && npm run rebuildEdgeCasesIndex",
@@ -71,7 +70,6 @@
 		"testAnnotationLocally": "npm run rebuildTestIndex && sleep 5 && node src/bin/es/annotate.mjs --field textBody_abstract_article --name dbpedia_entities --index test --page-size 10 --include-metadata",
 		"testAnnotationRemotely": "npm run rebuildTestIndex && sleep 5 && node src/bin/es/annotate.mjs --field textBody_abstract_article --index test --spotlight http://localhost:2222/rest/annotate --page-size 10",
 		"testEdgeCasesLocally": "npm run rebuildEdgeCasesIndex && sleep 1 && mocha --recursive -g 'edgeCases' src/test",
-		"testEvaluationServer": "mocha src/servers/evaluator/test",
 		"testPerformance": "bash src/test/perf/time.sh",
 		"testSpotlightLocally": "sh src/test/dbpedia/localCurlRequest.sh"
 	},
