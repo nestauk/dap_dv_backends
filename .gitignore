@@ -5,7 +5,6 @@ node_modules
 .DS_Store
 **/secrets/**
 **/.secrets/**
-src/services/**/terraform
 **/.env
 src/services/.secrets/**
 !src/services/.secrets/README.md
