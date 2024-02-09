@@ -45,7 +45,7 @@ fastify.use('/(s3|es)', authenticationMiddleware);
 await fastify.register(swagger, {
 	swagger: {
 	  info: {
-			title: 'Nesta Annotation Service',
+			title: 'Annotation Service',
 			description: 'DBpedia Spotlight Annotation service for large datasets.\n\nPlease refer to the <a href="https://github.com/nestauk/dap_dv_backends/tree/dev/src/services/annotation" target="_blank">docs</a> for a complete guide on how to use the service.',
 			version: '0.1.0'
 	  },

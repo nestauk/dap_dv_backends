@@ -15,3 +15,10 @@ export const PROVISION_URI_BASE = `http://${PROVISION_DOMAIN}`;
 export const AUTHENTICATION_PORT = 4001;
 export const ANNOTATION_PORT = 4002;
 export const PROVISION_PORT = 4003;
+
+export const AUTH_EMAIL_DOMAIN = 'nesta.org.uk';
+
+export const SPOTLIGHT_NODE_AMI = 'ami-06cb614d0f047d106';
+export const SPOTLIGHT_NODE_SEC_GROUP = 'sg-026313a646e2d8470';
+
+export const AWS_REGION = 'eu-west-2';

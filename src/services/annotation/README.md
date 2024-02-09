@@ -9,7 +9,7 @@ is fully explained
 The REST API docs for the authentication service can be found
 [here](https://api.dap-tools.co.uk/auth).
 
-Once you have a token for your associated Nesta Email, you're ready to use the
+Once you have a token for a valid email, you're ready to use the
 annotation service.
 
 The annotation endpoints `/annotation/s3` and `/annotation/es` are protected using
@@ -18,10 +18,10 @@ format when making requests to these endpoints:
 
 `Authorization Basic <credentials>`. 
 
-Credentials are constructed by combining your Nesta email and your API token
+Credentials are constructed by combining your email and your API token
 with a colon (email:token), and then by encoding the resulting string in base64.
-For example, with email `user@nesta.org.uk` and token `abc123`, you would encode
-the string `user@nesta.org.uk:abc123` in base64 to get
+For example, with email `user@<AUTH_EMAIL_DOMAIN>` and token `abc123`, you would encode
+the string `user@<AUTH_EMAIL_DOMAIN>:abc123` in base64 to get
 `dXNlckBuZXN0YS5vcmcudWs6YWJjMTIz`. 
 
 Your Authorization header would therefore look like 
@@ -138,7 +138,7 @@ provisioned, so there is a slight delay before the actual annotation begins.
 The endpoint will provide information about how many documents have been
 processed, and how many in total will have to be annotated.
 
-You will also receive an email to your Nesta account notifying you of when your
+You will also receive an email notifying you of when your
 annotation has finished.
 
 ### Architecture Diagram

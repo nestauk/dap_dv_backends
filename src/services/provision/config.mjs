@@ -1,7 +1,12 @@
 import * as path from 'path';
 
-import { __dirname } from './service/util.mjs';
-import { API_URI_BASE, PROVISION_PORT } from '../config.mjs';
+import {
+	API_URI_BASE,
+	AWS_REGION,
+	PROVISION_PORT,
+	SPOTLIGHT_NODE_AMI
+} from '../config.mjs';
+import {__dirname} from './service/util.mjs';
 
 export const provisionEndpoint = `${API_URI_BASE}/provision`;
 
@@ -10,14 +15,14 @@ export const WORKER_PORT = 4000;
 export const SERVER_DIRECTORY = path.join(__dirname, '..');
 export const TERRAFORM_DIRECTORY = path.join(SERVER_DIRECTORY, 'terraform');
 
-export const ami = 'ami-06cb614d0f047d106';
+export const ami = SPOTLIGHT_NODE_AMI;
 export const annotationNodeInstanceType = 't2.xlarge';
 
 export const scaffold = {
 	provider: [
 		{
 			aws: {
-				region: 'eu-west-2',
+				region: AWS_REGION,
 			},
 		},
 	],

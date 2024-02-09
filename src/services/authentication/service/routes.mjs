@@ -1,3 +1,4 @@
+import { AUTH_EMAIL_DOMAIN } from '../../config.mjs';
 import { doesTokenMatch, activateEmailToken } from './crypto.mjs';
 import { sendTokenEmail } from './email.mjs';
 import * as schema from './schemas.mjs';
@@ -10,8 +11,8 @@ export const routes = async (fastify, options) => {
 		if (!email) {
 			return reply.code(400).send('No email provided');
 		}
-		if (!email.endsWith('nesta.org.uk')) {
-			return reply.code(400).send('Nesta email must be provided');
+		if (!email.endsWith(`@${AUTH_EMAIL_DOMAIN}`)) {
+			return reply.code(400).send('Valid email must be provided');
 		}
 		sendTokenEmail(email);
 		reply.code(204).send();

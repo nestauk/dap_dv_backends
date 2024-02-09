@@ -19,7 +19,7 @@ export const sendTokenEmail = async email => {
 		email,
 		SOURCE_EMAIL,
 		message,
-		'Nesta verification email'
+		'Auth verification email'
 	);
 	return response;
 };

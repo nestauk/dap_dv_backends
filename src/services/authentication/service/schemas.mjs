@@ -1,6 +1,6 @@
 export const getRequestAuthSchema = {
 	summary: 'Request an authentication token for the provided email',
-	description: 'Request an authentication token for the provided email. The email must be registered with Nesta, i.e. must end with @nesta.org.uk',
+	description: 'Request an authentication token for the provided email. The email must end with @<AUTH_EMAIL_DOMAIN>',
 	produces: ['text/plain'],
 	query: {
 		required: ['email'],
@@ -8,7 +8,7 @@ export const getRequestAuthSchema = {
 		properties: {
 			email: {
 				type: 'string',
-				description: 'Your Nesta email, ending in @nesta.org.uk'
+				description: 'Your email, ending in @<AUTH_EMAIL_DOMAIN>'
 			}
 		}
 	},
@@ -65,7 +65,7 @@ export const getAuthenticateSchema = {
 		properties: {
 			email: {
 				type: 'string',
-				description: 'A Nesta email',
+				description: 'An email ending in <AUTH_EMAIL_DOMAIN>',
 			},
 			token: {
 				type: 'string',
