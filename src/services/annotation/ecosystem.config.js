@@ -1,11 +1,11 @@
 module.exports = {
-	"apps" : [
+	apps: [
 		{
-			"name" : "annotation",
-			"script" : "src/services/annotation/service/app.mjs",
-			"watch" : true,
-			"env" : {
-				"NODE_ENV": "dev"
+			name: 'annotation',
+			script: 'src/services/annotation/service/app.mjs',
+			watch: true,
+			env: {
+				NODE_ENV: 'dev'
 			}
 		}
 	]

@@ -1,11 +1,11 @@
 module.exports = {
-	"apps" : [
+	apps: [
 		{
-			"name" : "authentication",
-			"script" : "src/services/authentication/service/app.mjs",
-			"watch" : true,
-			"env" : {
-				"NODE_ENV": "dev"
+			name: 'authentication',
+			script: 'src/services/authentication/service/app.mjs',
+			watch: true,
+			env: {
+				NODE_ENV: 'dev'
 			}
 		}
 	]

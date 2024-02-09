@@ -15,3 +15,7 @@ sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update
 
 sudo apt-get install -y terraform
+
+# install terraform dependencies as specified in `src/services/provision/terraform/main.tf.json`
+# so that it doesn't waste time when the provision server is servicing its first request.
+terraform -chdir=src/services/provision/terraform init
