@@ -35,24 +35,6 @@ The following endpoints are exposed:
     `/create`. Takes the same paramaters as documented on the [Spotlight
     API.](https://www.dbpedia-spotlight.org/api)
 
-## Setup
-
-- Clone the repository and install nodeJS packages.
-- Ensure AWS keys are available in the host machine. Usually this will involve
-having a directory located at `~/.aws/` with `config` and `credentials` files.
-- Run the server using `npm run spotlightServer`.
-- Install `nginx` and ensure it's running.
-- Symlink the nginx configuration to the one in this repository: `sudo ln -sf
-/path/to/repo/src/servers/spotlight/nginx.conf /etc/nginx/nginx.conf`. This will
-reverse proxy HTTP requests to the server's port at 3000 as well as configure
-the loadbalancer for the instances created using the `/create` endpoint.
-
-## Configuration
-
-When setting up an EC2 instance, use the `spotlight-master` security group,
-found
-[here](https://eu-west-2.console.aws.amazon.com/ec2/v2/home?region=eu-west-2#SecurityGroup:groupId=sg-0a24f96cfe70b3785).
-
 ## Documentation
 
 The server uses a combination of Terraform for resource provisioning, AWS AMI

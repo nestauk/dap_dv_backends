@@ -33,24 +33,3 @@ You should get a response of `true`.
 
 You can also use the Swagger UI to make these requests. To access the UI,
 simply navigate to `https://api.dap-tools.uk/auth`. 
-
-## Docker
-
-To run as docker containers, first ensure that you add your AWS credentials
-to an enviromnent file at the following path: `src/services/authentication/.env`.
-
-Here's an example:
-
-```bash
-# The following three variables are required
-AWS_ACCESS_KEY_ID=<YOUR ID KEY>
-AWS_SECRET_ACCESS_KEY=<YOUR ACCESS KEY>
-AWS_DEFAULT_REGION=eu-west-2
-
-# Optional, default is 4000
-PORT=4000
-```
-
-Then run the following from the root level of this repository:
-
-`docker compose -f src/services/authentication/docker-compose.yml up`
