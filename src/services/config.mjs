@@ -1,9 +1,9 @@
 export const BASE_DOMAIN = 'dap-tools.uk';
 
-export const API_DOMAIN = `dv-test-api.${BASE_DOMAIN}`;
-export const AUTHENTICATION_DOMAIN = `dv-test-authentication.${BASE_DOMAIN}`;
-export const ANNOTATION_DOMAIN = `dv-test-annotation.${BASE_DOMAIN}`;
-export const PROVISION_DOMAIN = `dv-test-provision.${BASE_DOMAIN}`;
+export const API_DOMAIN = `api.${BASE_DOMAIN}`;
+export const AUTHENTICATION_DOMAIN = `authentication.${BASE_DOMAIN}`;
+export const ANNOTATION_DOMAIN = `annotation.${BASE_DOMAIN}`;
+export const PROVISION_DOMAIN = `provision.${BASE_DOMAIN}`;
 
 export const API_URI_BASE = `https://${API_DOMAIN}`;
 export const AUTHENTICATION_URI_BASE = `https://${AUTHENTICATION_DOMAIN}`;
