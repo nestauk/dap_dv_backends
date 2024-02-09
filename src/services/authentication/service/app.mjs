@@ -32,8 +32,8 @@ await fastify.register(cors);
 await fastify.register(swagger, {
 	swagger: {
 	  info: {
-			title: 'Nesta Internal Authentication Service',
-			description: 'Internal authentication service for providing api tokens to regestered Nesta emails.',
+			title: 'Internal Authentication Service',
+			description: 'Internal authentication service for providing api tokens to regestered emails ending in <AUTH_EMAIL_DOMAIN>.',
 			version: '0.1.0'
 	  },
 	  host: BACKEND_BASE,

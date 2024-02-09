@@ -1,8 +1,8 @@
 # Simple Email Authentication service
 
-Authenticates Nesta users by sending them an email with their token and a 
-verification link. Will only send emails to Nesta domains i.e. emails ending
-with `@nesta.org.uk`.
+Authenticates users by sending them an email with their token and a 
+verification link. Will only send emails to emails ending
+with `@<AUTH_EMAIL_DOMAIN>`.
 
 To request a token, send a POST request to
 
@@ -15,7 +15,7 @@ with the following JSON body:
 }
 ```
 
-This will send a verification email to your Nesta email account. Click the link,
+This will send a verification email to a valid email account ending in <AUTH_EMAIL_DOMAIN>. Click the link,
 and the token should work. To check if the token does in fact, send a POST
 request to
 

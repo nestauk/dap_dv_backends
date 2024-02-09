@@ -1,8 +1,8 @@
+import {createPathAndWriteObject} from 'dap_dv_backends_utils/util/path.mjs';
 import * as _ from 'lamb';
 
-import { createPathAndWriteObject } from 'dap_dv_backends_utils/util/path.mjs';
-import { ami, scaffold, annotationNodeInstanceType } from '../config.mjs';
-
+import {SPOTLIGHT_NODE_SEC_GROUP} from '../../config.mjs';
+import {ami, scaffold, annotationNodeInstanceType} from '../config.mjs';
 
 export const generateAndWriteConfiguration = async(workers, path=null) => {
 	const identifiers = [...Array(workers).keys()];
@@ -15,7 +15,7 @@ export const generateAndWriteConfiguration = async(workers, path=null) => {
 							ami,
 							instance_type: annotationNodeInstanceType,
 							key_name: 'spotlight', // [1]
-							vpc_security_group_ids: ['sg-026313a646e2d8470'],
+							vpc_security_group_ids: [SPOTLIGHT_NODE_SEC_GROUP],
 							tags: {
 								Name: `annotation-node-${id}`,
 							},
