@@ -1,5 +1,5 @@
-if [ -z "$DAP_HOME" ]; then
-    echo "DAP_HOME is not set or is empty."
+if [ -z "$REPO_DIR_PATH" ]; then
+    echo "REPO_DIR_PATH is not set or is empty."
     exit 1
 fi
 if [ -z "$CERTBOT_EMAIL" ]; then
@@ -20,21 +20,21 @@ if [ -z "$1" ]; then
 fi
 
 echo "******************************************************"
-echo "${DAP_HOME}/src/bin/services/install-system.sh"
+echo "${REPO_DIR_PATH}/src/bin/services/install-system.sh"
 echo "******************************************************"
-${DAP_HOME}/src/bin/services/install-system.sh
+${REPO_DIR_PATH}/src/bin/services/install-system.sh
 
-cd ${DAP_HOME}
+cd ${REPO_DIR_PATH}
 npm i
 
 echo "******************************************************"
-echo "${DAP_HOME}/src/bin/services/setup-nginx.sh $1"
+echo "${REPO_DIR_PATH}/src/bin/services/setup-nginx.sh $1"
 echo "******************************************************"
 ./src/bin/services/setup-nginx.sh $1
 
 if [ "$1" = "AUTHENTICATION" ]; then
     echo "******************************************************"
-    echo "${DAP_HOME}/src/bin/services/install-docker.sh"
+    echo "${REPO_DIR_PATH}/src/bin/services/install-docker.sh"
     echo "******************************************************"
 
     ./src/bin/services/install-docker.sh
@@ -43,7 +43,7 @@ fi
 
 if [ "$1" = "PROVISION" ]; then
     echo "******************************************************"
-    echo "${DAP_HOME}/src/bin/services/install-terraform.sh"
+    echo "${REPO_DIR_PATH}/src/bin/services/install-terraform.sh"
     echo "******************************************************"
 
     aws s3 cp s3://dap-dv-backends/spotlight.pem ~/.ssh/spotlight.pem

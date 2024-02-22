@@ -23,7 +23,7 @@ do
 			--template nginx/nginx.provision.template.conf \
 			--varspath ../../../src/services/config.mjs
 		sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
-		sudo ln -sf ${DAP_HOME}/src/services/provision/nginx.conf /etc/nginx/nginx.conf
+		sudo ln -sf ${REPO_DIR_PATH}/src/services/provision/nginx.conf /etc/nginx/nginx.conf
 	else
 		if [ $server = "API" ]; then
 			template="nginx/nginx.proxy.template.conf"

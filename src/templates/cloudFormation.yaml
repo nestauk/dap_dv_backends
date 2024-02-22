@@ -84,7 +84,7 @@ Resources:
 
           git clone https://github.com/nestauk/dap_dv_backends.git && 
 
-          export set DAP_HOME=/home/ubuntu/dap_dv_backends && 
+          export set REPO_DIR_PATH=/home/ubuntu/dap_dv_backends && 
           export set CERTBOT_EMAIL='${CertbotEmail}' && 
           export set AWS_USERNAME='${AwsUsername}' && 
           export set AWS_REGION='${AwsRegion}' && 
@@ -120,7 +120,7 @@ Resources:
 
           git clone https://github.com/nestauk/dap_dv_backends.git && 
 
-          export set DAP_HOME=/home/ubuntu/dap_dv_backends && 
+          export set REPO_DIR_PATH=/home/ubuntu/dap_dv_backends && 
           export set CERTBOT_EMAIL='${CertbotEmail}' && 
           export set AWS_USERNAME='${AwsUsername}' && 
           export set AWS_REGION='${AwsRegion}' && 
@@ -159,7 +159,7 @@ Resources:
 
           git clone https://github.com/nestauk/dap_dv_backends.git && 
 
-          export set DAP_HOME=/home/ubuntu/dap_dv_backends && 
+          export set REPO_DIR_PATH=/home/ubuntu/dap_dv_backends && 
           export set CERTBOT_EMAIL='${CertbotEmail}' && 
           export set AWS_USERNAME='${AwsUsername}' && 
           export set AWS_REGION='${AwsRegion}' && 
@@ -198,7 +198,7 @@ Resources:
 
           git clone https://github.com/nestauk/dap_dv_backends.git && 
 
-          export set DAP_HOME=/home/ubuntu/dap_dv_backends && 
+          export set REPO_DIR_PATH=/home/ubuntu/dap_dv_backends && 
           export set CERTBOT_EMAIL='${CertbotEmail}' && 
           export set AWS_USERNAME='${AwsUsername}' && 
           export set AWS_REGION='${AwsRegion}' && 
