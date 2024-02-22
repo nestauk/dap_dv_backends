@@ -11,6 +11,8 @@ sudo service nginx restart
 for server in "$@"
 do
 	serverdomain=$(node src/bin/utils/getDomain.mjs $server)
+	./src/bin/utils/waitForDns.sh $serverdomain
+
 	sudo certbot certonly -n --nginx --agree-tos --email $CERTBOT_EMAIL --domains $serverdomain
 
 	if [ $server = "PROVISION" ]; then
@@ -21,7 +23,7 @@ do
 			--template nginx/nginx.provision.template.conf \
 			--varspath ../../../src/services/config.mjs
 		sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
-		sudo ln -sf $(pwd)/src/services/provision/nginx.conf /etc/nginx/nginx.conf
+		sudo ln -sf ${DAP_HOME}/src/services/provision/nginx.conf /etc/nginx/nginx.conf
 	else
 		if [ $server = "API" ]; then
 			template="nginx/nginx.proxy.template.conf"
