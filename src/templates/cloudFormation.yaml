@@ -87,6 +87,7 @@ Resources:
           ./dap_dv_backends/src/bin/services/setup.sh API
 
           ' >>/home/ubuntu/output.txt 2>&1
+
   AnnotatorApiDNSRecord:
     Type: AWS::Route53::RecordSet
     Properties:
@@ -125,6 +126,7 @@ Resources:
           npm run startAuthenticationServer
 
           ' >>/home/ubuntu/output.txt 2>&1
+
   AnnotatorAuthDNSRecord:
     Type: AWS::Route53::RecordSet
     Properties:
@@ -163,6 +165,7 @@ Resources:
           npm run startProvisionServer
 
           ' >>/home/ubuntu/output.txt 2>&1
+
   AnnotatorProvisionDNSRecord:
     Type: AWS::Route53::RecordSet
     Properties:
@@ -201,6 +204,7 @@ Resources:
           npm run startAnnotationServer
 
           ' >>/home/ubuntu/output.txt 2>&1
+
   AnnotatorAnnotationDNSRecord:
     Type: AWS::Route53::RecordSet
     Properties:
