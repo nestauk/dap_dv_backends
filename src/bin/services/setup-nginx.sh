@@ -11,7 +11,7 @@ sudo service nginx restart
 for server in "$@"
 do
 	serverdomain=$(node src/bin/utils/getDomain.mjs $server)
-	./src/bin/utils/waitForDns.sh $serverdomain
+	./src/bin/utils/wait-for-dns.sh $serverdomain
 
 	sudo certbot certonly -n --nginx --agree-tos --email $CERTBOT_EMAIL --domains $serverdomain
 
