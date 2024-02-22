@@ -2,9 +2,6 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: Spotlight annotation system servers and associated resources
 
 Parameters:
-  SshKeyName:
-    Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
-    Type: AWS::EC2::KeyPair::KeyName
   CertbotEmail:
     Description: email to be used to register HTTPS certificates
     Type: String
@@ -71,7 +68,6 @@ Resources:
       ImageId: ami-0e5f882be1900e43b # Ubuntu 22.04 for AMD64 on eu-west-2
       InstanceType: t2.micro
       IamInstanceProfile: !Ref DvInstanceProfile
-      KeyName: !Ref SshKeyName
       SecurityGroups:
         - !Ref DvHttpHttpsSecurityGroup
       Tags:
@@ -107,7 +103,6 @@ Resources:
       ImageId: ami-0e5f882be1900e43b # Ubuntu 22.04 for AMD64 on eu-west-2
       InstanceType: t2.micro
       IamInstanceProfile: !Ref DvInstanceProfile
-      KeyName: !Ref SshKeyName
       SecurityGroups:
         - !Ref DvHttpHttpsSecurityGroup
       Tags:
@@ -146,7 +141,6 @@ Resources:
       ImageId: ami-0e5f882be1900e43b # Ubuntu 22.04 for AMD64 on eu-west-2
       InstanceType: t2.micro
       IamInstanceProfile: !Ref DvInstanceProfile
-      KeyName: !Ref SshKeyName
       SecurityGroups:
         - !Ref DvHttpHttpsSecurityGroup
       Tags:
@@ -185,7 +179,6 @@ Resources:
       ImageId: ami-0e5f882be1900e43b # Ubuntu 22.04 for AMD64 on eu-west-2
       InstanceType: t2.micro
       IamInstanceProfile: !Ref DvInstanceProfile
-      KeyName: !Ref SshKeyName
       SecurityGroups:
         - !Ref DvHttpHttpsSecurityGroup
       Tags:
