@@ -13,5 +13,5 @@ secret_access_key=$(echo "$output" | jq -r '.AccessKey.SecretAccessKey')
 aws configure set aws_access_key_id "$access_key_id"
 aws configure set aws_secret_access_key "$secret_access_key"
 
-# Optionally, set default region and output format
+# Set default region
 aws configure set default.region $AWS_REGION
