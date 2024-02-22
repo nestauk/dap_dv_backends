@@ -2,17 +2,17 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: Spotlight annotation system servers and associated resources
 
 Parameters:
+  AwsRegion:
+    Description: The AWS region where the system will be installed
+    Type: String
+  AwsUsername:
+    Description: The AWS username to be used when creatin IAM access keys
+    Type: String
   CertbotEmail:
     Description: email to be used to register HTTPS certificates
     Type: String
   HostedZoneId:
     Description: The ID of the hosted zone in Route 53 where the subdomain is to be created
-    Type: String
-  AwsUsername:
-    Description: The AWS username to be used when creatin IAM access keys
-    Type: String
-  AwsRegion:
-    Description: The AWS region where the system will be installed
     Type: String
 
 Resources:
