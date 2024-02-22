@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Spotlight annotation system servers and associated resources
+Description: Annotator servers and associated resources (DbPedia Spotlight)
 
 Parameters:
   AwsRegion:
@@ -16,7 +16,7 @@ Parameters:
     Type: String
 
 Resources:
-  DvFullAccessRole:
+  AnnotatorAccessRole:
     Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
@@ -38,13 +38,13 @@ Resources:
                 # Resource: 'arn:aws:s3:::dap-dv-backends/*'
                 # also need to allow terraforming
 
-  DvInstanceProfile:
+  AnnotatorInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Roles:
-        - Ref: DvFullAccessRole
+        - Ref: AnnotatorAccessRole
 
-  DvHttpHttpsSecurityGroup:
+  AnnotatorHttpHttpsSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable SSH, HTTP, and HTTPS access
@@ -62,17 +62,17 @@ Resources:
           ToPort: 443
           CidrIp: 0.0.0.0/0
 
-  DvApiInstance:
+  AnnotatorApiInstance:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0e5f882be1900e43b # Ubuntu 22.04 for AMD64 on eu-west-2
       InstanceType: t2.micro
-      IamInstanceProfile: !Ref DvInstanceProfile
+      IamInstanceProfile: !Ref AnnotatorInstanceProfile
       SecurityGroups:
-        - !Ref DvHttpHttpsSecurityGroup
+        - !Ref AnnotatorHttpHttpsSecurityGroup
       Tags:
         - Key: Name
-          Value: DvApiInstance
+          Value: AnnotatorApiInstance
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash
@@ -87,7 +87,7 @@ Resources:
           ./dap_dv_backends/src/bin/services/setup.sh API
 
           ' >>/home/ubuntu/output.txt 2>&1
-  DvApiDNSRecord:
+  AnnotatorApiDNSRecord:
     Type: AWS::Route53::RecordSet
     Properties:
       HostedZoneId: !Ref HostedZoneId
@@ -95,19 +95,19 @@ Resources:
       Type: A
       TTL: '300'
       ResourceRecords:
-        - !GetAtt DvApiInstance.PublicIp
+        - !GetAtt AnnotatorApiInstance.PublicIp
 
-  DvAuthInstance:
+  AnnotatorAuthInstance:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0e5f882be1900e43b # Ubuntu 22.04 for AMD64 on eu-west-2
       InstanceType: t2.micro
-      IamInstanceProfile: !Ref DvInstanceProfile
+      IamInstanceProfile: !Ref AnnotatorInstanceProfile
       SecurityGroups:
-        - !Ref DvHttpHttpsSecurityGroup
+        - !Ref AnnotatorHttpHttpsSecurityGroup
       Tags:
         - Key: Name
-          Value: DvAuthInstance
+          Value: AnnotatorAuthInstance
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash
@@ -125,7 +125,7 @@ Resources:
           npm run startAuthenticationServer
 
           ' >>/home/ubuntu/output.txt 2>&1
-  DvAuthDNSRecord:
+  AnnotatorAuthDNSRecord:
     Type: AWS::Route53::RecordSet
     Properties:
       HostedZoneId: !Ref HostedZoneId
@@ -133,19 +133,19 @@ Resources:
       Type: A
       TTL: '300'
       ResourceRecords:
-        - !GetAtt DvAuthInstance.PublicIp
+        - !GetAtt AnnotatorAuthInstance.PublicIp
 
-  DvProvisionInstance:
+  AnnotatorProvisionInstance:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0e5f882be1900e43b # Ubuntu 22.04 for AMD64 on eu-west-2
       InstanceType: t2.micro
-      IamInstanceProfile: !Ref DvInstanceProfile
+      IamInstanceProfile: !Ref AnnotatorInstanceProfile
       SecurityGroups:
-        - !Ref DvHttpHttpsSecurityGroup
+        - !Ref AnnotatorHttpHttpsSecurityGroup
       Tags:
         - Key: Name
-          Value: DvProvisionInstance
+          Value: AnnotatorProvisionInstance
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash
@@ -163,7 +163,7 @@ Resources:
           npm run startProvisionServer
 
           ' >>/home/ubuntu/output.txt 2>&1
-  DvProvisionDNSRecord:
+  AnnotatorProvisionDNSRecord:
     Type: AWS::Route53::RecordSet
     Properties:
       HostedZoneId: !Ref HostedZoneId
@@ -171,19 +171,19 @@ Resources:
       Type: A
       TTL: '300'
       ResourceRecords:
-        - !GetAtt DvProvisionInstance.PublicIp
+        - !GetAtt AnnotatorProvisionInstance.PublicIp
 
-  DvAnnotationInstance:
+  AnnotatorAnnotationInstance:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0e5f882be1900e43b # Ubuntu 22.04 for AMD64 on eu-west-2
       InstanceType: t2.micro
-      IamInstanceProfile: !Ref DvInstanceProfile
+      IamInstanceProfile: !Ref AnnotatorInstanceProfile
       SecurityGroups:
-        - !Ref DvHttpHttpsSecurityGroup
+        - !Ref AnnotatorHttpHttpsSecurityGroup
       Tags:
         - Key: Name
-          Value: DvAnnotationInstance
+          Value: AnnotatorAnnotationInstance
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash
@@ -201,7 +201,7 @@ Resources:
           npm run startAnnotationServer
 
           ' >>/home/ubuntu/output.txt 2>&1
-  DvAnnotationDNSRecord:
+  AnnotatorAnnotationDNSRecord:
     Type: AWS::Route53::RecordSet
     Properties:
       HostedZoneId: !Ref HostedZoneId
@@ -209,4 +209,4 @@ Resources:
       Type: A
       TTL: '300'
       ResourceRecords:
-        - !GetAtt DvAnnotationInstance.PublicIp
+        - !GetAtt AnnotatorAnnotationInstance.PublicIp
