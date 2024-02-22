@@ -20,7 +20,7 @@ if [ -z "$1" ]; then
 fi
 
 echo "******************************************************"
-echo "${REPO_DIR_PATH}/src/bin/services/install-system.sh"
+echo "SYSTEM setup"
 echo "******************************************************"
 ${REPO_DIR_PATH}/src/bin/services/install-system.sh
 
@@ -28,13 +28,13 @@ cd ${REPO_DIR_PATH}
 npm i
 
 echo "******************************************************"
-echo "${REPO_DIR_PATH}/src/bin/services/setup-nginx.sh $1"
+echo "NGINX setup for $1"
 echo "******************************************************"
 ./src/bin/services/setup-nginx.sh $1
 
 if [ "$1" = "AUTHENTICATION" ]; then
 	echo "******************************************************"
-	echo "${REPO_DIR_PATH}/src/bin/services/install-docker.sh"
+	echo "AUTHENTICATION setup"
 	echo "******************************************************"
 
 	./src/bin/services/install-docker.sh
@@ -43,7 +43,7 @@ fi
 
 if [ "$1" = "PROVISION" ]; then
 	echo "******************************************************"
-	echo "${REPO_DIR_PATH}/src/bin/services/install-terraform.sh"
+	echo "PROVISION setup"
 	echo "******************************************************"
 
 	aws s3 cp s3://dap-dv-backends/spotlight.pem ~/.ssh/spotlight.pem
