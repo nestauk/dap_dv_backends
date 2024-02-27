@@ -1,0 +1,216 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Annotator servers and associated resources (DbPedia Spotlight)
+
+Parameters:
+  AwsRegion:
+    Description: The AWS region where the system will be installed
+    Type: String
+  AwsUsername:
+    Description: The AWS username to be used when creatin IAM access keys
+    Type: String
+  CertbotEmail:
+    Description: email to be used to register HTTPS certificates
+    Type: String
+  HostedZoneId:
+    Description: The ID of the hosted zone in Route 53 where the subdomain is to be created
+    Type: String
+
+Resources:
+  AnnotatorAccessRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ec2.amazonaws.com
+            Action: 'sts:AssumeRole'
+      Policies:
+        - PolicyName: FullAccessPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: '*'
+                Resource: '*'
+                # Action: 's3:GetObject'
+                # Resource: 'arn:aws:s3:::dap-dv-backends/*'
+                # also need to allow terraforming
+
+  AnnotatorInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Roles:
+        - Ref: AnnotatorAccessRole
+
+  AnnotatorHttpHttpsSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable SSH, HTTP, and HTTPS access
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+
+  AnnotatorApiInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0e5f882be1900e43b # Ubuntu 22.04 for AMD64 on eu-west-2
+      InstanceType: t2.micro
+      IamInstanceProfile: !Ref AnnotatorInstanceProfile
+      SecurityGroups:
+        - !Ref AnnotatorHttpHttpsSecurityGroup
+      Tags:
+        - Key: Name
+          Value: AnnotatorApiInstance
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          sudo -i -H -u ubuntu -- bash -c '
+
+          git clone https://github.com/nestauk/dap_dv_backends.git && 
+
+          export set REPO_DIR_PATH=/home/ubuntu/dap_dv_backends && 
+          export set CERTBOT_EMAIL='${CertbotEmail}' && 
+          export set AWS_USERNAME='${AwsUsername}' && 
+          export set AWS_REGION='${AwsRegion}' && 
+          ./dap_dv_backends/src/bin/services/setup.sh API
+
+          ' >>/home/ubuntu/output.txt 2>&1
+
+  AnnotatorApiDNSRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: !Ref HostedZoneId
+      Name: api.dap-tools.uk
+      Type: A
+      TTL: '300'
+      ResourceRecords:
+        - !GetAtt AnnotatorApiInstance.PublicIp
+
+  AnnotatorAuthInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0e5f882be1900e43b # Ubuntu 22.04 for AMD64 on eu-west-2
+      InstanceType: t2.micro
+      IamInstanceProfile: !Ref AnnotatorInstanceProfile
+      SecurityGroups:
+        - !Ref AnnotatorHttpHttpsSecurityGroup
+      Tags:
+        - Key: Name
+          Value: AnnotatorAuthInstance
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          sudo -i -H -u ubuntu -- bash -c '
+
+          git clone https://github.com/nestauk/dap_dv_backends.git && 
+
+          export set REPO_DIR_PATH=/home/ubuntu/dap_dv_backends && 
+          export set CERTBOT_EMAIL='${CertbotEmail}' && 
+          export set AWS_USERNAME='${AwsUsername}' && 
+          export set AWS_REGION='${AwsRegion}' && 
+          ./dap_dv_backends/src/bin/services/setup.sh AUTHENTICATION && 
+
+          cd dap_dv_backends && 
+          npm run startAuthenticationServer
+
+          ' >>/home/ubuntu/output.txt 2>&1
+
+  AnnotatorAuthDNSRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: !Ref HostedZoneId
+      Name: authentication.dap-tools.uk
+      Type: A
+      TTL: '300'
+      ResourceRecords:
+        - !GetAtt AnnotatorAuthInstance.PublicIp
+
+  AnnotatorProvisionInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0e5f882be1900e43b # Ubuntu 22.04 for AMD64 on eu-west-2
+      InstanceType: t2.micro
+      IamInstanceProfile: !Ref AnnotatorInstanceProfile
+      SecurityGroups:
+        - !Ref AnnotatorHttpHttpsSecurityGroup
+      Tags:
+        - Key: Name
+          Value: AnnotatorProvisionInstance
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          sudo -i -H -u ubuntu -- bash -c '
+
+          git clone https://github.com/nestauk/dap_dv_backends.git && 
+
+          export set REPO_DIR_PATH=/home/ubuntu/dap_dv_backends && 
+          export set CERTBOT_EMAIL='${CertbotEmail}' && 
+          export set AWS_USERNAME='${AwsUsername}' && 
+          export set AWS_REGION='${AwsRegion}' && 
+          ./dap_dv_backends/src/bin/services/setup.sh PROVISION && 
+
+          cd dap_dv_backends && 
+          npm run startProvisionServer
+
+          ' >>/home/ubuntu/output.txt 2>&1
+
+  AnnotatorProvisionDNSRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: !Ref HostedZoneId
+      Name: provision.dap-tools.uk
+      Type: A
+      TTL: '300'
+      ResourceRecords:
+        - !GetAtt AnnotatorProvisionInstance.PublicIp
+
+  AnnotatorAnnotationInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0e5f882be1900e43b # Ubuntu 22.04 for AMD64 on eu-west-2
+      InstanceType: t2.micro
+      IamInstanceProfile: !Ref AnnotatorInstanceProfile
+      SecurityGroups:
+        - !Ref AnnotatorHttpHttpsSecurityGroup
+      Tags:
+        - Key: Name
+          Value: AnnotatorAnnotationInstance
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          sudo -i -H -u ubuntu -- bash -c '
+
+          git clone https://github.com/nestauk/dap_dv_backends.git && 
+
+          export set REPO_DIR_PATH=/home/ubuntu/dap_dv_backends && 
+          export set CERTBOT_EMAIL='${CertbotEmail}' && 
+          export set AWS_USERNAME='${AwsUsername}' && 
+          export set AWS_REGION='${AwsRegion}' && 
+          ./dap_dv_backends/src/bin/services/setup.sh ANNOTATION && 
+
+          cd dap_dv_backends &&
+          npm run startAnnotationServer
+
+          ' >>/home/ubuntu/output.txt 2>&1
+
+  AnnotatorAnnotationDNSRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: !Ref HostedZoneId
+      Name: annotation.dap-tools.uk
+      Type: A
+      TTL: '300'
+      ResourceRecords:
+        - !GetAtt AnnotatorAnnotationInstance.PublicIp
