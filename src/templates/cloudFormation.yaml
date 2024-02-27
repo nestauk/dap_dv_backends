@@ -14,6 +14,27 @@ Parameters:
   HostedZoneId:
     Description: The ID of the hosted zone in Route 53 where the subdomain is to be created
     Type: String
+  RepoBranch:
+    Description: The branch of the dap_dv_backends repository to be used
+    Type: String
+  RepoUrl:
+    Description: The URL of the dap_dv_backends repository
+    Type: String
+  AnnotationDomainName:
+    Description: The domain name for the annotation server
+    Type: String
+  ApiDomainName:
+    Description: The domain name for the API server
+    Type: String
+  AuthenticationDomainName:
+    Description: The domain name for the authentication server
+    Type: String
+  ProvisionDomainName:
+    Description: The domain name for the provision server
+    Type: String
+  SpotlightCertS3Uri:
+    Description: The S3 URI for the Spotlight server's HTTPS certificate
+    Type: String
 
 Resources:
   AnnotatorAccessRole:
@@ -78,7 +99,7 @@ Resources:
           #!/bin/bash
           sudo -i -H -u ubuntu -- bash -c '
 
-          git clone https://github.com/nestauk/dap_dv_backends.git && 
+          git clone -b '${RepoBranch}' '${RepoUrl}' && 
 
           export set REPO_DIR_PATH=/home/ubuntu/dap_dv_backends && 
           export set CERTBOT_EMAIL='${CertbotEmail}' && 
@@ -92,7 +113,7 @@ Resources:
     Type: AWS::Route53::RecordSet
     Properties:
       HostedZoneId: !Ref HostedZoneId
-      Name: api.dap-tools.uk
+      Name: !Ref ApiDomainName
       Type: A
       TTL: '300'
       ResourceRecords:
@@ -114,7 +135,7 @@ Resources:
           #!/bin/bash
           sudo -i -H -u ubuntu -- bash -c '
 
-          git clone https://github.com/nestauk/dap_dv_backends.git && 
+          git clone -b '${RepoBranch}' '${RepoUrl}' && 
 
           export set REPO_DIR_PATH=/home/ubuntu/dap_dv_backends && 
           export set CERTBOT_EMAIL='${CertbotEmail}' && 
@@ -131,7 +152,7 @@ Resources:
     Type: AWS::Route53::RecordSet
     Properties:
       HostedZoneId: !Ref HostedZoneId
-      Name: authentication.dap-tools.uk
+      Name: !Ref AuthenticationDomainName
       Type: A
       TTL: '300'
       ResourceRecords:
@@ -153,12 +174,13 @@ Resources:
           #!/bin/bash
           sudo -i -H -u ubuntu -- bash -c '
 
-          git clone https://github.com/nestauk/dap_dv_backends.git && 
+          git clone -b '${RepoBranch}' '${RepoUrl}' && 
 
           export set REPO_DIR_PATH=/home/ubuntu/dap_dv_backends && 
           export set CERTBOT_EMAIL='${CertbotEmail}' && 
           export set AWS_USERNAME='${AwsUsername}' && 
           export set AWS_REGION='${AwsRegion}' && 
+          export set SPOTLIGHT_CERT_S3_URI='${SpotlightCertS3Uri}' &&
           ./dap_dv_backends/src/bin/services/setup.sh PROVISION && 
 
           cd dap_dv_backends && 
@@ -170,7 +192,7 @@ Resources:
     Type: AWS::Route53::RecordSet
     Properties:
       HostedZoneId: !Ref HostedZoneId
-      Name: provision.dap-tools.uk
+      Name: !Ref ProvisionDomainName
       Type: A
       TTL: '300'
       ResourceRecords:
@@ -192,7 +214,7 @@ Resources:
           #!/bin/bash
           sudo -i -H -u ubuntu -- bash -c '
 
-          git clone https://github.com/nestauk/dap_dv_backends.git && 
+          git clone -b '${RepoBranch}' '${RepoUrl}' && 
 
           export set REPO_DIR_PATH=/home/ubuntu/dap_dv_backends && 
           export set CERTBOT_EMAIL='${CertbotEmail}' && 
@@ -209,7 +231,7 @@ Resources:
     Type: AWS::Route53::RecordSet
     Properties:
       HostedZoneId: !Ref HostedZoneId
-      Name: annotation.dap-tools.uk
+      Name: !Ref AnnotationDomainName
       Type: A
       TTL: '300'
       ResourceRecords:

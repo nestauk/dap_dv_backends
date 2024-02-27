@@ -1,4 +1,4 @@
-import * as configVars from '../../services/config.mjs';
+import * as configVars from '../../../services/config.mjs';
 
 // Get CONTEXT from the first CLI argument
 const server = process.argv[2];

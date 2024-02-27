@@ -1,6 +1,6 @@
 import {program} from 'commander';
 
-import {processAndSaveTemplate} from '../../utils/template.mjs';
+import {processAndSaveTemplate} from '../../../utils/template.mjs';
 
 // Dynamically import replacement variables
 const loadVariables = async path => {

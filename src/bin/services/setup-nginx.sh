@@ -10,18 +10,18 @@ sudo service nginx restart
 
 for server in "$@"
 do
-	serverdomain=$(node src/bin/utils/getDomain.mjs $server)
-	./src/bin/utils/wait-for-dns.sh $serverdomain
+	serverdomain=$(node src/bin/services/internals/getDomain.mjs $server)
+	./src/bin/services/internals/wait-for-dns.sh $serverdomain
 
 	sudo certbot certonly -n --nginx --agree-tos --email $CERTBOT_EMAIL --domains $serverdomain
 
 	if [ $server = "PROVISION" ]; then
-		node src/bin/utils/fillTemplate.mjs \
+		node src/bin/services/internals/fillTemplate.mjs \
 			--copy-var ACTIVE_DOMAIN="${server}_DOMAIN" \
 			--copy-var ACTIVE_PORT="${server}_PORT" \
 			--output src/services/provision/nginx.conf \
 			--template nginx/nginx.provision.template.conf \
-			--varspath ../../../src/services/config.mjs
+			--varspath ../../../services/config.mjs
 		sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
 		sudo ln -sf ${REPO_DIR_PATH}/src/services/provision/nginx.conf /etc/nginx/nginx.conf
 	else
@@ -30,12 +30,12 @@ do
 		else
 			template="nginx/nginx.https.template.conf"
 		fi
-		sudo node src/bin/utils/fillTemplate.mjs \
+		sudo node src/bin/services/internals/fillTemplate.mjs \
 			--copy-var ACTIVE_DOMAIN="${server}_DOMAIN" \
 			--copy-var ACTIVE_PORT="${server}_PORT" \
 			--output /etc/nginx/sites-enabled/$server.conf \
 			--template $template \
-			--varspath ../../../src/services/config.mjs
+			--varspath ../../../services/config.mjs
 	fi
 
 	sudo service nginx restart

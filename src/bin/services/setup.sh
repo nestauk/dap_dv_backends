@@ -46,10 +46,10 @@ if [ "$1" = "PROVISION" ]; then
 	echo "PROVISION setup"
 	echo "******************************************************"
 
-	aws s3 cp s3://dap-dv-backends/spotlight.pem ~/.ssh/spotlight.pem
+	aws s3 cp $SPOTLIGHT_CERT_S3_URI ~/.ssh/spotlight.pem
 	chmod 600 ~/.ssh/spotlight.pem
 
 	./src/bin/services/install-terraform.sh
 
-	./src/bin/utils/create-iam-keys.sh $AWS_USERNAME $AWS_REGION
+	./src/bin/services/internals/create-iam-keys.sh $AWS_USERNAME $AWS_REGION
 fi
