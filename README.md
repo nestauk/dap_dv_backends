@@ -57,7 +57,8 @@ The process is in 3 steps:
 	in [1] check make sure the `-e` is correct
 	- `npm run annotateData`
 - When the annotation has finished:
-	- navigate to the `dap_dv_backends` repo
+	- you should receive an email to notify you the annotation is done
+	- navigate to your local `dap_dv_backends` repo
 	- `npm run deleteInfra`
 
 
