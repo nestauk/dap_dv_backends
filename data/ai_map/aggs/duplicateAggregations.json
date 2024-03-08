@@ -1,0 +1,292 @@
+{
+    "took": 405,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 152,
+            "relation": "eq"
+        },
+        "max_score": null,
+        "hits": []
+    },
+    "aggregations": {
+        "dupes_60_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 106
+                },
+                {
+                    "key": 1,
+                    "doc_count": 43
+                },
+                {
+                    "key": 2,
+                    "doc_count": 3
+                }
+            ]
+        },
+        "dupes_10_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 40
+                },
+                {
+                    "key": 1,
+                    "doc_count": 39
+                },
+                {
+                    "key": 2,
+                    "doc_count": 34
+                },
+                {
+                    "key": 3,
+                    "doc_count": 26
+                },
+                {
+                    "key": 4,
+                    "doc_count": 8
+                },
+                {
+                    "key": 5,
+                    "doc_count": 2
+                },
+                {
+                    "key": 6,
+                    "doc_count": 1
+                },
+                {
+                    "key": 8,
+                    "doc_count": 2
+                }
+            ]
+        },
+        "dupes_60_ratio_extended_stats": {
+            "count": 152,
+            "min": 0,
+            "max": 0.1666666716337204,
+            "avg": 0.01959130486571475,
+            "sum": 2.977878339588642,
+            "sum_of_squares": 0.22770107941087112,
+            "variance": 0.0011142141908354053,
+            "std_deviation": 0.03337984707627351,
+            "std_deviation_bounds": {
+                "upper": 0.08635099901826178,
+                "lower": -0.04716838928683227
+            }
+        },
+        "dupes_60_ratio_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 106
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 10
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 19
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.15,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "dupes_10_ratio_extended_stats": {
+            "count": 152,
+            "min": 0,
+            "max": 0.6153846383094788,
+            "avg": 0.10011804535200722,
+            "sum": 15.217942893505096,
+            "sum_of_squares": 3.0495982202464544,
+            "variance": 0.010039523180725363,
+            "std_deviation": 0.1001974210283147,
+            "std_deviation_bounds": {
+                "upper": 0.30051288740863663,
+                "lower": -0.1002767967046222
+            }
+        },
+        "dupes_10_count_extended_stats": {
+            "count": 152,
+            "min": 0,
+            "max": 8,
+            "avg": 1.638157894736842,
+            "sum": 249,
+            "sum_of_squares": 751,
+            "variance": 2.257228185595568,
+            "std_deviation": 1.5024074632387738,
+            "std_deviation_bounds": {
+                "upper": 4.642972821214389,
+                "lower": -1.3666570317407056
+            }
+        },
+        "dupes_60_count_extended_stats": {
+            "count": 152,
+            "min": 0,
+            "max": 2,
+            "avg": 0.3223684210526316,
+            "sum": 49,
+            "sum_of_squares": 55,
+            "variance": 0.25792070637119113,
+            "std_deviation": 0.5078589433801389,
+            "std_deviation_bounds": {
+                "upper": 1.3380863078129095,
+                "lower": -0.6933494657076462
+            }
+        },
+        "dupes_10_ratio_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 40
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 15
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 12
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.15,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.17,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.18,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.19,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.2,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.21,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.23,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.26,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.27,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.3,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.36,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.42,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.5,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.61,
+                    "doc_count": 1
+                }
+            ]
+        }
+    }
+}

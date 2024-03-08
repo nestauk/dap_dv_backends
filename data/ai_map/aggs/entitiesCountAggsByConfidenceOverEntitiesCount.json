@@ -1,0 +1,926 @@
+{
+    "took": 491,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 152,
+            "relation": "eq"
+        },
+        "max_score": null,
+        "hits": []
+    },
+    "aggregations": {
+        "confidence_50_normalised_with_entities_count_extended_stats": {
+            "count": 152,
+            "min": 0,
+            "max": 0.2727272727272727,
+            "avg": 0.039998516257666476,
+            "sum": 6.079774471165305,
+            "sum_of_squares": 0.6215327589283293,
+            "variance": 0.002489150005924199,
+            "std_deviation": 0.0498913820807181,
+            "std_deviation_bounds": {
+                "upper": 0.13978128041910268,
+                "lower": -0.05978424790376972
+            }
+        },
+        "confidence_20_normalised_with_entities_count_extended_stats": {
+            "count": 152,
+            "min": 0,
+            "max": 0.16666666666666666,
+            "avg": 0.013270244639243972,
+            "sum": 2.0170771851650837,
+            "sum_of_squares": 0.1506256241707516,
+            "variance": 0.0008148586609695613,
+            "std_deviation": 0.028545729294757235,
+            "std_deviation_bounds": {
+                "upper": 0.07036170322875844,
+                "lower": -0.0438212139502705
+            }
+        },
+        "confidence_100_normalised_with_entities_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 102
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 15
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 8
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.17,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.22,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "confidence_80_normalised_with_entities_count_extended_stats": {
+            "count": 152,
+            "min": 0,
+            "max": 0.2857142857142857,
+            "avg": 0.016391788001382957,
+            "sum": 2.4915517762102093,
+            "sum_of_squares": 0.24034986593916083,
+            "variance": 0.0013125584041385127,
+            "std_deviation": 0.036229247910196986,
+            "std_deviation_bounds": {
+                "upper": 0.08885028382177693,
+                "lower": -0.05606670781901102
+            }
+        },
+        "confidence_10_normalised_with_entities_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 129
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 8
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.22,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "confidence_60_normalised_with_entities_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 109
+                },
+                {
+                    "key": 0.03,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 8
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 16
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 2
+                }
+            ]
+        },
+        "confidence_0_normalised_with_entities_count_extended_stats": {
+            "count": 152,
+            "min": 0,
+            "max": 0.058823529411764705,
+            "avg": 0.00112025419586117,
+            "sum": 0.17027863777089783,
+            "sum_of_squares": 0.00969049832740657,
+            "variance": 0.00006249830900643551,
+            "std_deviation": 0.007905587201874096,
+            "std_deviation_bounds": {
+                "upper": 0.01693142859960936,
+                "lower": -0.014690920207887022
+            }
+        },
+        "confidence_90_normalised_with_entities_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 49
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 12
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 20
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 8
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 8
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 10
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 9
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.15,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.17,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.18,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.19,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.2,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.21,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.25,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.26,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.28,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.42,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "confidence_70_normalised_with_entities_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 110
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 13
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.15,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.26,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.28,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "confidence_70_normalised_with_entities_count_extended_stats": {
+            "count": 152,
+            "min": 0,
+            "max": 0.2857142857142857,
+            "avg": 0.024001604275964712,
+            "sum": 3.648243849946636,
+            "sum_of_squares": 0.4342805581976894,
+            "variance": 0.002281031927691107,
+            "std_deviation": 0.04776014999653065,
+            "std_deviation_bounds": {
+                "upper": 0.11952190426902601,
+                "lower": -0.0715186957170966
+            }
+        },
+        "confidence_40_normalised_with_entities_count_extended_stats": {
+            "count": 152,
+            "min": 0,
+            "max": 0.4375,
+            "avg": 0.07585255458924438,
+            "sum": 11.529588297565144,
+            "sum_of_squares": 1.7143089455044889,
+            "variance": 0.005524738287973129,
+            "std_deviation": 0.07432858325014093,
+            "std_deviation_bounds": {
+                "upper": 0.22450972108952622,
+                "lower": -0.07280461191103747
+            }
+        },
+        "confidence_30_normalised_with_entities_count_extended_stats": {
+            "count": 152,
+            "min": 0.14285714285714285,
+            "max": 0.95,
+            "avg": 0.7028828085575248,
+            "sum": 106.83818690074378,
+            "sum_of_squares": 78.10714928506711,
+            "variance": 0.019818581678148487,
+            "std_deviation": 0.14077848442907917,
+            "std_deviation_bounds": {
+                "upper": 0.9844397774156832,
+                "lower": 0.4213258396993665
+            }
+        },
+        "confidence_80_normalised_with_entities_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 117
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 9
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 10
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.28,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "confidence_0_normalised_with_entities_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 149
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 3
+                }
+            ]
+        },
+        "confidence_90_normalised_with_entities_count_extended_stats": {
+            "count": 152,
+            "min": 0,
+            "max": 0.42857142857142855,
+            "avg": 0.07158234100967635,
+            "sum": 10.880515833470806,
+            "sum_of_squares": 1.5899034704511106,
+            "variance": 0.00533585970854224,
+            "std_deviation": 0.07304696919477385,
+            "std_deviation_bounds": {
+                "upper": 0.21767627939922407,
+                "lower": -0.07451159737987136
+            }
+        },
+        "confidence_60_normalised_with_entities_count_extended_stats": {
+            "count": 152,
+            "min": 0,
+            "max": 0.14285714285714285,
+            "avg": 0.018862275897363764,
+            "sum": 2.867065936399292,
+            "sum_of_squares": 0.2229554160421622,
+            "variance": 0.001111026495617534,
+            "std_deviation": 0.03333206407676449,
+            "std_deviation_bounds": {
+                "upper": 0.08552640405089275,
+                "lower": -0.04780185225616522
+            }
+        },
+        "confidence_10_normalised_with_entities_count_extended_stats": {
+            "count": 152,
+            "min": 0,
+            "max": 0.2222222222222222,
+            "avg": 0.010770361407987514,
+            "sum": 1.637094934014102,
+            "sum_of_squares": 0.14529828456804708,
+            "variance": 0.0008399090820363799,
+            "std_deviation": 0.02898118496604961,
+            "std_deviation_bounds": {
+                "upper": 0.06873273134008673,
+                "lower": -0.047192008524111706
+            }
+        },
+        "confidence_50_normalised_with_entities_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 79
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 11
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 16
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 10
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.15,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.18,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.27,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "confidence_40_normalised_with_entities_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 49
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 25
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.1,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 9
+                },
+                {
+                    "key": 0.12,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.13,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.14,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.15,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.17,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.18,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.2,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.22,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.23,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.25,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.26,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.43,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "confidence_100_normalised_with_entities_count_extended_stats": {
+            "count": 152,
+            "min": 0,
+            "max": 0.2222222222222222,
+            "avg": 0.025267251168083874,
+            "sum": 3.840622177548749,
+            "sum_of_squares": 0.3562358249941902,
+            "variance": 0.0017052227617917945,
+            "std_deviation": 0.04129434297566429,
+            "std_deviation_bounds": {
+                "upper": 0.10785593711941245,
+                "lower": -0.05732143478324471
+            }
+        },
+        "confidence_20_normalised_with_entities_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0,
+                    "doc_count": 121
+                },
+                {
+                    "key": 0.04,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.05,
+                    "doc_count": 15
+                },
+                {
+                    "key": 0.06,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.07,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.08,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.09,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.11,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 1
+                }
+            ]
+        },
+        "confidence_30_normalised_with_entities_count_histogram": {
+            "buckets": [
+                {
+                    "key": 0.14,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.16,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.22,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.37,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.42,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.43,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.45,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.46,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.5,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.52,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.53,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.54,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.55,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.56,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.5700000000000001,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.58,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.59,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.6,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.61,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.62,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.63,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.64,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.65,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.66,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.68,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.6900000000000001,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.7000000000000001,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.71,
+                    "doc_count": 5
+                },
+                {
+                    "key": 0.72,
+                    "doc_count": 8
+                },
+                {
+                    "key": 0.73,
+                    "doc_count": 10
+                },
+                {
+                    "key": 0.75,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.76,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.77,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.78,
+                    "doc_count": 7
+                },
+                {
+                    "key": 0.8,
+                    "doc_count": 11
+                },
+                {
+                    "key": 0.81,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.8200000000000001,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.8300000000000001,
+                    "doc_count": 6
+                },
+                {
+                    "key": 0.84,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.85,
+                    "doc_count": 4
+                },
+                {
+                    "key": 0.86,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.87,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.88,
+                    "doc_count": 2
+                },
+                {
+                    "key": 0.89,
+                    "doc_count": 1
+                },
+                {
+                    "key": 0.9,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.92,
+                    "doc_count": 3
+                },
+                {
+                    "key": 0.9500000000000001,
+                    "doc_count": 1
+                }
+            ]
+        }
+    }
+}

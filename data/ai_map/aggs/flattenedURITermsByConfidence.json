@@ -1,0 +1,2410 @@
+{
+    "took": 1301,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 152,
+            "relation": "eq"
+        },
+        "max_score": null,
+        "hits": []
+    },
+    "aggregations": {
+        "dbpedia": {
+            "doc_count": 2512,
+            "top_URI_40": {
+                "doc_count": 194,
+                "URI": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 28,
+                    "buckets": [
+                        {
+                            "key": "http://dbpedia.org/resource/Innovation",
+                            "doc_count": 17
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Postgraduate_education",
+                            "doc_count": 15
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/News",
+                            "doc_count": 12
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Heart",
+                            "doc_count": 8
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Higher_education",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Doctor_of_Philosophy",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Catapult_centres",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Academy",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Biomedicine",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Catapult",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Discrimination",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Economics",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Health_care",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Journalism",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Justice",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/United_Kingdom",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/A.C._Orestias",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Accessibility",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Alliance_Party_of_Northern_Ireland",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Ambassador",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Animal_welfare",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Apprenticeship",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Asteroid_family",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Audio_description",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Benefit_society",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Biology",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Blackboard_Learn",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Bus",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Business_administration",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Charitable_organization",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Chemical_reaction_engineering",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/City_Centre_Campus",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Climate",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Climate_change",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Coming_out",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Conservation-restoration_of_cultural_heritage",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Conspicuous_consumption",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Contemporary_slavery",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Continuing_education",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Corporate_spin-off",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Cosmopolitan_distribution",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Digital_data",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Earth_system_science",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Ecological_resilience",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Economic_inequality",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Education_in_the_United_Kingdom",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Educational_technology",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Email",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Emerging_technologies",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Environmental_issue",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Environmental_science",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Equal_opportunity",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Experience_Life",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/FAQ",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Film_speed",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Flood",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Flood_control",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Fusion_power",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Game_Changer_(Johnny_Gill_album)",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Geology",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Goldsmith",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Government_agency",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Government_of_the_United_Kingdom",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Grand_Canyon_Antelopes",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/HTTP_cookie",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Health_policy",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Henry_Fuseli",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Horse_harness",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Hybrid_vehicle",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Infection",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/International",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Journal_of_Food_Science",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/LGC_Ltd",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Language",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Lawrence_Berkeley_National_Laboratory",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Licentiate_in_Medicine_and_Surgery",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/List_of_Star_Trek_Starfleet_starships_ordered_by_class",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Listed_building",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Livestock",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Living_systems",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Logical_conjunction",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/London",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Maharishi_University_of_Management",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Mass",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Melbourne_Theatre_Company",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Mission_critical",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Modern_Woman",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Monarch",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/More_(magazine)",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Multiculturalism",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Music_school",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/NW_postcode_area",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/National_Olympic_Committee",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/National_University_Hospital",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Nonprofit_organization",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Nuclear_fusion",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Nursing",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Oxford",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Performing_arts",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Plant",
+                            "doc_count": 1
+                        }
+                    ]
+                }
+            },
+            "top_URI_50": {
+                "doc_count": 100,
+                "URI": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 0,
+                    "buckets": [
+                        {
+                            "key": "http://dbpedia.org/resource/United_Kingdom",
+                            "doc_count": 33
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Prospectus_(finance)",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Energy",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/List_of_life_sciences",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/QS_World_University_Rankings",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Rankings_of_universities_in_the_United_Kingdom",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Sustainability",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Europe",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Air_traffic_control",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Bachelor_of_Arts",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Bachelor_of_Medicine,_Bachelor_of_Surgery",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Biotechnology",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Blog",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Chancellor",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Charitable_organization",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Christian_Church",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/City_of_Salford",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Common_good",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Contentment",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Culture_of_Wales",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Defensive_tackle",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Digital_television",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Discover_Financial",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Federal_Communications_Commission",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Fender_Wide_Range",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Greenwich",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Health_and_Safety_Executive",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Holy_Roman_Empire",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Humanities",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/International",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Keele",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Master_of_Philosophy",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Master_of_Science",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/National_Service_Scheme",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Navi_Pillay",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Northern_England",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Philosophy",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Photonics",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Physics",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Political_science",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Registered_training_organisation",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/SW_postcode_area",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Scottish_Agricultural_College",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Seascape",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Strategic_Air_Command",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Tourism",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/UK_Space_Agency",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/United_Steelworkers",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/University_College_London",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/University_of_Edinburgh",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Waste_minimisation",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Who_We_Are_(Lifehouse_album)",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/YouTube",
+                            "doc_count": 1
+                        }
+                    ]
+                }
+            },
+            "top_URI_20": {
+                "doc_count": 32,
+                "URI": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 0,
+                    "buckets": [
+                        {
+                            "key": "http://dbpedia.org/resource/Why_(Annie_Lennox_song)",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/2015",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Boston_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Central_business_district",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/City_status_in_the_United_Kingdom",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Close_air_support",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Discover_Card",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Economic_development",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Globalization",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Independent_politician",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/International_development",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/International_recognition_of_Kosovo",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/List_of_artifacts_in_biblical_archaeology",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/MacOS",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Major_third",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Market_(place)",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Marketing",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Modern_architecture",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Mountain_range",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Nationalism",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/New_Testament",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/New_World",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Perfect_graph",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Positive_(2008_film)",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Propaganda",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Settlement_of_the_Americas",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Supporter",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Technology",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Unitary_authority",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/University_of_Southampton",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Wikipedia",
+                            "doc_count": 1
+                        }
+                    ]
+                }
+            },
+            "top_URI_30": {
+                "doc_count": 1788,
+                "URI": {
+                    "doc_count_error_upper_bound": 5,
+                    "sum_other_doc_count": 1090,
+                    "buckets": [
+                        {
+                            "key": "http://dbpedia.org/resource/University",
+                            "doc_count": 51
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Student",
+                            "doc_count": 30
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Wikimedia_Foundation",
+                            "doc_count": 29
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Find",
+                            "doc_count": 23
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Golf_course",
+                            "doc_count": 23
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Research",
+                            "doc_count": 23
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Wikipedia",
+                            "doc_count": 19
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/University_of_Novi_Sad",
+                            "doc_count": 18
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Life",
+                            "doc_count": 17
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Eduard_Study",
+                            "doc_count": 12
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/The_Open_Championship",
+                            "doc_count": 12
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Health",
+                            "doc_count": 11
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Day",
+                            "doc_count": 10
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Education",
+                            "doc_count": 10
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Explore_(education)",
+                            "doc_count": 10
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Globalization",
+                            "doc_count": 10
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Undergraduate_education",
+                            "doc_count": 10
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Book",
+                            "doc_count": 9
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Experience",
+                            "doc_count": 8
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Postgraduate_education",
+                            "doc_count": 8
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Rugby_union_positions",
+                            "doc_count": 8
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Career",
+                            "doc_count": 7
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/College_and_university_rankings",
+                            "doc_count": 7
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Event-driven_programming",
+                            "doc_count": 7
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Innovation",
+                            "doc_count": 7
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Institute",
+                            "doc_count": 7
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Top",
+                            "doc_count": 7
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Building",
+                            "doc_count": 6
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Days_of_Our_Lives",
+                            "doc_count": 6
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Enzo_and_Cass",
+                            "doc_count": 6
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Expert",
+                            "doc_count": 6
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Industry",
+                            "doc_count": 6
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Natural_environment",
+                            "doc_count": 6
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Science",
+                            "doc_count": 6
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Walter_Read",
+                            "doc_count": 6
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Academic_degree",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Airline_hub",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Business",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Collaboration",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Creativity",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Culture",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Dotdash",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Economic_sector",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Employment",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Excellence",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Exploration",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Food",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Graduation",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Impact_event",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Open-source_model",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Technology",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/United_Kingdom",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Academy",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Apply",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Art",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Course_(education)",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/December",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Delivery_(commerce)",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Developed_country",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Digbeth_Institute",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Electric_current",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Experience_point",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Fan_convention",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Future",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Immunization",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/International",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Join_(SQL)",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Knowledge",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Leadership",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Learning",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Local_government",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Member_of_parliament",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/News",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Reputation",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Short_film",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Technical_support",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/The",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/The_All",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Thomas_More",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Training",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/10",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Apprenticeship",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Area",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Arsenic",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Astatine",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Award",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Basic_research",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Business_opportunity",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Campus",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Celebrate_(Whitney_Houston_and_Jordin_Sparks_song)",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Charitable_organization",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/City",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/College",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Delivery_(cricket)",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Disease",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Economics",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Email",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Engineering",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Excited_state",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/FIFA_World_Rankings",
+                            "doc_count": 3
+                        }
+                    ]
+                }
+            },
+            "top_URI_10": {
+                "doc_count": 24,
+                "URI": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 0,
+                    "buckets": [
+                        {
+                            "key": "http://dbpedia.org/resource/Poland",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Wikipedia",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/1966",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/2000_Summer_Olympics",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/2010",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/2012",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/2018_FIFA_World_Cup",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Funding_of_science",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Graduate_school",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Hard_disk_drive",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Harwell_Science_and_Innovation_Campus",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/John_Maynard_Keynes",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Lead_climbing",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/List_of_athletics_events",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Menachem_Begin",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Nokia_7370",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Research",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Sovereign_state",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/The_Guardian",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Top_quark",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Unforgettable_(2011_TV_series)",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Working_class",
+                            "doc_count": 1
+                        }
+                    ]
+                }
+            },
+            "top_URI_0": {
+                "doc_count": 3,
+                "URI": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 0,
+                    "buckets": [
+                        {
+                            "key": "http://dbpedia.org/resource/Environmentalism",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Study_skills",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Vocal_range",
+                            "doc_count": 1
+                        }
+                    ]
+                }
+            },
+            "top_URI_80": {
+                "doc_count": 37,
+                "URI": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 0,
+                    "buckets": [
+                        {
+                            "key": "http://dbpedia.org/resource/International",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/London",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/National_Health_Service",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Beamline",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Carbon_neutrality",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Disability_History_Month",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/East_Anglia",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Fetishism",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Instrument_flight_rules",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Ireland",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Liverpool_F.C.",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/London_School_of_Hygiene_&_Tropical_Medicine",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Manchester",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/NHS_trust",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/People_&_Planet",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Pirbright_Institute",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Public_science",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Renewable_energy",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Royal_Academy_of_Music",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Royal_Northern_College_of_Music",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Scotland",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Secretary_of_State_for_Business,_Energy_and_Industrial_Strategy",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Sheffield",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/St_Andrews",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Sussex",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/United_Kingdom",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/University_of_Surrey",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Unravel",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Value-added_tax",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Warwick",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Wildlife",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/William_S._Burroughs",
+                            "doc_count": 1
+                        }
+                    ]
+                }
+            },
+            "top_URI_100": {
+                "doc_count": 59,
+                "URIs_100": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 0,
+                    "buckets": [
+                        {
+                            "key": "http://dbpedia.org/resource/QS_World_University_Rankings",
+                            "doc_count": 6
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Brunel_University_London",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Leeds_Beckett_University",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Research_Excellence_Framework",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Russell_Group",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Abertay_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Advanced_Manufacturing_Park",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Anglia_Ruskin_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Antarctic_Treaty_System",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Babraham_Institute",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Bangor_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Bournemouth_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/British_Geological_Survey",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Cambrian_Mountains",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Canterbury_Christ_Church_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Carbon_Trust",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Coronavirus",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Coventry_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Cranfield_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/De_Montfort_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Diamond_Light_Source",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Francis_Crick_Institute",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Grant_Shapps",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Grayson_Perry",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Hammersmith_Hospital",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Henry_Royce",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Imperial_College_London",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/John_Innes_Centre",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Kingston_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Lancaster_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Magnaporthe_grisea",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Manchester_Metropolitan_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Medical_Research_Council_(United_Kingdom)",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Moredun",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/National_Film_and_Television_School",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Nigel_Shadbolt",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Northumbria_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Old_Brompton_Road",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Open_Data_Institute",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Outline_of_space_science",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Quadram_Institute",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Rothamsted_Research",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Royal_Veterinary_College",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Swansea_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Teesside_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Tim_Berners-Lee",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Tsinghua_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/UK_Astronomy_Technology_Centre",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/University_of_Nottingham",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/York_St_John_University",
+                            "doc_count": 1
+                        }
+                    ]
+                }
+            },
+            "top_URI_90": {
+                "doc_count": 173,
+                "URI": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 36,
+                    "buckets": [
+                        {
+                            "key": "http://dbpedia.org/resource/London",
+                            "doc_count": 8
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Scotland",
+                            "doc_count": 5
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/International",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Telephone_numbers_in_the_United_Kingdom",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Wales",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/University_of_London",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Aberdeen",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Artificial_intelligence",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Astronomy",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Biology",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Bristol",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Campus_tour",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Climate_change",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Dundee",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Glasgow",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/National_Student_Survey",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Northern_Ireland",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Physics",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/The_Culture",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/The_Times",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/University_of_Oxford",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Aberystwyth",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Aberystwyth_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Abraham_Lincoln",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Agriculture",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Alan_Turing",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Antarctica",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Arctic",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Aylesbury",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Bath_Rugby",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Bath_Spa_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Bedford_railway_station",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Bedfordshire",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Biodiversity_loss",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Birmingham_City_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Bradford",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Cadbury",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Calstock",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Camera_lens",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Canary_Wharf",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Canterbury_Cathedral",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Carbon",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Cardiff",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Cardiff_Metropolitan_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Cardiff_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Cardigan_Bay",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Charles_Lapworth",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/City_of_London",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/County_Londonderry",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Culham",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Daresbury_Laboratory",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Derby",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Derry",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Earlham_College",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Economics",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Elizabeth_II",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Energy_storage",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Essex",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Facebook",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Food_science",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Genome",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Hendon",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Herald_Sun",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Heriot-Watt_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Hertfordshire",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Infrared",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Instagram",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Jesus",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/John_Milton",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Kent",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Kingston_upon_Hull",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Lancashire",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Laser",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Leeds",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Leicester",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Library",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/List_of_minor_Blandings_characters",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Liverpool",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/London_South",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Loughborough_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Luton",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Machine_learning",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Making_Trouble",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Malaysia",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Medway",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Middlesbrough",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Middlesex_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Mike_Turner",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/National_Oceanography_Centre",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Newcastle_upon_Tyne",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Newport_RFC",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/News_13",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Nobel_Prize",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Nottingham",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Open_Doors",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Open_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Paris",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Peterborough",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Plymouth",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Pontypridd",
+                            "doc_count": 1
+                        }
+                    ]
+                }
+            },
+            "top_URI_60": {
+                "doc_count": 46,
+                "URI": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 0,
+                    "buckets": [
+                        {
+                            "key": "http://dbpedia.org/resource/City",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Medicine",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Earth_science",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/News_(band)",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Bedford_Vehicles",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Body_image",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Brewing_Industry_Research_Foundation",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Bullying",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Catalysis",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/City_status_in_the_United_Kingdom",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Climate_change",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Da_Fat_Rat_wit_da_Cheeze",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Discover_Card",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Distance_education",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/EHealth",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Evangelicalism",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Gigabyte",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Global_health",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Guildhall_School_of_Music_and_Drama",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/International_law",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/London_School_of_Economics",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Marylebone_station",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Mechanical_engineering",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/NW_postcode_area",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/One_Day_International",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Pakistan_Muslim_League",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Public_transport",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Registered_office",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Robotics",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Royal_College_of_Music",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Royal_Holloway,_University_of_London",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Science_and_Technology_Facilities_Council",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Scotland",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Slavery",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Top_Spot",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Trent_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Turkey",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/University_of_Cambridge",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Vought_HVM",
+                            "doc_count": 1
+                        }
+                    ]
+                }
+            },
+            "top_URI_70": {
+                "doc_count": 56,
+                "URI": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 0,
+                    "buckets": [
+                        {
+                            "key": "http://dbpedia.org/resource/Discover_Card",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/International",
+                            "doc_count": 4
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/England",
+                            "doc_count": 3
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Discover_Financial",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Earth",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/London",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Planet",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Social_science",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/University_of_London",
+                            "doc_count": 2
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Birkbeck_station",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Cancer",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Carbon_Energy",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Carbon_footprint",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Catapult_centres",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Christian",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Consumer_price_index",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Cultural_heritage",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Data_science",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Dynamic_Structures",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/East_London",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Edinburgh",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Efficient_energy_use",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Environmental_protection",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/GM_New_Look_bus",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Genome_editing",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Genomics",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Globalization",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Interdisciplinarity",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/International_law",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Jake_Featherston",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Liverpool_John_Moores_University",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Market_town",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Master's_degree",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Mediacorp",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Orthopedic_surgery",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Podcast",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Rape",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Research_and_Intervention_Brigade",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Supply_chain",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Thomas_Manton",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Urban_planning",
+                            "doc_count": 1
+                        },
+                        {
+                            "key": "http://dbpedia.org/resource/Women_in_STEM_fields",
+                            "doc_count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

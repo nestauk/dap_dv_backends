@@ -1,0 +1,122 @@
+{
+    "took": 1309,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 152,
+            "relation": "eq"
+        },
+        "max_score": null,
+        "hits": []
+    },
+    "aggregations": {
+        "entities_count_extended_stats": {
+            "count": 152,
+            "min": 6,
+            "max": 27,
+            "avg": 16.526315789473685,
+            "sum": 2512,
+            "sum_of_squares": 44342,
+            "variance": 18.604570637119124,
+            "std_deviation": 4.31330159357297,
+            "std_deviation_bounds": {
+                "upper": 25.152918976619624,
+                "lower": 7.899712602327744
+            }
+        },
+        "entities_count_histogram": {
+            "buckets": [
+                {
+                    "key": 6,
+                    "doc_count": 2
+                },
+                {
+                    "key": 7,
+                    "doc_count": 2
+                },
+                {
+                    "key": 8,
+                    "doc_count": 4
+                },
+                {
+                    "key": 9,
+                    "doc_count": 1
+                },
+                {
+                    "key": 10,
+                    "doc_count": 3
+                },
+                {
+                    "key": 11,
+                    "doc_count": 11
+                },
+                {
+                    "key": 12,
+                    "doc_count": 5
+                },
+                {
+                    "key": 13,
+                    "doc_count": 8
+                },
+                {
+                    "key": 14,
+                    "doc_count": 13
+                },
+                {
+                    "key": 15,
+                    "doc_count": 11
+                },
+                {
+                    "key": 16,
+                    "doc_count": 10
+                },
+                {
+                    "key": 17,
+                    "doc_count": 14
+                },
+                {
+                    "key": 18,
+                    "doc_count": 13
+                },
+                {
+                    "key": 19,
+                    "doc_count": 17
+                },
+                {
+                    "key": 20,
+                    "doc_count": 10
+                },
+                {
+                    "key": 21,
+                    "doc_count": 10
+                },
+                {
+                    "key": 22,
+                    "doc_count": 8
+                },
+                {
+                    "key": 23,
+                    "doc_count": 4
+                },
+                {
+                    "key": 24,
+                    "doc_count": 2
+                },
+                {
+                    "key": 25,
+                    "doc_count": 3
+                },
+                {
+                    "key": 27,
+                    "doc_count": 1
+                }
+            ]
+        }
+    }
+}

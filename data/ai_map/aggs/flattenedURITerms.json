@@ -1,0 +1,429 @@
+{
+    "took": 1263,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 152,
+            "relation": "eq"
+        },
+        "max_score": null,
+        "hits": []
+    },
+    "aggregations": {
+        "dbpedia": {
+            "doc_count": 2512,
+            "URIs": {
+                "doc_count_error_upper_bound": 5,
+                "sum_other_doc_count": 1690,
+                "buckets": [
+                    {
+                        "key": "http://dbpedia.org/resource/University",
+                        "doc_count": 51
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/United_Kingdom",
+                        "doc_count": 42
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Student",
+                        "doc_count": 30
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Wikimedia_Foundation",
+                        "doc_count": 29
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Innovation",
+                        "doc_count": 24
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Postgraduate_education",
+                        "doc_count": 24
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Research",
+                        "doc_count": 24
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Golf_course",
+                        "doc_count": 23
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Find",
+                        "doc_count": 22
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Wikipedia",
+                        "doc_count": 22
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/International",
+                        "doc_count": 19
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/News",
+                        "doc_count": 18
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/University_of_Novi_Sad",
+                        "doc_count": 18
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Life",
+                        "doc_count": 17
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/London",
+                        "doc_count": 13
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Globalization",
+                        "doc_count": 12
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/The_Open_Championship",
+                        "doc_count": 12
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Eduard_Study",
+                        "doc_count": 11
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Education",
+                        "doc_count": 10
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Health",
+                        "doc_count": 10
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Undergraduate_education",
+                        "doc_count": 10
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Book",
+                        "doc_count": 9
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Day",
+                        "doc_count": 9
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Explore_(education)",
+                        "doc_count": 9
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Higher_education",
+                        "doc_count": 8
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Rugby_union_positions",
+                        "doc_count": 8
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Career",
+                        "doc_count": 7
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/City",
+                        "doc_count": 7
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/College_and_university_rankings",
+                        "doc_count": 7
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Experience",
+                        "doc_count": 7
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/QS_World_University_Rankings",
+                        "doc_count": 7
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Top",
+                        "doc_count": 7
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Academy",
+                        "doc_count": 6
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Building",
+                        "doc_count": 6
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Event-driven_programming",
+                        "doc_count": 6
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Heart",
+                        "doc_count": 6
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Industry",
+                        "doc_count": 6
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Science",
+                        "doc_count": 6
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Technology",
+                        "doc_count": 6
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Walter_Read",
+                        "doc_count": 6
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Academic_degree",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Airline_hub",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Business",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Charitable_organization",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Collaboration",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Creativity",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Days_of_Our_Lives",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Discover_Card",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Dotdash",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Economic_sector",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Economics",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Enzo_and_Cass",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Excellence",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Expert",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Exploration",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Food",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Institute",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Natural_environment",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Open-source_model",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Scotland",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Study_skills",
+                        "doc_count": 5
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Apply",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Apprenticeship",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Art",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Catapult_centres",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Climate_change",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Culture",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Delivery_(commerce)",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Developed_country",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Digbeth_Institute",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Electric_current",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Email",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Employment",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Future",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Graduate_school",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Graduation",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Join_(SQL)",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Leadership",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Local_government",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Member_of_parliament",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Short_film",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Supporter",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Technical_support",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/The",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/The_All",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Thomas_More",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Training",
+                        "doc_count": 4
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/10",
+                        "doc_count": 3
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Area",
+                        "doc_count": 3
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Arsenic",
+                        "doc_count": 3
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Astatine",
+                        "doc_count": 3
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Award",
+                        "doc_count": 3
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Basic_research",
+                        "doc_count": 3
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Biology",
+                        "doc_count": 3
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Business_opportunity",
+                        "doc_count": 3
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Campus",
+                        "doc_count": 3
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Celebrate_(Whitney_Houston_and_Jordin_Sparks_song)",
+                        "doc_count": 3
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/College",
+                        "doc_count": 3
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/Course_(education)",
+                        "doc_count": 3
+                    },
+                    {
+                        "key": "http://dbpedia.org/resource/December",
+                        "doc_count": 3
+                    }
+                ]
+            }
+        }
+    }
+}
